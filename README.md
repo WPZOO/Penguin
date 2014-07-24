@@ -1,4 +1,5 @@
-penguin
+PENGU!N
 =======
 
 WordPress Theme by WPZOO
+*THIS THEME IS STILL IN DEVELOPMENT*
