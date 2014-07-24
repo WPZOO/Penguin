@@ -131,6 +131,9 @@ a img {
 /*--------------------------------------------------------------
 1.2 Areas
 --------------------------------------------------------------*/
+body {
+	background-color: #f1f1f1;
+}
 #primary,
 #secondary {
 	margin-top: 1em;
@@ -578,16 +581,6 @@ p a {
 /*--------------------------------------------------------------
 5.2 Menus
 --------------------------------------------------------------*/
-@media (max-width: 781px) {
-	.admin-bar #wpadminbar {
-		position: fixed;
-	}
-}
-@media (min-width: 782px) {
-	.admin-bar .main-navigation {
-		top: 32px;
-	}
-}
 .main-navigation {
 	background-color: rgba(0,0,0,0.85);
 	-moz-box-sizing: border-box;
