@@ -8,7 +8,7 @@
 	<header class="entry-header">
 		<?php if ( has_post_thumbnail() ) : ?>
 		<div class="post-thumbnail">
-			<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_post_thumbnail( array(600,300) ); ?> </a>
+			<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_post_thumbnail( 'Penguin600X300' ); ?> </a>
 		</div><!-- .post-thumbnail -->
 		<?php endif; ?>
 		<?php if (!has_post_format('status')) : ?>
@@ -21,9 +21,9 @@
 		<?php endif; ?>
 			
 		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-			<small class="comments-link btn btn-sm"><?php comments_popup_link( __( 'Leave a comment', 'penguin' ), __( '1 Comment', 'penguin' ), __( '% Comments', 'penguin' ) ); ?></small>
+			<div class="comments-link btn btn-sm small"><?php comments_popup_link( __( 'Leave a comment', 'penguin' ), __( '1 Comment', 'penguin' ), __( '% Comments', 'penguin' ) ); ?></div>
 		<?php endif; ?>
-		<?php edit_post_link( __( 'Edit', 'penguin' ), '<small class="edit-link btn btn-sm">', '</small>' ); ?>
+		<?php edit_post_link( __( 'Edit', 'penguin' ), '<div class="edit-link btn btn-sm small">', '</div>' ); ?>
 		</div><!-- .entry-meta-top -->
 
 	</header><!-- .entry-header -->	
@@ -43,7 +43,7 @@
 		<?php /* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'penguin' ) );
 		if ( $categories_list && penguin_categorized_blog() ) : ?>
-		<div class="cat-links">
+		<div class="cat-links small">
 			<span class="penguin-category-icon"></span> <?php echo $categories_list ?>
 		</div>
 		<?php endif; // End if categories ?>
@@ -53,7 +53,7 @@
 			$tags_list = get_the_tag_list( '', __( ', ', 'penguin' ) );
 			if ( $tags_list ) :
 		?>
-		<div class="tags-links">
+		<div class="tags-links small">
 			<span class="penguin-tag-icon"></span> <?php echo $tags_list ?>
 		</div>
 		<?php endif; // End if $tags_list ?>

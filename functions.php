@@ -93,17 +93,12 @@ add_action( 'widgets_init', 'penguin_widgets_init' );
  * Enqueue scripts and styles.
  */
 function penguin_scripts() {
-	wp_enqueue_style( 'penguin-grid', get_template_directory_uri() . '/styles/grid.css' );
 	wp_enqueue_style( 'penguin-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'penguin-icon-font', get_template_directory_uri() . '/styles/penguin-icon-font.css' );
 	wp_enqueue_style( 'penguin-font', 'http://fonts.googleapis.com/css?family=Raleway:300,600' );
 
 	wp_enqueue_script( 'penguin-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20120206', true );
 	wp_enqueue_script( 'penguin-fitvids', get_template_directory_uri() . '/js/fitvids.js', array('jquery'), '20140528', true );	
-	if( is_home() || is_front_page() || is_archive() || is_search() ) {
-		wp_enqueue_script( 'penguin-masonry', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array('jquery'), '', true );
-		wp_enqueue_script( 'penguin-masonry-options', get_template_directory_uri() . '/js/masonry.options.js', array('jquery'), '', true );
-	}
 	wp_enqueue_script( 'penguin-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -136,7 +131,7 @@ require get_template_directory() . '/inc/jetpack.php';
  */
 function excerpt_read_more_link($output) {
     global $post;
-    return $output . '<span><a href="'. get_permalink($post->ID) . '">' . __("Read more", "penguin") . '</a></span>';
+    return $output . '<a href="'. get_permalink($post->ID) . '" class="read-more-link">' . __("Read more", "penguin") . '</a>';
 }
 add_filter('the_excerpt', 'excerpt_read_more_link');
 

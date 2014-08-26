@@ -78,7 +78,7 @@ function penguin_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
-	printf( '<small class="posted-on btn btn-sm">%1$s</small>',
+	printf( '<div class="posted-on btn btn-sm small">%1$s</div>',
 		sprintf( '<a href="%1$s" rel="bookmark">%2$s</a>',
 			esc_url( get_permalink() ),
 			$time_string

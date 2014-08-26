@@ -5,7 +5,7 @@
  * @package pengu!n
  */
 ?>
-	<div id="secondary" class="widget-area col-md-3 col-sm-4" role="complementary">
+	<div id="secondary" class="widget-area" role="complementary">
 		<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
 
 			<aside id="search" class="widget widget_search">
