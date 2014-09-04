@@ -143,11 +143,11 @@ add_filter('excerpt_more', 'new_excerpt_more');
 /**
  * Check if Single and Page has Post Thumbnail
  */
-function add_featured_image_body_class( $classes ) {    
-global $post;
-    if ( has_post_thumbnail() && is_page() || has_post_thumbnail() && is_single() && !is_attachment() ) {
-          $classes[] = 'has-headerimg';
- }
-          return $classes;
+function add_featured_image_body_class( $classes ) {
+	global $post;
+	if ( ! is_404 () && has_post_thumbnail() && ( is_page() || is_single() && !is_attachment() ) ) {
+		$classes[] = 'has-headerimg';
+	}
+	return $classes;
 }
 add_filter( 'body_class', 'add_featured_image_body_class' );

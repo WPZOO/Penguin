@@ -31,7 +31,7 @@
 			</div><!-- .container -->
 		</nav><!-- #site-navigation -->
 
-		<?php if ( has_post_thumbnail() && is_page() || has_post_thumbnail() && is_single() && !is_attachment() ) : ?>
+		<?php if ( ! is_404 () && has_post_thumbnail() && ( is_page() || is_single() && !is_attachment() ) ) : ?>
 		<div class="headerimg">
 			<?php the_post_thumbnail( 'full' ); ?>
 		</div>
