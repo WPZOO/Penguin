@@ -1,0 +1,105 @@
+.container {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+
+	@media screen and (min-width: 768px) {
+		width: 750px;
+	}
+
+	@media screen and (min-width: 992px) {
+		width: 970px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		width: 1170px;
+	}
+}
+
+#content-area {
+	margin-right: -15px;
+	margin-left: -15px;
+ }
+
+.posts-container {
+	@media screen and (min-width: 1200px) {
+		-webkit-column-count: 2;
+		-webkit-column-gap: 1em;
+		-moz-column-count: 2;
+		-moz-column-gap: 1em;
+		column-count: 2;
+		column-gap: 1em;
+	}
+}
+
+#primary,
+#secondary {
+	margin-top: 1em;
+	margin-bottom: 1.5em;
+	padding-right: 15px;
+	padding-left: 15px;
+	position: relative;
+}
+
+#primary {
+	@media screen and (min-width: 768px) {
+		float: left;
+	    width: 66.66666667%;
+	}
+
+	@media screen and (min-width: 992px) {
+		float: left;
+		width: 75%;
+	}
+}
+
+#secondary {
+	@media screen and (min-width: 400px) and (max-width: 767px) {
+		margin-left: auto;
+		margin-right: auto;
+		width: 75%;
+	}
+
+	@media screen and (max-width: 767px) {
+		margin-top: 3em;
+	}
+
+	@media screen and (min-width: 768px) {
+		float: left;
+		width: 33.33333333%;
+	}
+
+	@media screen and (min-width: 992px) {
+		float: left;
+		width: 25%;
+	}
+}
+
+#colophon {
+	margin-bottom: 10px;
+}
+
+.page-header {
+	margin-bottom: 1em;
+}
+
+/*--------------------------------------------------------------
+7.1 Posts and pages
+--------------------------------------------------------------*/
+@import "posts-and-pages";
+
+/*--------------------------------------------------------------
+7.2 Post Formats
+--------------------------------------------------------------*/
+@import "post-formats";
+
+/*--------------------------------------------------------------
+7.3 Comments
+--------------------------------------------------------------*/
+@import "comments";
+
+/*--------------------------------------------------------------
+7.4 Widgets
+--------------------------------------------------------------*/
+@import "widgets";

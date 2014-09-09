@@ -1,0 +1,30 @@
+@media print {
+	body {
+		background-color: white;
+		color: black;
+		font-size: 11pt;
+	}
+
+	#masthead,
+	#secondary,
+	#colophon,
+	.nav-links,
+	.comment-respond {
+		display: none;
+	}
+
+	#primary {
+		background: #fff;
+	}
+
+	article.post, 
+	article.page, 
+	article.attachment {
+		border: 0;
+		box-shadow: 0;
+	}
+
+	.single .has-post-thumbnail {
+		margin-top: 0;
+	}
+}

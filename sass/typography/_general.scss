@@ -1,0 +1,78 @@
+p {
+	margin-bottom: .5em;
+}
+p:last-of-type {
+	margin-bottom: 0;
+}
+
+b, strong {
+	font-weight: $font__weight-bold;
+}
+
+dfn, cite, em, i {
+	font-style: italic;
+}
+
+blockquote {
+	border-left: 2px solid #bcbcbc;
+	font-style: italic;
+	margin-bottom: .5em;
+	padding: .5em 1em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: $color__background-pre;
+	font-family: $font__pre;
+	font-size: inherit;
+	line-height: $font__line-height-pre;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code, kbd, tt, var {
+	font-family: $font__code;
+	font-size: inherit;
+}
+
+abbr, acronym {
+	border-bottom: 1px dotted $color__border-abbr;
+	cursor: help;
+}
+
+mark, ins {
+	background: $color__background-ins;
+	text-decoration: none;
+}
+
+sup,
+sub {
+	font-size: .75em;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	bottom: 1ex;
+}
+
+sub {
+	top: .5ex;
+}
+
+small,
+.small {
+	@include font-size-small;
+}
+
+big,
+.big {
+	font-size: 1.2em;
+}

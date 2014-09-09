@@ -1,0 +1,68 @@
+.page-content img.wp-smiley,
+.entry-content img.wp-smiley,
+.comment-content img.wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+.headerimg {
+	height: 220px;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+
+	@media screen and (min-width: 768px) {
+		height: 300px;
+	}
+
+	@media screen and (min-width: 992px) {
+		height: 400px;
+	}
+
+	img {
+		height: auto;
+		left: 50%;
+		margin: auto;
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		-webkit-transform: translate(-50%,-50%);
+		-ms-transform: translate(-50%,-50%);
+		transform: translate(-50%,-50%);
+	}
+}
+
+.post-thumbnail img {
+	width: 100%;
+}
+
+@media screen and (min-width: 600px) and (max-width: 991px) {
+	.post-thumbnail {
+		margin-bottom: 10px;
+	}		
+}
+
+@media screen and (min-width: 992px) {
+	.post-thumbnail {
+		margin-bottom: 15px;
+	}
+}
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+5.1 Captions
+--------------------------------------------------------------*/
+@import "captions";
+
+/*--------------------------------------------------------------
+5.2 Galleries
+--------------------------------------------------------------*/
+@import "galleries";

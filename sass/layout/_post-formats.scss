@@ -1,0 +1,76 @@
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title,
+.blog .format-quote .entry-title,
+.archive .format-quote .entry-title,
+.blog .format-quote .entry-meta-bottom,
+.archive .format-quote .entry-meta-bottom,
+.blog .format-link .entry-title,
+.archive .format-link .entry-title,
+.blog .format-link .entry-meta-bottom,
+.archive .format-link .entry-meta-bottom,
+.blog .format-video .entry-title,
+.archive .format-video .entry-title,
+.blog .format-video .entry-meta-bottom,
+.archive .format-video .entry-meta-bottom,
+.blog .format-image .entry-title,
+.archive .format-image .entry-title,
+.blog .format-image .entry-meta-bottom,
+.archive .format-image .entry-meta-bottom {
+	display: none;
+}
+/* Post Format Quote */
+article.format-quote {
+	border-top: none;
+}
+/* Post Format Link */
+article.format-link {
+	background-color: $color__background-post-format-link;
+	border: none;
+	color: white;
+}
+article.format-link .entry-meta-top a  {
+	background-color: #fff;
+}
+article.format-link .entry-content a {
+	background-color: #fff;
+	font-size: 1.5em;
+	line-height: 1;
+}
+article.format-link .entry-meta-top a:hover,
+article.format-link .entry-meta-top a:focus,
+article.format-link .entry-meta-top a:active,
+article.format-link .entry-content a:hover,
+article.format-link .entry-content a:focus,
+article.format-link .entry-content a:active {
+	background-color: $color__background-post-format-link;
+	color: white;
+}
+article.format-link .entry-meta-bottom a {
+	color: white;
+	text-decoration: underline;
+}
+article.format-link .entry-meta-bottom a:hover,
+article.format-link .entry-meta-bottom a:focus,
+article.format-link .entry-meta-bottom a:active {
+	text-decoration: none;
+}
+/* Post Formats Image & Video */
+.blog .format-image,
+.archive .format-image,
+.blog .format-video,
+.archive .format-video {
+	background-color: transparent;
+	border: 0;
+	box-shadow: none;
+	padding-bottom: 0;
+}
+.blog .format-image .entry-header,
+.archive .format-image .entry-header,
+.blog .format-image .entry-content,
+.archive .format-image .entry-content,
+.blog .format-video .entry-header,
+.archive .format-video .entry-header,
+.blog .format-video .entry-content,
+.archive .format-video .entry-content {
+	margin: 0;
+}

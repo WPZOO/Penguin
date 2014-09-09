@@ -1,0 +1,29 @@
+.scrollToTop{
+	background: rgba(0,0,0,0.85);
+	display: none;
+	height: 50px;
+	position: fixed;
+	right: 0;
+	text-align: center; 
+	text-decoration: none;
+	top: 0;
+	width: 50px;
+	z-index: 2000;
+}
+.scrollToTop:before {
+	color: #fff;
+	content: "\e003";
+	font-family: "penguin-icon-font" !important;
+	font-size: 26px;
+	font-style: normal !important;
+	font-weight: normal !important;
+	font-variant: normal !important;
+	text-transform: none !important;
+	speak: none;
+	line-height: 50px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.scrollToTop:hover{
+	text-decoration: none;
+}

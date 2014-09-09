@@ -1,0 +1,142 @@
+.main-navigation {
+	background: $color__background-main-nav;
+	@include box-sizing(border-box);
+	clear: both;
+	color: #fff;
+	display: block;
+	height: auto;
+	position: relative;
+	width: 100%;
+
+	.has-headerimg & {
+		position: absolute;
+		z-index: 1000;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+	}
+
+	li {
+		float: left;
+		margin-right: 1px;
+		position: relative;
+
+		&:hover > a {
+		}
+	}
+
+	a {
+		color: #fff;
+		display: block;
+		font-size: .8em;
+		height: 50px;
+		line-height: 50px;
+		padding-right: 12px;
+		padding-left: 12px;
+		text-decoration: none;
+
+		&:hover {
+			background-color: #fff;
+			color: #0066cc;
+		}
+	}
+
+	.site-title {
+		float: left;
+		margin: 0;
+
+		a {
+			color: #fff !important;
+			font-size: 20px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			margin-right: 5px;
+			padding-left: 0;
+
+			&:hover {
+				background-color: transparent;
+			}
+		}
+	}
+
+
+	.current_page_item a,
+	.current-menu-item a {
+		background-color: $color__background-main-nav-current;
+		color: white;
+	}
+}
+
+/* Small menu */
+.menu-toggle {
+	cursor: pointer;
+	display: none;
+	font-size: 26px;
+	padding-top: 10px;
+}
+
+@media screen and (max-width: 600px) {
+	.menu-toggle,
+	.main-navigation.toggled .nav-menu {
+		display: block;
+		float: right;
+	}
+
+	.main-navigation ul {
+		display: none;
+		max-height: 100%;
+		overflow-y: scroll;
+
+		ul {
+			display: block;
+			margin-left: 1em;
+		}
+	}
+
+	.main-navigation li {
+		display: block;
+		width: 100%;
+
+		a {
+			height: 40px;
+			line-height: 40px;
+		}
+	}
+}
+@media screen and (min-width: 601px) {
+	.main-navigation ul ul {
+		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+		float: left;
+		position: absolute;
+		top: 50px;
+		left: -999em;
+		z-index: 99999;
+
+		ul {
+			left: -999em;
+			top: 0;
+		}
+
+		li {
+			&:hover > ul {
+				left: 100%;
+			}
+		}
+
+		a {
+			background-color: $color__background-main-nav;
+			width: 200px;
+		}
+	}
+
+	.current-menu-parent a {
+		background-color: $color__background-main-nav-current;
+		color: white;		
+	}
+
+	li:hover > ul {
+		left: auto;
+	}
+}

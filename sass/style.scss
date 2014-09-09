@@ -1,0 +1,96 @@
+/*
+Theme Name: PENGU!N
+Theme URI: http://wpzoo.ch/themes/penguin/
+Author: WPZOO [Stefan Brechbühl]
+Author URI: http://wpzoo.ch/
+Description: PENGU!N is a clean and modern WordPress theme made by WPZOO. Besides the link color the used colors are monochromatic. The post thumbnail will be used as a big header image on single post pages as well as Pages. These theme characteristics make it possible to use PENGU!N for bloggin' as well as a magazin theme.
+Version: 1.0.alpha
+License: GNU General Public License v3
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: penguin
+Domain Path: /languages/
+Tags: black, blue, gray, white, light, one-column, two-columns, right-sidebar, responsive-layout, accessibility-ready, custom-menu, featured-image-header,featured-images, post-formats, sticky-post, threaded-comments, translation-ready
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 – Reset
+2.0 - Typography
+	2.1 – Headings
+	2.2 – General
+	2.3 – Icon Font
+3.0 - Elements
+4.0 - Forms
+5.0 - Media
+	5.1 - Captions
+	5.2 - Galleries
+6.0 - Navigation
+	6.1 - Links
+	6.2 - Menus
+	6.3 – Post / Page Nav
+	6.4 – Back to Top
+7.0 - Layout
+	7.1 - Posts and pages
+	7.2 - Post Formats
+	7.3 - Comments
+	7.4 - Widgets
+8.0 – Helper Classes
+	8.1 - Clearings
+	8.2 - Alignments
+	8.3 - Accessibility
+9.0 - Infinite scroll
+10.0 – Print
+--------------------------------------------------------------*/
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+
+/*--------------------------------------------------------------
+1.0 - Reset
+--------------------------------------------------------------*/
+@import "reset";
+
+/*--------------------------------------------------------------
+2.0 – Typography
+--------------------------------------------------------------*/
+@import "typography/typography";
+
+/*--------------------------------------------------------------
+3.0 – Elements
+--------------------------------------------------------------*/
+@import "elements/elements";
+
+/*--------------------------------------------------------------
+4.0 – Forms
+--------------------------------------------------------------*/
+@import "forms/forms";
+
+/*--------------------------------------------------------------
+5.0 – Media
+--------------------------------------------------------------*/
+@import "media/media";
+
+/*--------------------------------------------------------------
+6.0 – Navigation
+--------------------------------------------------------------*/
+@import "navigation/navigation";
+
+/*--------------------------------------------------------------
+7.0 - Layout
+--------------------------------------------------------------*/
+@import "layout/layout";
+
+/*--------------------------------------------------------------
+8.0 – Helper CLasses
+--------------------------------------------------------------*/
+@import "modules/helper";
+
+/*--------------------------------------------------------------
+9.0 – Infinite scroll
+--------------------------------------------------------------*/
+@import "modules/infinite-scroll";
+
+/*--------------------------------------------------------------
+10.0 – Print
+--------------------------------------------------------------*/
+@import "modules/print";

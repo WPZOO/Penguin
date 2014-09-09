@@ -1,0 +1,50 @@
+a {
+	color: $color__link;
+	text-decoration: none;
+	@include transition(.3);
+
+	&:visited {
+		color: $color__link-visited;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-hover;
+	}
+
+	p & {
+		font-weight: $font__weight-bold;
+	}
+
+	.btn & {
+		background-color: $color__background-btn;
+		color: #404040;
+		display: inline-block;
+	}
+	.btn-sm & {
+		padding: 2px 8px;	
+	}
+	.btn-lg & {
+		padding: 12px 16px;	
+	}
+	.btn &:hover,
+	.btn &:focus,
+	.btn &:active {
+		background-color: $color__background-btn-hover;
+		color: #fff;
+	}
+
+	#colophon & {
+		color: #cdcdcd;
+		font-size: .65em;
+		font-weight: $font__weight-bold;
+	}
+}
+
+.page-links {
+	border-top: 1px solid #cdcdcd;
+	clear: both;
+	font-size: 1.2em;
+	margin: 1.5em 0 .5em;
+	padding-top: 5px;
+}

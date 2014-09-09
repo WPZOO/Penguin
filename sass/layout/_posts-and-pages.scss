@@ -1,0 +1,141 @@
+article.post,
+article.page,
+article.attachment {
+	background-color: #fff;
+	border-top: 3px solid #bcbcbc;
+	border-bottom: 1px solid #bbb;
+	border-right: 1px solid #ddd;
+	box-shadow: 0 2px 1px #dedede;
+	position: relative;
+	width: 100%;
+}
+
+.single .has-post-thumbnail {
+	margin-top: -40px;
+
+	@media screen and (min-width: 600px) and (max-width: 991px) {
+		margin-top: -50px;
+	}
+
+	@media screen and (min-width: 992px) {
+		margin-top: -60px;
+	}
+}
+
+.post.has-post-thumbnail,
+.page.has-post-thumbnail {
+	border-top: none;
+}
+
+.sticky {
+	-webkit-column-span: all;
+	-moz-column-span: all;
+	column-span: all;
+}
+
+.hentry {
+	margin-bottom: 1em;
+	padding: 5px 0;
+	-webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    column-break-inside: avoid;
+
+	@media screen and (min-width: 600px) and (max-width: 991px) {
+		padding: 15px 0;
+	}
+
+	@media screen and (min-width: 992px) {
+		padding: 25px 0;
+	}
+}
+
+.blog .has-post-thumbnail.hentry,
+.archive .has-post-thumbnail.hentry,
+.search .has-post-thumbnail.hentry,
+.search .page.has-post-thumbnail.hentry {
+	padding-top: 0;
+}
+
+.single .hentry {
+	margin-bottom: 0;
+}
+
+.byline,
+.updated:not(.published){
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.entry-title,
+.entry-summary,
+.entry-content,
+.entry-meta-top,
+.entry-meta-bottom {
+	margin-left: 10px;
+	margin-right: 10px;
+
+	@media screen and (min-width: 600px) and (max-width: 991px) {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+}
+
+.entry-summary,
+.entry-content {
+	margin-top: .5em;
+	margin-bottom: .5em;
+}
+
+.entry-meta-top div {
+	margin: 2px 0;
+}
+
+.entry-meta-top div,
+.entry-meta-bottom {
+	display: inline-block;
+}
+
+@media screen and (min-width: 992px) {
+	.single .hentry,
+	.page .hentry {
+		padding: 40px 0;
+	}
+
+	.entry-title,
+	.entry-summary,
+	.entry-content,
+	.entry-meta-top,
+	.entry-meta-bottom,
+	.search .page .entry-title,
+	.search .page .entry-summary,
+	.search .page .entry-content,
+	.search .page .entry-meta-top,
+	.search .page .entry-meta-bottom {
+		margin-left: 30px;
+		margin-right: 30px;
+	}
+	
+	.single .entry-title,
+	.single .entry-summary,
+	.single .entry-content,
+	.single .entry-meta-top,
+	.single .entry-meta-bottom,
+	.page .entry-title,
+	.page .entry-summary,
+	.page .entry-content,
+	.page .entry-meta-top,
+	.page .entry-meta-bottom {
+		margin-left: 50px;
+		margin-right: 50px;
+	}
+}
