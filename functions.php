@@ -130,8 +130,8 @@ require get_template_directory() . '/inc/jetpack.php';
  * Custom Excerpt
  */
 function excerpt_read_more_link($output) {
-    global $post;
-    return $output . '<a href="'. get_permalink($post->ID) . '" class="read-more-link">' . __("Read more", "penguin") . '</a>';
+	global $post;
+	return $output . '<a href="'. get_permalink($post->ID) . '" class="read-more-link">' . __("Read more", "penguin") . '</a>';
 }
 add_filter('the_excerpt', 'excerpt_read_more_link');
 

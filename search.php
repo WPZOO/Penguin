@@ -7,36 +7,39 @@
 
 get_header(); ?>
 
-	<div id="content-area">
-		<div id="primary">
-			<main id="main" class="site-main" role="main">
+<div id="content-area">
+	<div id="primary">
+		<main id="main" class="site-main" role="main">
 
-			<?php if ( have_posts() ) : ?>
+		<?php if ( have_posts() ) : ?>
 
-				<header class="page-header">
-					<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'penguin' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-				</header><!-- .page-header -->
+			<header class="page-header">
+				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'penguin' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+			</header><!-- .page-header -->
 
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
+			<div class="posts-container">
 
-					<?php get_template_part( 'content', 'search' ); ?>
+			<?php /* Start the Loop */ ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php endwhile; ?>
-		
-				<?php penguin_paging_nav(); ?>
-				
-			</main><!-- #main -->
+				<?php get_template_part( 'content', 'search' ); ?>
 
-			<?php else : ?>
+			<?php endwhile; ?>
+			
+			</div><!-- .posts-container -->
+			<?php penguin_paging_nav(); ?>
+			
+		</main><!-- #main -->
 
-				<?php get_template_part( 'content', 'none' ); ?>
+		<?php else : ?>
 
-			<?php endif; ?>
+			<?php get_template_part( 'content', 'none' ); ?>
 
-			</main><!-- #main -->
-		</section><!-- #primary -->
+		<?php endif; ?>
 
-	<?php get_sidebar(); ?>
-	</div><!-- #content-area -->
-	<?php get_footer(); ?>
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+<?php get_sidebar(); ?>
+</div><!-- #content-area -->
+<?php get_footer(); ?>

@@ -21,21 +21,21 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 
-	<header id="masthead" class="site-header" role="banner">
-		<nav id="site-navigation" class="main-navigation clear" role="navigation">
-			<div class="container">
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<span class="menu-toggle penguin-menu-icon"></span>
-				<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'penguin' ); ?></a>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => '' ) ); ?>
-			</div><!-- .container -->
-		</nav><!-- #site-navigation -->
+<header id="masthead" class="site-header" role="banner">
+	<nav id="site-navigation" class="main-navigation clear" role="navigation">
+		<div class="container">
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<span class="menu-toggle penguin-menu-icon"></span>
+			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'penguin' ); ?></a>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => '' ) ); ?>
+		</div><!-- .container -->
+	</nav><!-- #site-navigation -->
 
-		<?php if ( ! is_404 () && has_post_thumbnail() && ( is_page() || is_single() && !is_attachment() ) ) : ?>
-		<div class="headerimg">
-			<?php the_post_thumbnail( 'full' ); ?>
-		</div>
-		<?php endif; ?>
-	</header><!-- #masthead -->
+	<?php if ( !is_404 () && has_post_thumbnail() && ( is_page() || is_single() && !is_attachment() ) ) : ?>
+	<div class="headerimg">
+		<?php the_post_thumbnail( 'full' ); ?>
+	</div>
+	<?php endif; ?>
+</header><!-- #masthead -->
 
-	<div id="content" class="site-content container">
+<div id="content" class="site-content container">
