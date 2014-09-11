@@ -94,7 +94,6 @@ add_action( 'widgets_init', 'penguin_widgets_init' );
  */
 function penguin_scripts() {
 	wp_enqueue_style( 'penguin-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'penguin-icon-font', get_template_directory_uri() . '/styles/penguin-icon-font.css' );
 	wp_enqueue_style( 'penguin-font', 'http://fonts.googleapis.com/css?family=Raleway:300,600' );
 
 	wp_enqueue_script( 'penguin-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20120206', true );
