@@ -4,7 +4,9 @@
  */
 ?>
 
+<?php tha_entry_before(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php tha_entry_top(); ?>
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 
@@ -49,4 +51,6 @@
 	</footer><!-- .entry-meta-bottom -->
 	<?php endif; // End if 'post' == get_post_type() ?>
 
+	<?php tha_entry_bottom(); ?>
 </article><!-- #post-## -->
+<?php tha_entry_after(); ?>

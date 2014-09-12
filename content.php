@@ -4,7 +4,9 @@
  */
 ?>
 
+<?php tha_entry_before(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php tha_entry_top(); ?>
 	<header class="entry-header">
 		<?php if ( has_post_thumbnail() ) : ?>
 		<div class="post-thumbnail">
@@ -59,4 +61,6 @@
 		<?php endif; // End if $tags_list ?>
 	</footer><!-- .entry-meta-bottom -->
 	<?php endif; // End if 'post' == get_post_type() ?>
+	<?php tha_entry_bottom(); ?>
 </article><!-- #post-## -->
+<?php tha_entry_after(); ?>
