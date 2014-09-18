@@ -26,7 +26,7 @@
 		<?php edit_post_link( __( 'Edit', 'penguin' ), '<div class="edit-link btn btn-sm small">', '</div>' ); ?>
 		</div><!-- .entry-meta-top -->
 
-	</header><!-- .entry-header -->	
+	</header><!-- .entry-header -->
 	
 	<?php if ( !has_post_format() || has_post_format('gallery') || is_search() ) : ?>
 		<div class="entry-summary">
