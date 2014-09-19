@@ -5,6 +5,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<div class="keeptogether">
 	<header class="entry-header">
 		<?php if ( has_post_thumbnail() ) : ?>
 		<div class="post-thumbnail">
@@ -59,4 +60,5 @@
 		<?php endif; // End if $tags_list ?>
 	</footer><!-- .entry-meta-bottom -->
 	<?php endif; // End if 'post' == get_post_type() ?>
+</div><!-- .keeptogether -->
 </article><!-- #post-## -->

@@ -10,6 +10,11 @@ article.attachment {
 	width: 100%;
 }
 
+.keeptogether { // Firefox doesn't support break-inside
+	display: inline-block;
+	width: 100%;
+}
+
 .single .has-post-thumbnail {
 	margin-top: -40px;
 
@@ -29,7 +34,6 @@ article.attachment {
 
 .sticky {
 	-webkit-column-span: all;
-	-moz-column-span: all;
 	column-span: all;
 }
 
@@ -37,7 +41,6 @@ article.attachment {
 	margin-bottom: 1em;
 	padding: 5px 0;
 	-webkit-column-break-inside: avoid;
-	-moz-column-break-inside: avoid;
 	break-inside: avoid;
 
 	@media screen and (min-width: 600px) and (max-width: 991px) {
