@@ -1456,7 +1456,7 @@ article.format-link .entry-meta-bottom a:active {
 	}
 }
 /* Comments */
-.comment,
+.comment article,
 .pingback {
 	margin-bottom: 1em;
 }
