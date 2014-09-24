@@ -417,6 +417,10 @@ big,
 	content: "\e002";
 }
 
+.penguin-dropdown-icon:before {
+	content: "\e004";
+}
+
 /*--------------------------------------------------------------
 3.0 – Elements
 --------------------------------------------------------------*/
@@ -898,13 +902,20 @@ p a {
 	font-size: .8em;
 	height: 50px;
 	line-height: 50px;
-	padding-right: 12px;
-	padding-left: 12px;
 	text-decoration: none;
 }
-.main-navigation a:hover {
-	background-color: #fff;
-	color: #0066cc;
+.main-navigation .menu-item-has-children a:after {
+	content: '\e004';
+	font-family: 'penguin-icon-font';
+	font-size: .75em;
+	line-height: 1;
+	padding-left: 7px;
+	speak: none;
+	text-align: right;
+	vertical-align: text-bottom;
+}
+.main-navigation .menu-item-has-children ul a:after {
+	content: none;
 }
 .main-navigation .site-title {
 	float: left;
@@ -921,13 +932,17 @@ p a {
 .main-navigation .site-title a:hover {
 	background-color: transparent;
 }
-.main-navigation .current_page_item a,
-.main-navigation .current-menu-item a {
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a {
 	background-color: #0066cc;
 	color: white;
+	font-weight: bold;
+}
+.main-navigation .current_page_parent > a,
+.main-navigation .current-menu-parent > a {
+	font-weight: bold;
 }
 
-/* Small menu */
 .menu-toggle {
 	cursor: pointer;
 	display: none;
@@ -946,22 +961,35 @@ p a {
 		display: none;
 		max-height: 100%;
 		overflow-y: scroll;
+		text-indent: .5em;
 	}
 	.main-navigation ul ul {
 		display: block;
-		margin-left: 1em;
+		text-indent: 1.5em;
 	}
-
 	.main-navigation li {
+		border-top: 1px solid rgba(255, 255, 255, 0.5);
 		display: block;
 		width: 100%;
 	}
-	.main-navigation li a {
-		height: 40px;
-		line-height: 40px;
+	.main-navigation li:last-of-type {
+		border-bottom: none;
+	}
+	.main-navigation .menu-item-has-children a:after {
+		position: absolute;
+		right: .5em;
+		top: 23px;
 	}
 }
 @media screen and (min-width: 601px) {
+	.main-navigation a {
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+	.main-navigation a:hover {
+		background-color: #fff;
+		color: #0066cc;
+	}
 	.main-navigation ul ul {
 		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 		float: left;
@@ -970,24 +998,14 @@ p a {
 		left: -999em;
 		z-index: 99999;
 	}
-	.main-navigation ul ul ul {
-		left: -999em;
-		top: 0;
-	}
-	.main-navigation ul ul li:hover > ul {
-		left: 100%;
+	.main-navigation ul ul li {
+		background-color: rgba(0, 0, 0, 0.85);
 	}
 	.main-navigation ul ul a {
-		background-color: rgba(0, 0, 0, 0.85);
-		width: 200px;
+		overflow: hidden;
+		width: 250px;
 	}
-
-	.current-menu-parent a {
-		background-color: #0066cc;
-		color: white;
-	}
-
-	li:hover > ul {
+	.main-navigation li:hover > ul {
 		left: auto;
 	}
 }

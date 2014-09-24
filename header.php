@@ -27,7 +27,7 @@
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<span class="menu-toggle penguin-menu-icon"></span>
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'penguin' ); ?></a>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => '' ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => '', 'depth' => 2 ) ); ?>
 		</div><!-- .container -->
 	</nav><!-- #site-navigation -->
 
