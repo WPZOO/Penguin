@@ -5,7 +5,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-<div class="keeptogether">
+
 	<header class="entry-header">
 		<?php if ( has_post_thumbnail() ) : ?>
 		<div class="post-thumbnail">
@@ -15,12 +15,12 @@
 		<?php if (!has_post_format('status')) : ?>
 			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 		<?php endif; ?>
-		
+
 		<div class="entry-meta-top">
 		<?php if ( 'post' == get_post_type() ) : ?>
 			<?php penguin_posted_on(); ?>
 		<?php endif; ?>
-			
+
 		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
 			<div class="comments-link btn btn-sm small"><?php comments_popup_link( __( 'Leave a comment', 'penguin' ), __( '1 Comment', 'penguin' ), __( '% Comments', 'penguin' ) ); ?></div>
 		<?php endif; ?>
@@ -28,7 +28,7 @@
 		</div><!-- .entry-meta-top -->
 
 	</header><!-- .entry-header -->
-	
+
 	<?php if ( !has_post_format() || has_post_format('gallery') || is_search() ) : ?>
 		<div class="entry-summary">
 			<?php the_excerpt(); ?>
@@ -37,8 +37,8 @@
 		<div class="entry-content">
 			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'penguin' ) ); ?>
 		</div><!-- .entry-content -->
-	<?php endif; ?>	
-	
+	<?php endif; ?>
+
 	<?php if ( 'post' == get_post_type() ) : ?>
 	<footer class="entry-meta-bottom">
 		<?php /* translators: used between list items, there is a space after the comma */
@@ -60,5 +60,5 @@
 		<?php endif; // End if $tags_list ?>
 	</footer><!-- .entry-meta-bottom -->
 	<?php endif; // End if 'post' == get_post_type() ?>
-</div><!-- .keeptogether -->
+
 </article><!-- #post-## -->

@@ -8,11 +8,10 @@
 get_header(); ?>
 
 <div id="content-area">
+
 	<div id="primary">
 		<main id="main" class="site-main" role="main">
-		
 			<?php get_template_part( 'content', 'none' ); ?>
-		
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

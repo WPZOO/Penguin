@@ -78,7 +78,7 @@ get_header(); ?>
 				?>
 			</header><!-- .page-header -->
 
-			<div class="posts-container">
+			<div id="posts-container">
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -93,7 +93,8 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			</div><!--posts-container -->
+			</div><!-- #posts-container -->
+
 			<?php penguin_paging_nav(); ?>
 
 		<?php else : ?>
@@ -102,7 +103,7 @@ get_header(); ?>
 
 		<?php endif; ?>
 
-		</main><!-- #main -->	
+		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
