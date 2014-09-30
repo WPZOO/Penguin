@@ -97,8 +97,7 @@ function penguin_scripts() {
 	wp_enqueue_style( 'penguin-font', '//fonts.googleapis.com/css?family=Raleway:300,600' );
 
 	if ( is_home() || is_archive() || is_search() ) {
-		wp_enqueue_script( 'penguin-masonry', get_template_directory_uri() . '/js/min/masonry.min.js', array(), '3.1.5', true );
-		wp_enqueue_script( 'penguin-masonry-options', get_template_directory_uri() . '/js/min/masonry-options.min.js', array(), '1.0', true );
+		wp_enqueue_script( 'penguin-masonry-options', get_template_directory_uri() . '/js/min/masonry-options.min.js', array( 'masonry' ), '1.0', true );
 	}
 	wp_enqueue_script( 'penguin-navigation', get_template_directory_uri() . '/js/min/navigation.min.js', array( 'jquery' ), '20120206', true );
 	wp_enqueue_script( 'fitvids', get_template_directory_uri() . '/js/min/fitvids.min.js', array( 'jquery' ), '1.1', true );

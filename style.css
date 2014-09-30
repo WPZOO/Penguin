@@ -1184,7 +1184,7 @@ article.attachment {
 	border-right: 1px solid #ddd;
 	box-shadow: 0 2px 1px #dedede;
 	position: relative;
-	width: 100%;
+	width: 400px;
 }
 
 .single .has-post-thumbnail {

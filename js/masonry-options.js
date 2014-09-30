@@ -2,8 +2,13 @@
  * Initialization and options of Masonry
  */
 
-var msnry = new Masonry( '#posts-container', {
-	columnWidth: 400,
-	gutter: 32,
-	itemSelector: '.post'
+var container = document.querySelector('#posts-container');
+var msnry;
+// initialize Masonry after all images have loaded
+imagesLoaded( container, function() {
+	msnry = new Masonry( container, {
+		columnWidth: 400,
+		gutter: 32,
+		itemSelector: '.post'
+	});
 });
