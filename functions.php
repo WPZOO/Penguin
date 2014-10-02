@@ -128,6 +128,11 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+/*
+ * Load Theme Hook Alliance files
+ */
+require( get_template_directory() . '/inc/tha-theme-hooks.php' );
+
 /**
  * Custom Excerpt
  */
