@@ -7,7 +7,17 @@ article.attachment {
 	border-right: 1px solid #ddd;
 	box-shadow: 0 2px 1px #dedede;
 	position: relative;
-	width: 45%;
+	width: 100%;
+}
+article.post,
+.search article.page {
+	@media screen and (min-width: 1200px) {
+		width: 49%;
+	}
+}
+article.sticky,
+.single article {
+	width: 100%;
 }
 
 .single .has-post-thumbnail {
