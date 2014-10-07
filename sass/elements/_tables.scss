@@ -38,21 +38,28 @@ table > tbody > tr:nth-child(odd) > th {
 	background-color: #f9f9f9;
 }
 
-@media screen and (max-width: 767px) {
-	table {
-		border: 1px solid #dddddd;
-		margin-bottom: 15px;
-		overflow-y: hidden;
-		overflow-x: scroll;
-		-ms-overflow-style: -ms-autohiding-scrollbar;
-		-webkit-overflow-scrolling: touch;
-		width: 100%;
-	}
-}
 td#next {
 	text-align: right;
 }
 
 th {
 	font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+	.table-responsive {
+		border: 1px solid #ddd;
+		margin: 0 0 1.5em;
+		overflow-y: hidden;
+		overflow-x: scroll;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+		-webkit-overflow-scrolling: touch;
+	}
+	.table-responsive table {
+		margin: 3px;
+	}
+	.table-responsive th,
+	.table-responsive td {
+		white-space: nowrap;
+	}
 }

@@ -20,7 +20,8 @@ article.sticky,
 	width: 100%;
 }
 
-.single .has-post-thumbnail {
+.single .has-post-thumbnail,
+.page .has-post-thumbnail {
 	margin-top: -40px;
 
 	@media screen and (min-width: 600px) and (max-width: 991px) {
