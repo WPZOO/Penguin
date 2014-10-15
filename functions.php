@@ -114,24 +114,19 @@ add_action( 'wp_enqueue_scripts', 'penguin_scripts' );
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
+ * PENGU!N specifics.
+ */
+require get_template_directory() . '/inc/extras-penguin.php';
+
+/**
  * Custom functions that act independently of the theme templates.
  */
-require get_template_directory() . '/inc/extras.php';
+require get_template_directory() . '/inc/extras-underscores.php';
 
 /**
- * Customizer additions.
+ * Plugins compatibility file.
  */
-require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-require get_template_directory() . '/inc/jetpack.php';
-
-/*
- * Load Theme Hook Alliance files
- */
-require( get_template_directory() . '/inc/tha-theme-hooks.php' );
+require get_template_directory() . '/inc/extras-plugins.php';
 
 /**
  * Custom Excerpt
@@ -147,14 +142,7 @@ function new_excerpt_more( $more ) {
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
-/**
- * Check if Single and Page has Post Thumbnail
+/*
+ * Theme Hook Alliance files
  */
-function add_featured_image_body_class( $classes ) {
-	global $post;
-	if ( ! is_404 () && has_post_thumbnail() && ( is_page() || is_single() && !is_attachment() ) ) {
-		$classes[] = 'has-headerimg';
-	}
-	return $classes;
-}
-add_filter( 'body_class', 'add_featured_image_body_class' );
+require( get_template_directory() . '/inc/tha-theme-hooks.php' );

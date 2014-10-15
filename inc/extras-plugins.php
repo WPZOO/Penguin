@@ -1,7 +1,6 @@
 <?php
 /**
- * Jetpack Compatibility File
- * See: http://jetpack.me/
+ * Plugins Compatibility File
  *
  * @package pengu!n
  */
