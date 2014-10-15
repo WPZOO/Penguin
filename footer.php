@@ -14,10 +14,6 @@
 <?php tha_footer_before(); ?>
 <footer id="colophon" class="site-footer container" role="contentinfo">
 	<?php tha_footer_top(); ?>
-	<a href="#" class="scrollToTop"><?php __('Scroll To Top', 'penguin' ) ?></a>
-	<a href="http://www.pixelstrol.ch/" rel="designer">
-		PENGU!N WordPress Theme <?php _e( 'made by WPZOO', 'penguin' ) ?>
-	</a>
 	<?php tha_footer_bottom(); ?>
 </footer><!-- #colophon -->
 <?php tha_footer_after(); ?>
