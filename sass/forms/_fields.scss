@@ -30,7 +30,7 @@ textarea {
 	@include border-radius(0);
 	color: $color__text-input;
 	padding: 10.5px;
-	@include transition(.3)
+	@include transition(all, 0.3s, ease-in-out)
 }
 
 input[type="text"]:focus,
@@ -50,5 +50,5 @@ textarea {
 }
 textarea:focus, 
 input:focus {
-    outline: 0; // Disable Chromes outline style
+	outline: 0; // Disable Chromes outline style
 }

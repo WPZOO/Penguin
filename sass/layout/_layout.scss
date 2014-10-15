@@ -69,6 +69,16 @@
 	margin-bottom: 10px;
 }
 
+#poweredby {
+	color: #cdcdcd;
+	@include font-size-small;
+
+	a {
+		color: #cdcdcd;
+		font-weight: $font__weight-bold;
+	}
+}
+
 .page-header {
 	margin-bottom: 1em;
 }

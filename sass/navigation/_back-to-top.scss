@@ -1,17 +1,17 @@
 .scrollToTop{
-	background: rgba(0,0,0,0.85);
-	display: none;
+	background: $color__background-main-nav;
 	height: 50px;
 	position: fixed;
 	right: 0;
-	text-align: center; 
+	text-align: center;
 	text-decoration: none;
 	top: 0;
 	width: 50px;
 	z-index: 2000;
 }
+
 .scrollToTop:before {
-	color: #fff;
+	color: $color__text-main-nav;
 	content: "\e003";
 	font-family: "penguin-icon-font" !important;
 	font-size: 26px;

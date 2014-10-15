@@ -1,8 +1,8 @@
-.main-navigation {
+#site-navigation {
 	background: $color__background-main-nav;
 	@include box-sizing(border-box);
 	clear: both;
-	color: #fff;
+	color: $color__text-main-nav;
 	display: block;
 	height: auto;
 	position: relative;
@@ -31,6 +31,11 @@
 		height: 50px;
 		line-height: 50px;
 		text-decoration: none;
+
+		&:hover {
+			background-color: #fff;
+			color: #0066cc;
+		}
 	}
 
 	.menu-item-has-children a:after {
@@ -53,7 +58,7 @@
 		margin: 0;
 
 		a {
-			color: #fff !important;
+			color: #fff;
 			font-size: 20px;
 			text-transform: uppercase;
 			letter-spacing: 1px;
@@ -61,15 +66,21 @@
 			padding-left: 0;
 
 			&:hover {
+				color: $color__link;
 				background-color: transparent;
 			}
 		}
 	}
 
+	.skip-link {
+		color: black;
+		line-height: 1.5;
+	}
+
 	.current_page_item > a,
 	.current-menu-item > a {
 		background-color: $color__background-main-nav-current;
-		color: white;
+		color: white !important;
 		font-weight: bold;
 	}
 
@@ -89,12 +100,12 @@
 @media screen and (max-width: 600px) {
 
 	.menu-toggle,
-	.main-navigation.toggled .nav-menu {
+	#site-navigation.toggled .nav-menu {
 		display: block;
 		float: right;
 	}
 
-	.main-navigation {
+	#site-navigation {
 
 		ul {
 			display: none;
@@ -109,9 +120,10 @@
 		}
 
 		li {
-			border-top: 1px solid rgba(255,255,255,.5);
+			border-top: 1px solid rgba(255,255,255,0.5);
 			display: block;
 			width: 100%;
+
 
 			&:last-of-type {
 				border-bottom: none;
@@ -128,16 +140,11 @@
 
 @media screen and (min-width: 601px) {
 
-	.main-navigation {
+	#site-navigation {
 
 		a {
 			padding-left: 12px;
 			padding-right: 12px;
-
-			&:hover {
-				background-color: #fff;
-				color: #0066cc;
-			}
 		}
 
 		ul ul {

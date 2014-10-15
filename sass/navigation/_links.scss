@@ -1,10 +1,9 @@
 a {
-	color: $color__link;
-	text-decoration: none;
-	@include transition(.3);
-
+	&:link,
 	&:visited {
-		color: $color__link-visited;
+		color: $color__link;
+		text-decoration: none;
+		@include transition(all, 0.3s, ease-in-out);
 	}
 	&:hover,
 	&:focus,
@@ -18,26 +17,20 @@ a {
 
 	.btn & {
 		background-color: $color__background-btn;
-		color: #404040;
+		color: $color__text-main !important;
 		display: inline-block;
 	}
 	.btn-sm & {
-		padding: 2px 8px;	
+		padding: 2px 8px;
 	}
 	.btn-lg & {
-		padding: 12px 16px;	
+		padding: 12px 16px;
 	}
 	.btn &:hover,
 	.btn &:focus,
 	.btn &:active {
 		background-color: $color__background-btn-hover;
-		color: #fff;
-	}
-
-	#colophon & {
-		color: #cdcdcd;
-		font-size: .65em;
-		font-weight: $font__weight-bold;
+		color: white !important;
 	}
 }
 
