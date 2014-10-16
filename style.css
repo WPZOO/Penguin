@@ -5,7 +5,7 @@ Theme URI: http://wpzoo.ch/themes/penguin/
 Author: WPZOO [Stefan Brechbühl]
 Author URI: http://wpzoo.ch/
 Description: PENGU!N is a clean and modern WordPress theme made by WPZOO. Besides the link color the used colors are monochromatic. The post thumbnail will be used as a big header image on single post pages as well as Pages. These theme characteristics make it possible to use PENGU!N for bloggin' as well as a magazin theme.
-Version: 1.0.alpha
+Version: 1.0.beta
 License: GNU General Public License v3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: penguin
@@ -571,8 +571,11 @@ input[type="submit"] {
 	line-height: 1;
 	padding: 15px;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-	-webkit-transition: 0.3;
-	transition: 0.3;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 @media screen and (min-width: 992px) {
 	button,
@@ -644,8 +647,11 @@ textarea {
 	border-radius: 0;
 	color: #666;
 	padding: 10.5px;
-	-webkit-transition: 0.3;
-	transition: 0.3;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 input[type="text"]:focus,
@@ -774,8 +780,11 @@ object {
 .gallery-item a img {
 	border: 3px solid #fff;
 	box-shadow: 0px 1px 3px #ccc;
-	-webkit-transition: 0.3;
-	transition: 0.3;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 .gallery-item a:hover img,
 .gallery-item a:active img,
@@ -829,14 +838,14 @@ object {
 /*--------------------------------------------------------------
 6.1 Links
 --------------------------------------------------------------*/
-a {
+a:link, a:visited {
 	color: #0066cc;
 	text-decoration: none;
-	-webkit-transition: 0.3;
-	transition: 0.3;
-}
-a:visited {
-	color: #0066cc;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 a:hover, a:focus, a:active {
 	color: #404040;
@@ -846,7 +855,7 @@ p a {
 }
 .btn a {
 	background-color: #ddd;
-	color: #404040;
+	color: #404040 !important;
 	display: inline-block;
 }
 .btn-sm a {
@@ -857,12 +866,7 @@ p a {
 }
 .btn a:hover, .btn a:focus, .btn a:active {
 	background-color: #0066cc;
-	color: #fff;
-}
-#colophon a {
-	color: #cdcdcd;
-	font-size: .65em;
-	font-weight: 600;
+	color: white !important;
 }
 
 .page-links {
@@ -876,7 +880,7 @@ p a {
 /*--------------------------------------------------------------
 6.2 Menus
 --------------------------------------------------------------*/
-.main-navigation {
+#site-navigation {
 	background: rgba(0, 0, 0, 0.85);
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -888,20 +892,20 @@ p a {
 	position: relative;
 	width: 100%;
 }
-.has-headerimg .main-navigation {
+.has-headerimg #site-navigation {
 	position: absolute;
 	z-index: 1000;
 }
-.main-navigation ul {
+#site-navigation ul {
 	list-style: none;
 	margin: 0;
 }
-.main-navigation li {
+#site-navigation li {
 	float: left;
 	margin-right: 1px;
 	position: relative;
 }
-.main-navigation a {
+#site-navigation a {
 	color: #fff;
 	display: block;
 	font-size: .8em;
@@ -909,7 +913,11 @@ p a {
 	line-height: 50px;
 	text-decoration: none;
 }
-.main-navigation .menu-item-has-children a:after {
+#site-navigation a:hover {
+	background-color: #fff;
+	color: #0066cc;
+}
+#site-navigation .menu-item-has-children a:after {
 	content: '\e004';
 	font-family: 'penguin-icon-font';
 	font-size: .75em;
@@ -919,32 +927,37 @@ p a {
 	text-align: right;
 	vertical-align: text-bottom;
 }
-.main-navigation .menu-item-has-children ul a:after {
+#site-navigation .menu-item-has-children ul a:after {
 	content: none;
 }
-.main-navigation .site-title {
+#site-navigation .site-title {
 	float: left;
 	margin: 0;
 }
-.main-navigation .site-title a {
-	color: #fff !important;
+#site-navigation .site-title a {
+	color: #fff;
 	font-size: 20px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	margin-right: 5px;
 	padding-left: 0;
 }
-.main-navigation .site-title a:hover {
+#site-navigation .site-title a:hover {
+	color: #0066cc;
 	background-color: transparent;
 }
-.main-navigation .current_page_item > a,
-.main-navigation .current-menu-item > a {
+#site-navigation .skip-link {
+	color: black;
+	line-height: 1.5;
+}
+#site-navigation .current_page_item > a,
+#site-navigation .current-menu-item > a {
 	background-color: #0066cc;
-	color: white;
+	color: white !important;
 	font-weight: bold;
 }
-.main-navigation .current_page_parent > a,
-.main-navigation .current-menu-parent > a {
+#site-navigation .current_page_parent > a,
+#site-navigation .current-menu-parent > a {
 	font-weight: bold;
 }
 
@@ -957,45 +970,45 @@ p a {
 
 @media screen and (max-width: 600px) {
 	.menu-toggle,
-	.main-navigation.toggled .nav-menu {
+	#site-navigation.toggled .nav-menu {
 		display: block;
 		float: right;
 	}
 
-	.main-navigation ul {
+	#site-navigation ul {
 		display: none;
 		max-height: 100%;
 		overflow-y: scroll;
 		text-indent: .5em;
 	}
-	.main-navigation ul ul {
+	#site-navigation ul ul {
 		display: block;
 		text-indent: 1.5em;
 	}
-	.main-navigation li {
+	#site-navigation li {
 		border-top: 1px solid rgba(255, 255, 255, 0.5);
 		display: block;
 		width: 100%;
 	}
-	.main-navigation li:last-of-type {
+	#site-navigation li:last-of-type {
 		border-bottom: none;
 	}
-	.main-navigation .menu-item-has-children a:after {
+	#site-navigation .menu-item-has-children a:after {
 		position: absolute;
 		right: .5em;
 		top: 23px;
 	}
 }
 @media screen and (min-width: 601px) {
-	.main-navigation a {
+	#site-navigation a {
 		padding-left: 12px;
 		padding-right: 12px;
 	}
-	.main-navigation a:hover {
+	#site-navigation a:hover {
 		background-color: #fff;
 		color: #0066cc;
 	}
-	.main-navigation ul ul {
+	#site-navigation ul ul {
 		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 		float: left;
 		position: absolute;
@@ -1003,14 +1016,14 @@ p a {
 		left: -999em;
 		z-index: 99999;
 	}
-	.main-navigation ul ul li {
+	#site-navigation ul ul li {
 		background-color: rgba(0, 0, 0, 0.85);
 	}
-	.main-navigation ul ul a {
+	#site-navigation ul ul a {
 		overflow: hidden;
 		width: 250px;
 	}
-	.main-navigation li:hover > ul {
+	#site-navigation li:hover > ul {
 		left: auto;
 	}
 }
@@ -1072,7 +1085,6 @@ p a {
 	width: 50px;
 	z-index: 2000;
 }
-
 .scrollToTop:before {
 	color: #fff;
 	content: "\e003";
@@ -1087,7 +1099,6 @@ p a {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
 .scrollToTop:hover {
 	text-decoration: none;
 }
@@ -1171,6 +1182,20 @@ p a {
 
 #colophon {
 	margin-bottom: 10px;
+}
+
+#poweredby {
+	color: #cdcdcd;
+	font-size: .85em;
+}
+@media screen and (min-width: 992px) {
+	#poweredby {
+		font-size: .75em;
+	}
+}
+#poweredby a {
+	color: #cdcdcd;
+	font-weight: 600;
 }
 
 .page-header {
@@ -1487,6 +1512,7 @@ article.format-link .entry-meta-bottom a:active {
 	margin-left: 0;
 	padding: 5px 10px;
 	position: relative;
+	width: auto;
 }
 .comment-list article:after {
 	content: '';
