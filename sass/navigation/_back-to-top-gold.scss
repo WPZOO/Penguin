@@ -1,0 +1,22 @@
+.scrollToTop {
+
+	.has-logo & {
+		height: 60px;
+		width: 60px;
+	}
+
+	.bright-navbar & {
+		background: $color__background-main-nav-bright;
+	}
+
+	&:before {
+
+		.bright-navbar & {
+			color: $color__text-main-nav-bright;
+		}
+
+		.has-logo & {
+			line-height: 60px;
+		}
+	}
+}

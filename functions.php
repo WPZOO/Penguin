@@ -117,6 +117,7 @@ require get_template_directory() . '/inc/template-tags.php';
  * PENGU!N specifics.
  */
 require get_template_directory() . '/inc/extras-penguin.php';
+require get_template_directory() . '/inc/extras-penguin-gold.php';
 
 /**
  * Custom functions that act independently of the theme templates.
@@ -129,18 +130,11 @@ require get_template_directory() . '/inc/extras-underscores.php';
 require get_template_directory() . '/inc/extras-plugins.php';
 
 /**
- * Custom Excerpt
+ * Customizer additions.
  */
-function excerpt_read_more_link($output) {
-	global $post;
-	return $output . '<a href="'. get_permalink($post->ID) . '" class="read-more-link">' . __("Read more", "penguin") . '</a>';
-}
-add_filter('the_excerpt', 'excerpt_read_more_link');
-
-function new_excerpt_more( $more ) {
-	return ' ...';
-}
-add_filter('excerpt_more', 'new_excerpt_more');
+require get_template_directory() . '/inc/customizer-library/customizer-library.php';
+require get_template_directory() . '/inc/customizer-options.php';
+require get_template_directory() . '/inc/customizer-styles.php';
 
 /*
  * Theme Hook Alliance files

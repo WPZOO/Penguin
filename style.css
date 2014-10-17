@@ -1027,6 +1027,58 @@ p a {
 		left: auto;
 	}
 }
+/* Gold styles */
+.bright-navbar #site-navigation {
+	background: rgba(255, 255, 255, 0.95);
+	color: #404040;
+}
+.bright-navbar #site-navigation a {
+	color: #404040;
+}
+.has-logo #site-navigation a {
+	height: 60px;
+	line-height: 60px;
+}
+#site-navigation .site-logo {
+	float: left;
+	height: 60px;
+	margin-right: 20px;
+	padding: 5px;
+}
+#site-navigation .site-logo:hover {
+	background-color: transparent;
+}
+#site-navigation .site-logo img {
+	max-height: 50px;
+}
+.bright-navbar #site-navigation .site-title a {
+	color: #404040;
+}
+
+.has-logo .menu-toggle {
+	padding-top: 15px;
+}
+
+@media screen and (max-width: 600px) {
+	.bright-navbar #site-navigation li {
+		border-top: 1px solid rgba(0, 0, 0, 0.5);
+	}
+	.has-logo #site-navigation .nav-menu {
+		margin-top: .5em;
+	}
+	.has-logo #site-navigation li a {
+		height: 50px;
+		line-height: 50px;
+	}
+}
+@media screen and (min-width: 601px) {
+	.has-logo #site-navigation ul ul {
+		top: 60px;
+	}
+	.bright-navbar #site-navigation ul ul li {
+		background-color: rgba(255, 255, 255, 0.95);
+	}
+}
 /*--------------------------------------------------------------
 6.3 Post / Page Nav
 --------------------------------------------------------------*/
@@ -1101,6 +1153,21 @@ p a {
 }
 .scrollToTop:hover {
 	text-decoration: none;
+}
+
+/* Gold styles */
+.has-logo .scrollToTop {
+	height: 60px;
+	width: 60px;
+}
+.bright-navbar .scrollToTop {
+	background: rgba(255, 255, 255, 0.95);
+}
+.bright-navbar .scrollToTop:before {
+	color: #404040;
+}
+.has-logo .scrollToTop:before {
+	line-height: 60px;
 }
 
 /*--------------------------------------------------------------

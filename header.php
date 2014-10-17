@@ -29,7 +29,14 @@
 	<?php tha_header_top(); ?>
 	<nav id="site-navigation" class="main-navigation clear" role="navigation">
 		<div class="container">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<?php $logo = get_theme_mod( 'logo' ); ?>
+			<?php if ($logo == '') { ?>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<?php } else { ?>
+				<a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<img title="<?php bloginfo( 'name' ); ?>" alt="<?php bloginfo( 'name' ); ?>" src="<?php echo $logo; ?>">
+				</a>
+			<?php } ?>
 			<span class="menu-toggle penguin-menu-icon"></span>
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'penguin' ); ?></a>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => '', 'depth' => 2 ) ); ?>
