@@ -902,7 +902,6 @@ p a {
 }
 #site-navigation li {
 	float: left;
-	margin-right: 1px;
 	position: relative;
 }
 #site-navigation a {
@@ -914,7 +913,7 @@ p a {
 	text-decoration: none;
 }
 #site-navigation a:hover {
-	background-color: #fff;
+	background-color: white;
 	color: #0066cc;
 }
 #site-navigation .menu-item-has-children a:after {
@@ -1004,10 +1003,6 @@ p a {
 		padding-left: 12px;
 		padding-right: 12px;
 	}
-	#site-navigation a:hover {
-		background-color: #fff;
-		color: #0066cc;
-	}
 	#site-navigation ul ul {
 		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 		float: left;
@@ -1035,6 +1030,21 @@ p a {
 .bright-navbar #site-navigation a {
 	color: #404040;
 }
+.bright-navbar #site-navigation a:hover {
+	background-color: rgba(0, 0, 0, 0.03);
+	color: #0066cc;
+}
+.bright-navbar #site-navigation .current_page_item > a,
+.bright-navbar #site-navigation .current-menu-item > a {
+	background-color: #0066cc;
+}
+.bright-navbar #site-navigation .site-title a {
+	color: #404040;
+}
+.bright-navbar #site-navigation .site-title a:hover {
+	background-color: transparent;
+	color: #0066cc;
+}
 .has-logo #site-navigation a {
 	height: 60px;
 	line-height: 60px;
@@ -1050,9 +1060,6 @@ p a {
 }
 #site-navigation .site-logo img {
 	max-height: 50px;
-}
-.bright-navbar #site-navigation .site-title a {
-	color: #404040;
 }
 
 .has-logo .menu-toggle {
@@ -1150,9 +1157,6 @@ p a {
 	line-height: 50px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-}
-.scrollToTop:hover {
-	text-decoration: none;
 }
 
 /* Gold styles */

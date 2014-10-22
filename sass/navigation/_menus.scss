@@ -20,7 +20,6 @@
 
 	li {
 		float: left;
-		margin-right: 1px;
 		position: relative;
 	}
 
@@ -33,7 +32,7 @@
 		text-decoration: none;
 
 		&:hover {
-			background-color: #fff;
+			background-color: white;
 			color: $color__link;
 		}
 	}
@@ -144,11 +143,6 @@
 		a {
 			padding-left: 12px;
 			padding-right: 12px;
-
-			&:hover {
-				background-color: #fff;
-				color: #0066cc;
-			}
 		}
 
 		ul ul {

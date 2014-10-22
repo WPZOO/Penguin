@@ -28,7 +28,8 @@ function customizer_library_penguin_build_styles() {
 			'selectors' => array(
 				'a:link',
 				'a:visited',
-				'#site-navigation.main-navigation a:hover',
+				'#site-navigation a:hover',
+				'.bright-navbar #site-navigation a:hover',
 				'button:hover',
 				'input[type="button"]:hover',
 				'input[type="reset"]:hover',

@@ -3,18 +3,34 @@
 	.bright-navbar & {
 		background: $color__background-main-nav-bright;
 		color: $color__text-main-nav-bright;
-	}
-
-	a {
-
-		.bright-navbar & {
+	
+		a {
 			color: $color__text-main-nav-bright;
 		}
 
-		.has-logo & {
-			height: 60px;
-			line-height: 60px;
+		a:hover {
+			background-color: $color__background-main-nav-hover-bright;
+			color: $color__link;
 		}
+
+		.current_page_item > a,
+		.current-menu-item > a {
+			background-color: $color__background-main-nav-current;
+		}
+
+		.site-title a {
+			color: $color__text-main-nav-bright;
+		}
+
+		.site-title a:hover {
+			background-color: transparent;
+			color: $color__link;
+		}
+	}
+
+	.has-logo & a {
+		height: 60px;
+		line-height: 60px;
 	}
 
 	.site-logo {
@@ -29,16 +45,6 @@
 
 		img {
 			max-height: 50px;
-		}
-	}
-
-	.site-title {
-
-		a {
-
-			.bright-navbar & {
-				color: $color__text-main-nav-bright;
-			}
 		}
 	}
 }
