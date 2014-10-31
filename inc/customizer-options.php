@@ -68,6 +68,29 @@ function penguin_options() {
 		'default' => $link_color,
 	);
 
+	// Sidebar
+	$section = 'sidebar';
+
+	$sections[] = array(
+		'id' => $section,
+		'title' => __( 'Sidebar', 'penguin' ),
+		'priority' => '130'
+	);
+
+	$sidebarchoices = array(
+		'sidebar-right' => __( 'Sidebar right', 'penguin' ),
+		'sidebar-left' => __( 'Sidebar left', 'penguin' ),
+	);
+
+	$options['sidebar-layout'] = array(
+		'id' => 'sidebar-layout',
+		'label'   => __( 'Sidebar', 'penguin' ),
+		'section' => $section,
+		'type'    => 'radio',
+		'choices' => $sidebarchoices,
+		'default' => 'sidebar-right'
+	);
+
 	// Footer
 	$section = 'footer';
 

@@ -1,7 +1,6 @@
 <?php
 /**
  * Defines theme specific functions
- *
  * @package PENGU!N Gold
  */
 
@@ -20,6 +19,21 @@ function add_logo_and_navbar_body_class( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'add_logo_and_navbar_body_class' );
+
+/**
+ * Sidebar layout
+ */
+function add_sidebar_body_class( $classes ) {
+	$sidebar = get_theme_mod( 'sidebar-layout' );
+	if ($sidebar == 'sidebar-left') {
+		$classes[] = 'sidebar-left';
+	}
+	else {
+		$classes[] = 'sidebar-right';
+	}
+	return $classes;
+}
+add_filter( 'body_class', 'add_sidebar_body_class' );
 
 /**
  * Footer text

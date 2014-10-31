@@ -1273,6 +1273,15 @@ p a {
 	margin-bottom: 1em;
 }
 
+@media screen and (min-width: 768px) {
+	.sidebar-left #primary {
+		float: right;
+	}
+
+	.sidebar-left #secondary {
+		float: left;
+	}
+}
 /*--------------------------------------------------------------
 7.1 Posts and pages
 --------------------------------------------------------------*/

@@ -5,6 +5,7 @@
  * @package pengu!n
  */
 ?>
+
 <?php tha_sidebars_before(); ?>
 <div id="secondary" class="widget-area" role="complementary">
 	<?php tha_sidebar_top(); ?>
