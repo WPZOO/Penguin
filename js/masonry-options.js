@@ -9,6 +9,6 @@ imagesLoaded( container, function() {
 	msnry = new Masonry( container, {
 		columnWidth: 400,
 		gutter: 32,
-		itemSelector: '.post'
+		itemSelector: '.hentry'
 	});
 });
