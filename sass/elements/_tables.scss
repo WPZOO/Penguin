@@ -1,6 +1,6 @@
 table {
 	margin: 0 0 1.5em;
-	width: 100%;
+	max-width: 100%;
 }
 
 table > thead > tr > th,
@@ -9,7 +9,7 @@ table > tfoot > tr > th,
 table > thead > tr > td,
 table > tbody > tr > td,
 table > tfoot > tr > td {
-	padding: 8px;
+	padding: 6px;
 	line-height: 1.42857143;
 	vertical-align: top;
 	border-top: 1px solid #dddddd;
@@ -38,28 +38,6 @@ table > tbody > tr:nth-child(odd) > th {
 	background-color: #f9f9f9;
 }
 
-td#next {
-	text-align: right;
-}
-
 th {
 	font-weight: bold;
-}
-
-@media screen and (max-width: 767px) {
-	.table-responsive {
-		border: 1px solid #ddd;
-		margin: 0 0 1.5em;
-		overflow-y: hidden;
-		overflow-x: scroll;
-		-ms-overflow-style: -ms-autohiding-scrollbar;
-		-webkit-overflow-scrolling: touch;
-	}
-	.table-responsive table {
-		margin: 3px;
-	}
-	.table-responsive th,
-	.table-responsive td {
-		white-space: nowrap;
-	}
 }

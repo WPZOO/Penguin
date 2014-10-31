@@ -470,7 +470,7 @@ figure {
 
 table {
 	margin: 0 0 1.5em;
-	width: 100%;
+	max-width: 100%;
 }
 
 table > thead > tr > th,
@@ -479,7 +479,7 @@ table > tfoot > tr > th,
 table > thead > tr > td,
 table > tbody > tr > td,
 table > tfoot > tr > td {
-	padding: 8px;
+	padding: 6px;
 	line-height: 1.42857143;
 	vertical-align: top;
 	border-top: 1px solid #dddddd;
@@ -508,33 +508,10 @@ table > tbody > tr:nth-child(odd) > th {
 	background-color: #f9f9f9;
 }
 
-td#next {
-	text-align: right;
-}
-
 th {
 	font-weight: bold;
 }
 
-@media screen and (max-width: 767px) {
-	.table-responsive {
-		border: 1px solid #ddd;
-		margin: 0 0 1.5em;
-		overflow-y: hidden;
-		overflow-x: scroll;
-		-ms-overflow-style: -ms-autohiding-scrollbar;
-		-webkit-overflow-scrolling: touch;
-	}
-
-	.table-responsive table {
-		margin: 3px;
-	}
-
-	.table-responsive th,
-	.table-responsive td {
-		white-space: nowrap;
-	}
-}
 /*--------------------------------------------------------------
 4.0 – Forms
 --------------------------------------------------------------*/
@@ -1055,7 +1032,7 @@ p a {
 	margin-right: 20px;
 	padding: 5px;
 }
-#site-navigation .site-logo:hover {
+#site-navigation .site-logo:hover, .bright-navbar #site-navigation .site-logo:hover {
 	background-color: transparent;
 }
 #site-navigation .site-logo img {
@@ -1211,6 +1188,12 @@ p a {
 	padding-right: 15px;
 	padding-left: 15px;
 	position: relative;
+}
+@media screen and (min-width: 768px) {
+	#primary,
+	#secondary {
+		margin-top: 1.5em;
+	}
 }
 
 @media screen and (min-width: 768px) {
@@ -1535,11 +1518,13 @@ article.format-link .entry-meta-bottom a:active {
 --------------------------------------------------------------*/
 @media only screen and (min-width: 768px) {
 	#comments {
+		margin-top: 1em;
 		margin-left: 20px;
 	}
 }
 @media only screen and (min-width: 992px) {
 	#comments {
+		margin-top: 2em;
 		margin-left: 50px;
 		margin-right: 50px;
 	}
@@ -1652,7 +1637,7 @@ article.format-link .entry-meta-bottom a:active {
 /*--------------------------------------------------------------
 7.4 Widgets
 --------------------------------------------------------------*/
-.widget {
+#secondary .widget {
 	margin: 0 0 2em;
 }
 @media only screen and (min-width: 992px) {
@@ -1698,12 +1683,24 @@ article.format-link .entry-meta-bottom a:active {
 
 /* Calendar widget */
 #calendar_wrap table {
+	margin-left: auto;
+	margin-right: auto;
 	margin-bottom: 0;
+	max-width: 300px;
+	width: 100%;
 }
-@media screen and (min-width: 768px) and (max-width: 991px) {
-	#calendar_wrap table {
-		font-size: 0.8em;
-	}
+#calendar_wrap table th, #calendar_wrap table td {
+	text-align: center;
+}
+#calendar_wrap table #prev {
+	text-align: left;
+}
+#calendar_wrap table #next {
+	text-align: right;
+}
+
+.before-content-home .widget {
+	margin-top: 1.5em;
 }
 
 /*--------------------------------------------------------------

@@ -3,7 +3,7 @@
 	.bright-navbar & {
 		background: $color__background-main-nav-bright;
 		color: $color__text-main-nav-bright;
-	
+
 		a {
 			color: $color__text-main-nav-bright;
 		}
@@ -39,7 +39,8 @@
 		margin-right: 20px;
 		padding: 5px;
 
-		&:hover {
+		&:hover,
+		.bright-navbar &:hover {
 			background-color: transparent;
 		}
 
