@@ -115,11 +115,11 @@ function penguin_wp_footer() { ?>
 	<script>
 		fluidvids.init({
 			selector: ['iframe'],
-			players: ['www.youtube.com', 'player.vimeo.com']
+			players: ['www.youtube.com', 'www.youtube-nocookie.com', 'player.vimeo.com']
 		});
 	</script>
 <?php }
-add_action( 'wp_footer', 'penguin_wp_footer' );
+add_action( 'wp_footer', 'penguin_wp_footer', 21 );
 
 /**
  * Custom template tags for this theme.
