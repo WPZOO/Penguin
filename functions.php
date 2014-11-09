@@ -100,13 +100,26 @@ function penguin_scripts() {
 		wp_enqueue_script( 'penguin-masonry-options', get_template_directory_uri() . '/js/min/masonry-options.min.js', array( 'masonry' ), '1.0', true );
 	}
 	wp_enqueue_script( 'penguin-navigation', get_template_directory_uri() . '/js/min/navigation.min.js', array( 'jquery' ), '20120206', true );
-	wp_enqueue_script( 'fitvids', get_template_directory_uri() . '/js/min/fitvids.min.js', array( 'jquery' ), '1.1', true );
+	wp_enqueue_script( 'fluidvids', get_template_directory_uri() . '/js/min/fluidvids.min.js', array(), '2.4.1', true );
 	wp_enqueue_script( 'penguin-skip-link-focus-fix', get_template_directory_uri() . '/js/min/skip-link-focus-fix.min.js', array(), '20130115', true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'penguin_scripts' );
+
+/**
+ * Add script to footer
+ */
+function penguin_wp_footer() { ?>
+	<script>
+		fluidvids.init({
+			selector: ['iframe'],
+			players: ['www.youtube.com', 'player.vimeo.com']
+		});
+	</script>
+<?php }
+add_action( 'wp_footer', 'penguin_wp_footer' );
 
 /**
  * Custom template tags for this theme.
