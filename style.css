@@ -1121,6 +1121,9 @@ p a {
 	width: 50px;
 	z-index: 2000;
 }
+.admin-bar .scrollToTop {
+	top: 32px;
+}
 .scrollToTop:before {
 	color: #fff;
 	content: "\e003";
