@@ -10,6 +10,10 @@
 	width: 50px;
 	z-index: 2000;
 
+	.admin-bar & {
+		top: 32px;
+	}
+
 	&:before {
 		color: $color__text-main-nav;
 		content: "\e003";
