@@ -1121,8 +1121,10 @@ p a {
 	width: 50px;
 	z-index: 2000;
 }
-.admin-bar .scrollToTop {
-	top: 32px;
+@media screen and (min-width: 783px) {
+	.admin-bar .scrollToTop {
+		top: 32px;
+	}
 }
 .scrollToTop:before {
 	color: #fff;
