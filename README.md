@@ -1,33 +1,28 @@
-PENGU!N
-=======
+# PENGU!N
+![Screenshot of the WordPress Theme PENGU!N](screenshot.png)
 
-*Alpha Status*
+*Beta Status*
 
-WordPress Theme by WPZOO
--------
-PENGU!N is a clean and modern WordPress theme made by [WPZOO](http://wpzoo.ch/). Besides the link color, all colors are monochromatic. The post thumbnail will be used as a big header image on single post pages as well as Pages. These theme characteristics make it possible to use PENGU!N for bloggin' as well as a magazin theme.
+## WordPress Theme by WPZOO
+PENGU!N is a clean and modern WordPress theme made by [WPZOO](http://wpzoo.ch/). Besides the link color, it consists of clean shades of grays. The post thumbnail will be used as a big header image on single posts as well as pages. PENGU!N theme can be used as blogging as well as a magazin theme.
 
-Moreover PENGU!N is a responsive, mobile first theme. This means it will be a pleasure to read the site on a smartphone as well as on a desktop computer.
+Moreover PENGU!N is a responsive, mobile first theme. That means reading your website on mobile device will be as on a desktop computer.
 
-The official theme data of PENGU!N will be provided on:
-- [WordPress.org](https://wordpress.org/themes/penguin/) or
-- [Github](https://github.com/wpzoo/penguin/).
+### PENGU!N and PENGU!N Gold
+The free version of the theme is available on wordpress.org. We also have built a pro version of it which we call PENGU!N Gold. The Gold version includes theme options which help you to personalize your website.
+
+### Documentation & Support
+If you have any question using this theme, please visit our documentation page. If your issue will still be there after reading our documentation, please ask your question in our forum.
+
+When you're coming across a theme bug – please contact us directly with the help of our bug form.
+
+If you are a Gold member we'll serve you with private email support. However you need to contact us via the contact form on our member site.
 
 ### License
 This theme is licensed under the GNU General Public License version 3. All ressources which have been included are provided with the same or a compatible license. Read more in [license.txt](/license.txt).
 
-### Documentation & Support
-If you have any question using this theme, please visit our documentation.
-
-When you're coming across a bug we haven't explored – please don't hesitate to contact us directly!
-
-Please use our support forum if the documentation doesn't help you solving your problem. The support of the WPZOO is limited to questions we think there is a additional benefit for all users. If you prefer personal support, have a look at our Gold version.
-
-### PENGU!N Gold
-The guys from WPZOO have built a pro version of PENGU!N as well. As already mentioned, there is personal support and other goodies you might like. Find out more about PENGU!N Gold.
-
 ## Credits
-Luckily we hadn't to reinvent the wheel and got help for this theme. Thanks a lot all the following folks who shared their work in a GPL friendly way.
+Thanks a lot to all people who are involved in the following projects.
 
 ### Translations
 PENGU!N has been translated into the following languages so far:
@@ -35,15 +30,19 @@ PENGU!N has been translated into the following languages so far:
 
 If you are a multilangual and wanna help us make PENGU!N even more international, join us on [webtranslateit.com](https://webtranslateit.com/en/projects/9863-PENGU-N).
 
-### Starting on a professional base
-PENGU!N is based on the well known and well maintained starter theme _s (underscores).
+### Starting point
+PENGU!N is based on the well known and maintained [starter theme _s](https://github.com/Automattic/_s) (underscores).
 
 ### Font / icon font
-PENGU!N's typeface is the elegant sans-serif font Raleway, hosted on Google and shared with the SIL Open Font License.
+PENGU!N's typeface is the elegant sans-serif font [Raleway](http://www.google.com/fonts/specimen/Raleway), hosted on Google and shared with the SIL Open Font License.
 
-The icon font used in PENGU!N only contains the icons which are really needed. These icons coming from the ionicons font which have designed by @benjsperry and licensed under MIT.
+The icon font used in PENGU!N only contains the icons which are really needed. These icons coming from the [ionicons](http://ionicons.com/) font which have designed by [@benjsperry](https://twitter.com/benjsperry) and licensed under MIT.
 
 ### Masonry
+The multi column layout which appears on a bigger screen has implemented with the help of [Masonry](http://masonry.desandro.com/), a JavaScript grid layout library. Masonry is available under the MIT license.
 
-### Fluidvids/Fitvids
+### Customizer Library
+This is a helpful library for working with the influded WordPress Theme customizer. [Customizer](https://github.com/devinsays/customizer-library) Library is shared by Devin Price on github.
 
+### Fluidvids
+[Fluidvids](https://github.com/toddmotto/fluidvids) is a JavaScript library and helps PENGU!N to show your embed videos in a responsive way. Fluidvids is available under the MIT license.
