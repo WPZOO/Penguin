@@ -1,22 +1,24 @@
-.blog .format-aside .entry-title,
-.archive .format-aside .entry-title,
-.blog .format-quote .entry-title,
-.archive .format-quote .entry-title,
-.blog .format-quote .entry-meta-bottom,
-.archive .format-quote .entry-meta-bottom,
-.blog .format-link .entry-title,
-.archive .format-link .entry-title,
-.blog .format-link .entry-meta-bottom,
-.archive .format-link .entry-meta-bottom,
-.blog .format-video .entry-title,
-.archive .format-video .entry-title,
-.blog .format-video .entry-meta-bottom,
-.archive .format-video .entry-meta-bottom,
-.blog .format-image .entry-title,
-.archive .format-image .entry-title,
-.blog .format-image .entry-meta-bottom,
-.archive .format-image .entry-meta-bottom {
+.format-aside .entry-title,
+.format-quote .entry-title,
+.format-quote .entry-meta-bottom,
+.format-link .entry-title,
+.format-link .entry-meta-bottom,
+.format-video .entry-title,
+.format-video .entry-meta-bottom,
+.format-image .entry-title,
+.format-image .entry-meta-bottom {
 	display: none;
+}
+.single .format-aside .entry-title,
+.single .format-quote .entry-title,
+.single .format-quote .entry-meta-bottom,
+.single .format-link .entry-title,
+.single .format-link .entry-meta-bottom,
+.single .format-video .entry-title,
+.single .format-video .entry-meta-bottom,
+.single .format-image .entry-title,
+.single .format-image .entry-meta-bottom {
+	display: block;
 }
 /* Post Format Quote */
 article.format-quote {

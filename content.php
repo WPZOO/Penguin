@@ -30,7 +30,7 @@
 
 	</header><!-- .entry-header -->
 
-	<?php if ( !has_post_format() || has_post_format('gallery') || is_search() ) : ?>
+	<?php if ( ! has_post_format() ) : ?>
 		<div class="entry-summary">
 			<?php the_excerpt(); ?>
 		</div><!-- .entry-summary -->
