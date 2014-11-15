@@ -93,6 +93,9 @@ add_action( 'widgets_init', 'penguin_widgets_init' );
  * Enqueue scripts and styles.
  */
 function penguin_scripts() {
+	if ( is_child_theme() ) {
+		wp_enqueue_style( 'penguin-parent-style', get_template_directory_uri() . '/style.css' );
+	}
 	wp_enqueue_style( 'penguin-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'penguin-font', '//fonts.googleapis.com/css?family=Raleway:300,600' );
 
