@@ -94,9 +94,11 @@ add_action( 'widgets_init', 'penguin_widgets_init' );
  */
 function penguin_scripts() {
 	if ( is_child_theme() ) {
-		wp_enqueue_style( 'penguin-parent-style', get_template_directory_uri() . '/style.css' );
+		$penguin = wp_get_theme( 'penguin' );
+		wp_enqueue_style( 'penguin-parent-style', get_template_directory_uri() . '/style.css', false, $penguin['Version'] );
 	}
-	wp_enqueue_style( 'penguin-style', get_stylesheet_uri() );
+	$theme = wp_get_theme();
+	wp_enqueue_style( 'penguin-style', get_stylesheet_uri(), false, $theme['Version'] );
 	wp_enqueue_style( 'penguin-font', '//fonts.googleapis.com/css?family=Raleway:300,600' );
 
 	if ( is_home() || is_archive() || is_search() ) {
