@@ -116,14 +116,17 @@ add_action( 'wp_enqueue_scripts', 'penguin_scripts' );
 /**
  * Add script to footer
  */
-function penguin_wp_footer() { ?>
+function penguin_wp_footer() {
+	// Do not add script if FluidVids plugin is installed
+	if ( ! class_exists( 'FluidVids' ) ) { ?>
 	<script>
 		fluidvids.init({
 			selector: ['iframe'],
 			players: ['www.youtube.com', 'www.youtube-nocookie.com', 'player.vimeo.com']
 		});
 	</script>
-<?php }
+	<?php }
+}
 add_action( 'wp_footer', 'penguin_wp_footer', 21 );
 
 /**
