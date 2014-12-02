@@ -2,7 +2,7 @@
 /**
  * pengu!n functions and definitions
  *
- * @package pengu!n
+ * @package PENGU!N
  */
 
 /**

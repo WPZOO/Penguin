@@ -2,7 +2,7 @@
 /**
  * Implements styles set in the theme customizer
  *
- * @package penguin
+ * @package PENGU!N
  */
 
 if ( ! function_exists( 'customizer_library_penguin_build_styles' ) && class_exists( 'Customizer_Library_Styles' ) ) :

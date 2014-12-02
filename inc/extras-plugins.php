@@ -2,7 +2,7 @@
 /**
  * Plugins Compatibility File
  *
- * @package pengu!n
+ * @package PENGU!N
  */
 
 /**

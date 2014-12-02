@@ -1,6 +1,7 @@
 <?php
 /**
  * Defines theme specific functions
+ *
  * @package PENGU!N Gold
  */
 

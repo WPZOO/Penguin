@@ -3,7 +3,7 @@
  * The Header for our theme.
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package pengu!n
+ * @package PENGU!N
  */
 ?>
 <!DOCTYPE html>

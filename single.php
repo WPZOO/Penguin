@@ -2,7 +2,7 @@
 /**
  * The Template for displaying all single posts.
  *
- * @package pengu!n
+ * @package PENGU!N
  */
 
 get_header(); ?>

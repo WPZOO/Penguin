@@ -2,7 +2,7 @@
 /**
  * The template for displaying Search Results pages.
  *
- * @package pengu!n
+ * @package PENGU!N
  */
 
 get_header(); ?>

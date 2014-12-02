@@ -2,7 +2,7 @@
 /**
  * Defines customizer options
  *
- * @package penguin
+ * @package PENGU!N
  */
 
 function penguin_options() {

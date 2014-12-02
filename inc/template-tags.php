@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package pengu!n
+ * @package PENGU!N
  */
 
 if ( ! function_exists( 'penguin_paging_nav' ) ) :

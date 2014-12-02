@@ -1,6 +1,6 @@
 <?php
 /**
- * @package pengu!n
+ * @package PENGU!N
  */
 ?>
 
