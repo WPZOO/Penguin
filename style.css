@@ -1272,27 +1272,37 @@ p a {
 /*--------------------------------------------------------------
 7.1 Posts and pages
 --------------------------------------------------------------*/
-article.post,
-article.page,
-article.attachment {
+.hentry {
 	background-color: #fff;
 	border-top: 3px solid #bcbcbc;
 	border-bottom: 1px solid #bbb;
 	border-right: 1px solid #ddd;
 	box-shadow: 0 2px 1px #dedede;
+	margin-bottom: 1em;
+	padding: 5px 0;
 	position: relative;
 	width: 100%;
 }
+@media screen and (min-width: 600px) and (max-width: 991px) {
+	.hentry {
+		padding: 15px 0;
+	}
+}
+@media screen and (min-width: 992px) {
+	.hentry {
+		padding: 25px 0;
+	}
+}
 
 @media screen and (min-width: 1200px) {
-	article.post,
-	.search article.page {
+	.post.hentry,
+	.search .page.hentry {
 		width: 49%;
 	}
 }
 
-article.sticky,
-.single article {
+.hentry.sticky,
+.single .hentry {
 	width: 100%;
 }
 
@@ -1316,21 +1326,6 @@ article.sticky,
 .post.has-post-thumbnail,
 .page.has-post-thumbnail {
 	border-top: none;
-}
-
-.hentry {
-	margin-bottom: 1em;
-	padding: 5px 0;
-}
-@media screen and (min-width: 600px) and (max-width: 991px) {
-	.hentry {
-		padding: 15px 0;
-	}
-}
-@media screen and (min-width: 992px) {
-	.hentry {
-		padding: 25px 0;
-	}
 }
 
 .blog .has-post-thumbnail.hentry,
