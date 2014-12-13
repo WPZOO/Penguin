@@ -117,9 +117,9 @@ function penguin_options() {
 		'priority' => '200'
 	);
 
-	$options['js'] = array(
-		'id' => 'js-load',
-		'label'   => __( 'Load only one minified javascript file', 'penguin' ),
+	$options['min-files'] = array(
+		'id' => 'min-files',
+		'label'   => __( 'Minified CSS and JS', 'penguin' ),
 		'section' => $section,
 		'type'    => 'checkbox',
 		'default' => 0,
