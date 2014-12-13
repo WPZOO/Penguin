@@ -11,5 +11,5 @@ Thumbs.db
 **/.sass-cache
 **/.sass-cache/*
 
-# CodeKit
-config.codekit
+# Node Modules
+node_modules
