@@ -2,7 +2,7 @@
 /**
  * Defines customizer options
  *
- * @package PENGU!N
+ * @package PENGU!N Gold
  */
 
 function penguin_options() {

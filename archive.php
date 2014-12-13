@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package PENGU!N
+ * @package PENGU!N Gold
  */
 
 get_header(); ?>

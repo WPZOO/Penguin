@@ -5,7 +5,7 @@
  * The area of the page that contains both current comments
  * and the comment form.
  *
- * @package PENGU!N
+ * @package PENGU!N Gold
  */
 
 /*
@@ -40,9 +40,9 @@ if ( post_password_required() ) {
 		<ol class="comment-list">
 			<?php
 				wp_list_comments( array(
-					'style'      	=> 'ol',
-					'short_ping' 	=> true,
-					'avatar_size'   => 64,
+					'style'					=> 'ol',
+					'short_ping'		=> true,
+					'avatar_size'		=> 64,
 				) );
 			?>
 		</ol><!-- .comment-list -->

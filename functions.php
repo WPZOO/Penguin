@@ -2,7 +2,7 @@
 /**
  * pengu!n functions and definitions
  *
- * @package PENGU!N
+ * @package PENGU!N Gold
  */
 
 /**
@@ -78,13 +78,13 @@ add_action( 'after_setup_theme', 'penguin_setup' );
  */
 function penguin_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'penguin' ),
-		'id'            => 'sidebar-1',
-		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'name'					=> __( 'Sidebar', 'penguin' ),
+		'id'						=> 'sidebar-1',
+		'description'		=> '',
+		'before_widget'	=> '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'	=> '</aside>',
+		'before_title'	=> '<h1 class="widget-title">',
+		'after_title'		=> '</h1>',
 	) );
 }
 add_action( 'widgets_init', 'penguin_widgets_init' );
@@ -137,7 +137,6 @@ require get_template_directory() . '/inc/template-tags.php';
 /**
  * PENGU!N specifics.
  */
-require get_template_directory() . '/inc/extras-penguin.php';
 require get_template_directory() . '/inc/extras-penguin-gold.php';
 
 /**
