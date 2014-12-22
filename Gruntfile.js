@@ -52,7 +52,7 @@ module.exports = function(grunt) {
 				tasks: ['uglify'],
 			},
 			css: {
-				files: ['sass/*.scss'],
+				files: ['sass/**/*.scss'],
 				tasks: ['sass', 'fixindent', 'cssmin'],
 			},
 		}
