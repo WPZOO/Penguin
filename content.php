@@ -28,7 +28,6 @@
 	<?php get_template_part( 'template-parts/meta', 'bottom' ); ?>
 	<?php endif; // End if 'post' == get_post_type() ?>
 
-</article><!-- #post-## -->
 	<?php tha_entry_bottom(); ?>
 </article><!-- #post-## -->
 <?php tha_entry_after(); ?>
