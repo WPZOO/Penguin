@@ -85,3 +85,14 @@ function poweredbygold() {
 	}
 }
 add_action( 'tha_footer_bottom', 'poweredbygold' );
+
+/**
+ * Body class for page template
+ */
+function fullwidth_body_class( $classes ) {
+	if ( is_page_template( 'page-fullwidth.php' ) ) {
+			$classes[] = 'fullwidth';
+	}
+	return $classes;
+}
+add_filter( 'body_class','fullwidth_body_class' );

@@ -33,7 +33,6 @@
 	@media screen and (min-width: 768px) {
 		margin-top: 1.5em;
 	}
-
 }
 
 #primary {
@@ -46,6 +45,11 @@
 		float: left;
 		width: 75%;
 	}
+}
+
+.fullwidth #primary {
+	float: none;
+	width: 100%;
 }
 
 #secondary {

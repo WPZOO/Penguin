@@ -1213,6 +1213,11 @@ p a {
 	}
 }
 
+.fullwidth #primary {
+	float: none;
+	width: 100%;
+}
+
 @media screen and (min-width: 400px) and (max-width: 767px) {
 	#secondary {
 		margin-left: auto;
