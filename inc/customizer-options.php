@@ -68,6 +68,24 @@ function penguin_options() {
 		'default'       => $link_color,
 	);
 
+	// Navigation
+	$section = 'nav';
+
+	$sections[] = array(
+		'id'            => $section,
+		'title'         => __( 'Navigation', 'penguin' ),
+		'priority'      => '100'
+	);
+
+	$options['menu-search'] = array(
+		'id'            => 'menu-search',
+		'label'         => __( 'Add search box to primary menu', 'penguin' ),
+		'section'       => $section,
+		'type'          => 'checkbox',
+		'default'       => 0,
+		'priority'      => '100'
+	);
+
 	// Sidebar
 	$section = 'sidebar';
 
@@ -102,7 +120,7 @@ function penguin_options() {
 
 	$options['footer-text'] = array(
 		'id'            => 'footer-text',
-		'label'         => __( 'Your own footer text', 'penguin' ),
+		'label'         => __( 'Custom footer text', 'penguin' ),
 		'section'       => $section,
 		'type'          => 'textarea',
 		'default'       => ''
@@ -112,17 +130,17 @@ function penguin_options() {
 	$section = 'advanced';
 
 	$sections[] = array(
-		'id'           => $section,
-		'title'        => __( 'Advanced', 'penguin' ),
-		'priority'     => '200'
+		'id'            => $section,
+		'title'         => __( 'Advanced', 'penguin' ),
+		'priority'      => '200'
 	);
 
 	$options['min-files'] = array(
-		'id'           => 'min-files',
-		'label'        => __( 'Minified CSS and JS', 'penguin' ),
-		'section'      => $section,
-		'type'         => 'checkbox',
-		'default'      => 0,
+		'id'            => 'min-files',
+		'label'         => __( 'Minified CSS and JS', 'penguin' ),
+		'section'       => $section,
+		'type'          => 'checkbox',
+		'default'       => 0,
 	);
 
 	// Adds the sections to the $options array

@@ -56,6 +56,24 @@ function add_logo_and_navbar_body_class( $classes ) {
 add_filter( 'body_class', 'add_logo_and_navbar_body_class' );
 
 /**
+ * Add search box to primary menu
+ */
+function add_search_box($items, $args) {
+	$menusearch = get_theme_mod( 'menu-search' );
+	if ( $menusearch == 1 ) {
+		ob_start();
+		get_search_form();
+		$searchform = ob_get_contents();
+		ob_end_clean();
+
+		$items .= '<li class="menu-search"><span class="penguin-search-icon"></span>' . $searchform . '</li>';
+	}
+	return $items;
+}
+add_filter('wp_nav_menu_items','add_search_box', 10, 2);
+
+
+/**
  * Sidebar layout
  */
 function add_sidebar_body_class( $classes ) {

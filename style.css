@@ -421,6 +421,10 @@ big,
 	content: "\e004";
 }
 
+.penguin-search-icon:before {
+	content: "\e005";
+}
+
 /*--------------------------------------------------------------
 3.0 – Elements
 --------------------------------------------------------------*/
@@ -546,7 +550,7 @@ input[type="submit"] {
 	/* Improves usability and consistency of cursor style between image-type 'input' and others */
 	font-size: .85em;
 	line-height: 1;
-	padding: 15px;
+	padding: 16px 25px;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
@@ -936,6 +940,11 @@ p a {
 	font-weight: bold;
 }
 
+.menu-search .penguin-search-icon,
+.menu-search .search-submit {
+	display: none;
+}
+
 .menu-toggle {
 	cursor: pointer;
 	display: none;
@@ -968,10 +977,20 @@ p a {
 	#site-navigation li:last-of-type {
 		border-bottom: none;
 	}
-	#site-navigation .menu-item-has-children a:after {
+
+	#masthead .menu-item-has-children a:after {
 		position: absolute;
 		right: .5em;
 		top: 23px;
+	}
+	#masthead .menu-search {
+		padding: 5px 16px 5px 0;
+	}
+	#masthead .menu-search .search-field {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		width: 100%;
 	}
 }
 @media screen and (min-width: 601px) {
@@ -996,6 +1015,44 @@ p a {
 	}
 	#site-navigation li:hover > ul {
 		left: auto;
+	}
+
+	#masthead .menu-search {
+		display: block;
+		float: right;
+		height: 50px;
+		position: relative;
+		min-width: 25px;
+		z-index: 2000;
+	}
+	.has-logo #masthead .menu-search {
+		margin: 5px 0;
+	}
+	#masthead .menu-search .search-field {
+		background-color: transparent;
+		border-width: 0px;
+		cursor: pointer;
+		position: absolute;
+		right: 0;
+		text-indent: 25px;
+		-webkit-transition: all 0.2s ease-in-out;
+		-moz-transition: all 0.2s ease-in-out;
+		-ms-transition: all 0.2s ease-in-out;
+		-o-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+		width: 0;
+	}
+	#masthead .menu-search .search-field:focus {
+		background-color: white;
+		border-width: 1px;
+		text-indent: 0;
+		width: 220px;
+	}
+	#masthead .menu-search .penguin-search-icon {
+		display: block;
+		font-size: 25px;
+		position: absolute;
+		top: 11px;
 	}
 }
 /* Gold styles */
