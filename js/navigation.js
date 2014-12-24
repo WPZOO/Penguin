@@ -35,21 +35,33 @@
 /**
  * Scroll to Top link
  */
-jQuery(document).ready(function(){
-	
-	//Check to see if the window is top if not then display button
-	jQuery(window).scroll(function(){
-		if (jQuery(this).scrollTop() > 100) {
-			jQuery('.scrollToTop').fadeIn();
-		} else {
-			jQuery('.scrollToTop').fadeOut();
-		}
-	});
-	
-	//Click event to scroll to top
-	jQuery('.scrollToTop').click(function(){
-		jQuery('html, body').animate({scrollTop : 0},800);
-		return false;
-	});
-	
-});
+// http://codepen.io/sturobson/pen/equnb
+document.getElementById('scroll-to-top').onclick = function () {
+	scrollTo(document.body, 0, 800);
+}
+
+function scrollTo(element, to, duration) {
+	if (duration < 0) return;
+	var difference = to - element.scrollTop;
+	var perTick = difference / duration * 2;
+
+	setTimeout(function() {
+		element.scrollTop = element.scrollTop + perTick;
+		scrollTo(element, to, duration - 2);
+	}, 10);
+}
+
+// http://codepen.io/foleyatwork/pen/wxurt
+(function () {
+	var button = document.getElementById('scroll-to-top'), opacity;
+	var min = 0;
+
+	function setButtonOpacity () {
+		if (screen.height < 100) return;
+		opacity = 0 + window.scrollY / (screen.height + 100);
+		button.style.display = 'block';
+		button.style.opacity = opacity > min ? opacity : min;
+	}
+
+	window.addEventListener('scroll', setButtonOpacity);
+})();
