@@ -35,33 +35,31 @@
 /**
  * Scroll to Top link
  */
-// http://codepen.io/sturobson/pen/equnb
-document.getElementById('scroll-to-top').onclick = function () {
-	scrollTo(document.body, 0, 800);
-}
-
-function scrollTo(element, to, duration) {
-	if (duration < 0) return;
-	var difference = to - element.scrollTop;
-	var perTick = difference / duration * 2;
-
-	setTimeout(function() {
-		element.scrollTop = element.scrollTop + perTick;
-		scrollTo(element, to, duration - 2);
-	}, 10);
-}
+smoothScroll.init({
+	speed: 500, // Integer. How fast to complete the scroll in milliseconds
+	easing: 'easeInOutCubic', // Easing pattern to use
+	offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
+	updateURL: true, // Boolean. Whether or not to update the URL with the anchor hash on scroll
+	callbackBefore: function () {}, // Function to run before scrolling
+	callbackAfter: function () {} // Function to run after scrolling
+});
 
 // http://codepen.io/foleyatwork/pen/wxurt
 (function () {
 	var button = document.getElementById('scroll-to-top'), opacity;
-	var min = 0;
+	var max = 1;
 
 	function setButtonOpacity () {
-		if (screen.height < 100) return;
-		opacity = 0 + window.scrollY / (screen.height + 100);
+		if (screen.height < 100 ) return;
+		opacity = window.scrollY / (screen.height + 100);
 		button.style.display = 'block';
-		button.style.opacity = opacity > min ? opacity : min;
+		button.style.opacity = opacity < max ? opacity : max;
 	}
 
-	window.addEventListener('scroll', setButtonOpacity);
+	if (window.addEventListener) { // For all major browsers, except IE 8 and earlier
+		window.addEventListener('scroll', setButtonOpacity);
+	} else if (window.attachEvent) { // For IE 8 and earlier versions
+		window.attachEvent('scroll', setButtonOpacity);
+	}
+
 })();

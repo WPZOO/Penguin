@@ -35,7 +35,7 @@ add_filter('excerpt_more', 'new_excerpt_more');
  * Link to scroll back to the top of the page.
  */
 function penguin_back_to_top() {
-	echo '<a href="#" id="scroll-to-top"><span class="screen-reader-text">' . __( 'Scroll To Top', 'penguin' ) . '</span></a>';
+	echo '<a data-scroll href="#masthead" id="scroll-to-top"><span class="screen-reader-text">' . __( 'Scroll To Top', 'penguin' ) . '</span></a>';
 }
 add_action( 'tha_footer_top', 'penguin_back_to_top' );
 

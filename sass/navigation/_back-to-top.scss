@@ -16,6 +16,10 @@
 		}
 	}
 
+	.no-js & {
+		display: block;
+	}
+
 	&:before {
 		color: $color__text-main-nav;
 		content: "\e003";
