@@ -66,5 +66,6 @@ grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-contrib-watch');
 
 grunt.registerTask('default', ['watch']);
+grunt.registerTask('css', ['sass','fixindent','cssmin']);
 
 };
