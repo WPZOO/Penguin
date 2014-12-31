@@ -130,6 +130,14 @@ function penguin_scripts() {
 add_action( 'wp_enqueue_scripts', 'penguin_scripts' );
 
 /**
+ * Change class when js is enabled
+ */
+function penguin_enqueue_js_fix() {
+	echo "<script>(function(){document.documentElement.className='js'})();</script>";
+}
+add_action( 'wp_enqueue_scripts', 'penguin_enqueue_js_fix' );
+
+/**
  * Add script to footer
  */
 function penguin_wp_footer() {
