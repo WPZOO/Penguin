@@ -18,7 +18,12 @@ get_header(); ?>
 			<header class="page-header">
 			<?php
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="taxonomy-description">', '</div>' );
+				if ( is_author() ) : ?>
+					<div class="author-img"><?php echo get_avatar( get_the_author_meta('email'), '95' ); ?></div>
+					<p class="author-bio"><?php the_author_meta('description'); ?></p> <?php
+				else :
+					the_archive_description( '<div class="taxonomy-description">', '</div>' );
+				endif;
 			?>
 			</header><!-- .page-header -->
 

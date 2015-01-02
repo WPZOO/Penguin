@@ -467,6 +467,10 @@ img {
 	max-width: 100%;
 	/* Adhere to container width. */
 }
+.author-img img {
+	float: left;
+	margin: 7px 1em 0 0;
+}
 
 figure {
 	margin: 0;

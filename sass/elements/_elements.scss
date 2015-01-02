@@ -10,6 +10,11 @@ hr {
 img {
 	height: auto; /* Make sure images are scaled correctly. */
 	max-width: 100%; /* Adhere to container width. */
+
+	.author-img & {
+		float: left;
+		margin: 7px 1em 0 0;
+	}
 }
 
 figure {
