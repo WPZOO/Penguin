@@ -8,7 +8,7 @@
 ?>
 <!DOCTYPE html>
 <?php tha_html_before(); ?>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> class="no-js">
 <head>
 <?php tha_head_top(); ?>
 <meta charset="<?php bloginfo( 'charset' ); ?>">

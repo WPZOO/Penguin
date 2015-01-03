@@ -35,21 +35,31 @@
 /**
  * Scroll to Top link
  */
-jQuery(document).ready(function(){
-	
-	//Check to see if the window is top if not then display button
-	jQuery(window).scroll(function(){
-		if (jQuery(this).scrollTop() > 100) {
-			jQuery('.scrollToTop').fadeIn();
-		} else {
-			jQuery('.scrollToTop').fadeOut();
-		}
-	});
-	
-	//Click event to scroll to top
-	jQuery('.scrollToTop').click(function(){
-		jQuery('html, body').animate({scrollTop : 0},800);
-		return false;
-	});
-	
+smoothScroll.init({
+	speed: 500, // Integer. How fast to complete the scroll in milliseconds
+	easing: 'easeInOutCubic', // Easing pattern to use
+	offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
+	updateURL: true, // Boolean. Whether or not to update the URL with the anchor hash on scroll
+	callbackBefore: function () {}, // Function to run before scrolling
+	callbackAfter: function () {} // Function to run after scrolling
 });
+
+// http://codepen.io/foleyatwork/pen/wxurt
+(function () {
+	var button = document.getElementById('scroll-to-top'), opacity;
+	var max = 1;
+
+	function setButtonOpacity () {
+		if (screen.height < 100 ) return;
+		opacity = window.scrollY / (screen.height + 100);
+		button.style.display = 'block';
+		button.style.opacity = opacity < max ? opacity : max;
+	}
+
+	if (window.addEventListener) { // For all major browsers, except IE 8 and earlier
+		window.addEventListener('scroll', setButtonOpacity);
+	} else if (window.attachEvent) { // For IE 8 and earlier versions
+		window.attachEvent('scroll', setButtonOpacity);
+	}
+
+})();

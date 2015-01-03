@@ -1,4 +1,4 @@
-.scrollToTop {
+#scroll-to-top {
 	background: $color__background-main-nav;
 	display: none;
 	height: 50px;
@@ -14,6 +14,10 @@
 		@media screen and (min-width: 783px) {
 			top: 32px;
 		}
+	}
+
+	.no-js & {
+		display: block;
 	}
 
 	&:before {
