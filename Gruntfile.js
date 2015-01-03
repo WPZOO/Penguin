@@ -38,7 +38,7 @@ module.exports = function(grunt) {
 		uglify: {
 			my_target: {
 				files: {
-					'js/penguin.min.js': ['js/fluidvids.js', 'js/masonry-options.js', 'js/navigation.js', 'js/skip-link-focus-fix.js']
+					'js/penguin.min.js': ['js/masonry-options.js', 'js/smooth-scroll.js', 'js/navigation.js', 'js/fluidvids.js', 'js/skip-link-focus-fix.js']
 				}
 			}
 		},
@@ -67,5 +67,6 @@ grunt.loadNpmTasks('grunt-contrib-watch');
 
 grunt.registerTask('default', ['watch']);
 grunt.registerTask('css', ['sass','fixindent','cssmin']);
+grunt.registerTask('js', ['uglify']);
 
 };
