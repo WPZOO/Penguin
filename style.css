@@ -1090,7 +1090,7 @@ p a {
 	float: left;
 	height: 60px;
 	margin-right: 20px;
-	padding: 5px;
+	padding: 5px 0;
 }
 #site-navigation .site-logo:hover, .bright-navbar #site-navigation .site-logo:hover {
 	background-color: transparent;
