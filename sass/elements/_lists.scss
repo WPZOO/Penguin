@@ -1,5 +1,5 @@
 ul, ol {
-	margin: 0 0 .5em 3em;
+	margin: 0 0 .5em 2em;
 }
 
 ul {
@@ -8,6 +8,12 @@ ul {
 
 ol {
 	list-style: decimal;
+}
+
+li {
+	#primary & {
+		margin: .5em 0;
+	}
 }
 
 li > ul,
