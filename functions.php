@@ -58,7 +58,7 @@ function penguin_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// Add new thumbnail sizes.
-	add_image_size( 'Penguin600X300', '600', '300', array( 'center', 'center' ) );
+	add_image_size( 'Penguin800X400', '800', '400', array( 'center', 'center' ) );
 
 	// Enable support for HTML5 markup.
 	add_theme_support( 'html5', array(
