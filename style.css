@@ -2,7 +2,7 @@
 /*
 Theme Name: PENGU!N Gold
 Theme URI: http://wpzoo.ch/themes/penguin-gold/
-Author: WPZOO [Stefan Brechbühl]
+Author: WPZOO
 Author URI: http://wpzoo.ch/
 Description: PENGU!N is a clean and modern WordPress theme made by WPZOO. Besides the link color the used colors are monochromatic. The post thumbnail will be used as a big header image on single post pages as well as Pages. These theme characteristics make it possible to use PENGU!N for bloggin' as well as a magazin theme.
 Version: 1.0.beta
@@ -679,19 +679,44 @@ input:focus {
 }
 
 .headerimg {
-	height: 220px;
+	height: 150px;
 	overflow: hidden;
 	position: relative;
 	width: 100%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 400px) {
+	.headerimg {
+		height: 200px;
+	}
+}
+@media screen and (min-width: 500px) {
+	.headerimg {
+		height: 250px;
+	}
+}
+@media screen and (min-width: 600px) {
 	.headerimg {
 		height: 300px;
 	}
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 700px) {
+	.headerimg {
+		height: 350px;
+	}
+}
+@media screen and (min-width: 800px) {
 	.headerimg {
 		height: 400px;
+	}
+}
+@media screen and (min-width: 900px) {
+	.headerimg {
+		height: 450px;
+	}
+}
+@media screen and (min-width: 1000px) {
+	.headerimg {
+		height: 500px;
 	}
 }
 .headerimg img {
@@ -1369,7 +1394,8 @@ p a {
 
 @media screen and (min-width: 1200px) {
 	.post.hentry,
-	.search .page.hentry {
+	.search .hentry,
+	.archive .hentry {
 		width: 49%;
 	}
 }
@@ -1396,15 +1422,8 @@ p a {
 	}
 }
 
-.post.has-post-thumbnail,
-.page.has-post-thumbnail {
+.has-post-thumbnail {
 	border-top: none;
-}
-
-.blog .has-post-thumbnail.hentry,
-.archive .has-post-thumbnail.hentry,
-.search .has-post-thumbnail.hentry,
-.search .page.has-post-thumbnail.hentry {
 	padding-top: 0;
 }
 

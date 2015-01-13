@@ -18,7 +18,8 @@
 	}
 }
 .post.hentry,
-.search .page.hentry {
+.search .hentry,
+.archive .hentry {
 	@media screen and (min-width: 1200px) {
 		width: 49%;
 	}
@@ -41,15 +42,8 @@
 	}
 }
 
-.post.has-post-thumbnail,
-.page.has-post-thumbnail {
+.has-post-thumbnail {
 	border-top: none;
-}
-
-.blog .has-post-thumbnail.hentry,
-.archive .has-post-thumbnail.hentry,
-.search .has-post-thumbnail.hentry,
-.search .page.has-post-thumbnail.hentry {
 	padding-top: 0;
 }
 

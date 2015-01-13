@@ -8,17 +8,37 @@
 }
 
 .headerimg {
-	height: 220px;
+	height: 150px;
 	overflow: hidden;
 	position: relative;
 	width: 100%;
 
-	@media screen and (min-width: 768px) {
+	@media screen and (min-width: 400px) {
+		height: 200px;
+	}
+
+	@media screen and (min-width: 500px) {
+		height: 250px;
+	}
+
+	@media screen and (min-width: 600px) {
 		height: 300px;
 	}
 
-	@media screen and (min-width: 992px) {
+	@media screen and (min-width: 700px) {
+		height: 350px;
+	}
+
+	@media screen and (min-width: 800px) {
 		height: 400px;
+	}
+
+	@media screen and (min-width: 900px) {
+		height: 450px;
+	}
+
+	@media screen and (min-width: 1000px) {
+		height: 500px;
 	}
 
 	img {
