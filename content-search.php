@@ -18,12 +18,7 @@
 		<?php get_template_part( 'template-parts/meta', 'top' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php $contentoutput = get_theme_mod( 'excerpt-content' ); ?>
-	<?php if ( ! has_post_format() && $contentoutput == 'excerpt' ) : ?>
 	<?php get_template_part( 'template-parts/the_excerpt' ); ?>
-	<?php else : ?>
-	<?php get_template_part( 'template-parts/the_content' ); ?>
-	<?php endif; ?>
 
 	<?php if ( 'post' == get_post_type() ) : ?>
 	<?php get_template_part( 'template-parts/meta', 'bottom' ); ?>

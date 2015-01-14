@@ -135,6 +135,20 @@ function penguin_options() {
 		'priority'      => '200'
 	);
 
+	$contentchoices = array(
+		'excerpt' => __( 'Excerpt (trimmed-down output)', 'penguin' ),
+		'content' => __( 'Content (full post / custom more tag)', 'penguin' ),
+	);
+
+	$options['excerpt-content'] = array(
+		'id'            => 'excerpt-content',
+		'label'         => __( 'Content output of standard posts on home and archive pages.', 'penguin' ),
+		'section'       => $section,
+		'type'          => 'radio',
+		'choices'       => $contentchoices,
+		'default'       => 'excerpt'
+	);
+
 	$options['min-files'] = array(
 		'id'            => 'min-files',
 		'label'         => __( 'Minified CSS and JS', 'penguin' ),

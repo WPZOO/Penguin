@@ -72,7 +72,6 @@ function add_search_box($items, $args) {
 }
 add_filter('wp_nav_menu_items','add_search_box', 10, 2);
 
-
 /**
  * Sidebar layout
  */

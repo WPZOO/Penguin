@@ -25,10 +25,10 @@ get_header(); ?>
 				<?php get_template_part( 'content', 'search' ); ?>
 
 			<?php endwhile; ?>
-			
+
 			</div><!-- #posts-container -->
 			<?php penguin_paging_nav(); ?>
-			
+
 		</main><!-- #main -->
 
 		<?php else : ?>
