@@ -9,8 +9,11 @@
 	width: 100%;
 
 	.has-headerimg & {
-		position: absolute;
-		z-index: 1000;
+
+		@media screen and (min-width: 600px) {
+			position: absolute;
+			z-index: 1000;
+		}
 	}
 
 	ul {

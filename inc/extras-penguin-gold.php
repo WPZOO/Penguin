@@ -6,16 +6,23 @@
  */
 
 /**
- * Check if Single and Page has Post Thumbnail
+ * Header image body class
  */
-function add_featured_image_body_class( $classes ) {
+function get_headerimg_body_class( $classes ) {
 	global $post;
-	if ( ! is_404 () && has_post_thumbnail() && ( is_page() || is_single() && !is_attachment() ) ) {
+
+	if ( 'no' == get_post_meta( $post->ID, 'header-img', true ) ) {
+		$classes[] = 'no-headerimg';
+	}
+
+	elseif ( ! is_404 () && has_post_thumbnail() && ( is_page() || is_single() && !is_attachment() ) ) {
 		$classes[] = 'has-headerimg';
 	}
+
 	return $classes;
+
 }
-add_filter( 'body_class', 'add_featured_image_body_class' );
+add_filter( 'body_class', 'get_headerimg_body_class' );
 
 /**
  * Custom Excerpt
