@@ -19,17 +19,17 @@ add_filter( 'body_class', 'add_featured_image_body_class' );
 
 /**
  * Custom Excerpt
- */
+*/
 function excerpt_read_more_link($output) {
 	global $post;
 	return $output . '<a href="'. get_permalink($post->ID) . '" class="read-more-link">' . __("Read more", "penguin") . '</a>';
 }
-add_filter('the_excerpt', 'excerpt_read_more_link');
+add_filter( 'the_excerpt', 'excerpt_read_more_link' );
 
 function new_excerpt_more( $more ) {
 	return ' ...';
 }
-add_filter('excerpt_more', 'new_excerpt_more');
+add_filter( 'excerpt_more', 'new_excerpt_more' );
 
 /**
  * Link to scroll back to the top of the page.
@@ -70,7 +70,7 @@ function add_search_box($items, $args) {
 	}
 	return $items;
 }
-add_filter('wp_nav_menu_items','add_search_box', 10, 2);
+add_filter( 'wp_nav_menu_items','add_search_box', 10, 2 );
 
 /**
  * Sidebar layout
@@ -102,14 +102,3 @@ function poweredbygold() {
 	}
 }
 add_action( 'tha_footer_bottom', 'poweredbygold' );
-
-/**
- * Body class for page template
- */
-function fullwidth_body_class( $classes ) {
-	if ( is_page_template( 'page-fullwidth.php' ) ) {
-			$classes[] = 'fullwidth';
-	}
-	return $classes;
-}
-add_filter( 'body_class','fullwidth_body_class' );

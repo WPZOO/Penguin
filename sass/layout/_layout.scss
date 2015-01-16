@@ -20,7 +20,7 @@
 #content-area {
 	margin-right: -15px;
 	margin-left: -15px;
- }
+}
 
 #primary,
 #secondary {
@@ -74,6 +74,10 @@
 	}
 }
 
+.page-header {
+	margin-bottom: 1em;
+}
+
 #colophon {
 	margin-bottom: 10px;
 }
@@ -86,10 +90,6 @@
 		color: #cdcdcd;
 		font-weight: $font__weight-bold;
 	}
-}
-
-.page-header {
-	margin-bottom: 1em;
 }
 
 @import "layout-gold";
