@@ -13,7 +13,7 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'content', 'single' ); ?>
+			<?php get_template_part( 'template-parts/content-single', get_post_format() ); ?>
 
 			<?php penguin_post_nav(); ?>
 
