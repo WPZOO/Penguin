@@ -19,13 +19,14 @@ function penguin_options() {
 	// Adds the sections to the $options array
 	$options['sections'] = $sections;
 
+
 	// Logo
 	$section = 'logo';
 
 	$sections[] = array(
 		'id'            => $section,
 		'title'         => __( 'Your logo', 'penguin' ),
-		'priority'      => '80',
+		'priority'      => '70',
 		'description' => __( 'You might use a logo instead of the site title in the header navigation.', 'penguin' )
 	);
 
@@ -43,7 +44,7 @@ function penguin_options() {
 	$sections[] = array(
 		'id'            => $section,
 		'title'         => __( 'Colors', 'penguin' ),
-		'priority'      => '70'
+		'priority'      => '80'
 	);
 
 	$choices = array(
@@ -86,13 +87,36 @@ function penguin_options() {
 		'priority'      => '100'
 	);
 
+	// Content
+	$section = 'content';
+
+	$sections[] = array(
+		'id'            => $section,
+		'title'         => __( 'Content', 'penguin' ),
+		'priority'      => '100'
+	);
+
+	$contentchoices = array(
+		'excerpt' => __( 'Excerpt (trimmed-down output)', 'penguin' ),
+		'content' => __( 'Content (full post / custom more tag)', 'penguin' ),
+	);
+
+	$options['excerpt-content'] = array(
+		'id'            => 'excerpt-content',
+		'label'         => __( 'Content output of standard posts on home and archive pages.', 'penguin' ),
+		'section'       => $section,
+		'type'          => 'radio',
+		'choices'       => $contentchoices,
+		'default'       => 'excerpt'
+	);
+
 	// Sidebar
 	$section = 'sidebar';
 
 	$sections[] = array(
 		'id'            => $section,
 		'title'         => __( 'Sidebar', 'penguin' ),
-		'priority'      => '130'
+		'priority'      => '100'
 	);
 
 	$sidebarchoices = array(
@@ -135,20 +159,6 @@ function penguin_options() {
 		'priority'      => '200'
 	);
 
-	$contentchoices = array(
-		'excerpt' => __( 'Excerpt (trimmed-down output)', 'penguin' ),
-		'content' => __( 'Content (full post / custom more tag)', 'penguin' ),
-	);
-
-	$options['excerpt-content'] = array(
-		'id'            => 'excerpt-content',
-		'label'         => __( 'Content output of standard posts on home and archive pages.', 'penguin' ),
-		'section'       => $section,
-		'type'          => 'radio',
-		'choices'       => $contentchoices,
-		'default'       => 'excerpt'
-	);
-
 	$options['min-files'] = array(
 		'id'            => 'min-files',
 		'label'         => __( 'Minified CSS and JS', 'penguin' ),
@@ -167,3 +177,9 @@ function penguin_options() {
 
 }
 add_action( 'init', 'penguin_options' );
+
+
+function change_default_order_options( $wp_customize ){
+	$wp_customize->get_section('static_front_page')->priority = '50';
+}
+add_action( 'customize_register', 'change_default_order_options' );
