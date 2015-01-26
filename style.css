@@ -1598,8 +1598,10 @@ article.format-link .entry-meta-bottom a:active {
 /* Post Formats Image & Video */
 .blog .format-image,
 .archive .format-image,
+.search .format-image,
 .blog .format-video,
-.archive .format-video {
+.archive .format-video,
+.search .format-video {
 	background-color: transparent;
 	border: 0;
 	box-shadow: none;
@@ -1608,12 +1610,16 @@ article.format-link .entry-meta-bottom a:active {
 
 .blog .format-image .entry-header,
 .archive .format-image .entry-header,
+.search .format-image .entry-header,
 .blog .format-image .entry-content,
 .archive .format-image .entry-content,
+.search .format-image .entry-content,
 .blog .format-video .entry-header,
 .archive .format-video .entry-header,
+.search .format-video .entry-header,
 .blog .format-video .entry-content,
-.archive .format-video .entry-content {
+.archive .format-video .entry-content,
+.search .format-video .entry-content {
 	margin: 0;
 }
 
