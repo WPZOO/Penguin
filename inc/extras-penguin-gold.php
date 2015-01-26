@@ -67,7 +67,7 @@ add_filter( 'body_class', 'add_logo_and_navbar_body_class' );
  */
 function add_search_box($items, $args) {
 	$menusearch = get_theme_mod( 'menu-search' );
-	if ( $menusearch == 1 ) {
+	if ( $args->theme_location == 'primary' && $menusearch == 1 ) {
 		ob_start();
 		get_search_form();
 		$searchform = ob_get_contents();
