@@ -16,15 +16,12 @@
 	@media screen and (min-width: 992px) {
 		padding: 25px 0;
 	}
-}
 
-.post.hentry,
-.search .hentry,
-.archive .hentry {
 	@media screen and (min-width: 1200px) {
 		width: 49%;
 	}
 }
+
 .hentry.sticky,
 .single .hentry {
 	width: 100%;

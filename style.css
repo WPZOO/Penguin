@@ -1401,11 +1401,8 @@ p a {
 		padding: 25px 0;
 	}
 }
-
 @media screen and (min-width: 1200px) {
-	.post.hentry,
-	.search .hentry,
-	.archive .hentry {
+	.hentry {
 		width: 49%;
 	}
 }
