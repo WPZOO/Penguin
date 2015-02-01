@@ -60,6 +60,13 @@ function penguin_setup() {
 	// Add new thumbnail sizes.
 	add_image_size( 'Penguin800X400', '800', '400', array( 'center', 'center' ) );
 
+	function show_custom_image_sizes($sizes) {
+		$sizes['Penguin800X400'] = __( 'PENGU!N image size', 'penguin' );
+
+		return $sizes;
+	}
+	add_filter('image_size_names_choose', 'show_custom_image_sizes');
+
 	// Enable support for HTML5 markup.
 	add_theme_support( 'html5', array(
 		'comment-list',
