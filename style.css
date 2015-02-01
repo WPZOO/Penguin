@@ -1408,7 +1408,8 @@ p a {
 }
 
 .hentry.sticky,
-.single .hentry {
+.single .hentry,
+.page .hentry {
 	width: 100%;
 }
 
