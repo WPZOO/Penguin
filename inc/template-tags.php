@@ -87,7 +87,7 @@ function penguin_posted_on() {
 }
 endif;
 
-if ( ! function_exists( 'the_archive_title' ) ) :
+if ( ! function_exists( 'penguin_the_archive_title' ) ) :
 /**
  * Shim for `the_archive_title()`.
  *
@@ -98,7 +98,7 @@ if ( ! function_exists( 'the_archive_title' ) ) :
  * @param string $before Optional. Content to prepend to the title. Default empty.
  * @param string $after  Optional. Content to append to the title. Default empty.
  */
-function the_archive_title( $before = '', $after = '' ) {
+function penguin_the_archive_title( $before = '', $after = '' ) {
 	if ( is_category() ) {
 		$title = sprintf( __( 'Category: %s', 'penguin' ), single_cat_title( '', false ) );
 	} elseif ( is_tag() ) {
@@ -149,7 +149,7 @@ function the_archive_title( $before = '', $after = '' ) {
 	}
 }
 endif;
-if ( ! function_exists( 'the_archive_description' ) ) :
+if ( ! function_exists( 'penguin_the_archive_description' ) ) :
 /**
  * Shim for `the_archive_description()`.
  *
@@ -160,7 +160,7 @@ if ( ! function_exists( 'the_archive_description' ) ) :
  * @param string $before Optional. Content to prepend to the description. Default empty.
  * @param string $after  Optional. Content to append to the description. Default empty.
  */
-function the_archive_description( $before = '', $after = '' ) {
+function penguin_the_archive_description( $before = '', $after = '' ) {
 	$description = apply_filters( 'get_the_archive_description', term_description() );
 	if ( ! empty( $description ) ) {
 		/**
