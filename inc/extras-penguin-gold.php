@@ -11,11 +11,11 @@
 function penguin_get_headerimg_body_class( $classes ) {
 	global $post;
 
-	if ( is_single() && 'no' == get_post_meta( $post->ID, 'header-img', true ) ) {
+	if ( 'no' == get_post_meta( $post->ID, 'header-img', true ) ) {
 		$classes[] = 'no-headerimg';
 	}
 
-	elseif ( is_single() && ! is_404 () && has_post_thumbnail() && ( is_page() || is_single() && !is_attachment() ) ) {
+	elseif ( ! is_404 () && has_post_thumbnail() && ( is_page() || is_single() && !is_attachment() ) ) {
 		$classes[] = 'has-headerimg';
 	}
 
