@@ -8,7 +8,7 @@
 /**
  * Header image body class
  */
-function get_headerimg_body_class( $classes ) {
+function penguin_get_headerimg_body_class( $classes ) {
 	global $post;
 
 	if ( 'no' == get_post_meta( $post->ID, 'header-img', true ) ) {
@@ -22,21 +22,21 @@ function get_headerimg_body_class( $classes ) {
 	return $classes;
 
 }
-add_filter( 'body_class', 'get_headerimg_body_class' );
+add_filter( 'body_class', 'penguin_get_headerimg_body_class' );
 
 /**
  * Custom Excerpt
 */
-function excerpt_read_more_link($output) {
+function penguin_excerpt_read_more_link($output) {
 	global $post;
 	return $output . '<a href="'. get_permalink($post->ID) . '" class="read-more-link">' . __("Read more", "penguin") . '</a>';
 }
-add_filter( 'the_excerpt', 'excerpt_read_more_link' );
+add_filter( 'the_excerpt', 'penguin_excerpt_read_more_link' );
 
-function new_excerpt_more( $more ) {
+function penguin_new_excerpt_more( $more ) {
 	return ' ...';
 }
-add_filter( 'excerpt_more', 'new_excerpt_more' );
+add_filter( 'excerpt_more', 'penguin_new_excerpt_more' );
 
 /**
  * Link to scroll back to the top of the page.
@@ -49,7 +49,7 @@ add_action( 'tha_footer_top', 'penguin_back_to_top' );
 /**
  * Check if have a logo
  */
-function add_logo_and_navbar_body_class( $classes ) {
+function penguin_gold_add_logo_and_navbar_body_class( $classes ) {
 	$logo = get_theme_mod( 'logo' );
 	$navbar = get_theme_mod( 'brightness-navbar' );
 	if ($logo != '') {
@@ -60,12 +60,12 @@ function add_logo_and_navbar_body_class( $classes ) {
 	}
 	return $classes;
 }
-add_filter( 'body_class', 'add_logo_and_navbar_body_class' );
+add_filter( 'body_class', 'penguin_gold_add_logo_and_navbar_body_class' );
 
 /**
  * Add search box to primary menu
  */
-function add_search_box($items, $args) {
+function penguin_gold_add_search_box($items, $args) {
 	$menusearch = get_theme_mod( 'menu-search' );
 	if ( $args->theme_location == 'primary' && $menusearch == 1 ) {
 		ob_start();
@@ -77,12 +77,12 @@ function add_search_box($items, $args) {
 	}
 	return $items;
 }
-add_filter( 'wp_nav_menu_items','add_search_box', 10, 2 );
+add_filter( 'wp_nav_menu_items','penguin_gold_add_search_box', 10, 2 );
 
 /**
  * Sidebar layout
  */
-function add_sidebar_body_class( $classes ) {
+function penguin_gold_add_sidebar_body_class( $classes ) {
 	$sidebar = get_theme_mod( 'sidebar-layout' );
 	if ($sidebar == 'sidebar-left') {
 		$classes[] = 'sidebar-left';
@@ -92,12 +92,12 @@ function add_sidebar_body_class( $classes ) {
 	}
 	return $classes;
 }
-add_filter( 'body_class', 'add_sidebar_body_class' );
+add_filter( 'body_class', 'penguin_gold_add_sidebar_body_class' );
 
 /**
  * Footer text
  */
-function poweredbygold() {
+function penguin_gold_poweredby() {
 	$footertext = get_theme_mod( 'footer-text' );
 	$wpzoo = '<a href="http://wpzoo.ch" rel="designer">PENGU!N WordPress Theme made by WPZOO</a>';
 
@@ -108,4 +108,4 @@ function poweredbygold() {
 		echo '<div id="poweredby">' . $wpzoo . '</div>';
 	}
 }
-add_action( 'tha_footer_bottom', 'poweredbygold' );
+add_action( 'tha_footer_bottom', 'penguin_gold_poweredby' );
