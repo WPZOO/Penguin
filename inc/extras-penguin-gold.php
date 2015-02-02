@@ -48,6 +48,18 @@ function penguin_body_classes( $classes ) {
 add_filter( 'body_class', 'penguin_body_classes' );
 
 /**
+ * Adds a general, theme specific post class.
+ *
+ * @param array $class Class for all kind of posts.
+ * @return array
+ */
+function penguin_add_post_class( $class ) {
+	$class[] = 'penguin-post';
+	return $class;
+}
+add_filter( 'post_class', 'penguin_add_post_class' );
+
+/**
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
  *
  * @param array $args Configuration arguments.
