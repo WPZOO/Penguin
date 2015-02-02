@@ -1,4 +1,4 @@
-.hentry {
+.penguin-post {
 	background-color: #fff;
 	border-top: 3px solid #bcbcbc;
 	border-bottom: 1px solid #bbb;
@@ -20,12 +20,12 @@
 	@media screen and (min-width: 1200px) {
 		width: 49%;
 	}
-}
 
-.hentry.sticky,
-.single .hentry,
-.page .hentry {
-	width: 100%;
+	&.sticky,
+	.single &,
+	.page & {
+		width: 100%;
+	}
 }
 
 .has-headerimg .has-post-thumbnail {
@@ -48,7 +48,7 @@
 	padding-top: 0;
 }
 
-.single .hentry {
+.single .penguin-post {
 	margin-bottom: 0;
 }
 
@@ -98,8 +98,8 @@
 }
 
 @media screen and (min-width: 992px) {
-	.single .hentry,
-	.page .hentry {
+	.single .penguin-post,
+	.page .penguin-post {
 		padding: 40px 0;
 	}
 

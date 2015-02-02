@@ -5,7 +5,7 @@ var container = document.querySelector('#posts-container');
 var msnry = new Masonry( container, {
 	columnWidth: 400,
 	gutter: 32,
-	itemSelector: 'hentry',
+	itemSelector: '.penguin-post',
 	transitionDuration: '1s'
 });
 // initialize Masonry after all images have loaded
