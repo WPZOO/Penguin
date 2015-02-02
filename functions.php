@@ -161,27 +161,22 @@ function penguin_wp_footer() {
 add_action( 'wp_footer', 'penguin_wp_footer', 21 );
 
 /**
- * Custom template tags for this theme.
+ * Custom template tags for this theme
  */
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
- * PENGU!N specifics.
+ * PENGU!N extras
  */
 require get_template_directory() . '/inc/extras-penguin-gold.php';
 
 /**
- * Custom functions that act independently of the theme templates.
- */
-require get_template_directory() . '/inc/extras-underscores.php';
-
-/**
- * Plugins compatibility file.
+ * Plugins compatibility file
  */
 require get_template_directory() . '/inc/extras-plugins.php';
 
 /**
- * Customizer additions.
+ * Customizer additions
  */
 require get_template_directory() . '/inc/customizer-library/customizer-library.php';
 require get_template_directory() . '/inc/customizer-options.php';
