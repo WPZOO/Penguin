@@ -1382,10 +1382,10 @@ p a {
 --------------------------------------------------------------*/
 .penguin-post {
 	background-color: #fff;
-	border-top: 3px solid #bcbcbc;
-	border-bottom: 1px solid #bbb;
+	border-top: 3px solid rgba(145, 145, 145, 0.4);
+	border-bottom: 1px solid #ccc;
 	border-right: 1px solid #ddd;
-	box-shadow: 0 2px 1px #dedede;
+	box-shadow: 1px 2px 4px rgba(160, 160, 160, 0.2);
 	margin-bottom: 1em;
 	padding: 5px 0;
 	position: relative;
