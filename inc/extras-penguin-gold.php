@@ -19,10 +19,10 @@ function penguin_body_classes( $classes ) {
 
 	// Adds a class to handle the header img
 	global $post;
-	if ( 'no' == get_post_meta( $post->ID, 'header-img', true ) ) {
+	if ( ! is_404() && 'no' == get_post_meta( $post->ID, 'header-img', true ) ) {
 		$classes[] = 'no-headerimg';
 	}
-	elseif ( ! is_404 () && has_post_thumbnail() && ( is_page() || is_single() && !is_attachment() ) ) {
+	if ( ! is_404() && has_post_thumbnail() && ( is_page() || is_single() && !is_attachment() ) ) {
 		$classes[] = 'has-headerimg';
 	}
 
