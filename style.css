@@ -970,8 +970,8 @@ p a {
 	color: white !important;
 	font-weight: bold;
 }
-#site-navigation .current_page_parent > a,
-#site-navigation .current-menu-parent > a {
+#site-navigation .current_page_ancestor > a,
+#site-navigation .current-menu-ancestor > a {
 	font-weight: bold;
 }
 
