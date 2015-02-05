@@ -19,10 +19,7 @@ function penguin_body_classes( $classes ) {
 
 	// Adds a class to handle the header img
 	global $post;
-	if ( ! is_404() && 'no' == get_post_meta( $post->ID, 'header-img', true ) ) {
-		$classes[] = 'no-headerimg';
-	}
-	if ( ! is_404() && has_post_thumbnail() && ( is_page() || is_single() && !is_attachment() ) ) {
+	if ( has_post_thumbnail() && false == get_post_meta( $post->ID, 'header-img', true ) && ( is_page() || is_single() ) ) {
 		$classes[] = 'has-headerimg';
 	}
 
@@ -58,6 +55,14 @@ function penguin_add_post_class( $class ) {
 	return $class;
 }
 add_filter( 'post_class', 'penguin_add_post_class' );
+
+/**
+ * Change image size on attachment pages.
+ */
+function penguin_prepend_attachment($p) {
+	return '<p class="attachment">'.wp_get_attachment_link(0, 'full', false).'</p>';
+}
+add_filter('prepend_attachment', 'penguin_prepend_attachment');
 
 /**
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.

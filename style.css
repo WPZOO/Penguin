@@ -730,9 +730,6 @@ input:focus {
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 }
-.no-headerimg .headerimg {
-	display: none;
-}
 
 .post-thumbnail img {
 	width: 100%;

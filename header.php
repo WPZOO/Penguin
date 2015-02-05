@@ -43,11 +43,13 @@
 		</div><!-- .container -->
 	</nav><!-- #site-navigation -->
 
-	<?php if ( !is_404 () && has_post_thumbnail() && ( is_page() || is_single() && !is_attachment() ) ) : ?>
-	<div class="headerimg">
-		<?php the_post_thumbnail( 'full' ); ?>
-	</div>
+	<?php $classes = get_body_class();
+	if ( in_array('has-headerimg', $classes ) ) : ?>
+		<div class="headerimg">
+			<?php the_post_thumbnail( 'full' ); ?>
+		</div>
 	<?php endif; ?>
+
 	<?php tha_header_bottom(); ?>
 </header><!-- #masthead -->
 <?php tha_header_after(); ?>
