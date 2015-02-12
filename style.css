@@ -1158,43 +1158,46 @@ p a {
 6.3 Post / Page Nav
 --------------------------------------------------------------*/
 .navigation {
-	width: 100%;
-}
-.navigation a {
-	display: block;
-}
-
-.site-main .comment-navigation,
-.site-main .paging-navigation,
-.site-main .post-navigation {
 	margin: 1.5em 0;
 	overflow: hidden;
 }
-
-.comment-navigation .nav-previous,
-.paging-navigation .nav-previous,
-.post-navigation .nav-previous,
-.comment-navigation .nav-next,
-.paging-navigation .nav-next,
-.post-navigation .nav-next {
+.navigation .nav-previous,
+.navigation .nav-next {
 	margin-bottom: 3px;
 	width: 100%;
 }
-
+.navigation .nav-previous a,
+.navigation .nav-next a {
+	background-color: #ddd;
+	color: #404040 !important;
+	display: block;
+	padding: 12px 16px;
+}
+.navigation .nav-previous a:hover,
+.navigation .nav-previous a:focus,
+.navigation .nav-previous a:active,
+.navigation .nav-next a:hover,
+.navigation .nav-next a:focus,
+.navigation .nav-next a:active {
+	background-color: #0066cc;
+	color: white !important;
+}
 @media screen and (min-width: 400px) {
-	.comment-navigation .nav-previous,
-	.paging-navigation .nav-previous,
-	.post-navigation .nav-previous {
+	.navigation .nav-previous {
 		float: left;
-		width: 49.5%;
+		max-width: 49.5%;
 	}
-
-	.comment-navigation .nav-next,
-	.paging-navigation .nav-next,
-	.post-navigation .nav-next {
+	.navigation .nav-next {
 		float: right;
 		text-align: right;
-		width: 49.5%;
+		max-width: 49.5%;
+	}
+}
+
+@media screen and (min-width: 400px) {
+	.navigation.comment-navigation a,
+	.navigation.posts-navigation a {
+		display: inline-block;
 	}
 }
 /*--------------------------------------------------------------
@@ -1901,7 +1904,7 @@ article:after,
 9.0 – Infinite scroll
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .paging-navigation,
+.infinite-scroll .posts-navigation,
 .infinite-scroll.neverending .site-footer {
 	/* Theme Footer (when set to scrolling) */
 	display: none;

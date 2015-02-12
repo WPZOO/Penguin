@@ -7,26 +7,29 @@
  * @package PENGU!N Gold
  */
 
-if ( ! function_exists( 'penguin_paging_nav' ) ) :
+
+if ( ! function_exists( 'the_posts_navigation' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.
+ *
+ * @todo Remove this function when WordPress 4.3 is released.
  */
-function penguin_paging_nav() {
+function the_posts_navigation() {
 	// Don't print empty markup if there's only one page.
 	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
 		return;
 	}
 	?>
-	<nav class="navigation paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'penguin' ); ?></h1>
+	<nav class="navigation posts-navigation" role="navigation">
+		<h2 class="screen-reader-text"><?php _e( 'Posts navigation', 'penguin' ); ?></h2>
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous btn btn-lg"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'penguin' ) ); ?></div>
+			<div class="nav-previous"><?php next_posts_link( __( 'Older posts', 'penguin' ) ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next btn btn-lg"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'penguin' ) ); ?></div>
+			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts;', 'penguin' ) ); ?></div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->
@@ -35,25 +38,26 @@ function penguin_paging_nav() {
 }
 endif;
 
-if ( ! function_exists( 'penguin_post_nav' ) ) :
+if ( ! function_exists( 'the_post_navigation' ) ) :
 /**
  * Display navigation to next/previous post when applicable.
+ *
+ * @todo Remove this function when WordPress 4.3 is released.
  */
-function penguin_post_nav() {
+function the_post_navigation() {
 	// Don't print empty markup if there's nowhere to navigate.
 	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
 	$next     = get_adjacent_post( false, '', false );
-
 	if ( ! $next && ! $previous ) {
 		return;
 	}
 	?>
 	<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'penguin' ); ?></h1>
+		<h2 class="screen-reader-text"><?php _e( 'Post navigation', 'penguin' ); ?></h2>
 		<div class="nav-links">
 			<?php
-				previous_post_link( '<div class="nav-previous btn btn-lg">%link</div>', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'penguin' ) );
-				next_post_link(     '<div class="nav-next btn btn-lg">%link</div>',     _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link',     'penguin' ) );
+				previous_post_link( '<div class="nav-previous">%link</div>', '%title' );
+				next_post_link( '<div class="nav-next">%link</div>', '%title' );
 			?>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->

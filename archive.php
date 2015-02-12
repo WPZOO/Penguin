@@ -44,7 +44,7 @@ get_header(); ?>
 
 			</div><!-- #posts-container -->
 
-			<?php penguin_paging_nav(); ?>
+			<?php the_posts_navigation(); ?>
 
 		<?php else : ?>
 

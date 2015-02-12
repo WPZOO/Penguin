@@ -27,7 +27,7 @@ get_header(); ?>
 			<?php endwhile; ?>
 
 			</div><!-- #posts-container -->
-			<?php penguin_paging_nav(); ?>
+			<?php the_posts_navigation(); ?>
 
 		</main><!-- #main -->
 

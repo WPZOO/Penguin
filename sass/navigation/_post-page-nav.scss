@@ -1,42 +1,44 @@
 .navigation {
-	width: 100%;
-
-	a {
-	display: block;
-	}
-}
-
-.site-main .comment-navigation,
-.site-main .paging-navigation,
-.site-main .post-navigation {
 	margin: 1.5em 0;
 	overflow: hidden;
-}
 
-.comment-navigation .nav-previous,
-.paging-navigation .nav-previous,
-.post-navigation .nav-previous,
-.comment-navigation .nav-next,
-.paging-navigation .nav-next,
-.post-navigation .nav-next {
-	margin-bottom: 3px;
-	width: 100%;
-}
+	.nav-previous,
+	.nav-next {
+		margin-bottom: 3px;
+		width: 100%;
 
+		a {
+			background-color: $color__background-btn;
+			color: $color__text-main !important;
+			display: block;
+			padding: 12px 16px;
+		}
 
-@media screen and (min-width: 400px) {
-	.comment-navigation .nav-previous,
-	.paging-navigation .nav-previous,
-	.post-navigation .nav-previous {
-		float: left;
-		width: 49.5%;
+		a:hover,
+		a:focus,
+		a:active {
+			background-color: $color__background-btn-hover;
+			color: white !important;
+		}
 	}
 
-	.comment-navigation .nav-next,
-	.paging-navigation .nav-next,
-	.post-navigation .nav-next {
-		float: right;
-		text-align: right;
-		width: 49.5%;
+	@media screen and (min-width: 400px) {
+		.nav-previous {
+			float: left;
+			max-width: 49.5%;
+		}
+
+		.nav-next {
+			float: right;
+			text-align: right;
+			max-width: 49.5%;
+		}
+	}
+}
+
+@media screen and (min-width: 400px) {
+	.navigation.comment-navigation a,
+	.navigation.posts-navigation a {
+		display: inline-block;
 	}
 }
