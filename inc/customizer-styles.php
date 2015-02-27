@@ -26,14 +26,16 @@ function customizer_library_penguin_build_styles() {
 		// Color
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'a:link',
-				'a:visited',
-				'#site-navigation a:hover',
-				'.bright-navbar #site-navigation a:hover',
 				'button:hover',
 				'input[type="button"]:hover',
 				'input[type="reset"]:hover',
-				'input[type="submit"]:hover'
+				'input[type="submit"]:hover',
+				'a:link',
+				'a:visited',
+				'#site-navigation a:hover',
+				'#site-navigation .site-title a:hover',
+				'.bright-navbar #site-navigation a:hover',
+				'.bright-navbar #site-navigation .site-title a:hover'
 			),
 			'declarations' => array(
 				'color' => $color
@@ -54,11 +56,19 @@ function customizer_library_penguin_build_styles() {
 		// background-color
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'.btn a:hover',
-				'.btn a:focus',
+				'.btn a:hover', 
+				'.btn a:focus', 
 				'.btn a:active',
-				'#site-navigation.main-navigation .current_page_item > a',
-				'#site-navigation.main-navigation .current-menu-item > a',
+				'#site-navigation .current_page_item > a',
+				'#site-navigation .current-menu-item > a',
+				'.bright-navbar #site-navigation .current_page_item > a',
+				'.bright-navbar #site-navigation .current-menu-item > a',
+				'.navigation .nav-previous a:hover',
+				'.navigation .nav-previous a:focus',
+				'.navigation .nav-previous a:active',
+				'.navigation .nav-next a:hover',
+				'.navigation .nav-next a:focus',
+				'.navigation .nav-next a:active',
 				'article.format-link',
 				'article.format-link .entry-meta-top a:hover',
 				'article.format-link .entry-meta-top a:focus',
@@ -75,6 +85,7 @@ function customizer_library_penguin_build_styles() {
 		// border-color
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
+				'button:hover',
 				'input[type="button"]:hover',
 				'input[type="reset"]:hover',
 				'input[type="submit"]:hover',
