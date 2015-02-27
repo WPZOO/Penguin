@@ -19,7 +19,7 @@
 	</header><!-- .entry-header -->
 
 	<?php $contentoutput = get_theme_mod( 'excerpt-content' ); ?>
-	<?php if ( has_excerpt() && $contentoutput == 'excerpt' || ! has_post_format() && $contentoutput == 'excerpt' ) : ?>
+	<?php if ( $contentoutput != 'content' && ! has_post_format() ) : ?>
 	<?php get_template_part( 'template-parts/the_excerpt' ); ?>
 	<?php else : ?>
 	<?php get_template_part( 'template-parts/the_content' ); ?>
