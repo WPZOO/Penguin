@@ -179,15 +179,80 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 1.5em;
+	font-size: 1.6em;
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+	h1 {
+		font-size: 2em;
+	}
+}
+@media screen and (min-width: 992px) {
+	h1 {
+		font-size: 2em;
+	}
+}
+@media screen and (min-width: 1200px) {
+	h1.entry-title {
+		font-size: 1.6em;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.sticky h1.entry-title {
+		font-size: 2.5em;
+	}
+}
+body.single h1.entry-title, body.page h1.entry-title {
+	font-size: 2em;
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+	body.single h1.entry-title, body.page h1.entry-title {
+		font-size: 2.3em;
+	}
+}
+@media screen and (min-width: 992px) {
+	body.single h1.entry-title, body.page h1.entry-title {
+		font-size: 2.5em;
+	}
+}
+@media screen and (min-width: 1200px) {
+	body.single h1.entry-title, body.page h1.entry-title {
+		font-size: 3em;
+	}
+}
+h1.entry-title, h1.widget-title, h1.page-title {
+	margin-top: 0;
+}
+h1.entry-title {
+	margin-bottom: .1em;
+}
+.search .page h1.entry-title {
+	font-weight: 600;
+}
+.single h1.entry-title, .page h1.entry-title {
+	font-weight: 300;
 }
 
 h2 {
-	font-size: 1.4em;
+	font-size: 1.5em;
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+	h2 {
+		font-size: 1.8em;
+	}
+}
+@media screen and (min-width: 992px) {
+	h2 {
+		font-size: 1.8em;
+	}
 }
 
 h3 {
-	font-size: 1.3em;
+	font-size: 1.4em;
+}
+@media screen and (min-width: 992px) {
+	h3 {
+		font-size: 1.6em;
+	}
 }
 
 h4 {
@@ -203,78 +268,6 @@ h6 {
 	letter-spacing: 1px;
 }
 
-h1.entry-title,
-h1.widget-title,
-h1.page-title {
-	margin-top: 0;
-}
-
-h1.entry-title {
-	margin-bottom: .1em;
-}
-
-.search .page h1.entry-title {
-	font-weight: 600;
-}
-
-.single h1.entry-title,
-.page h1.entry-title {
-	font-weight: 300;
-}
-
-@media screen and (max-width: 767px) {
-	.blog h1.entry-title,
-	.archive h1.entry-title,
-	.search h1.entry-title,
-	.search .page h1.entry-title {
-		font-size: 1.5em;
-	}
-
-	.single h1.entry-title,
-	.page h1.entry-title {
-		font-size: 2em;
-	}
-}
-@media screen and (min-width: 768px) and (max-width: 991px) {
-	.blog h1.entry-title,
-	.archive h1.entry-title,
-	.search h1.entry-title,
-	.search .page h1.entry-title {
-		font-size: 2em;
-	}
-
-	.single h1.entry-title,
-	.page h1.entry-title {
-		font-size: 2.5em;
-	}
-}
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-	.blog h1.entry-title,
-	.archive h1.entry-title,
-	.search h1.entry-title,
-	.search .page h1.entry-title,
-	.single h1.entry-title,
-	.page h1.entry-title {
-		font-size: 2.5em;
-	}
-}
-@media screen and (min-width: 1200px) {
-	.blog h1.entry-title,
-	.archive h1.entry-title,
-	.search h1.entry-title,
-	.search .page h1.entry-title {
-		font-size: 1.5em;
-	}
-
-	.blog .sticky h1.entry-title {
-		font-size: 2em;
-	}
-
-	.single h1.entry-title,
-	.page h1.entry-title {
-		font-size: 3em;
-	}
-}
 /*--------------------------------------------------------------
 2.2 - General
 --------------------------------------------------------------*/
