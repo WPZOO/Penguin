@@ -18,7 +18,11 @@
 		<?php get_template_part( 'template-parts/meta', 'top' ); ?>
 	</header><!-- .entry-header -->
 
+	<?php if ( has_post_format() ) : ?>
+	<?php get_template_part( 'template-parts/the_content' ); ?>
+	<?php else : ?>
 	<?php get_template_part( 'template-parts/the_excerpt' ); ?>
+	<?php endif; ?>
 
 	<?php if ( 'post' == get_post_type() ) : ?>
 	<?php get_template_part( 'template-parts/meta', 'bottom' ); ?>
