@@ -738,6 +738,34 @@ input:focus {
 		margin-bottom: 15px;
 	}
 }
+/* Image shapes */
+.img-rounded {
+	background-clip: padding-box;
+	/* stops bg color from leaking outside the border: */
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.img-circle {
+	background-clip: padding-box;
+	/* stops bg color from leaking outside the border: */
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.img-thumbnail {
+	border: 3px solid #fff;
+	box-shadow: 0px 1px 3px #ccc;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.img-thumbnail:hover {
+	box-shadow: 0px 1px 3px #404040;
+}
+
 /* Make sure embeds and iframes fit their containers */
 embed,
 iframe,
