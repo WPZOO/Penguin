@@ -1,0 +1,30 @@
+{
+	"name"        : "wpzoo/penguin-gold",
+	"description" : "PENGU!N is a clean and modern WordPress theme made by WPZOO. Besides the link color the used colors are monochromatic. The post thumbnail will be used as a big header image on single post pages as well as Pages. These theme characteristics make it possible to use PENGU!N for bloggin' as well as a magazin theme.",
+	"keywords"    : ["wordpress", "theme", "penguin-gold"],
+	"type"        : "wordpress-theme",
+	"homepage"    : "https://github.com/WPZOO/penguin-gold",
+	"license"     : "GPL2",
+	"authors"     : [
+		{
+			"name"    : "WPZOO",
+			"email"   : "support@wpzoo.ch",
+			"homepage": "http://ulrich.pogson.ch/"
+		},
+		{
+			"name"    : "Stefan Brechbühl",
+			"homepage": "http://pixelstrol.ch/"
+		},
+		{
+			"name"    : "Ulrich Pogson",
+			"email"   : "grapplerulrich@gmail.com",
+			"homepage": "http://ulrich.pogson.ch/"
+		}
+	],
+	"support"     : {
+		"issues": "https://github.com/WPZOO/penguin-gold/issues"
+	},
+	"require" : {
+		"php": ">=5.2",
+	}
+}
