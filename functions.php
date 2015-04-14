@@ -131,7 +131,7 @@ function penguin_stylesheet_uri( $stylesheet_uri, $stylesheet_dir_uri ) {
 			$stylesheet_uri = $min_stylesheet_uri;
 		}
 	} elseif ( 1 == $minified ) {
-		$stylesheet_uri = $stylesheet_dir_uri . '/min.style.css';
+		$stylesheet_uri = $stylesheet_dir_uri . '/style.min.css';
 	}
 	
 	return $stylesheet_uri;
