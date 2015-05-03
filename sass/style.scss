@@ -15,11 +15,11 @@ Tags: black, blue, gray, white, light, one-column, two-columns, right-sidebar, l
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-1.0 – Reset
+1.0 - Reset
 2.0 - Typography
-  2.1 – Headings
-  2.2 – General
-  2.3 – Icon Font
+  2.1 - Headings
+  2.2 - General
+  2.3 - Icon Font
 3.0 - Elements
 4.0 - Forms
 5.0 - Media
@@ -28,19 +28,19 @@ Tags: black, blue, gray, white, light, one-column, two-columns, right-sidebar, l
 6.0 - Navigation
   6.1 - Links
   6.2 - Menus
-  6.3 – Post / Page Nav
-  6.4 – Back to Top
+  6.3 - Post / Page Nav
+  6.4 - Back to Top
 7.0 - Layout
   7.1 - Posts and pages
   7.2 - Post Formats
   7.3 - Comments
   7.4 - Widgets
-8.0 – Helper Classes
+8.0 - Helper Classes
   8.1 - Clearings
   8.2 - Alignments
   8.3 - Accessibility
 9.0 - Infinite scroll
-10.0 – Print
+10.0 - Print
 --------------------------------------------------------------*/
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
@@ -51,27 +51,27 @@ Tags: black, blue, gray, white, light, one-column, two-columns, right-sidebar, l
 @import "reset";
 
 /*--------------------------------------------------------------
-2.0 – Typography
+2.0 - Typography
 --------------------------------------------------------------*/
 @import "typography/typography";
 
 /*--------------------------------------------------------------
-3.0 – Elements
+3.0 - Elements
 --------------------------------------------------------------*/
 @import "elements/elements";
 
 /*--------------------------------------------------------------
-4.0 – Forms
+4.0 - Forms
 --------------------------------------------------------------*/
 @import "forms/forms";
 
 /*--------------------------------------------------------------
-5.0 – Media
+5.0 - Media
 --------------------------------------------------------------*/
 @import "media/media";
 
 /*--------------------------------------------------------------
-6.0 – Navigation
+6.0 - Navigation
 --------------------------------------------------------------*/
 @import "navigation/navigation";
 
@@ -81,16 +81,16 @@ Tags: black, blue, gray, white, light, one-column, two-columns, right-sidebar, l
 @import "layout/layout";
 
 /*--------------------------------------------------------------
-8.0 – Helper CLasses
+8.0 - Helper CLasses
 --------------------------------------------------------------*/
 @import "modules/helper";
 
 /*--------------------------------------------------------------
-9.0 – Infinite scroll
+9.0 - Infinite scroll
 --------------------------------------------------------------*/
 @import "modules/infinite-scroll";
 
 /*--------------------------------------------------------------
-10.0 – Print
+10.0 - Print
 --------------------------------------------------------------*/
 @import "modules/print";
