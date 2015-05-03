@@ -170,7 +170,7 @@ caption,
 th,
 td {
 	font-weight: normal;
-	text-align: left;
+	text-align: right;
 }
 
 blockquote:before,
@@ -385,7 +385,7 @@ i {
 }
 
 blockquote {
-	border-left: 2px solid #bcbcbc;
+	border-right: 2px solid #bcbcbc;
 	font-style: italic;
 	margin-bottom: 0.5em;
 	padding: 0.5em 1em;
@@ -504,7 +504,7 @@ big,
 .penguin-category-icon:before {
 	content: "\e000";
 	font-size: 1.3em;
-	margin-left: -2px;
+	margin-right: -2px;
 	vertical-align: middle;
 }
 
@@ -540,7 +540,7 @@ hr {
 
 ul,
 ol {
-	margin: 0 0 0.5em 2em;
+	margin: 0 2em 0.5em 0;
 }
 
 ul {
@@ -558,7 +558,7 @@ ol {
 li > ul,
 li > ol {
 	margin-bottom: 0;
-	margin-left: 1.5em;
+	margin-right: 1.5em;
 }
 
 dt {
@@ -577,8 +577,8 @@ img {
 }
 
 .author-img img {
-	float: left;
-	margin: 7px 1em 0 0;
+	float: right;
+	margin: 7px 0 0 1em;
 }
 
 figure {
@@ -844,10 +844,10 @@ input:focus {
 	margin: auto;
 	position: absolute;
 	top: 50%;
-	left: 50%;
-	-ms-transform: translate(-50%, -50%);
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
+	right: 50%;
+	-ms-transform: translate(50%, -50%);
+	-webkit-transform: translate(50%, -50%);
+	transform: translate(50%, -50%);
 	width: 100%;
 }
 
@@ -1096,7 +1096,7 @@ p a {
 }
 
 #site-navigation li {
-	float: left;
+	float: right;
 	position: relative;
 }
 
@@ -1119,8 +1119,8 @@ p a {
 	font-family: "penguin-icon-font";
 	font-size: 0.75em;
 	line-height: 1;
-	padding-left: 7px;
-	text-align: right;
+	padding-right: 7px;
+	text-align: left;
 	vertical-align: text-bottom;
 
 	speak: none;
@@ -1131,7 +1131,7 @@ p a {
 }
 
 #site-navigation .site-title {
-	float: left;
+	float: right;
 	margin: 0;
 }
 
@@ -1139,8 +1139,8 @@ p a {
 	color: #fff;
 	font-size: 20px;
 	letter-spacing: 1px;
-	margin-right: 5px;
-	padding-left: 0;
+	margin-left: 5px;
+	padding-right: 0;
 	text-transform: uppercase;
 }
 
@@ -1182,7 +1182,7 @@ p a {
 	.menu-toggle,
 	#site-navigation.toggled .nav-menu {
 		display: block;
-		float: right;
+		float: left;
 	}
 
 	#site-navigation ul {
@@ -1210,11 +1210,11 @@ p a {
 	#masthead .menu-item-has-children a:after {
 		position: absolute;
 		top: 23px;
-		right: 0.5em;
+		left: 0.5em;
 	}
 
 	#masthead .menu-search {
-		padding: 5px 16px 5px 0;
+		padding: 5px 0 5px 16px;
 	}
 
 	#masthead .menu-search .search-field {
@@ -1227,16 +1227,16 @@ p a {
 
 @media screen and (min-width: 601px) {
 	#site-navigation a {
-		padding-left: 12px;
 		padding-right: 12px;
+		padding-left: 12px;
 	}
 
 	#site-navigation ul ul {
 		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-		float: left;
+		float: right;
 		position: absolute;
 		top: 50px;
-		left: -999em;
+		right: -999em;
 		z-index: 99999;
 	}
 
@@ -1250,12 +1250,12 @@ p a {
 	}
 
 	#site-navigation li:hover > ul {
-		left: auto;
+		right: auto;
 	}
 
 	#masthead .menu-search {
 		display: block;
-		float: right;
+		float: left;
 		height: 50px;
 		min-width: 25px;
 		position: relative;
@@ -1271,7 +1271,7 @@ p a {
 		border-width: 0;
 		cursor: pointer;
 		position: absolute;
-		right: 0;
+		left: 0;
 		text-indent: 25px;
 		-moz-transition: all 0.2s ease-in-out;
 		-ms-transition: all 0.2s ease-in-out;
@@ -1331,9 +1331,9 @@ p a {
 }
 
 #site-navigation .site-logo {
-	float: left;
+	float: right;
 	height: 60px;
-	margin-right: 20px;
+	margin-left: 20px;
 	padding: 5px 0;
 }
 
@@ -1411,14 +1411,14 @@ p a {
 
 @media screen and (min-width: 400px) {
 	.navigation .nav-previous {
-		float: left;
+		float: right;
 		max-width: 49.5%;
 	}
 
 	.navigation .nav-next {
-		float: right;
+		float: left;
 		max-width: 49.5%;
-		text-align: right;
+		text-align: left;
 	}
 }
 
@@ -1440,7 +1440,7 @@ p a {
 	height: 50px;
 	position: fixed;
 	top: 0;
-	right: 0;
+	left: 0;
 	text-align: center;
 	text-decoration: none;
 	width: 50px;
@@ -1497,10 +1497,10 @@ p a {
 --------------------------------------------------------------*/
 
 .container {
-	margin-left: auto;
 	margin-right: auto;
-	padding-left: 15px;
+	margin-left: auto;
 	padding-right: 15px;
+	padding-left: 15px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1522,16 +1522,16 @@ p a {
 }
 
 #content-area {
-	margin-left: -15px;
 	margin-right: -15px;
+	margin-left: -15px;
 }
 
 #primary,
 #secondary {
 	margin-bottom: 1.5em;
 	margin-top: 1em;
-	padding-left: 15px;
 	padding-right: 15px;
+	padding-left: 15px;
 	position: relative;
 }
 
@@ -1544,14 +1544,14 @@ p a {
 
 @media screen and (min-width: 768px) {
 	#primary {
-		float: left;
+		float: right;
 		width: 66.66666667%;
 	}
 }
 
 @media screen and (min-width: 992px) {
 	#primary {
-		float: left;
+		float: right;
 		width: 75%;
 	}
 }
@@ -1563,8 +1563,8 @@ p a {
 
 @media screen and (min-width: 400px) and (max-width: 767px) {
 	#secondary {
-		margin-left: auto;
 		margin-right: auto;
+		margin-left: auto;
 		width: 75%;
 	}
 }
@@ -1577,14 +1577,14 @@ p a {
 
 @media screen and (min-width: 768px) {
 	#secondary {
-		float: left;
+		float: right;
 		width: 33.33333333%;
 	}
 }
 
 @media screen and (min-width: 992px) {
 	#secondary {
-		float: left;
+		float: right;
 		width: 25%;
 	}
 }
@@ -1615,11 +1615,11 @@ p a {
 
 @media screen and (min-width: 768px) {
 	.sidebar-left #primary {
-		float: right;
+		float: left;
 	}
 
 	.sidebar-left #secondary {
-		float: left;
+		float: right;
 	}
 }
 
@@ -1636,9 +1636,9 @@ p a {
 .penguin-post {
 	background-color: #fff;
 	border-bottom: 1px solid #ccc;
-	border-right: 1px solid #ddd;
+	border-left: 1px solid #ddd;
 	border-top: 3px solid rgba(145, 145, 145, 0.4);
-	box-shadow: 1px 2px 4px rgba(160, 160, 160, 0.2);
+	box-shadow: -1px 2px 4px rgba(160, 160, 160, 0.2);
 	margin-bottom: 1em;
 	padding: 5px 0;
 	position: relative;
@@ -1718,8 +1718,8 @@ p a {
 .entry-content,
 .entry-meta-top,
 .entry-meta-bottom {
-	margin-left: 10px;
 	margin-right: 10px;
+	margin-left: 10px;
 }
 
 @media screen and (min-width: 600px) and (max-width: 991px) {
@@ -1728,8 +1728,8 @@ p a {
 	.entry-content,
 	.entry-meta-top,
 	.entry-meta-bottom {
-		margin-left: 20px;
 		margin-right: 20px;
+		margin-left: 20px;
 	}
 }
 
@@ -1764,8 +1764,8 @@ p a {
 	.search .page .entry-content,
 	.search .page .entry-meta-top,
 	.search .page .entry-meta-bottom {
-		margin-left: 30px;
 		margin-right: 30px;
+		margin-left: 30px;
 	}
 
 	.single .entry-title,
@@ -1778,8 +1778,8 @@ p a {
 	.page .entry-content,
 	.page .entry-meta-top,
 	.page .entry-meta-bottom {
-		margin-left: 50px;
 		margin-right: 50px;
+		margin-left: 50px;
 	}
 }
 
@@ -1890,15 +1890,15 @@ article.format-link .entry-meta-bottom a:active {
 
 @media only screen and (min-width: 768px) {
 	#comments {
-		margin-left: 20px;
+		margin-right: 20px;
 		margin-top: 1em;
 	}
 }
 
 @media only screen and (min-width: 992px) {
 	#comments {
-		margin-left: 50px;
 		margin-right: 50px;
+		margin-left: 50px;
 		margin-top: 2em;
 	}
 }
@@ -1944,12 +1944,12 @@ article.format-link .entry-meta-bottom a:active {
 .comment-list,
 .comment-list .children {
 	list-style: none;
-	margin-left: 0;
+	margin-right: 0;
 }
 
 .comment-list article {
 	background-color: #fff;
-	margin-left: 0;
+	margin-right: 0;
 	padding: 5px 10px;
 	position: relative;
 	width: auto;
@@ -1958,25 +1958,25 @@ article.format-link .entry-meta-bottom a:active {
 .comment-list article:after {
 	border-color: transparent #fff;
 	border-style: solid;
-	border-width: 10px 10px 10px 0;
+	border-width: 10px 0 10px 10px;
 	content: "";
 	display: block;
 	position: absolute;
 	top: 25px;
-	left: -10px;
+	right: -10px;
 	width: 0;
 	z-index: 1;
 }
 
 @media only screen and (min-width: 480px) {
 	.comment-list article {
-		margin-left: 80px;
+		margin-right: 80px;
 	}
 }
 
 @media only screen and (min-width: 800px) {
 	.comment-list .children {
-		margin-left: 40px;
+		margin-right: 40px;
 	}
 }
 
@@ -2002,8 +2002,8 @@ article.format-link .entry-meta-bottom a:active {
 	.comment-meta img {
 		border-radius: 50%;
 		display: block;
-		float: left;
-		margin-left: -90px;
+		float: right;
+		margin-right: -90px;
 	}
 }
 
@@ -2032,7 +2032,7 @@ article.format-link .entry-meta-bottom a:active {
 
 .widget ul {
 	list-style-type: none;
-	margin-left: 0;
+	margin-right: 0;
 }
 
 .widget li {
@@ -2041,7 +2041,7 @@ article.format-link .entry-meta-bottom a:active {
 
 .widget .children,
 .widget .sub-menu {
-	margin-left: 2em;
+	margin-right: 2em;
 }
 
 .widget .children li,
@@ -2073,8 +2073,8 @@ article.format-link .entry-meta-bottom a:active {
 /* Calendar widget */
 #calendar_wrap table {
 	margin-bottom: 0;
-	margin-left: auto;
 	margin-right: auto;
+	margin-left: auto;
 	max-width: 300px;
 	width: 100%;
 }
@@ -2085,11 +2085,11 @@ article.format-link .entry-meta-bottom a:active {
 }
 
 #calendar_wrap table #prev {
-	text-align: left;
+	text-align: right;
 }
 
 #calendar_wrap table #next {
-	text-align: right;
+	text-align: left;
 }
 
 
@@ -2149,14 +2149,14 @@ article:after,
 @media screen and (min-width: 600px) {
 	.alignleft {
 		display: inline;
-		float: left;
-		margin-right: 1.5em;
+		float: right;
+		margin-left: 1.5em;
 	}
 
 	.alignright {
 		display: inline;
-		float: right;
-		margin-left: 1.5em;
+		float: left;
+		margin-right: 1.5em;
 	}
 }
 
@@ -2193,7 +2193,7 @@ article:after,
 	line-height: normal;
 	padding: 15px 23px 14px;
 	top: 5px;
-	left: 5px;
+	right: 5px;
 	text-decoration: none;
 	width: auto;
 	z-index: 100000;
