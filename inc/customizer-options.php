@@ -164,7 +164,15 @@ function penguin_options() {
 		'label'         => __( 'Minified CSS and JS', 'penguin' ),
 		'section'       => $section,
 		'type'          => 'checkbox',
-		'default'       => 0,
+		'default'       => 1,
+	);
+
+	$options['fluidvids'] = array(
+		'id'            => 'fluidvids',
+		'label'         => __( 'Load Fluidvids.js for responsive videos', 'penguin' ),
+		'section'       => $section,
+		'type'          => 'checkbox',
+		'default'       => 1,
 	);
 
 	// Adds the sections to the $options array

@@ -93,10 +93,11 @@ add_action( 'widgets_init', 'penguin_widgets_init' );
  * Enqueue scripts and styles.
  */
 function penguin_scripts() {
-	$theme    = wp_get_theme();
-	$penguin  = wp_get_theme( 'penguin-gold' );
-	$minified = get_theme_mod( 'min-files' );
-	$suffix   = ( 1 == $minified ) ? '.min' : '';
+	$theme     = wp_get_theme();
+	$penguin   = wp_get_theme( 'penguin-gold' );
+	$minified  = get_theme_mod( 'min-files' );
+	$suffix    = ( 1 == $minified ) ? '.min' : '';
+	$fluidvids = get_theme_mod( 'fluidvids' );
 
 	if ( is_child_theme() ) {
 		wp_enqueue_style( 'penguin-parent-style', get_template_directory_uri() . '/style' . $suffix . '.css', false, $penguin['Version'] );
@@ -111,8 +112,10 @@ function penguin_scripts() {
 
 	wp_enqueue_script( 'smooth-scroll', get_template_directory_uri() . '/js/smooth-scroll' . $suffix . '.js', array(), '5.3.3', true );
 	wp_enqueue_script( 'penguin-navigation', get_template_directory_uri() . '/js/navigation' . $suffix . '.js', array(), '20120206', true );
-	wp_enqueue_script( 'fluidvids', get_template_directory_uri() . '/js/fluidvids' . $suffix . '.js', array(), '2.4.1', true );
-	wp_enqueue_script( 'penguin-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix' . $suffix . '.js', array(), '20130115', true );
+	
+	if ( 1 == $fluidvids ) {
+		wp_enqueue_script( 'fluidvids', get_template_directory_uri() . '/js/fluidvids' . $suffix . '.js', array(), '2.4.1', true );
+	}
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -162,8 +165,9 @@ add_action( 'wp_enqueue_scripts', 'penguin_enqueue_js_fix' );
  * Add script to footer
  */
 function penguin_wp_footer() {
+	$fluidvids = get_theme_mod( 'fluidvids' );
 	// Do not add script if FluidVids plugin is installed
-	if ( ! class_exists( 'FluidVids' ) ) { ?>
+	if ( ! class_exists( 'FluidVids' ) && 1 == $fluidvids ) { ?>
 	<script>
 		fluidvids.init({
 			selector: ['iframe'],
@@ -200,3 +204,45 @@ require get_template_directory() . '/inc/customizer-styles.php';
  * Theme Hook Alliance files
  */
 require( get_template_directory() . '/inc/tha-theme-hooks.php' );
+
+/*
+ * Gold notice 
+ */
+function example_admin_notice() {
+	global $current_user ;
+	$user_id = $current_user->ID;
+	/* Check that the user hasn't already clicked to ignore the message */
+	if ( ! get_user_meta($user_id, 'penguin_gold_notice') && current_user_can('edit_themes')) {
+		echo '<div class="updated"><p>'; 
+		printf(__('Thank you for choosing the PENGUIN Theme! You might be interested in <a href="//wpzoo.ch/en/themes/penguin/">the Gold version of PENGU!N</a>.<br> <a href="%1$s">Hide this message</a>'), '?igonore_penguin_gold_notice=0');
+		echo "</p></div>";
+	}
+}
+add_action('admin_notices', 'example_admin_notice');
+
+function igonore_penguin_gold_notice() {
+	global $current_user;
+	$user_id = $current_user->ID;
+	/* If user clicks to ignore the notice, add that to their user meta */
+	if ( isset($_GET['igonore_penguin_gold_notice']) && '0' == $_GET['igonore_penguin_gold_notice'] ) {
+		 add_user_meta($user_id, 'penguin_gold_notice', 'true', true);
+	}
+}
+add_action('admin_init', 'igonore_penguin_gold_notice');
+
+/*
+ * Gold link in toolbar 
+ */
+function add_toolbar_items($admin_bar){
+	if ( current_user_can('edit_themes')) {
+		$admin_bar->add_menu( array(
+			'id'    => 'buy-penguin-gold',
+			'title' => 'Buy PENGU!N Gold',
+			'href'  => '//wpzoo.ch/en/themes/penguin/',
+			'meta'  => array(
+				'title' => __('Buy PENGU!N Gold'),
+			),
+		));
+	}
+}
+add_action('admin_bar_menu', 'add_toolbar_items', 100);
