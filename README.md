@@ -23,7 +23,7 @@ Thanks a lot to all people who are involved in the following projects.
 
 ### Translations
 PENGU!N Gold has been translated into the following languages so far:
-- German by WPZOO
+- German by Stefan Brechbühl
 
 If you are a multilangual and wanna help us make PENGU!N Gold even more international, join us on [webtranslateit.com](https://webtranslateit.com/en/projects/9863-PENGU-N).
 
@@ -39,7 +39,7 @@ The icon font used in PENGU!N Gold only contains the icons which are really need
 The multi column layout which appears on a bigger screen has implemented with the help of [Masonry](http://masonry.desandro.com/), a JavaScript grid layout library. Masonry is available under the MIT license.
 
 ### Customizer Library
-This is a helpful library for working with the influded WordPress Theme customizer. [Customizer](https://github.com/devinsays/customizer-library) Library is shared by Devin Price on github.
+This is a helpful library for working with the influded WordPress Theme customizer. [Customizer Library](https://github.com/devinsays/customizer-library) is shared by Devin Price on github.
 
 ### Fluidvids
 [Fluidvids](https://github.com/toddmotto/fluidvids) is a JavaScript library and helps PENGU!N Gold to show your embed videos in a responsive way. Fluidvids is available under the MIT license.
