@@ -1,297 +1,411 @@
-# Copyright (C) 2014 Automattic
-# This file is distributed under the GNU General Public License v2 or later.
+# Copyright (C) 2015 WPZOO
+# This file is distributed under the GPL-2.0+.
 msgid ""
 msgstr ""
-"Project-Id-Version: _s 1.0-wpcom\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2014-03-30 17:37:52+00:00\n"
+"Project-Id-Version: PENGU!N Gold 1.0beta\n"
+"Report-Msgid-Bugs-To: WPZOO Translations <translations@wpzoo.ch>\n"
+"POT-Creation-Date: 2015-05-14 21:27:10+00:00\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: WPZOO Translations <translations@wpzoo.ch>\n"
+"Language-Team: WPZOO Translations <translations@wpzoo.ch>\n"
+"X-Generator: grunt-wp-i18n 0.5.2\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
 
-#: 404.php:15
-msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
-
-#: 404.php:19
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
-msgstr ""
-
-#: 404.php:27
-msgid "Most Used Categories"
-msgstr ""
-
-#. translators: %1$s: smiley
-#: 404.php:44
-msgid "Try looking in the monthly archives. %1$s"
-msgstr ""
-
-#: archive.php:27
-msgid "Author: %s"
-msgstr ""
-
-#: archive.php:30
-msgid "Day: %s"
-msgstr ""
-
-#: archive.php:33
-msgid "Month: %s"
-msgstr ""
-
-#: archive.php:33
-msgctxt "monthly archives date format"
-msgid "F Y"
-msgstr ""
-
-#: archive.php:36
-msgid "Year: %s"
-msgstr ""
-
-#: archive.php:36
-msgctxt "yearly archives date format"
-msgid "Y"
-msgstr ""
-
-#: archive.php:39
-msgid "Asides"
-msgstr ""
-
-#: archive.php:42
-msgid "Galleries"
-msgstr ""
-
-#: archive.php:45
-msgid "Images"
-msgstr ""
-
-#: archive.php:48
-msgid "Videos"
-msgstr ""
-
-#: archive.php:51
-msgid "Quotes"
-msgstr ""
-
-#: archive.php:54
-msgid "Links"
-msgstr ""
-
-#: archive.php:57
-msgid "Statuses"
-msgstr ""
-
-#: archive.php:60
-msgid "Audios"
-msgstr ""
-
-#: archive.php:63
-msgid "Chats"
-msgstr ""
-
-#: archive.php:66 sidebar.php:16
-msgid "Archives"
-msgstr ""
-
-#: comments.php:28
-msgctxt "comments title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
-
-#: comments.php:35 comments.php:52
+#: comments.php:44
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:36 comments.php:53
-msgid "&larr; Older Comments"
+#: comments.php:46
+msgid "Older Comments"
 msgstr ""
 
-#: comments.php:37 comments.php:54
-msgid "Newer Comments &rarr;"
+#: comments.php:47
+msgid "Newer Comments"
 msgstr ""
 
-#: comments.php:64
+#: comments.php:58
 msgid "Comments are closed."
-msgstr ""
-
-#: content-none.php:13
-msgid "Nothing Found"
-msgstr ""
-
-#: content-none.php:19
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
-
-#: content-none.php:23
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr ""
-
-#: content-none.php:28
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
-msgstr ""
-
-#: content-page.php:18 content-single.php:20 content.php:27
-msgid "Pages:"
-msgstr ""
-
-#: content-page.php:23 content-single.php:60 content.php:61
-msgid "Edit"
-msgstr ""
-
-#. translators: used between list items, there is a space after the comma
-#: content-single.php:29 content-single.php:32 content.php:38 content.php:48
-msgid ", "
-msgstr ""
-
-#: content-single.php:37
-msgid ""
-"This entry was tagged %2$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark"
-"\">permalink</a>."
-msgstr ""
-
-#: content-single.php:39
-msgid "Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
-msgstr ""
-
-#: content-single.php:45
-msgid ""
-"This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" "
-"rel=\"bookmark\">permalink</a>."
-msgstr ""
-
-#: content-single.php:47
-msgid ""
-"This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark"
-"\">permalink</a>."
-msgstr ""
-
-#: content.php:24
-msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#: content.php:42
-msgid "Posted in %1$s"
-msgstr ""
-
-#: content.php:52
-msgid "Tagged %1$s"
-msgstr ""
-
-#: content.php:58
-msgid "Leave a comment"
-msgstr ""
-
-#: content.php:58
-msgid "1 Comment"
-msgstr ""
-
-#: content.php:58
-msgid "% Comments"
-msgstr ""
-
-#: footer.php:15
-msgid "http://wordpress.org/"
-msgstr ""
-
-#: footer.php:15
-msgid "Proudly powered by %s"
-msgstr ""
-
-#: footer.php:17
-msgid "Theme: %1$s by %2$s."
 msgstr ""
 
 #: functions.php:45
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:73
+#: functions.php:81 inc/customizer-options.php:118
+#: inc/customizer-options.php:129
 msgid "Sidebar"
 msgstr ""
 
-#: header.php:31
-msgid "Menu"
+#: functions.php:150
+msgid "PENGU!N image size"
 msgstr ""
 
-#: header.php:32
+#: header.php:41
 msgid "Skip to content"
 msgstr ""
 
-#: inc/extras.php:63
+#: inc/customizer-library/extensions/fonts.php:115
+msgid "All"
+msgstr ""
+
+#: inc/customizer-library/extensions/fonts.php:116
+msgid "Cyrillic"
+msgstr ""
+
+#: inc/customizer-library/extensions/fonts.php:117
+msgid "Cyrillic Extended"
+msgstr ""
+
+#: inc/customizer-library/extensions/fonts.php:118
+msgid "Devanagari"
+msgstr ""
+
+#: inc/customizer-library/extensions/fonts.php:119
+msgid "Greek"
+msgstr ""
+
+#: inc/customizer-library/extensions/fonts.php:120
+msgid "Greek Extended"
+msgstr ""
+
+#: inc/customizer-library/extensions/fonts.php:121
+msgid "Khmer"
+msgstr ""
+
+#: inc/customizer-library/extensions/fonts.php:122
+msgid "Latin"
+msgstr ""
+
+#: inc/customizer-library/extensions/fonts.php:123
+msgid "Latin Extended"
+msgstr ""
+
+#: inc/customizer-library/extensions/fonts.php:124
+msgid "Vietnamese"
+msgstr ""
+
+#: inc/customizer-options.php:28
+msgid "Your logo"
+msgstr ""
+
+#: inc/customizer-options.php:30
+msgid "You might use a logo instead of the site title in the header navigation."
+msgstr ""
+
+#: inc/customizer-options.php:35
+msgid "Logo"
+msgstr ""
+
+#: inc/customizer-options.php:46
+msgid "Colors"
+msgstr ""
+
+#: inc/customizer-options.php:51
+msgid "Dark"
+msgstr ""
+
+#: inc/customizer-options.php:52
+msgid "Bright"
+msgstr ""
+
+#: inc/customizer-options.php:57
+msgid "Brightness of navbar"
+msgstr ""
+
+#: inc/customizer-options.php:66
+msgid "Link color"
+msgstr ""
+
+#: inc/customizer-options.php:77
+msgid "Navigation"
+msgstr ""
+
+#: inc/customizer-options.php:83
+msgid "Add search box to primary menu"
+msgstr ""
+
+#: inc/customizer-options.php:95
+msgid "Content"
+msgstr ""
+
+#: inc/customizer-options.php:100
+msgid "Excerpt (trimmed-down output)"
+msgstr ""
+
+#: inc/customizer-options.php:101
+msgid "Content (full post / custom more tag)"
+msgstr ""
+
+#: inc/customizer-options.php:106
+msgid "Content output of standard posts on home and archive pages."
+msgstr ""
+
+#: inc/customizer-options.php:123
+msgid "Sidebar right"
+msgstr ""
+
+#: inc/customizer-options.php:124
+msgid "Sidebar left"
+msgstr ""
+
+#: inc/customizer-options.php:141
+msgid "Footer"
+msgstr ""
+
+#: inc/customizer-options.php:147
+msgid "Custom footer text"
+msgstr ""
+
+#: inc/customizer-options.php:158
+msgid "Advanced"
+msgstr ""
+
+#: inc/customizer-options.php:164
+msgid "Minified CSS and JS"
+msgstr ""
+
+#: inc/customizer-options.php:172
+msgid "Load Fluidvids.js for responsive videos"
+msgstr ""
+
+#: inc/extras-penguin-gold.php:104
 msgid "Page %s"
 msgstr ""
 
-#: inc/template-tags.php:23
+#: inc/extras-penguin-gold.php:137
+msgid "Read more"
+msgstr ""
+
+#: inc/extras-penguin-gold.php:150
+msgid "Scroll To Top"
+msgstr ""
+
+#: inc/template-tags.php:24
 msgid "Posts navigation"
 msgstr ""
 
-#: inc/template-tags.php:27
-msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+#: inc/template-tags.php:28
+msgid "Older posts"
 msgstr ""
 
-#: inc/template-tags.php:31
-msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+#: inc/template-tags.php:32
+msgid "Newer posts;"
 msgstr ""
 
 #: inc/template-tags.php:56
 msgid "Post navigation"
 msgstr ""
 
-#: inc/template-tags.php:59
-msgctxt "Previous post link"
-msgid "<span class=\"meta-nav\">&larr;</span> %title"
+#: inc/template-tags.php:107
+msgid "Category: %s"
 msgstr ""
 
-#: inc/template-tags.php:60
-msgctxt "Next post link"
-msgid "%title <span class=\"meta-nav\">&rarr;</span>"
+#: inc/template-tags.php:109
+msgid "Tag: %s"
 msgstr ""
 
-#: inc/template-tags.php:85
-msgid ""
-"<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by "
-"%2$s</span>"
+#: inc/template-tags.php:111
+msgid "Author: %s"
 msgstr ""
 
-#: search.php:16
+#: inc/template-tags.php:113
+msgid "Year: %s"
+msgstr ""
+
+#: inc/template-tags.php:115
+msgid "Month: %s"
+msgstr ""
+
+#: inc/template-tags.php:117
+msgid "Day: %s"
+msgstr ""
+
+#: inc/template-tags.php:137
+msgid "Archives: %s"
+msgstr ""
+
+#: inc/template-tags.php:141
+#. translators: 1: Taxonomy singular name, 2: Current taxonomy term
+msgid "%1$s: %2$s"
+msgstr ""
+
+#: inc/template-tags.php:143
+msgid "Archives"
+msgstr ""
+
+#: search.php:17
 msgid "Search Results for: %s"
 msgstr ""
 
-#: sidebar.php:23
-msgid "Meta"
+#: template-parts/content-none.php:13
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:19
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:27
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: template-parts/meta-bottom.php:3 template-parts/meta-bottom.php:12
+#. translators: used between list items, there is a space after the comma
+msgid ", "
+msgstr ""
+
+#: template-parts/meta-top.php:13
+msgid "Leave a comment"
+msgstr ""
+
+#: template-parts/meta-top.php:13
+msgid "1 Comment"
+msgstr ""
+
+#: template-parts/meta-top.php:13
+msgid "% Comments"
+msgstr ""
+
+#: template-parts/meta-top.php:15
+msgid "Edit"
+msgstr ""
+
+#: template-parts/the_content.php:2
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: template-parts/the_content.php:5
+msgid "Pages:"
 msgstr ""
 
 #. Theme Name of the plugin/theme
-msgid "_s"
+msgid "PENGU!N Gold"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "http://underscores.me/"
+msgid "http://wpzoo.ch/themes/penguin/"
 msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if "
-"you like. I'm a theme meant for hacking so don't use me as a <em>Parent "
-"Theme</em>. Instead try turning me into the next, most awesome, WordPress "
-"theme out there. That's what I'm here for."
+"PENGU!N is a clean and modern WordPress theme made by WPZOO. Besides the "
+"link color the used colors are monochromatic. The post thumbnail will be "
+"used as a big header image on single post pages as well as Pages. These "
+"theme characteristics make it possible to use PENGU!N for bloggin' as well "
+"as a magazin theme."
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "Automattic"
+msgid "WPZOO"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://automattic.com/"
+msgid "http://wpzoo.ch"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Full Width"
+msgstr ""
+
+#: comments.php:27
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/customizer-library/extensions/fonts.php:184
+msgctxt "font style"
+msgid "Serif"
+msgstr ""
+
+#: inc/customizer-library/extensions/fonts.php:188
+msgctxt "font style"
+msgid "Sans Serif"
+msgstr ""
+
+#: inc/customizer-library/extensions/fonts.php:192
+msgctxt "font style"
+msgid "Monospaced"
+msgstr ""
+
+#: inc/template-tags.php:113
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: inc/template-tags.php:115
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: inc/template-tags.php:117
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr ""
+
+#: inc/template-tags.php:119
+msgctxt "post format archive title"
+msgid "Asides"
+msgstr ""
+
+#: inc/template-tags.php:121
+msgctxt "post format archive title"
+msgid "Galleries"
+msgstr ""
+
+#: inc/template-tags.php:123
+msgctxt "post format archive title"
+msgid "Images"
+msgstr ""
+
+#: inc/template-tags.php:125
+msgctxt "post format archive title"
+msgid "Videos"
+msgstr ""
+
+#: inc/template-tags.php:127
+msgctxt "post format archive title"
+msgid "Quotes"
+msgstr ""
+
+#: inc/template-tags.php:129
+msgctxt "post format archive title"
+msgid "Links"
+msgstr ""
+
+#: inc/template-tags.php:131
+msgctxt "post format archive title"
+msgid "Statuses"
+msgstr ""
+
+#: inc/template-tags.php:133
+msgctxt "post format archive title"
+msgid "Audio"
+msgstr ""
+
+#: inc/template-tags.php:135
+msgctxt "post format archive title"
+msgid "Chats"
 msgstr ""
