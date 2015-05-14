@@ -112,16 +112,16 @@ if ( ! function_exists( 'customizer_library_get_google_font_subsets' ) ) :
  */
 function customizer_library_get_google_font_subsets() {
 	return array(
-		'all'          => __( 'All', 'textdomain' ),
-		'cyrillic'     => __( 'Cyrillic', 'textdomain' ),
-		'cyrillic-ext' => __( 'Cyrillic Extended', 'textdomain' ),
-		'devanagari'   => __( 'Devanagari', 'textdomain' ),
-		'greek'        => __( 'Greek', 'textdomain' ),
-		'greek-ext'    => __( 'Greek Extended', 'textdomain' ),
-		'khmer'        => __( 'Khmer', 'textdomain' ),
-		'latin'        => __( 'Latin', 'textdomain' ),
-		'latin-ext'    => __( 'Latin Extended', 'textdomain' ),
-		'vietnamese'   => __( 'Vietnamese', 'textdomain' ),
+		'all'          => __( 'All', 'penguin' ),
+		'cyrillic'     => __( 'Cyrillic', 'penguin' ),
+		'cyrillic-ext' => __( 'Cyrillic Extended', 'penguin' ),
+		'devanagari'   => __( 'Devanagari', 'penguin' ),
+		'greek'        => __( 'Greek', 'penguin' ),
+		'greek-ext'    => __( 'Greek Extended', 'penguin' ),
+		'khmer'        => __( 'Khmer', 'penguin' ),
+		'latin'        => __( 'Latin', 'penguin' ),
+		'latin-ext'    => __( 'Latin Extended', 'penguin' ),
+		'vietnamese'   => __( 'Vietnamese', 'penguin' ),
 	);
 }
 endif;
@@ -181,15 +181,15 @@ if ( ! function_exists( 'customizer_library_get_standard_fonts' ) ) :
 function customizer_library_get_standard_fonts() {
 	return array(
 		'serif' => array(
-			'label' => _x( 'Serif', 'font style', 'textdomain' ),
+			'label' => _x( 'Serif', 'font style', 'penguin' ),
 			'stack' => 'Georgia,Times,"Times New Roman",serif'
 		),
 		'sans-serif' => array(
-			'label' => _x( 'Sans Serif', 'font style', 'textdomain' ),
+			'label' => _x( 'Sans Serif', 'font style', 'penguin' ),
 			'stack' => '"Helvetica Neue",Helvetica,Arial,sans-serif'
 		),
 		'monospace' => array(
-			'label' => _x( 'Monospaced', 'font style', 'textdomain' ),
+			'label' => _x( 'Monospaced', 'font style', 'penguin' ),
 			'stack' => 'Monaco,"Lucida Sans Typewriter","Lucida Typewriter","Courier New",Courier,monospace'
 		)
 	);
