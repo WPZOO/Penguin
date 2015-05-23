@@ -129,9 +129,9 @@ add_action( 'wp_enqueue_scripts', 'penguin_scripts' );
 function penguin_stylesheet_uri( $stylesheet_uri, $stylesheet_dir_uri ) {
 	$minified = get_theme_mod( 'min-files' );
 	if ( is_child_theme() && 1 == $minified ) {
-		$min_stylesheet_uri = $stylesheet_dir_uri . '/style.min.css';
+		$min_stylesheet_uri = get_stylesheet_directory() . '/style.min.css';
 		if ( file_exists( $min_stylesheet_uri ) ) {
-			$stylesheet_uri = $min_stylesheet_uri;
+			$stylesheet_uri = $stylesheet_dir_uri . '/style.min.css';
 		}
 	} elseif ( 1 == $minified ) {
 		$stylesheet_uri = $stylesheet_dir_uri . '/style.min.css';
