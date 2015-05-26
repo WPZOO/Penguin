@@ -45,11 +45,11 @@
 		float: left;
 		width: 75%;
 	}
-}
 
-.fullwidth #primary {
-	float: none;
-	width: 100%;
+	.page-template-page-fullwidth & {
+		float: none;
+		width: 100%;
+	}
 }
 
 #secondary {
@@ -74,6 +74,16 @@
 	}
 }
 
+@media screen and (min-width: 768px) {
+	.sidebar-left #primary {
+		float: right;
+	}
+
+	.sidebar-left #secondary {
+		float: left;
+	}
+}
+
 .page-header {
 	margin-bottom: 1em;
 }
@@ -91,8 +101,6 @@
 		font-weight: $font__weight-bold;
 	}
 }
-
-@import "layout-gold";
 
 /*--------------------------------------------------------------
 7.1 Posts and pages

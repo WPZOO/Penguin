@@ -4,7 +4,7 @@ Theme URI:   http://wpzoo.ch/themes/penguin/
 Description: PENGU!N is a clean and modern WordPress theme made by WPZOO. Besides the link color the used colors are monochromatic. The post thumbnail will be used as a big header image on single post pages as well as Pages. These theme characteristics make it possible to use PENGU!N for bloggin' as well as a magazin theme.
 Author:      WPZOO
 Author URI:  http://wpzoo.ch
-Version:     1.0beta
+Version:     1.0.0-beta.0
 Tags:        black, blue, gray, white, light, one-column, two-columns, right-sidebar, left-sidebar, responsive-layout, accessibility-ready, custom-menu, featured-image-header, featured-images, post-formats, sticky-post, threaded-comments, translation-ready
 Text Domain: penguin
 Domain Path: /languages
@@ -1149,6 +1149,27 @@ p a {
 	color: #06c;
 }
 
+.has-logo #site-navigation a {
+	height: 60px;
+	line-height: 60px;
+}
+
+#site-navigation .site-logo {
+	float: right;
+	margin-left: 20px;
+	padding: 5px 0;
+}
+
+#site-navigation .site-logo:hover,
+.bright-navbar #site-navigation .site-logo:hover {
+	background-color: transparent;
+}
+
+#site-navigation .site-logo img {
+	max-height: 50px;
+	width: auto;
+}
+
 #site-navigation .skip-link {
 	color: black;
 	line-height: 1.5;
@@ -1166,6 +1187,34 @@ p a {
 	font-weight: bold;
 }
 
+.bright-navbar #site-navigation {
+	background: rgba(255, 255, 255, 0.95);
+	color: #404040;
+}
+
+.bright-navbar #site-navigation a {
+	color: #404040;
+}
+
+.bright-navbar #site-navigation a:hover {
+	background-color: rgba(0, 0, 0, 0.03);
+	color: #06c;
+}
+
+.bright-navbar #site-navigation .current_page_item > a,
+.bright-navbar #site-navigation .current-menu-item > a {
+	background-color: #06c;
+}
+
+.bright-navbar #site-navigation .site-title a {
+	color: #404040;
+}
+
+.bright-navbar #site-navigation .site-title a:hover {
+	background-color: transparent;
+	color: #06c;
+}
+
 .menu-search .penguin-search-icon,
 .menu-search .search-submit {
 	display: none;
@@ -1178,11 +1227,24 @@ p a {
 	padding-top: 10px;
 }
 
+.has-logo .menu-toggle {
+	padding-top: 15px;
+}
+
 @media screen and (max-width: 600px) {
 	.menu-toggle,
 	#site-navigation.toggled .nav-menu {
 		display: block;
 		float: left;
+	}
+
+	.has-logo #site-navigation .nav-menu {
+		margin-top: 0.5em;
+	}
+
+	.has-logo #site-navigation li a {
+		height: 50px;
+		line-height: 50px;
 	}
 
 	#site-navigation ul {
@@ -1207,10 +1269,8 @@ p a {
 		border-bottom: none;
 	}
 
-	#masthead .menu-item-has-children a:after {
-		position: absolute;
-		top: 23px;
-		left: 0.5em;
+	.bright-navbar #site-navigation li {
+		border-top: 1px solid rgba(0, 0, 0, 0.5);
 	}
 
 	#masthead .menu-search {
@@ -1240,8 +1300,16 @@ p a {
 		z-index: 99999;
 	}
 
+	.has-logo #site-navigation ul ul {
+		top: 60px;
+	}
+
 	#site-navigation ul ul li {
 		background-color: rgba(0, 0, 0, 0.85);
+	}
+
+	.bright-navbar #site-navigation ul ul li {
+		background-color: rgba(255, 255, 255, 0.95);
 	}
 
 	#site-navigation ul ul a {
@@ -1293,85 +1361,6 @@ p a {
 		font-size: 25px;
 		position: absolute;
 		top: 11px;
-	}
-}
-
-/* Gold styles */
-.bright-navbar #site-navigation {
-	background: rgba(255, 255, 255, 0.95);
-	color: #404040;
-}
-
-.bright-navbar #site-navigation a {
-	color: #404040;
-}
-
-.bright-navbar #site-navigation a:hover {
-	background-color: rgba(0, 0, 0, 0.03);
-	color: #06c;
-}
-
-.bright-navbar #site-navigation .current_page_item > a,
-.bright-navbar #site-navigation .current-menu-item > a {
-	background-color: #06c;
-}
-
-.bright-navbar #site-navigation .site-title a {
-	color: #404040;
-}
-
-.bright-navbar #site-navigation .site-title a:hover {
-	background-color: transparent;
-	color: #06c;
-}
-
-.has-logo #site-navigation a {
-	height: 60px;
-	line-height: 60px;
-}
-
-#site-navigation .site-logo {
-	float: right;
-	height: 60px;
-	margin-left: 20px;
-	padding: 5px 0;
-}
-
-#site-navigation .site-logo:hover,
-.bright-navbar #site-navigation .site-logo:hover {
-	background-color: transparent;
-}
-
-#site-navigation .site-logo img {
-	max-height: 50px;
-}
-
-.has-logo .menu-toggle {
-	padding-top: 15px;
-}
-
-@media screen and (max-width: 600px) {
-	.bright-navbar #site-navigation li {
-		border-top: 1px solid rgba(0, 0, 0, 0.5);
-	}
-
-	.has-logo #site-navigation .nav-menu {
-		margin-top: 0.5em;
-	}
-
-	.has-logo #site-navigation li a {
-		height: 50px;
-		line-height: 50px;
-	}
-}
-
-@media screen and (min-width: 601px) {
-	.has-logo #site-navigation ul ul {
-		top: 60px;
-	}
-
-	.bright-navbar #site-navigation ul ul li {
-		background-color: rgba(255, 255, 255, 0.95);
 	}
 }
 
@@ -1457,6 +1446,15 @@ p a {
 	display: block;
 }
 
+.has-logo #scroll-to-top {
+	height: 60px;
+	width: 60px;
+}
+
+.bright-navbar #scroll-to-top {
+	background: rgba(255, 255, 255, 0.95);
+}
+
 #scroll-to-top:before {
 	color: #fff;
 	content: "\e003";
@@ -1471,16 +1469,6 @@ p a {
 	text-transform: none !important;
 
 	speak: none;
-}
-
-/* Gold styles */
-.has-logo #scroll-to-top {
-	height: 60px;
-	width: 60px;
-}
-
-.bright-navbar #scroll-to-top {
-	background: rgba(255, 255, 255, 0.95);
 }
 
 .bright-navbar #scroll-to-top:before {
@@ -1556,7 +1544,7 @@ p a {
 	}
 }
 
-.fullwidth #primary {
+.page-template-page-fullwidth #primary {
 	float: none;
 	width: 100%;
 }
@@ -1589,6 +1577,16 @@ p a {
 	}
 }
 
+@media screen and (min-width: 768px) {
+	.sidebar-left #primary {
+		float: left;
+	}
+
+	.sidebar-left #secondary {
+		float: right;
+	}
+}
+
 .page-header {
 	margin-bottom: 1em;
 }
@@ -1611,21 +1609,6 @@ p a {
 #poweredby a {
 	color: #cdcdcd;
 	font-weight: 600;
-}
-
-@media screen and (min-width: 768px) {
-	.sidebar-left #primary {
-		float: left;
-	}
-
-	.sidebar-left #secondary {
-		float: right;
-	}
-}
-
-.page-template-page-fullwidth #primary {
-	float: none;
-	width: 100%;
 }
 
 

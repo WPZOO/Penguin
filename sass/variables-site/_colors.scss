@@ -4,6 +4,8 @@ $color__background-body: #f1f1f1;
 $color__background-screen: #f1f1f1;
 $color__background-main-nav: rgba(0,0,0,0.85);
 $color__background-main-nav-current: $color__primary;
+$color__background-main-nav-bright: rgba(255,255,255,0.95);
+$color__background-main-nav-hover-bright: rgba(0,0,0,0.03);
 $color__background-hr: #ccc;
 $color__background-button: #e6e6e6;
 $color__background-pre: #eee;
@@ -17,6 +19,7 @@ $color__text-screen: #21759b;
 $color__text-input: #666;
 $color__text-input-focus: #111;
 $color__text-main-nav: #fff;
+$color__text-main-nav-bright: #404040;
 $color__link: $color__primary;
 $color__link-hover: #404040;
 
