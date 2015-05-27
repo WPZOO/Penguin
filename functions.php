@@ -184,6 +184,11 @@ add_action( 'wp_footer', 'penguin_wp_footer', 21 );
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
+ * Custom Header
+ */
+require get_template_directory() . '/inc/custom-header.php';
+
+/**
  * PENGU!N extras
  */
 require get_template_directory() . '/inc/extras-penguin-gold.php';

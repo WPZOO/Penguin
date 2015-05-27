@@ -20,24 +20,6 @@ function penguin_options() {
 	$options['sections'] = $sections;
 
 
-	// Logo
-	$section = 'logo';
-
-	$sections[] = array(
-		'id'            => $section,
-		'title'         => __( 'Your logo', 'penguin' ),
-		'priority'      => '70',
-		'description' => __( 'You might use a logo instead of the site title in the header navigation.', 'penguin' )
-	);
-
-	$options['logo'] = array(
-		'id'            => 'logo',
-		'label'         => __( 'Logo', 'penguin' ),
-		'section'       => $section,
-		'type'          => 'image',
-		'default'       => '',
-	);
-
 	// Colors
 	$section = 'colors';
 

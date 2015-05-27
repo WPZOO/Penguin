@@ -24,10 +24,10 @@ function penguin_body_classes( $classes ) {
 	}
 
 	// Adds PENGU!N Gold body classes
-	$logo = get_theme_mod( 'logo' );
 	$navbar = get_theme_mod( 'brightness-navbar' );
 	$sidebar = get_theme_mod( 'sidebar-layout' );
-	if ($logo != '') {
+
+	if (get_header_image() != '') {
 		$classes[] = 'has-logo';
 	}
 	if ($navbar == 'bright' ) {
