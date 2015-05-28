@@ -17,8 +17,9 @@ function penguin_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'penguin_custom_header_args', array(
 		'default-image'          => '',
 		'width'                  => 300,
-		'height'                 => 100,
+		'height'                 => 50,
 		'flex-height'            => true,
+		'flex-width'             => true,
 		'wp-head-callback'       => 'penguin_header_style',
 		'admin-head-callback'    => 'penguin_admin_header_style',
 		'admin-preview-callback' => 'penguin_admin_header_image',
