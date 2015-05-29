@@ -15,8 +15,6 @@
  */
 function penguin_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'penguin_custom_header_args', array(
-		'default-image'          => '',
-		'width'                  => 300,
 		'height'                 => 50,
 		'flex-height'            => true,
 		'flex-width'             => true,
@@ -26,6 +24,13 @@ function penguin_custom_header_setup() {
 	) ) );
 }
 add_action( 'after_setup_theme', 'penguin_custom_header_setup' );
+
+/*
+ * Calculate max width according to image ratio
+ */
+function penguin_header_image_max_width( $height, $width ) {
+	return $width / ( $height / 50 );
+}
 
 if ( ! function_exists( 'penguin_header_style' ) ) :
 /**
