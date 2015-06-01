@@ -3,7 +3,7 @@
 		<?php penguin_posted_on(); ?>
 	<?php endif; ?>
 
-	<?php if ( is_multi_author() ) : ?>
+	<?php if ( is_multi_author() && ( is_singular('post') || is_post_type_archive('post') ) ) : ?>
 		<div class="author vcard btn btn-sm small">
 			<?php echo '<a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a>' ?>
 		</div>
