@@ -130,18 +130,35 @@ function penguin_setup_author() {
 add_action( 'wp', 'penguin_setup_author' );
 
 /**
- * Custom Excerpt
+ * Read more text
  */
-function penguin_excerpt_read_more_link($output) {
-	global $post;
-	return $output . '<a href="'. get_permalink($post->ID) . '" class="read-more-link">' . __("Read more", "penguin") . '</a>';
+function penguin_read_more_text() {
+	$read_more_text = sprintf(
+		/* translators: %s: Name of current post */
+		wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'penguin' ), array( 'span' => array( 'class' => array() ) ) ),
+		the_title( '<span class="screen-reader-text">"', '"</span>', false )
+	);
+	return apply_filters( 'penguin_read_more_text', $read_more_text );
+}
+
+/**
+ * Excerpt continue reading link
+ */
+function penguin_excerpt_read_more_link( $output ) {
+	if ( ! is_attachment() ) {
+		$output .= '<a href="'. get_permalink() . '" class="read-more-link">' . penguin_read_more_text() . '</a>';
+	}
+	return $output;
 }
 add_filter( 'the_excerpt', 'penguin_excerpt_read_more_link' );
 
-function penguin_new_excerpt_more( $more ) {
+/**
+ * Excerpt more
+ */
+function penguin_excerpt_more( $more ) {
 	return ' ...';
 }
-add_filter( 'excerpt_more', 'penguin_new_excerpt_more' );
+add_filter( 'excerpt_more', 'penguin_excerpt_more' );
 
 /**
  * Link to scroll back to the top of the page.
