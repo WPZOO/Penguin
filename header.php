@@ -39,7 +39,7 @@
 
 			<span class="menu-toggle penguin-menu-icon"></span>
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'penguin' ); ?></a>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => '', 'depth' => 2 ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'main-menu', 'depth' => 2 ) ); ?>
 		</div><!-- .container -->
 	</nav><!-- #site-navigation -->
 

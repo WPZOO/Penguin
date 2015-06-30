@@ -157,6 +157,18 @@
 	}
 }
 
+.footer-menu {
+	list-style: none;
+	margin: .5em 0;
+
+	li {
+		float: left;
+		@include font-size-small;
+		line-height: 2;
+		margin: 0 10px 0 0;
+	}
+}
+
 @media screen and (max-width: 600px) {
 
 	.menu-toggle,

@@ -1231,6 +1231,24 @@ p a {
 	padding-top: 15px;
 }
 
+.footer-menu {
+	list-style: none;
+	margin: 0.5em 0;
+}
+
+.footer-menu li {
+	float: left;
+	font-size: 0.85em;
+	line-height: 2;
+	margin: 0 10px 0 0;
+}
+
+@media screen and (min-width: 992px) {
+	.footer-menu li {
+		font-size: 0.75em;
+	}
+}
+
 @media screen and (max-width: 600px) {
 	.menu-toggle,
 	#site-navigation.toggled .nav-menu {
