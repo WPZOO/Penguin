@@ -2,31 +2,34 @@
 .format-quote .entry-title,
 .format-quote .entry-meta-bottom,
 .format-link .entry-title,
-.format-link .entry-meta-bottom,
-.format-video .entry-title,
-.format-video .entry-meta-bottom,
-.format-image .entry-title,
-.format-image .entry-meta-bottom {
+.format-link .entry-meta-bottom {
 	display: none;
 }
 .single .format-aside .entry-title,
 .single .format-quote .entry-title,
 .single .format-quote .entry-meta-bottom,
 .single .format-link .entry-title,
-.single .format-link .entry-meta-bottom,
-.single .format-video .entry-title,
-.single .format-video .entry-meta-bottom,
-.single .format-image .entry-title,
-.single .format-image .entry-meta-bottom {
+.single .format-link .entry-meta-bottom  {
 	display: block;
 }
+
+/* Post Format Aside */
+.blog .format-aside,
+.archive .format-aside,
+.search .format-aside {
+	background-color: transparent;
+	border: none;
+	box-shadow: none;
+}
+
 /* Post Format Quote */
 article.format-quote {
 	border-top: none;
 }
+
 /* Post Format Link */
 article.format-link {
-	background-color: $color__background-post-format-link;
+	background-color: $color__background-post-primary;
 	border: none;
 	color: white;
 }
@@ -44,7 +47,7 @@ article.format-link .entry-meta-top a:active,
 article.format-link .entry-content a:hover,
 article.format-link .entry-content a:focus,
 article.format-link .entry-content a:active {
-	background-color: $color__background-post-format-link;
+	background-color: $color__background-post-primary;
 	color: white;
 }
 article.format-link .entry-meta-bottom a {
@@ -55,30 +58,4 @@ article.format-link .entry-meta-bottom a:hover,
 article.format-link .entry-meta-bottom a:focus,
 article.format-link .entry-meta-bottom a:active {
 	text-decoration: none;
-}
-/* Post Formats Image & Video */
-.blog .format-image,
-.archive .format-image,
-.search .format-image,
-.blog .format-video,
-.archive .format-video,
-.search .format-video {
-	background-color: transparent;
-	border: 0;
-	box-shadow: none;
-	padding-bottom: 0;
-}
-.blog .format-image .entry-header,
-.archive .format-image .entry-header,
-.search .format-image .entry-header,
-.blog .format-image .entry-content,
-.archive .format-image .entry-content,
-.search .format-image .entry-content,
-.blog .format-video .entry-header,
-.archive .format-video .entry-header,
-.search .format-video .entry-header,
-.blog .format-video .entry-content,
-.archive .format-video .entry-content,
-.search .format-video .entry-content {
-	margin: 0;
 }

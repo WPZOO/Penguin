@@ -47,7 +47,7 @@ function penguin_setup() {
 	) );
 
 	// Enable support for Post Formats.
-	add_theme_support( 'post-formats', array( 'aside', 'audio', 'gallery', 'image', 'link', 'quote', 'video' ) );
+	add_theme_support( 'post-formats', array( 'aside', 'link', 'quote' ) );
 
 	// Setup the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'penguin_custom_background_args', array(
