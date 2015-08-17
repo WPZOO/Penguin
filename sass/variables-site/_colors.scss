@@ -2,17 +2,22 @@ $color__primary: #0066cc;
 
 $color__background-body: #f1f1f1;
 $color__background-screen: #f1f1f1;
+$color__background-post: #fff;
+$color__background-post-primary: $color__primary;
+
 $color__background-main-nav: rgba(0,0,0,0.85);
 $color__background-main-nav-current: $color__primary;
 $color__background-main-nav-bright: rgba(255,255,255,0.95);
 $color__background-main-nav-hover-bright: rgba(0,0,0,0.03);
+
 $color__background-hr: #ccc;
 $color__background-button: #e6e6e6;
 $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
+
 $color__background-btn: #ddd;
 $color__background-btn-hover: $color__primary;
-$color__background-post-format-link: $color__primary;
+
 
 $color__text-main: #404040;
 $color__text-screen: #21759b;
@@ -20,12 +25,15 @@ $color__text-input: #666;
 $color__text-input-focus: #111;
 $color__text-main-nav: #fff;
 $color__text-main-nav-bright: #404040;
+
 $color__link: $color__primary;
 $color__link-hover: #404040;
+
 
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: $color__primary;
 $color__border-button-focus: #aaa #bbb #bbb;
+
 $color__border-input: #ccc;
 $color__border-input-hover: $color__primary;
 $color__border-abbr: #666;
