@@ -1,34 +1,60 @@
 /*
  * Initialization and options of Masonry
  */
-var container = document.querySelector('#posts-container');
-var msnry = new Masonry( container, {
-	columnWidth: 400,
-	gutter: 32,
-	itemSelector: '.penguin-post',
-	transitionDuration: '1s'
-});
-// initialize Masonry after all images have loaded
-imagesLoaded( container, function() {
-	msnry.layout();
-});
+if ( typeof jQuery == 'undefined' ) {
+	var posts_container = document.querySelector('#posts-container');
+	var penguin_post = document.querySelector('.penguin-post');
+	var msnry = new Masonry( posts_container, {
+		columnWidth: 400,
+		gutter: 32,
+		itemSelector: '.penguin-post',
+		transitionDuration: '1s'
+	});
+	// initialize Masonry after all images have loaded
+	imagesLoaded( posts_container, function() {
+		msnry.layout();
+	});
+} else {
+	jQuery(document).ready(function ($) {
 
-// Initialize Masonry for Jetpack Infinite Scroll
-if (typeof jQuery != 'undefined') {
-	jQuery( document ).ready( function( $ ) {
-		infinite_count = 0;
-		// Triggers on infinite scroll
-		$( document.body ).on( 'post-load', function () {
-			infinite_count = infinite_count + 1;
-			var $container = $('#infinite-view-' + infinite_count);
-			// initialize Masonry after all images have loaded
-			$container.imagesLoaded( function() {
-				$container.masonry({
-					columnWidth: 400,
-					gutter: 32,
-					itemSelector: '.post'
-				});
+		//Masonry blocks
+		var $container = $( "#posts-container" );
+
+		$container.imagesLoaded( function() {
+			$container.masonry({
+				columnWidth: 400,
+				gutter: 32,
+				itemSelector: '.penguin-post',
+				transitionDuration: '1s'
 			});
+
+			// Fade blocks in after images are ready (prevents jumping and re-rendering)
+			$( ".penguin-post" ).show();
+		});
+
+		$( window ).resize( function() {
+			$container.masonry();
+		});
+
+		// Layout posts that arrive via infinite scroll
+		infinite_count = 0;
+		$( document.body ).on( 'post-load', function () {
+
+			infinite_count = $( '.infinite-wrap:last-of-type' ).data( 'page-num' );
+
+			// Show the blocks
+			$( ".penguin-post" ).show();
+
+			var $newItems = $( '#infinite-view-' + infinite_count  ).not('.is--replaced');
+			var $elements = $newItems.find('.penguin-post');
+			$elements.hide();
+			$container.append($elements);
+
+			$container.imagesLoaded( function() {
+				$container.masonry( "appended", $elements, true ).masonry( "reloadItems" ).masonry( "layout" );
+				$elements.fadeIn();
+			});
+
 		});
 	});
 }
