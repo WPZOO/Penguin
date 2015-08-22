@@ -29,7 +29,7 @@ function the_posts_navigation() {
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts;', 'penguin' ) ); ?></div>
+			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts', 'penguin' ) ); ?></div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->
