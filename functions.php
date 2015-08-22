@@ -185,11 +185,6 @@ add_action( 'wp_footer', 'penguin_wp_footer', 21 );
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
- * Custom Header
- */
-require get_template_directory() . '/inc/custom-header.php';
-
-/**
  * PENGU!N extras
  */
 require get_template_directory() . '/inc/extras-penguin-gold.php';
@@ -203,8 +198,8 @@ require get_template_directory() . '/inc/extras-plugins.php';
  * Customizer additions
  */
 require get_template_directory() . '/inc/customizer-library/customizer-library.php';
-require get_template_directory() . '/inc/customizer-options.php';
-require get_template_directory() . '/inc/customizer-styles.php';
+require get_template_directory() . '/inc/customizer-options-gold.php';
+require get_template_directory() . '/inc/customizer-styles-gold.php';
 
 /*
  * Theme Hook Alliance files

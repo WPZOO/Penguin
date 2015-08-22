@@ -29,13 +29,14 @@
 	<?php tha_header_top(); ?>
 	<nav id="site-navigation" class="main-navigation clear" role="navigation">
 		<div class="container">
-			<?php if ( get_header_image() ) : ?>
-			<a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-				<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" style="max-width:<?php echo esc_attr( penguin_header_image_max_width( get_custom_header()->height, get_custom_header()->width ) ); ?>px" alt="<?php esc_attr( bloginfo( 'name' ) ); ?>">
-			</a>
-			<?php else : ?>
+			<?php $logo = get_theme_mod( 'logo-upload' ); ?>
+			<?php if ($logo == '') { ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php endif; // End header image check. ?>
+			<?php } else { ?>
+				<a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<img title="<?php bloginfo( 'name' ); ?>" alt="<?php bloginfo( 'name' ); ?>" src="<?php echo $logo; ?>">
+				</a>
+			<?php } ?>
 
 			<span class="menu-toggle penguin-menu-icon"></span>
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'penguin' ); ?></a>

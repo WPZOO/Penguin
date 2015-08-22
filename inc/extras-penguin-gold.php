@@ -23,13 +23,16 @@ function penguin_body_classes( $classes ) {
 		$classes[] = 'has-headerimg';
 	}
 
-	// Adds PENGU!N Gold body classes
+	// Adds body class if logo has uploaded
+	$logo = get_theme_mod( 'logo-upload' );
+	if ($logo != '') {
+		$classes[] = 'has-logo';
+	}
+
+	// Adds body classes for gold version
 	$navbar = get_theme_mod( 'brightness-navbar' );
 	$sidebar = get_theme_mod( 'sidebar-layout' );
 
-	if (get_header_image() != '') {
-		$classes[] = 'has-logo';
-	}
 	if ($navbar == 'bright' ) {
 		$classes[] = 'bright-navbar';
 	}

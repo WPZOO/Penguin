@@ -20,6 +20,23 @@ function penguin_options() {
 	$options['sections'] = $sections;
 
 
+	// Logo
+	$section = 'logo';
+
+	$sections[] = array(
+		'id'            => $section,
+		'title'         => __( 'Logo', 'albinomouse' ),
+		'priority'      => '80'
+	);
+
+	$options['logo-upload'] = array(
+    'id' => 'logo-upload',
+    'label'   => __( 'Upload your logo', 'penguin' ),
+    'section' => $section,
+    'type'    => 'upload',
+    'default' => '',
+);
+
 	// Colors
 	$section = 'colors';
 
@@ -51,24 +68,6 @@ function penguin_options() {
 		'default'       => $link_color,
 	);
 
-	// Navigation
-	$section = 'nav';
-
-	$sections[] = array(
-		'id'            => $section,
-		'title'         => __( 'Navigation', 'penguin' ),
-		'priority'      => '100'
-	);
-
-	$options['menu-search'] = array(
-		'id'            => 'menu-search',
-		'label'         => __( 'Add search box to primary menu', 'penguin' ),
-		'section'       => $section,
-		'type'          => 'checkbox',
-		'default'       => 0,
-		'priority'      => '100'
-	);
-
 	// Content
 	$section = 'content';
 
@@ -92,15 +91,6 @@ function penguin_options() {
 		'default'       => 'excerpt'
 	);
 
-	// Sidebar
-	$section = 'sidebar';
-
-	$sections[] = array(
-		'id'            => $section,
-		'title'         => __( 'Sidebar', 'penguin' ),
-		'priority'      => '100'
-	);
-
 	$sidebarchoices = array(
 		'sidebar-right' => __( 'Sidebar right', 'penguin' ),
 		'sidebar-left'  => __( 'Sidebar left', 'penguin' ),
@@ -115,15 +105,6 @@ function penguin_options() {
 		'default'       => 'sidebar-right'
 	);
 
-	// Footer
-	$section = 'footer';
-
-	$sections[] = array(
-		'id'            => $section,
-		'title'         => __( 'Footer', 'penguin' ),
-		'priority'      => '150'
-	);
-
 	$options['footer-text'] = array(
 		'id'            => 'footer-text',
 		'label'         => __( 'Custom footer text', 'penguin' ),
@@ -132,6 +113,7 @@ function penguin_options() {
 		'default'       => ''
 	);
 
+
 	// Advanced Options
 	$section = 'advanced';
 
@@ -139,6 +121,14 @@ function penguin_options() {
 		'id'            => $section,
 		'title'         => __( 'Advanced', 'penguin' ),
 		'priority'      => '200'
+	);
+
+	$options['menu-search'] = array(
+		'id'            => 'menu-search',
+		'label'         => __( 'Add search box to primary menu', 'penguin' ),
+		'section'       => $section,
+		'type'          => 'checkbox',
+		'default'       => 0,
 	);
 
 	$options['min-files'] = array(
