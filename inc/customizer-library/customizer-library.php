@@ -25,9 +25,6 @@ require plugin_dir_path( __FILE__ ) . 'extensions/sanitization.php';
 // Helper functions to build the inline CSS.
 require plugin_dir_path( __FILE__ ) . 'extensions/style-builder.php';
 
-// Helper functions for fonts.
-require plugin_dir_path( __FILE__ ) . 'extensions/fonts.php';
-
 // Utility functions for the customizer.
 require plugin_dir_path( __FILE__ ) . 'extensions/utilities.php';
 
