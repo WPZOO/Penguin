@@ -25,7 +25,7 @@ function penguin_options() {
 
 	$sections[] = array(
 		'id'            => $section,
-		'title'         => __( 'Logo', 'albinomouse' ),
+		'title'         => __( 'Logo', 'penguin' ),
 		'priority'      => '80'
 	);
 
