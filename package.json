@@ -26,7 +26,8 @@
     "js": "./js",
     "sass": "./sass",
     "css": "",
-    "build": "./build"
+    "build": "./build",
+    "lite": "../penguin/"
   },
   "theme": {
     "name": "PENGU!N Gold",
@@ -55,20 +56,22 @@
     "url": "https://github.com/WPZOO/penguin-gold.git"
   },
   "devDependencies": {
-    "grunt": "*",
-    "load-grunt-config": "*",
-    "grunt-checktextdomain": "*",
+    "grunt":                  "*",
+    "grunt-banner":           "*",
+    "grunt-checktextdomain":  "*",
+    "grunt-contrib-copy":     "*",
+    "grunt-contrib-cssmin":   "*",
     "grunt-contrib-imagemin": "*",
-    "grunt-contrib-sass": "*",
-    "grunt-wp-css": "*",
-    "grunt-rtlcss": "*",
-    "grunt-contrib-cssmin": "*",
-    "grunt-contrib-uglify": "*",
-    "grunt-contrib-watch": "*",
-    "grunt-wp-i18n": "*",
-    "grunt-newer": "*",
-    "grunt-potomo": "*",
-    "grunt-banner": "*",
-    "grunt-exec": "*"
+    "grunt-contrib-sass":     "*",
+    "grunt-contrib-uglify":   "*",
+    "grunt-contrib-watch":    "*",
+    "grunt-exec":             "*",
+    "grunt-newer":            "*",
+    "grunt-potomo":           "*",
+    "grunt-replace":          "*",
+    "grunt-rtlcss":           "*",
+    "grunt-wp-css":           "*",
+    "grunt-wp-i18n":          "*",
+    "load-grunt-config":      "*"
   }
 }
