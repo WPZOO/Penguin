@@ -187,6 +187,7 @@ require get_template_directory() . '/inc/template-tags.php';
 /**
  * PENGU!N extras
  */
+require get_template_directory() . '/inc/extras-penguin.php';
 require get_template_directory() . '/inc/extras-penguin-gold.php';
 
 /**
@@ -198,6 +199,7 @@ require get_template_directory() . '/inc/extras-plugins.php';
  * Customizer additions
  */
 require get_template_directory() . '/inc/customizer-library/customizer-library.php';
+require get_template_directory() . '/inc/customizer-options.php';
 require get_template_directory() . '/inc/customizer-options-gold.php';
 require get_template_directory() . '/inc/customizer-styles-gold.php';
 
