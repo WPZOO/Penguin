@@ -1,64 +1,53 @@
-# Copyright (C) 2015 WPZOO
-# This file is distributed under the GPL-2.0+.
 msgid ""
 msgstr ""
-"Project-Id-Version: PENGU!N Gold 1.0.0-beta.2\n"
+"Project-Id-Version: PENGU!N\n"
 "Report-Msgid-Bugs-To: WPZOO Translations <translations@wpzoo.ch>\n"
 "POT-Creation-Date: 2015-09-26 18:37:09+00:00\n"
+"PO-Revision-Date: 2015-09-26 18:35:52 UTC\n"
+"Last-Translator: Web Translate It <support@webtranslateit.com>\n"
+"Language-Team: German, Germany\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
-"Last-Translator: WPZOO Translations <translations@wpzoo.ch>\n"
-"Language-Team: WPZOO Translations <translations@wpzoo.ch>\n"
-"X-Generator: grunt-wp-i18n 0.5.3\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
-"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
-"Language: en_US\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-Country: United States\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-Basepath: ../\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-Bookmarks: \n"
-"X-Textdomain-Support: yes\n"
+"X-Generator: WebTranslateIt.com\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: comments.php:44
 msgid "Comment navigation"
-msgstr ""
+msgstr "Kommentar-Navigation"
 
 #: comments.php:46
 msgid "Older Comments"
-msgstr ""
+msgstr "Ältere Kommentare"
 
 #: comments.php:47
 msgid "Newer Comments"
-msgstr ""
+msgstr "Neuere Kommentare"
 
 #: comments.php:58
 msgid "Comments are closed."
-msgstr ""
+msgstr "Kommentare sind geschlossen."
 
 #: functions.php:45
 msgid "Primary Menu"
-msgstr ""
+msgstr "Hauptmenü"
 
 #: functions.php:46
 msgid "Footer Menu"
-msgstr ""
+msgstr "Footer-Menü"
 
 #: functions.php:82 inc/customizer-options-gold.php:101
 msgid "Sidebar"
-msgstr ""
+msgstr "Seitenleiste"
 
 #: functions.php:151
 msgid "PENGU!N image size"
-msgstr ""
+msgstr "PENGU!N Bildgröße"
 
 #: header.php:42
 msgid "Skip to content"
-msgstr ""
+msgstr "Zum Inhalt wechseln"
 
 #: inc/customizer-options-gold.php:28
 msgid "Logo"
@@ -70,191 +59,202 @@ msgstr ""
 
 #: inc/customizer-options-gold.php:45
 msgid "Colors"
-msgstr ""
+msgstr "Farben"
 
 #: inc/customizer-options-gold.php:50
 msgid "Dark"
-msgstr ""
+msgstr "Dunkel"
 
 #: inc/customizer-options-gold.php:51
 msgid "Bright"
-msgstr ""
+msgstr "Hell"
 
 #: inc/customizer-options-gold.php:56
 msgid "Brightness of navbar"
-msgstr ""
+msgstr "Helligkeit der Navigationsleiste"
 
 #: inc/customizer-options-gold.php:65
 msgid "Link color"
-msgstr ""
+msgstr "Linkfarbe"
 
 #: inc/customizer-options-gold.php:76
 msgid "Content"
-msgstr ""
+msgstr "Inhalt"
 
 #: inc/customizer-options-gold.php:81
 msgid "Excerpt (trimmed-down output)"
-msgstr ""
+msgstr "Auszug (gekürzte Ausgabe)"
 
 #: inc/customizer-options-gold.php:82
 msgid "Content (full post / custom more tag)"
-msgstr ""
+msgstr "Inhalt (ganzer Beitrag / benutzerdefinierter Weiterlesen-Link"
 
 #: inc/customizer-options-gold.php:87
 msgid "Content output of standard posts on home and archive pages."
-msgstr ""
+msgstr "Inhaltsausgabe der Standard-Beiträge für Blog- und Archivseiten"
 
 #: inc/customizer-options-gold.php:95
 msgid "Sidebar right"
-msgstr ""
+msgstr "Seitenleiste rechts"
 
 #: inc/customizer-options-gold.php:96
 msgid "Sidebar left"
-msgstr ""
+msgstr "Seitenleiste links"
 
 #: inc/customizer-options-gold.php:110
 msgid "Custom footer text"
-msgstr ""
+msgstr "Eigener Footer-Text"
 
 #: inc/customizer-options-gold.php:122
 msgid "Advanced"
-msgstr ""
+msgstr "Erweitert"
 
 #: inc/customizer-options-gold.php:128
 msgid "Add search box to primary menu"
-msgstr ""
+msgstr "Das Suchfeld in das Hauptmenü hinzufügen"
 
 #: inc/customizer-options-gold.php:136
 msgid "Minified CSS and JS"
-msgstr ""
+msgstr "Minimiertes CSS und JS"
 
 #: inc/customizer-options-gold.php:144
 msgid "Load Fluidvids.js for responsive videos"
-msgstr ""
+msgstr "Lade Fluidvids.js für responsive Videos"
 
 #: inc/extras-penguin-gold.php:107
 msgid "Page %s"
-msgstr ""
+msgstr "Seite %s"
 
-#: inc/extras-penguin-gold.php:141
+# INSTRUCTION: translators: %s: Name of current post
 #. translators: %s: Name of current post
+#: inc/extras-penguin-gold.php:141
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "%s weiterlesen <span class=\"meta-nav\">&rarr;</span>"
 
 #: inc/extras-penguin-gold.php:170
 msgid "Scroll To Top"
-msgstr ""
+msgstr "Nach oben scrollen"
 
 #: inc/template-tags.php:24
 msgid "Posts navigation"
-msgstr ""
+msgstr "Beiträge-Navigation"
 
 #: inc/template-tags.php:28
 msgid "Older posts"
-msgstr ""
+msgstr "Ältere Beiträge"
 
 #: inc/template-tags.php:32
 msgid "Newer posts"
-msgstr ""
+msgstr "Neuere Beiträge"
 
 #: inc/template-tags.php:56
 msgid "Post navigation"
-msgstr ""
+msgstr "Beitrag-Navigation"
 
 #: inc/template-tags.php:110
 msgid "Category: %s"
-msgstr ""
+msgstr "Kategorie: %s"
 
 #: inc/template-tags.php:112
 msgid "Tag: %s"
-msgstr ""
+msgstr "Schlagwort: %s"
 
 #: inc/template-tags.php:114
 msgid "Author: %s"
-msgstr ""
+msgstr "Autor: %s"
 
 #: inc/template-tags.php:116
 msgid "Year: %s"
-msgstr ""
+msgstr "Jahr: %s"
 
 #: inc/template-tags.php:118
 msgid "Month: %s"
-msgstr ""
+msgstr "Monat: %s"
 
 #: inc/template-tags.php:120
 msgid "Day: %s"
-msgstr ""
+msgstr "Tag: %s"
 
 #: inc/template-tags.php:140
 msgid "Archives: %s"
-msgstr ""
+msgstr "Archiv: %s"
 
-#: inc/template-tags.php:144
+# INSTRUCTION: translators: 1: Taxonomy singular name, 2: Current taxonomy term
 #. translators: 1: Taxonomy singular name, 2: Current taxonomy term
+#: inc/template-tags.php:144
 msgid "%1$s: %2$s"
 msgstr ""
 
 #: inc/template-tags.php:146
 msgid "Archives"
-msgstr ""
+msgstr "Archiv"
 
 #: search.php:17
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Suchergebnisse für: %s"
 
 #: template-parts/content-none.php:13
 msgid "Nothing Found"
-msgstr ""
+msgstr "Nichts gefunden"
 
 #: template-parts/content-none.php:19
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Bereit für deinen ersten Beitrag? <a href=\"%1$s\">Leg hier los</a>."
 
 #: template-parts/content-none.php:23
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
+"Leider entspricht nichts deinem Suchbegriff / deinen Suchbegriffen. Versuche "
+"es bitte mit anderen Suchwörtern."
 
 #: template-parts/content-none.php:27
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
+"Was du suchst, kann leider nicht gefunden werden. Vielleicht kann dir das "
+"Suchformular weiterhelfen."
 
-#: template-parts/meta-bottom.php:3 template-parts/meta-bottom.php:12
+# INSTRUCTION: translators: used between list items, there is a space after the comma
 #. translators: used between list items, there is a space after the comma
+#: template-parts/meta-bottom.php:3 template-parts/meta-bottom.php:12
 msgid ", "
 msgstr ""
 
 #: template-parts/meta-top.php:13
 msgid "Leave a comment"
-msgstr ""
+msgstr "Hinterlasse einen Kommentar"
 
 #: template-parts/meta-top.php:13
 msgid "1 Comment"
-msgstr ""
+msgstr "1 Kommentar"
 
 #: template-parts/meta-top.php:13
 msgid "% Comments"
-msgstr ""
+msgstr "% Kommentare"
 
 #: template-parts/meta-top.php:15
 msgid "Edit"
-msgstr ""
+msgstr "Bearbeiten"
 
 #: template-parts/the_content.php:5
 msgid "Pages:"
-msgstr ""
+msgstr "Seiten:"
 
+# INSTRUCTION: Theme Name of the plugin/theme
 #. Theme Name of the plugin/theme
 msgid "PENGU!N Gold"
 msgstr ""
 
+# INSTRUCTION: Theme URI of the plugin/theme
 #. Theme URI of the plugin/theme
 msgid "http://wpzoo.ch/themes/penguin/"
 msgstr ""
 
+# INSTRUCTION: Description of the plugin/theme
 #. Description of the plugin/theme
 msgid ""
 "PENGU!N is a clean and modern WordPress theme made by WPZOO. Besides the "
@@ -263,25 +263,33 @@ msgid ""
 "theme characteristics make it possible to use PENGU!N for bloggin' as well "
 "as a magazin theme."
 msgstr ""
+"PENGU!N ist ein simples und modernes WordPress Theme, entwickelt von WPZOO. "
+"Nebst der Linkfarbe ist das Theme in verschiedenen Grautönen gestaltet. Das "
+"Beitragsbild wird auf Single-Post-Seiten als grosses Header-Bild verwendet. "
+"Die Theme-Eigenschaften machen es möglich PENGU!N als Blog oder Magazin-"
+"Theme zu verwenden."
 
+# INSTRUCTION: Author of the plugin/theme
 #. Author of the plugin/theme
 msgid "WPZOO"
 msgstr ""
 
+# INSTRUCTION: Author URI of the plugin/theme
 #. Author URI of the plugin/theme
 msgid "http://wpzoo.ch"
 msgstr ""
 
+# INSTRUCTION: Template Name of the plugin/theme
 #. Template Name of the plugin/theme
 msgid "Full Width"
-msgstr ""
+msgstr "Volle Breite"
 
 #: comments.php:27
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Eine Reaktion zu &bdquo;%2$s&ldquo;"
+msgstr[1] "%1$s Reaktionen zu &bdquo;%2$s&ldquo;"
 
 #: inc/template-tags.php:116
 msgctxt "yearly archives date format"
@@ -296,49 +304,49 @@ msgstr ""
 #: inc/template-tags.php:120
 msgctxt "daily archives date format"
 msgid "F j, Y"
-msgstr ""
+msgstr "j. F Y"
 
 #: inc/template-tags.php:122
 msgctxt "post format archive title"
 msgid "Asides"
-msgstr ""
+msgstr "Kurznachrichten"
 
 #: inc/template-tags.php:124
 msgctxt "post format archive title"
 msgid "Galleries"
-msgstr ""
+msgstr "Galerien"
 
 #: inc/template-tags.php:126
 msgctxt "post format archive title"
 msgid "Images"
-msgstr ""
+msgstr "Bilder"
 
 #: inc/template-tags.php:128
 msgctxt "post format archive title"
 msgid "Videos"
-msgstr ""
+msgstr "Videos"
 
 #: inc/template-tags.php:130
 msgctxt "post format archive title"
 msgid "Quotes"
-msgstr ""
+msgstr "Zitate"
 
 #: inc/template-tags.php:132
 msgctxt "post format archive title"
 msgid "Links"
-msgstr ""
+msgstr "Links"
 
 #: inc/template-tags.php:134
 msgctxt "post format archive title"
 msgid "Statuses"
-msgstr ""
+msgstr "Statusmeldungen"
 
 #: inc/template-tags.php:136
 msgctxt "post format archive title"
 msgid "Audio"
-msgstr ""
+msgstr "Audio"
 
 #: inc/template-tags.php:138
 msgctxt "post format archive title"
 msgid "Chats"
-msgstr ""
+msgstr "Chats"
