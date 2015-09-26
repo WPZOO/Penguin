@@ -25,7 +25,7 @@ function penguin_body_classes( $classes ) {
 
 	// Adds body class if logo has uploaded
 	$logo = get_theme_mod( 'logo-upload' );
-	if ($logo != '') {
+	if ( ! empty( $logo ) ) {
 		$classes[] = 'has-logo';
 	}
 
@@ -49,7 +49,7 @@ add_filter( 'post_class', 'penguin_add_post_class' );
  * Change image size on attachment pages.
  */
 function penguin_prepend_attachment($p) {
-	return '<p class="attachment">'.wp_get_attachment_link(0, 'full', false).'</p>';
+	return '<p class="attachment">' . wp_get_attachment_link( 0, 'full', false ) . '</p>';
 }
 add_filter('prepend_attachment', 'penguin_prepend_attachment');
 
@@ -76,7 +76,7 @@ function penguin_wp_title( $title, $sep ) {
 	if ( is_feed() ) {
 		return $title;
 	}
-	
+
 	global $page, $paged;
 
 	// Add the blog name
@@ -157,7 +157,7 @@ function penguin_back_to_top() {
 }
 add_action( 'tha_footer_top', 'penguin_back_to_top' );
 
- /**
+/**
  * Display upgrade notice on customizer page
  */
 function penguin_upsell_notice() {
@@ -166,8 +166,8 @@ function penguin_upsell_notice() {
 		'penguin-customizer-goldad',
 		'penguinL10n',
 		array(
-			'penguinURL'	=> esc_url( '//wpzoo.ch/themes/penguin/' ),
-			'penguinLabel'	=> __( 'Buy Gold Version', 'penguin' ),
+			'penguinURL'   => esc_url( '//wpzoo.ch/themes/penguin/' ),
+			'penguinLabel' => __( 'Buy Gold Version', 'penguin' ),
 		)
 	);
 
@@ -179,11 +179,8 @@ add_action( 'customize_controls_enqueue_scripts', 'penguin_upsell_notice' );
  */
 function penguin_poweredby() {
 	$footer = '<div id="poweredby"><a href="http://wpzoo.ch" rel="designer">PENGU!N WordPress Theme made by WPZOO</a></div>';
-
-    if(has_filter('custom_footer_text')) {
-		$footer = apply_filters('custom_footer_text', $footer);
-	} 
-    echo $footer;
+ 
+	echo apply_filters( 'penguin_footer_text', $footer );
 
 }
 add_action( 'tha_footer_bottom', 'penguin_poweredby' );

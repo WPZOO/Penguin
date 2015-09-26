@@ -5,13 +5,6 @@
  * @package PENGU!N Gold
  */
 
-/**
- * Set the content width based on the theme's design and stylesheet.
- */
-if ( ! isset( $content_width ) ) {
-	$content_width = 840; /* pixels */
-}
-
 if ( ! function_exists( 'penguin_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -71,6 +64,18 @@ function penguin_setup() {
 }
 endif; // penguin_setup
 add_action( 'after_setup_theme', 'penguin_setup' );
+
+/**
+ * Set the content width in pixels, based on the theme's design and stylesheet.
+ *
+ * Priority 0 to make it available to lower priority callbacks.
+ *
+ * @global int $content_width
+ */
+function penguin_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'penguin_content_width', 840 );
+}
+add_action( 'after_setup_theme', 'penguin_content_width', 0 );
 
 /**
  * Register widget area.
@@ -147,12 +152,12 @@ add_action( 'stylesheet_uri', 'penguin_stylesheet_uri', 10, 2 );
  *
  * @link http://codex.wordpress.org/Function_Reference/add_image_size
  */
-function show_custom_image_sizes($sizes) {
+function penguin_show_custom_image_sizes( $sizes ) {
 	$sizes['Penguin800X400'] = __( 'PENGU!N image size', 'penguin' );
 
 	return $sizes;
 }
-add_filter('image_size_names_choose', 'show_custom_image_sizes');
+add_filter( 'image_size_names_choose', 'penguin_show_custom_image_sizes' );
 
 /**
  * Change class when js is enabled
