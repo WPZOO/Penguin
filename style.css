@@ -1981,11 +1981,11 @@ article.format-link .entry-meta-bottom a:active {
 	}
 }
 
-.bypostauthor article {
+.bypostauthor > article {
 	background-color: #e2e2e2;
 }
 
-.bypostauthor article:after {
+.bypostauthor > article:after {
 	border-color: transparent #e2e2e2;
 }
 
