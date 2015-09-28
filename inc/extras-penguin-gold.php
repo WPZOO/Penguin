@@ -13,16 +13,16 @@
  */
 function penguin_gold_body_classes( $classes ) {
 	// Adds body classes for gold version
-	$navbar = get_theme_mod( 'brightness-navbar' );
+	$navbar  = get_theme_mod( 'brightness-navbar' );
 	$sidebar = get_theme_mod( 'sidebar-layout' );
 
-	if ($navbar == 'bright' ) {
+	if ( $navbar == 'bright' ) {
 		$classes[] = 'bright-navbar';
 	}
-	if ($sidebar == 'sidebar-left') {
+	if ( $sidebar == 'sidebar-left' ) {
 		$classes[] = 'sidebar-left';
 	}
-	if ($sidebar == 'sidebar-right') {
+	if ( $sidebar == 'sidebar-right' ) {
 		$classes[] = 'sidebar-right';
 	}
 
@@ -35,7 +35,7 @@ add_filter( 'body_class', 'penguin_gold_body_classes' );
  */
 function penguin_gold_add_search_box($items, $args) {
 	$menusearch = get_theme_mod( 'menu-search' );
-	if ( $args->theme_location == 'primary' && $menusearch == 1 ) {
+	if ( 'primary' == $args->theme_location && 1 == $menusearch ) {
 		ob_start();
 		get_search_form();
 		$searchform = ob_get_contents();
@@ -55,14 +55,13 @@ remove_action( 'customize_controls_enqueue_scripts', 'penguin_upsell_notice' );
 /**
  * Footer text
  */
-function penguin_gold_poweredby($footer) {
+function penguin_gold_poweredby( $footer ) {
 	$custom_footer = get_theme_mod( 'footer-text' );
-    
-	if ( $custom_footer != '' ) {
-		return '<div id="poweredby">' . $custom_footer . '</div>';
+
+	if ( ! empty( $custom_footer ) ) {
+		$footer = '<div id="poweredby">' . $custom_footer . '</div>';
 	}
-    else {
-        return $footer;
-    }
+
+	return $footer;
 }
-add_filter( 'custom_footer_text', 'penguin_gold_poweredby' );
+add_filter( 'penguin_footer_text', 'penguin_gold_poweredby' );

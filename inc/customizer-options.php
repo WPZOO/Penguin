@@ -27,12 +27,12 @@ function penguin_options() {
 	);
 
 	$options['logo-upload'] = array(
-    'id' => 'logo-upload',
-    'label'   => __( 'Upload your logo', 'penguin' ),
-    'section' => $section,
-    'type'    => 'upload',
-    'default' => '',
-    );
+		'id' => 'logo-upload',
+		'label'   => __( 'Upload your logo', 'penguin' ),
+		'section' => $section,
+		'type'    => 'upload',
+		'default' => '',
+	);
 
 
 	// Content
