@@ -130,24 +130,6 @@ function penguin_scripts() {
 add_action( 'wp_enqueue_scripts', 'penguin_scripts' );
 
 /**
- * Change the stylesheet_uri accordingly
- */
-function penguin_stylesheet_uri( $stylesheet_uri, $stylesheet_dir_uri ) {
-	$minified = get_theme_mod( 'min-files' );
-	if ( is_child_theme() && 1 == $minified ) {
-		$min_stylesheet_uri = get_stylesheet_directory() . '/style.min.css';
-		if ( file_exists( $min_stylesheet_uri ) ) {
-			$stylesheet_uri = $stylesheet_dir_uri . '/style.min.css';
-		}
-	} elseif ( 1 == $minified ) {
-		$stylesheet_uri = $stylesheet_dir_uri . '/style.min.css';
-	}
-	
-	return $stylesheet_uri;
-}
-add_action( 'stylesheet_uri', 'penguin_stylesheet_uri', 10, 2 );
-
-/**
  * Make custom image size selectable from WordPress admin.
  *
  * @link http://codex.wordpress.org/Function_Reference/add_image_size

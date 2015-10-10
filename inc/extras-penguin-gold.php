@@ -31,6 +31,24 @@ function penguin_gold_body_classes( $classes ) {
 add_filter( 'body_class', 'penguin_gold_body_classes' );
 
 /**
+ * Change the stylesheet_uri accordingly
+ */
+function penguin_stylesheet_uri( $stylesheet_uri, $stylesheet_dir_uri ) {
+	$minified = get_theme_mod( 'min-files' );
+	if ( is_child_theme() && 1 == $minified ) {
+		$min_stylesheet_uri = get_stylesheet_directory() . '/style.min.css';
+		if ( file_exists( $min_stylesheet_uri ) ) {
+			$stylesheet_uri = $stylesheet_dir_uri . '/style.min.css';
+		}
+	} elseif ( 1 == $minified ) {
+		$stylesheet_uri = $stylesheet_dir_uri . '/style.min.css';
+	}
+	
+	return $stylesheet_uri;
+}
+add_action( 'stylesheet_uri', 'penguin_stylesheet_uri', 10, 2 );
+
+/**
  * Add search box to primary menu
  */
 function penguin_gold_add_search_box($items, $args) {
