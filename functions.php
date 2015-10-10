@@ -27,6 +27,14 @@ function penguin_setup() {
 	add_theme_support( 'automatic-feed-links' );
 
 	/*
+	 * Let WordPress manage the document title.
+	 * By adding theme support, we declare that this theme does not use a
+	 * hard-coded <title> tag in the document head, and expect WordPress to
+	 * provide it for us.
+	 */
+	add_theme_support( 'title-tag' );
+
+	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
@@ -118,7 +126,7 @@ function penguin_scripts() {
 
 	wp_enqueue_script( 'smooth-scroll', get_template_directory_uri() . '/js/smooth-scroll' . $suffix . '.js', array(), '5.3.3', true );
 	wp_enqueue_script( 'penguin-navigation', get_template_directory_uri() . '/js/navigation' . $suffix . '.js', array(), '20120206', true );
-	
+
 	if ( 1 == $fluidvids ) {
 		wp_enqueue_script( 'fluidvids', get_template_directory_uri() . '/js/fluidvids' . $suffix . '.js', array(), '2.4.1', true );
 	}
