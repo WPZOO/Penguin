@@ -4,7 +4,7 @@
   "description": "WP Theme PENGU!N Gold",
   "author": "Stefan Brechbühl",
   "homepage": "https://wpzoo.ch/",
-  "version": "1.0.0-beta.2",
+  "version": "0.1.0",
   "copyright": "2015",
   "license": "GPL-2.0+",
   "private": true,
@@ -37,7 +37,7 @@
     "authoruri": "http://wpzoo.ch",
     "license": "GPL-2.0+",
     "licenseuri": "http://www.gnu.org/licenses/gpl-2.0.html",
-    "textdomain": "penguin",
+    "textdomain": "penguin-gold",
     "domainpath": "/languages",
     "tags": "black, blue, gray, white, light, one-column, two-columns, right-sidebar, left-sidebar, responsive-layout, accessibility-ready, custom-menu, featured-image-header, featured-images, post-formats, sticky-post, threaded-comments, translation-ready"
   },
