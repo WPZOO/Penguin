@@ -57,7 +57,7 @@ function penguin_options() {
 add_action( 'init', 'penguin_options' );
 
 
-function change_default_order_options( $wp_customize ){
+function penguin_change_default_order_options( $wp_customize ){
 	$wp_customize->get_section('static_front_page')->priority = '50';
 }
-add_action( 'customize_register', 'change_default_order_options' );
+add_action( 'customize_register', 'penguin_change_default_order_options' );
