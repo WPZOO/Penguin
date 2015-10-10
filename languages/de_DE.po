@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PENGU!N\n"
 "Report-Msgid-Bugs-To: WPZOO Translations <translations@wpzoo.ch>\n"
-"POT-Creation-Date: 2015-09-26 18:37:09+00:00\n"
+"POT-Creation-Date: 2015-10-10 19:15:21+00:00\n"
 "PO-Revision-Date: 2015-09-26 18:35:52 UTC\n"
 "Last-Translator: Web Translate It <support@webtranslateit.com>\n"
 "Language-Team: German, Germany\n"
@@ -13,236 +13,53 @@ msgstr ""
 "X-Generator: WebTranslateIt.com\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: comments.php:44
-msgid "Comment navigation"
-msgstr "Kommentar-Navigation"
-
-#: comments.php:46
-msgid "Older Comments"
-msgstr "Ältere Kommentare"
-
-#: comments.php:47
-msgid "Newer Comments"
-msgstr "Neuere Kommentare"
-
-#: comments.php:58
-msgid "Comments are closed."
-msgstr "Kommentare sind geschlossen."
-
-#: functions.php:45
-msgid "Primary Menu"
-msgstr "Hauptmenü"
-
-#: functions.php:46
-msgid "Footer Menu"
-msgstr "Footer-Menü"
-
-#: functions.php:82 inc/customizer-options-gold.php:101
-msgid "Sidebar"
-msgstr "Seitenleiste"
-
-#: functions.php:151
-msgid "PENGU!N image size"
-msgstr "PENGU!N Bildgröße"
-
-#: header.php:42
-msgid "Skip to content"
-msgstr "Zum Inhalt wechseln"
-
-#: inc/customizer-options-gold.php:28
-msgid "Logo"
-msgstr ""
-
-#: inc/customizer-options-gold.php:34
-msgid "Upload your logo"
-msgstr ""
-
-#: inc/customizer-options-gold.php:45
-msgid "Colors"
-msgstr "Farben"
-
-#: inc/customizer-options-gold.php:50
+#: inc/customizer-options-gold.php:12
 msgid "Dark"
 msgstr "Dunkel"
 
-#: inc/customizer-options-gold.php:51
+#: inc/customizer-options-gold.php:13
 msgid "Bright"
 msgstr "Hell"
 
-#: inc/customizer-options-gold.php:56
+#: inc/customizer-options-gold.php:18
 msgid "Brightness of navbar"
 msgstr "Helligkeit der Navigationsleiste"
 
-#: inc/customizer-options-gold.php:65
+#: inc/customizer-options-gold.php:27
 msgid "Link color"
 msgstr "Linkfarbe"
 
-#: inc/customizer-options-gold.php:76
-msgid "Content"
-msgstr "Inhalt"
-
-#: inc/customizer-options-gold.php:81
-msgid "Excerpt (trimmed-down output)"
-msgstr "Auszug (gekürzte Ausgabe)"
-
-#: inc/customizer-options-gold.php:82
-msgid "Content (full post / custom more tag)"
-msgstr "Inhalt (ganzer Beitrag / benutzerdefinierter Weiterlesen-Link"
-
-#: inc/customizer-options-gold.php:87
-msgid "Content output of standard posts on home and archive pages."
-msgstr "Inhaltsausgabe der Standard-Beiträge für Blog- und Archivseiten"
-
-#: inc/customizer-options-gold.php:95
+#: inc/customizer-options-gold.php:35
 msgid "Sidebar right"
 msgstr "Seitenleiste rechts"
 
-#: inc/customizer-options-gold.php:96
+#: inc/customizer-options-gold.php:36
 msgid "Sidebar left"
 msgstr "Seitenleiste links"
 
-#: inc/customizer-options-gold.php:110
+#: inc/customizer-options-gold.php:41
+msgid "Sidebar"
+msgstr "Seitenleiste"
+
+#: inc/customizer-options-gold.php:50
 msgid "Custom footer text"
 msgstr "Eigener Footer-Text"
 
-#: inc/customizer-options-gold.php:122
+#: inc/customizer-options-gold.php:60
 msgid "Advanced"
 msgstr "Erweitert"
 
-#: inc/customizer-options-gold.php:128
+#: inc/customizer-options-gold.php:66
 msgid "Add search box to primary menu"
 msgstr "Das Suchfeld in das Hauptmenü hinzufügen"
 
-#: inc/customizer-options-gold.php:136
+#: inc/customizer-options-gold.php:74
 msgid "Minified CSS and JS"
 msgstr "Minimiertes CSS und JS"
 
-#: inc/customizer-options-gold.php:144
+#: inc/customizer-options-gold.php:82
 msgid "Load Fluidvids.js for responsive videos"
 msgstr "Lade Fluidvids.js für responsive Videos"
-
-#: inc/extras-penguin-gold.php:107
-msgid "Page %s"
-msgstr "Seite %s"
-
-# INSTRUCTION: translators: %s: Name of current post
-#. translators: %s: Name of current post
-#: inc/extras-penguin-gold.php:141
-msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
-msgstr "%s weiterlesen <span class=\"meta-nav\">&rarr;</span>"
-
-#: inc/extras-penguin-gold.php:170
-msgid "Scroll To Top"
-msgstr "Nach oben scrollen"
-
-#: inc/template-tags.php:24
-msgid "Posts navigation"
-msgstr "Beiträge-Navigation"
-
-#: inc/template-tags.php:28
-msgid "Older posts"
-msgstr "Ältere Beiträge"
-
-#: inc/template-tags.php:32
-msgid "Newer posts"
-msgstr "Neuere Beiträge"
-
-#: inc/template-tags.php:56
-msgid "Post navigation"
-msgstr "Beitrag-Navigation"
-
-#: inc/template-tags.php:110
-msgid "Category: %s"
-msgstr "Kategorie: %s"
-
-#: inc/template-tags.php:112
-msgid "Tag: %s"
-msgstr "Schlagwort: %s"
-
-#: inc/template-tags.php:114
-msgid "Author: %s"
-msgstr "Autor: %s"
-
-#: inc/template-tags.php:116
-msgid "Year: %s"
-msgstr "Jahr: %s"
-
-#: inc/template-tags.php:118
-msgid "Month: %s"
-msgstr "Monat: %s"
-
-#: inc/template-tags.php:120
-msgid "Day: %s"
-msgstr "Tag: %s"
-
-#: inc/template-tags.php:140
-msgid "Archives: %s"
-msgstr "Archiv: %s"
-
-# INSTRUCTION: translators: 1: Taxonomy singular name, 2: Current taxonomy term
-#. translators: 1: Taxonomy singular name, 2: Current taxonomy term
-#: inc/template-tags.php:144
-msgid "%1$s: %2$s"
-msgstr ""
-
-#: inc/template-tags.php:146
-msgid "Archives"
-msgstr "Archiv"
-
-#: search.php:17
-msgid "Search Results for: %s"
-msgstr "Suchergebnisse für: %s"
-
-#: template-parts/content-none.php:13
-msgid "Nothing Found"
-msgstr "Nichts gefunden"
-
-#: template-parts/content-none.php:19
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr "Bereit für deinen ersten Beitrag? <a href=\"%1$s\">Leg hier los</a>."
-
-#: template-parts/content-none.php:23
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr ""
-"Leider entspricht nichts deinem Suchbegriff / deinen Suchbegriffen. Versuche "
-"es bitte mit anderen Suchwörtern."
-
-#: template-parts/content-none.php:27
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
-msgstr ""
-"Was du suchst, kann leider nicht gefunden werden. Vielleicht kann dir das "
-"Suchformular weiterhelfen."
-
-# INSTRUCTION: translators: used between list items, there is a space after the comma
-#. translators: used between list items, there is a space after the comma
-#: template-parts/meta-bottom.php:3 template-parts/meta-bottom.php:12
-msgid ", "
-msgstr ""
-
-#: template-parts/meta-top.php:13
-msgid "Leave a comment"
-msgstr "Hinterlasse einen Kommentar"
-
-#: template-parts/meta-top.php:13
-msgid "1 Comment"
-msgstr "1 Kommentar"
-
-#: template-parts/meta-top.php:13
-msgid "% Comments"
-msgstr "% Kommentare"
-
-#: template-parts/meta-top.php:15
-msgid "Edit"
-msgstr "Bearbeiten"
-
-#: template-parts/the_content.php:5
-msgid "Pages:"
-msgstr "Seiten:"
 
 # INSTRUCTION: Theme Name of the plugin/theme
 #. Theme Name of the plugin/theme
@@ -284,69 +101,173 @@ msgstr ""
 msgid "Full Width"
 msgstr "Volle Breite"
 
-#: comments.php:27
-msgctxt "comments title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] "Eine Reaktion zu &bdquo;%2$s&ldquo;"
-msgstr[1] "%1$s Reaktionen zu &bdquo;%2$s&ldquo;"
+#~ msgid "Comment navigation"
+#~ msgstr "Kommentar-Navigation"
 
-#: inc/template-tags.php:116
-msgctxt "yearly archives date format"
-msgid "Y"
-msgstr ""
+#~ msgid "Older Comments"
+#~ msgstr "Ältere Kommentare"
 
-#: inc/template-tags.php:118
-msgctxt "monthly archives date format"
-msgid "F Y"
-msgstr ""
+#~ msgid "Newer Comments"
+#~ msgstr "Neuere Kommentare"
 
-#: inc/template-tags.php:120
-msgctxt "daily archives date format"
-msgid "F j, Y"
-msgstr "j. F Y"
+#~ msgid "Comments are closed."
+#~ msgstr "Kommentare sind geschlossen."
 
-#: inc/template-tags.php:122
-msgctxt "post format archive title"
-msgid "Asides"
-msgstr "Kurznachrichten"
+#~ msgid "Primary Menu"
+#~ msgstr "Hauptmenü"
 
-#: inc/template-tags.php:124
-msgctxt "post format archive title"
-msgid "Galleries"
-msgstr "Galerien"
+#~ msgid "Footer Menu"
+#~ msgstr "Footer-Menü"
 
-#: inc/template-tags.php:126
-msgctxt "post format archive title"
-msgid "Images"
-msgstr "Bilder"
+#~ msgid "PENGU!N image size"
+#~ msgstr "PENGU!N Bildgröße"
 
-#: inc/template-tags.php:128
-msgctxt "post format archive title"
-msgid "Videos"
-msgstr "Videos"
+#~ msgid "Skip to content"
+#~ msgstr "Zum Inhalt wechseln"
 
-#: inc/template-tags.php:130
-msgctxt "post format archive title"
-msgid "Quotes"
-msgstr "Zitate"
+#~ msgid "Content"
+#~ msgstr "Inhalt"
 
-#: inc/template-tags.php:132
-msgctxt "post format archive title"
-msgid "Links"
-msgstr "Links"
+#~ msgid "Excerpt (trimmed-down output)"
+#~ msgstr "Auszug (gekürzte Ausgabe)"
 
-#: inc/template-tags.php:134
-msgctxt "post format archive title"
-msgid "Statuses"
-msgstr "Statusmeldungen"
+#~ msgid "Content (full post / custom more tag)"
+#~ msgstr "Inhalt (ganzer Beitrag / benutzerdefinierter Weiterlesen-Link"
 
-#: inc/template-tags.php:136
-msgctxt "post format archive title"
-msgid "Audio"
-msgstr "Audio"
+#~ msgid "Content output of standard posts on home and archive pages."
+#~ msgstr "Inhaltsausgabe der Standard-Beiträge für Blog- und Archivseiten"
 
-#: inc/template-tags.php:138
-msgctxt "post format archive title"
-msgid "Chats"
-msgstr "Chats"
+#~ msgid "Page %s"
+#~ msgstr "Seite %s"
+
+# INSTRUCTION: translators: %s: Name of current post
+#~ msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+#~ msgstr "%s weiterlesen <span class=\"meta-nav\">&rarr;</span>"
+
+#~ msgid "Scroll To Top"
+#~ msgstr "Nach oben scrollen"
+
+#~ msgid "Posts navigation"
+#~ msgstr "Beiträge-Navigation"
+
+#~ msgid "Older posts"
+#~ msgstr "Ältere Beiträge"
+
+#~ msgid "Newer posts"
+#~ msgstr "Neuere Beiträge"
+
+#~ msgid "Post navigation"
+#~ msgstr "Beitrag-Navigation"
+
+#~ msgid "Category: %s"
+#~ msgstr "Kategorie: %s"
+
+#~ msgid "Tag: %s"
+#~ msgstr "Schlagwort: %s"
+
+#~ msgid "Author: %s"
+#~ msgstr "Autor: %s"
+
+#~ msgid "Year: %s"
+#~ msgstr "Jahr: %s"
+
+#~ msgid "Month: %s"
+#~ msgstr "Monat: %s"
+
+#~ msgid "Day: %s"
+#~ msgstr "Tag: %s"
+
+#~ msgid "Archives: %s"
+#~ msgstr "Archiv: %s"
+
+#~ msgid "Archives"
+#~ msgstr "Archiv"
+
+#~ msgid "Search Results for: %s"
+#~ msgstr "Suchergebnisse für: %s"
+
+#~ msgid "Nothing Found"
+#~ msgstr "Nichts gefunden"
+
+#, fuzzy
+#~ msgid "Ready to publish your first post?"
+#~ msgstr ""
+#~ "Bereit für deinen ersten Beitrag? <a href=\"%1$s\">Leg hier los</a>."
+
+#~ msgid ""
+#~ "Sorry, but nothing matched your search terms. Please try again with some "
+#~ "different keywords."
+#~ msgstr ""
+#~ "Leider entspricht nichts deinem Suchbegriff / deinen Suchbegriffen. "
+#~ "Versuche es bitte mit anderen Suchwörtern."
+
+#~ msgid ""
+#~ "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+#~ "searching can help."
+#~ msgstr ""
+#~ "Was du suchst, kann leider nicht gefunden werden. Vielleicht kann dir das "
+#~ "Suchformular weiterhelfen."
+
+#~ msgid "Leave a comment"
+#~ msgstr "Hinterlasse einen Kommentar"
+
+#~ msgid "1 Comment"
+#~ msgstr "1 Kommentar"
+
+#~ msgid "% Comments"
+#~ msgstr "% Kommentare"
+
+#~ msgid "Edit"
+#~ msgstr "Bearbeiten"
+
+#~ msgid "Pages:"
+#~ msgstr "Seiten:"
+
+#~ msgctxt "comments title"
+#~ msgid "One thought on &ldquo;%2$s&rdquo;"
+#~ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+#~ msgstr[0] "Eine Reaktion zu &bdquo;%2$s&ldquo;"
+#~ msgstr[1] "%1$s Reaktionen zu &bdquo;%2$s&ldquo;"
+
+#~ msgctxt "daily archives date format"
+#~ msgid "F j, Y"
+#~ msgstr "j. F Y"
+
+#~ msgctxt "post format archive title"
+#~ msgid "Asides"
+#~ msgstr "Kurznachrichten"
+
+#~ msgctxt "post format archive title"
+#~ msgid "Galleries"
+#~ msgstr "Galerien"
+
+#~ msgctxt "post format archive title"
+#~ msgid "Images"
+#~ msgstr "Bilder"
+
+#~ msgctxt "post format archive title"
+#~ msgid "Videos"
+#~ msgstr "Videos"
+
+#~ msgctxt "post format archive title"
+#~ msgid "Quotes"
+#~ msgstr "Zitate"
+
+#~ msgctxt "post format archive title"
+#~ msgid "Links"
+#~ msgstr "Links"
+
+#~ msgctxt "post format archive title"
+#~ msgid "Statuses"
+#~ msgstr "Statusmeldungen"
+
+#~ msgctxt "post format archive title"
+#~ msgid "Audio"
+#~ msgstr "Audio"
+
+#~ msgctxt "post format archive title"
+#~ msgid "Chats"
+#~ msgstr "Chats"
+
+#~ msgid "Colors"
+#~ msgstr "Farben"
