@@ -13,10 +13,6 @@ function penguin_options() {
 	// Stores all the sections to be added
 	$sections = array();
 
-	// Adds the sections to the $options array
-	$options['sections'] = $sections;
-
-
 	// Logo
 	$sections[] = array(
 		'id'            => 'logo',
@@ -31,7 +27,6 @@ function penguin_options() {
 		'type'    => 'upload',
 		'default' => '',
 	);
-
 
 	// Content
 	$sections[] = array(
@@ -53,7 +48,6 @@ function penguin_options() {
 		'choices'       => $contentchoices,
 		'default'       => 'excerpt'
 	);
-
 
 	// Adds the sections to the $options array
 	$options['sections'] = $sections;

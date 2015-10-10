@@ -29,11 +29,11 @@
 	<nav id="site-navigation" class="main-navigation clear" role="navigation">
 		<div class="container">
 			<?php $logo = get_theme_mod( 'logo-upload' ); ?>
-			<?php if ($logo == '') { ?>
+			<?php if ( $logo == '' ) { ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<?php } else { ?>
 				<a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-					<img title="<?php bloginfo( 'name' ); ?>" alt="<?php bloginfo( 'name' ); ?>" src="<?php echo $logo; ?>">
+					<img title="<?php bloginfo( 'name' ); ?>" alt="<?php bloginfo( 'name' ); ?>" src="<?php echo esc_url( $logo ); ?>">
 				</a>
 			<?php } ?>
 
@@ -44,7 +44,7 @@
 	</nav><!-- #site-navigation -->
 
 	<?php $classes = get_body_class();
-	if ( in_array('has-headerimg', $classes ) ) : ?>
+	if ( in_array( 'has-headerimg', $classes ) ) : ?>
 		<div class="headerimg">
 			<?php the_post_thumbnail( 'full' ); ?>
 		</div>

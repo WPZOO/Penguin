@@ -14,6 +14,24 @@ if ( typeof jQuery == 'undefined' ) {
 	imagesLoaded( posts_container, function() {
 		msnry.layout();
 	});
+//	window.twttr = function (d, s, id) {
+//		var t, js, fjs = d.getElementsByTagName(s)[0];
+//		if (d.getElementById(id)) return; js = d.createElement(s); js.id = id;
+//		js.src = "https://platform.twitter.com/widgets.js";
+//		fjs.parentNode.insertBefore(js, fjs);
+//		return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });
+//	}(document, 'script', 'twitter-wjs');
+//
+//	twttr.ready(function (twttr) {
+//		twttr.events.bind('loaded', function (event) {
+//			//DO A MASONRY RELAYOUT HERE
+//			msnry.layout();
+//		});
+//	});
+	$('.elem').each(function(elem,index){
+		var height = $(elem).find('iframe').height();
+		$(elem).height(height);
+	});
 } else {
 	jQuery(document).ready(function ($) {
 

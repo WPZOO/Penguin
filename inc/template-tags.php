@@ -7,7 +7,6 @@
  * @package PENGU!N Gold
  */
 
-
 if ( ! function_exists( 'the_posts_navigation' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.
@@ -156,6 +155,7 @@ function penguin_the_archive_title( $before = '', $after = '' ) {
 	}
 }
 endif;
+
 if ( ! function_exists( 'penguin_the_archive_description' ) ) :
 /**
  * Shim for `the_archive_description()`.

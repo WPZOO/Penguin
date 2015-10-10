@@ -123,8 +123,15 @@ add_action( 'wp', 'penguin_setup_author' );
  */
 function penguin_read_more_text() {
 	$read_more_text = sprintf(
-		/* translators: %s: Name of current post */
-		wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'penguin' ), array( 'span' => array( 'class' => array() ) ) ),
+		wp_kses(
+			/* translators: %s: Name of current post */
+			__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'penguin' ),
+			array(
+				'span' => array(
+					'class' => array()
+				)
+			)
+		),
 		the_title( '<span class="screen-reader-text">"', '"</span>', false )
 	);
 	return apply_filters( 'penguin_read_more_text', $read_more_text );
@@ -166,7 +173,7 @@ function penguin_upsell_notice() {
 		'penguin-customizer-goldad',
 		'penguinL10n',
 		array(
-			'penguinURL'   => esc_url( '//wpzoo.ch/themes/penguin/' ),
+			'penguinURL'   => '//wpzoo.ch/themes/penguin/',
 			'penguinLabel' => __( 'Buy Gold Version', 'penguin' ),
 		)
 	);
@@ -178,7 +185,7 @@ add_action( 'customize_controls_enqueue_scripts', 'penguin_upsell_notice' );
  * Footer text
  */
 function penguin_poweredby() {
-	$footer = '<div id="poweredby"><a href="http://wpzoo.ch" rel="designer">PENGU!N WordPress Theme made by WPZOO</a></div>';
+	$footer = '<div id="poweredby"><a href="http://wpzoo.ch" rel="designer">' . __( 'PENGU!N WordPress Theme made by WPZOO', 'penguin' ) . '</a></div>';
  
 	echo apply_filters( 'penguin_footer_text', $footer );
 

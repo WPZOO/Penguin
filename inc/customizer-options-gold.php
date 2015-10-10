@@ -13,10 +13,6 @@ function penguin_gold_options() {
 	// Stores all the sections to be added
 	$sections = array();
 
-	// Adds the sections to the $options array
-	$options['sections'] = $sections;
-
-
 	// Colors
 	$sections[] = array(
 		'id'            => 'colors',

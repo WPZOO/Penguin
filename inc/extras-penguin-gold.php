@@ -74,10 +74,19 @@ remove_action( 'customize_controls_enqueue_scripts', 'penguin_upsell_notice' );
  * Footer text
  */
 function penguin_gold_poweredby( $footer ) {
-	$custom_footer = get_theme_mod( 'footer-text' );
+	$footer_text = get_theme_mod( 'footer-text' );
+	$allowed_html = array(
+		'a' => array(
+			'href' => array(),
+			'title' => array()
+		),
+		'br' => array(),
+		'em' => array(),
+		'strong' => array(),
+	);
 
 	if ( ! empty( $custom_footer ) ) {
-		$footer = '<div id="poweredby">' . $custom_footer . '</div>';
+		$footer = '<div id="poweredby">' . wp_kses( $footer_text, $allowed_html ) . '</div>';
 	}
 
 	return $footer;

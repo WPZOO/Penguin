@@ -11,23 +11,25 @@
 		<?php if ( has_post_thumbnail() ) : ?>
 		<?php get_template_part( 'template-parts/the_post_thumbnail' ); ?>
 		<?php endif; ?>
-		<?php if (!has_post_format('status')) : ?>
+		<?php if ( ! has_post_format( 'status' ) ) : ?>
 			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 		<?php endif; ?>
 
 		<?php get_template_part( 'template-parts/meta', 'top' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php $contentoutput = get_theme_mod( 'excerpt-content' ); ?>
-	<?php if ( $contentoutput != 'content' && ! has_post_format() ) : ?>
-	<?php get_template_part( 'template-parts/the_excerpt' ); ?>
-	<?php else : ?>
-	<?php get_template_part( 'template-parts/the_content' ); ?>
-	<?php endif; ?>
+<?php
+	$contentoutput = get_theme_mod( 'excerpt-content' );
+	if ( $contentoutput != 'content' && ! has_post_format() ) {
+		get_template_part( 'template-parts/the_excerpt' );
+	} else {
+		get_template_part( 'template-parts/the_content' );
+	}
 
-	<?php if ( 'post' == get_post_type() ) : ?>
-	<?php get_template_part( 'template-parts/meta', 'bottom' ); ?>
-	<?php endif; // End if 'post' == get_post_type() ?>
+	if ( 'post' == get_post_type() ) {
+		get_template_part( 'template-parts/meta', 'bottom' );
+	}
+?>
 
 	<?php tha_entry_bottom(); ?>
 </article><!-- #post-## -->
