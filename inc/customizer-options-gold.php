@@ -5,21 +5,9 @@
  * @package PENGU!N Gold
  */
 
-function penguin_gold_options() {
-
-	// Stores all the controls that will be added
-	$options = array();
-
-	// Stores all the sections to be added
-	$sections = array();
+function penguin_gold_options( $options ) {
 
 	// Colors
-	$sections[] = array(
-		'id'            => 'colors',
-		'title'         => __( 'Colors', 'penguin' ),
-		'priority'      => '80'
-	);
-
 	$choices = array(
 		'dark'          => __( 'Dark', 'penguin' ),
 		'bright'        => __( 'Bright', 'penguin' )
@@ -43,12 +31,6 @@ function penguin_gold_options() {
 	);
 
 	// Content
-	$sections[] = array(
-		'id'            => 'content',
-		'title'         => __( 'Content', 'penguin' ),
-		'priority'      => '100'
-	);
-
 	$sidebarchoices = array(
 		'sidebar-right' => __( 'Sidebar right', 'penguin' ),
 		'sidebar-left'  => __( 'Sidebar left', 'penguin' ),
@@ -73,10 +55,10 @@ function penguin_gold_options() {
 
 
 	// Advanced Options
-	$sections[] = array(
+	$options['sections'][] = array(
 		'id'            => 'advanced',
 		'title'         => __( 'Advanced', 'penguin' ),
-		'priority'      => '200'
+		'priority'      => '150'
 	);
 
 	$options['menu-search'] = array(
@@ -103,13 +85,7 @@ function penguin_gold_options() {
 		'default'       => 1,
 	);
 
-	// Adds the sections to the $options array
-	$options['sections'] = $sections;
-
-	$customizer_library = Customizer_Library::Instance();
-	$customizer_library->add_options( $options );
-
-	// To delete custom mods use: customizer_library_remove_theme_mods();
+	return $options;
 
 }
-add_action( 'init', 'penguin_gold_options' );
+add_filter( 'penguin_options', 'penguin_gold_options' );

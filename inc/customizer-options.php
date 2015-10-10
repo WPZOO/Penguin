@@ -10,11 +10,8 @@ function penguin_options() {
 	// Stores all the controls that will be added
 	$options = array();
 
-	// Stores all the sections to be added
-	$sections = array();
-
 	// Logo
-	$sections[] = array(
+	$options['sections'][] = array(
 		'id'            => 'logo',
 		'title'         => __( 'Logo', 'penguin' ),
 		'priority'      => '80'
@@ -29,7 +26,7 @@ function penguin_options() {
 	);
 
 	// Content
-	$sections[] = array(
+	$options['sections'][] = array(
 		'id'            => 'content',
 		'title'         => __( 'Content', 'penguin' ),
 		'priority'      => '100'
@@ -49,8 +46,7 @@ function penguin_options() {
 		'default'       => 'excerpt'
 	);
 
-	// Adds the sections to the $options array
-	$options['sections'] = $sections;
+	$options = apply_filters( 'penguin_options', $options );
 
 	$customizer_library = Customizer_Library::Instance();
 	$customizer_library->add_options( $options );
