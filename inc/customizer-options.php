@@ -18,10 +18,8 @@ function penguin_options() {
 
 
 	// Logo
-	$section = 'logo';
-
 	$sections[] = array(
-		'id'            => $section,
+		'id'            => 'logo',
 		'title'         => __( 'Logo', 'penguin' ),
 		'priority'      => '80'
 	);
@@ -29,17 +27,15 @@ function penguin_options() {
 	$options['logo-upload'] = array(
 		'id' => 'logo-upload',
 		'label'   => __( 'Upload your logo', 'penguin' ),
-		'section' => $section,
+		'section' => 'logo',
 		'type'    => 'upload',
 		'default' => '',
 	);
 
 
 	// Content
-	$section = 'content';
-
 	$sections[] = array(
-		'id'            => $section,
+		'id'            => 'content',
 		'title'         => __( 'Content', 'penguin' ),
 		'priority'      => '100'
 	);
@@ -52,7 +48,7 @@ function penguin_options() {
 	$options['excerpt-content'] = array(
 		'id'            => 'excerpt-content',
 		'label'         => __( 'Content output of standard posts on home and archive pages.', 'penguin' ),
-		'section'       => $section,
+		'section'       => 'content',
 		'type'          => 'radio',
 		'choices'       => $contentchoices,
 		'default'       => 'excerpt'
