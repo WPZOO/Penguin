@@ -58,16 +58,40 @@
 	width: 100%;
 }
 
+.fullwidth-container {
+    left: -10px;
+    position: relative;
+    width: calc(100% + 20px);
+    
+    img {
+        width: 100%;
+    }
+}
+
 @media screen and (min-width: 600px) and (max-width: 991px) {
 	.post-thumbnail {
 		margin-bottom: 10px;
 	}		
+
+    .fullwidth-container {
+        left: -20px;
+        width: calc(100% + 40px);
+    }
 }
 
 @media screen and (min-width: 992px) {
 	.post-thumbnail {
 		margin-bottom: 15px;
 	}
+    .search .page .fullwidth-container {
+        left: -30px;
+        width: calc(100% + 60px);
+    }
+    .page .fullwidth-container,
+    .single .fullwidth-container {
+        left: -50px;
+        width: calc(100% + 100px);
+    }
 }
 
 /* Image shapes */

@@ -855,15 +855,41 @@ input:focus {
 	width: 100%;
 }
 
+.fullwidth-container {
+	position: relative;
+	right: -10px;
+	width: calc(100% + 20px);
+}
+
+.fullwidth-container img {
+	width: 100%;
+}
+
 @media screen and (min-width: 600px) and (max-width: 991px) {
 	.post-thumbnail {
 		margin-bottom: 10px;
+	}
+
+	.fullwidth-container {
+		right: -20px;
+		width: calc(100% + 40px);
 	}
 }
 
 @media screen and (min-width: 992px) {
 	.post-thumbnail {
 		margin-bottom: 15px;
+	}
+
+	.search .page .fullwidth-container {
+		right: -30px;
+		width: calc(100% + 60px);
+	}
+
+	.page .fullwidth-container,
+	.single .fullwidth-container {
+		right: -50px;
+		width: calc(100% + 100px);
 	}
 }
 
