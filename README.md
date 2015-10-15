@@ -1,8 +1,6 @@
 # PENGU!N
 ![Screenshot of the WordPress Theme PENGU!N](screenshot.png)
 
-*Beta Status*
-
 ## WordPress Theme by WPZOO
 PENGU!N is a clean and modern WordPress theme made by [WPZOO](http://wpzoo.ch/). Besides the link color, it consists of clean shades of grays. The post thumbnail will be used as a big header image on single posts as well as pages. PENGU!N theme can be used as blogging as well as a magazin theme.
 
