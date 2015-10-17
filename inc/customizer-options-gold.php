@@ -9,13 +9,13 @@ function penguin_gold_options( $options ) {
 
 	// Colors
 	$choices = array(
-		'dark'          => __( 'Dark', 'penguin' ),
-		'bright'        => __( 'Bright', 'penguin' )
+		'dark'          => __( 'Dark', 'penguin-gold' ),
+		'bright'        => __( 'Bright', 'penguin-gold' )
 	);
 
 	$options['brightness-navbar'] = array(
 		'id'            => 'brightness-navbar',
-		'label'         => __( 'Brightness of navbar', 'penguin' ),
+		'label'         => __( 'Brightness of navbar', 'penguin-gold' ),
 		'section'       => 'colors',
 		'type'          => 'select',
 		'choices'       => $choices,
@@ -24,7 +24,7 @@ function penguin_gold_options( $options ) {
 
 	$options['link-color'] = array(
 		'id'            => 'link-color',
-		'label'         => __( 'Link color', 'penguin' ),
+		'label'         => __( 'Link color', 'penguin-gold' ),
 		'section'       => 'colors',
 		'type'          => 'color',
 		'default'       => '#0066cc',
@@ -32,13 +32,13 @@ function penguin_gold_options( $options ) {
 
 	// Content
 	$sidebarchoices = array(
-		'sidebar-right' => __( 'Sidebar right', 'penguin' ),
-		'sidebar-left'  => __( 'Sidebar left', 'penguin' ),
+		'sidebar-right' => __( 'Sidebar right', 'penguin-gold' ),
+		'sidebar-left'  => __( 'Sidebar left', 'penguin-gold' ),
 	);
 
 	$options['sidebar-layout'] = array(
 		'id'            => 'sidebar-layout',
-		'label'         => __( 'Sidebar', 'penguin' ),
+		'label'         => __( 'Sidebar', 'penguin-gold' ),
 		'section'       => 'content',
 		'type'          => 'radio',
 		'choices'       => $sidebarchoices,
@@ -47,7 +47,7 @@ function penguin_gold_options( $options ) {
 
 	$options['footer-text'] = array(
 		'id'            => 'footer-text',
-		'label'         => __( 'Custom footer text', 'penguin' ),
+		'label'         => __( 'Custom footer text', 'penguin-gold' ),
 		'section'       => 'content',
 		'type'          => 'textarea',
 		'default'       => ''
@@ -57,13 +57,13 @@ function penguin_gold_options( $options ) {
 	// Advanced Options
 	$options['sections'][] = array(
 		'id'            => 'advanced',
-		'title'         => __( 'Advanced', 'penguin' ),
+		'title'         => __( 'Advanced', 'penguin-gold' ),
 		'priority'      => '150'
 	);
 
 	$options['menu-search'] = array(
 		'id'            => 'menu-search',
-		'label'         => __( 'Add search box to primary menu', 'penguin' ),
+		'label'         => __( 'Add search box to primary menu', 'penguin-gold' ),
 		'section'       => 'advanced',
 		'type'          => 'checkbox',
 		'default'       => 0,
@@ -71,7 +71,7 @@ function penguin_gold_options( $options ) {
 
 	$options['min-files'] = array(
 		'id'            => 'min-files',
-		'label'         => __( 'Minified CSS and JS', 'penguin' ),
+		'label'         => __( 'Minified CSS and JS', 'penguin-gold' ),
 		'section'       => 'advanced',
 		'type'          => 'checkbox',
 		'default'       => 1,
@@ -79,7 +79,7 @@ function penguin_gold_options( $options ) {
 
 	$options['fluidvids'] = array(
 		'id'            => 'fluidvids',
-		'label'         => __( 'Load Fluidvids.js for responsive videos', 'penguin' ),
+		'label'         => __( 'Load Fluidvids.js for responsive videos', 'penguin-gold' ),
 		'section'       => 'advanced',
 		'type'          => 'checkbox',
 		'default'       => 1,
