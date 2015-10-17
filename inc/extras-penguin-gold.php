@@ -92,3 +92,12 @@ function penguin_gold_poweredby( $footer ) {
 	return $footer;
 }
 add_filter( 'penguin_footer_text', 'penguin_gold_poweredby' );
+
+/**
+ * Load theme updater functions.
+ * Action is used so that child themes can easily disable.
+ */
+function penguin_gold_theme_updater() {
+	require( get_template_directory() . '/updater/theme-updater.php' );
+}
+add_action( 'after_setup_theme', 'penguin_gold_theme_updater' );
