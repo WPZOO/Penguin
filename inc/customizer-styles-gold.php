@@ -56,8 +56,8 @@ function customizer_library_penguin_build_styles() {
 		// background-color
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'.btn a:hover', 
-				'.btn a:focus', 
+				'.btn a:hover',
+				'.btn a:focus',
 				'.btn a:active',
 				'#site-navigation .current_page_item > a',
 				'#site-navigation .current-menu-item > a',
@@ -131,5 +131,4 @@ function customizer_library_penguin_styles() {
 	}
 }
 endif;
-
 add_action( 'wp_head', 'customizer_library_penguin_styles', 11 );
