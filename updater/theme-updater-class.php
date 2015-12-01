@@ -89,6 +89,9 @@ class EDD_Theme_Updater {
 		if ( $update_data ) {
 			$value->response[ $this->theme_slug ] = $update_data;
 		}
+		if ( is_array( $update_data ) && array_key_exists( 'translations', $update_data ) ) {
+			$value->translations = array_merge( $value->translations, $update_data['translations'] );
+		}
 		return $value;
 	}
 
