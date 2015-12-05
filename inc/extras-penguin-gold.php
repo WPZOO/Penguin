@@ -83,6 +83,9 @@ function penguin_gold_poweredby( $footer ) {
 		'br' => array(),
 		'em' => array(),
 		'strong' => array(),
+		'i' => array(
+			'class' => array()
+		)
 	);
 
 	if ( ! empty( $footer_text ) ) {
