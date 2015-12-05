@@ -85,7 +85,7 @@ function penguin_gold_poweredby( $footer ) {
 		'strong' => array(),
 	);
 
-	if ( ! empty( $custom_footer ) ) {
+	if ( ! empty( $footer_text ) ) {
 		$footer = '<div id="poweredby">' . wp_kses( $footer_text, $allowed_html ) . '</div>';
 	}
 
