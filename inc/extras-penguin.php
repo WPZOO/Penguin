@@ -168,7 +168,7 @@ add_action( 'tha_footer_top', 'penguin_back_to_top' );
  * Display upgrade notice on customizer page
  */
 function penguin_upsell_notice() {
-	wp_enqueue_script( 'penguin-customizer-goldad', get_template_directory_uri() . '/js/goldad.js', array(), '1.0.0', true );
+	wp_enqueue_script( 'penguin-customizer-goldad', get_template_directory_uri() . '/js/goldad.min.js', array(), '1.0.0', true );
 	wp_localize_script(
 		'penguin-customizer-goldad',
 		'penguinL10n',
