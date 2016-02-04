@@ -89,7 +89,7 @@ class EDD_Theme_Updater {
 		if ( $update_data ) {
 			$value->response[ $this->theme_slug ] = $update_data;
 		}
-		if ( array_key_exists( 'translations', $update_data ) ) {
+		if ( is_array( $update_data ) && array_key_exists( 'translations', $update_data ) ) {
 			foreach ( $value->translations as $key => $value) {
 				$update_data['translations'][] = $value;
 			}
