@@ -45,6 +45,14 @@ function penguin_gold_options( $options ) {
 		'default'       => 'sidebar-right'
 	);
 
+	$options['author-box'] = array(
+		'id'            => 'author-box',
+		'label'         => __( 'Author info box about on single posts', 'penguin-gold' ),
+		'section'       => 'content',
+		'type'          => 'checkbox',
+		'default'       => 0,
+	);
+
 	$options['footer-text'] = array(
 		'id'            => 'footer-text',
 		'label'         => __( 'Custom footer text', 'penguin-gold' ),

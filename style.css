@@ -1778,6 +1778,29 @@ p a {
 	display: inline-block;
 }
 
+.author_info_box {
+	border-left: 1px solid #ddd;
+	font-size: 0.85em;
+	margin: 2em 0;
+	padding: 0 0 2px 15px;
+}
+
+@media screen and (min-width: 992px) {
+	.author_info_box {
+		font-size: 0.75em;
+	}
+}
+
+.author_info_box .author_name {
+	font-weight: bold;
+}
+
+.author_info_box img {
+	float: left;
+	margin: 0 18px 3px 0;
+	padding: 5px 0 0 0;
+}
+
 @media screen and (min-width: 992px) {
 	.single .penguin-post,
 	.page .penguin-post {

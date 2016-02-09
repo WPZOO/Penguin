@@ -104,3 +104,31 @@ function penguin_gold_theme_updater() {
 	require( get_template_directory() . '/updater/theme-updater.php' );
 }
 add_action( 'after_setup_theme', 'penguin_gold_theme_updater' );
+
+/**
+ * Author info box below content
+ */
+function penguin_author_info_box( $content ) {
+	$authoroption = get_theme_mod( 'author-box' );
+	global $post;
+	$user_description = get_the_author_meta( 'user_description', $post->post_author );
+
+	if ( $authoroption == true && is_single() && ! empty ( $user_description ) && isset( $post->post_author ) ) {
+
+		$display_name = get_the_author_meta( 'display_name', $post->post_author );
+		if ( empty( $display_name ) )
+			$display_name = get_the_author_meta( 'nickname', $post->post_author );
+
+		if ( ! empty( $display_name ) )
+			$author_details = '<p class="author_name">' . __( 'About ', 'penguin' ) . $display_name . '</p>';
+
+		if ( ! empty( $user_description ) )
+			$author_details .= '<p class="author_details">' . get_avatar( get_the_author_meta('user_email') , 60 ) . $user_description . '</p>';
+
+		$content = $content . '<aside class="author_info_box clear" >' . $author_details . '</aside>';
+
+	}
+
+	return $content;
+}
+add_action( 'the_content', 'penguin_author_info_box' );
