@@ -98,10 +98,10 @@
 }
 
 .author_info_box {
-	border-left: 1px solid #ddd;
+	border-left: 2px solid #bcbcbc;
 	@include font-size-small;
 	margin: 2em 0;
-	padding: 0 0 2px 15px;
+	padding: .5em 1em;
 
 	.author_name {
 		font-weight: bold;
