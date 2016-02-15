@@ -1930,7 +1930,7 @@ article.format-link .entry-meta-bottom a:active {
 	}
 }
 
-.required {
+span.required {
 	color: red;
 }
 
