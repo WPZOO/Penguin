@@ -102,7 +102,7 @@ function penguin_scripts() {
 	$penguin   = wp_get_theme( 'penguin-gold' );
 	$minified  = get_theme_mod( 'min-files' );
 	$suffix    = ( 1 == $minified ) ? '.min' : '';
-	$fluidvids = get_theme_mod( 'fluidvids' );
+	$fluidvids = get_theme_mod( 'fluidvids', true );
 
 	if ( is_child_theme() ) {
 		wp_enqueue_style( 'penguin-parent-style', get_template_directory_uri() . '/style' . $suffix . '.css', false, $penguin['Version'] );
@@ -152,7 +152,7 @@ add_action( 'wp_enqueue_scripts', 'penguin_enqueue_js_fix' );
  * Add script to footer
  */
 function penguin_wp_footer() {
-	$fluidvids = get_theme_mod( 'fluidvids' );
+	$fluidvids = get_theme_mod( 'fluidvids', true );
 	// Do not add script if FluidVids plugin is installed
 	if ( ! class_exists( 'FluidVids' ) && 1 == $fluidvids ) { ?>
 	<script>
