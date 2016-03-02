@@ -141,7 +141,10 @@ function penguin_read_more_text() {
  * Excerpt continue reading link
  */
 function penguin_excerpt_read_more_link( $output ) {
-	if ( ! is_attachment() && ! is_admin() ) {
+	if ( is_admin() ) {
+		return;
+	}
+	if ( ! is_attachment() ) {
 		$output .= '<a href="'. get_permalink() . '" class="read-more-link">' . penguin_read_more_text() . '</a>';
 	}
 	return $output;
