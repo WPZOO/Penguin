@@ -31,10 +31,10 @@
   },
   "theme": {
     "name": "PENGU!N Gold",
-    "uri": "http://wpzoo.ch/en/themes/penguin/",
+    "uri": "https://wpzoo.ch/en/themes/penguin/",
     "description": "PENGU!N is a clean and modern WordPress theme made by WPZOO. Besides the link color the used colors are monochromatic. The post thumbnail will be used as a big header image on single post pages as well as Pages. These theme characteristics make it possible to use PENGU!N for bloggin' as well as a magazin theme.",
     "author": "WPZOO",
-    "authoruri": "http://wpzoo.ch",
+    "authoruri": "https://wpzoo.ch/en/",
     "license": "GPL-2.0+",
     "licenseuri": "http://www.gnu.org/licenses/gpl-2.0.html",
     "textdomain": "penguin-gold",
