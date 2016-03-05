@@ -1779,10 +1779,8 @@ p a {
 }
 
 .author_info_box {
-	border-right: 2px solid #bcbcbc;
 	font-size: 0.85em;
-	margin: 2em 0;
-	padding: 0.5em 1em;
+	margin-top: 2em;
 }
 
 @media screen and (min-width: 992px) {
@@ -1797,8 +1795,15 @@ p a {
 
 .author_info_box img {
 	float: right;
-	margin: 0 0 3px 18px;
+	margin: 0 0 3px 15px;
 	padding: 5px 0 0 0;
+}
+
+@media screen and (max-width: 991px) {
+	.author_info_box img {
+		margin-left: 10px;
+		width: 90px;
+	}
 }
 
 @media screen and (min-width: 992px) {

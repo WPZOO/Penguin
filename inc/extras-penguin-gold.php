@@ -119,10 +119,9 @@ function penguin_gold_author_info_box( $content ) {
 			$display_name = get_the_author_meta( 'nickname' );
 
 		if ( ! empty( $display_name ) )
-			$author_details = '<p class="author_name">' . sprintf( __( 'About %s', 'penguin' ), $display_name ) . '</p>';
-
-		if ( ! empty( $user_description ) )
-			$author_details .= '<p class="author_details">' . get_avatar( get_the_author_meta( 'user_email' ) , 60 ) . $user_description . '</p>';
+			$author_details = '<div class="author-avatar">' . get_avatar( get_the_author_meta( 'user_email' ) , 100 ) . '</div>';
+			$author_details .= '<p class="author_name">' . sprintf( __( 'About %s', 'penguin' ), $display_name ) . '</p>';
+			$author_details .= '<p class="author_details">' . $user_description . '</p>';
 
 		$content = $content . '<aside class="author_info_box clear" >' . $author_details . '</aside>';
 

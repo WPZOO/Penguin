@@ -98,10 +98,8 @@
 }
 
 .author_info_box {
-	border-left: 2px solid #bcbcbc;
 	@include font-size-small;
-	margin: 2em 0;
-	padding: .5em 1em;
+	margin-top: 2em;
 
 	.author_name {
 		font-weight: bold;
@@ -109,8 +107,13 @@
 
 	img {
 		float: left;
-		margin: 0 18px 3px 0;
+		margin: 0 15px 3px 0;
 		padding: 5px 0 0 0px;
+
+		@media screen and (max-width: 991px) {
+			margin-right: 10px;
+			width: 90px;
+		}
 	}
 }
 
