@@ -1,0 +1,211 @@
+# Copyright (C) 2016 WPZOO
+# This file is distributed under the GPL-2.0+.
+msgid ""
+msgstr ""
+"Project-Id-Version: PENGU!N 0.1.2\n"
+"Report-Msgid-Bugs-To: WPZOO Translations <translations@wpzoo.ch>\n"
+"POT-Creation-Date: 2016-03-07 20:25:30+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: WPZOO Translations <translations@wpzoo.ch>\n"
+"Language-Team: WPZOO Translations <translations@wpzoo.ch>\n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+
+#: comments.php:47
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:49
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:50
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:61
+msgid "Comments are closed."
+msgstr ""
+
+#: functions.php:37
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:38
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:86
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:137
+msgid "PENGU!N image size"
+msgstr ""
+
+#: inc/customizer-options.php:16
+msgid "Logo"
+msgstr ""
+
+#: inc/customizer-options.php:22
+msgid "Upload your logo"
+msgstr ""
+
+#: inc/customizer-options.php:31
+msgid "Content"
+msgstr ""
+
+#: inc/customizer-options.php:36
+msgid "Excerpt (trimmed-down output)"
+msgstr ""
+
+#: inc/customizer-options.php:37
+msgid "Content (full post / custom more tag)"
+msgstr ""
+
+#: inc/customizer-options.php:42
+msgid "Content output of standard posts on home and archive pages."
+msgstr ""
+
+#: inc/extras-penguin.php:93
+msgid "Page %s"
+msgstr ""
+
+#: inc/extras-penguin.php:128
+#. translators: %s: Name of current post
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: inc/extras-penguin.php:166
+msgid "Scroll To Top"
+msgstr ""
+
+#: inc/extras-penguin.php:179
+msgid "http://wpzoo.ch/en/themes/penguin/"
+msgstr ""
+
+#: inc/extras-penguin.php:180
+msgid "Buy Gold Version"
+msgstr ""
+
+#: inc/extras-penguin.php:191
+msgid "PENGU!N WordPress Theme made by WPZOO"
+msgstr ""
+
+#: inc/template-tags.php:23
+msgid "Posts navigation"
+msgstr ""
+
+#: inc/template-tags.php:27
+msgid "Older posts"
+msgstr ""
+
+#: inc/template-tags.php:31
+msgid "Newer posts"
+msgstr ""
+
+#: inc/template-tags.php:55
+msgid "Post navigation"
+msgstr ""
+
+#: search.php:17
+msgid "Search Results for: %s"
+msgstr ""
+
+#: template-parts/content-none.php:13
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:19
+msgid "Ready to publish your first post?"
+msgstr ""
+
+#: template-parts/content-none.php:19
+msgid "Get started here."
+msgstr ""
+
+#: template-parts/content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:27
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: template-parts/header-navigation.php:21
+msgid "Skip to content"
+msgstr ""
+
+#: template-parts/meta-bottom.php:3 template-parts/meta-bottom.php:12
+#. translators: used between list items, there is a space after the comma
+msgid ", "
+msgstr ""
+
+#: template-parts/meta-top.php:13
+msgid "Leave a comment"
+msgstr ""
+
+#: template-parts/meta-top.php:13
+msgid "1 Comment"
+msgstr ""
+
+#: template-parts/meta-top.php:13
+msgid "% Comments"
+msgstr ""
+
+#: template-parts/meta-top.php:15
+msgid "Edit"
+msgstr ""
+
+#: template-parts/the_content.php:5
+msgid "Pages:"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "PENGU!N"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://wpzoo.ch/en/themes/penguin/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"PENGU!N is a clean and modern WordPress theme made by WPZOO. Besides the "
+"link color the used colors are monochromatic. The post thumbnail will be "
+"used as a big header image on single post pages as well as Pages. These "
+"theme characteristics make it possible to use PENGU!N for bloggin' as well "
+"as a magazin theme."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "WPZOO"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://wpzoo.ch/en/"
+msgstr ""
+
+#: comments.php:28
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
