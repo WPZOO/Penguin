@@ -47,7 +47,7 @@ function penguin_gold_options( $options ) {
 
 	$options['author-box'] = array(
 		'id'            => 'author-box',
-		'label'         => __( 'Author info box about on single posts', 'penguin-gold' ),
+		'label'         => __( 'Author info box on single posts', 'penguin-gold' ),
 		'section'       => 'content',
 		'type'          => 'checkbox',
 		'default'       => 0,

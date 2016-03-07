@@ -2,11 +2,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PENGU!N\n"
 "Report-Msgid-Bugs-To: WPZOO Translations <translations@wpzoo.ch>\n"
-"POT-Creation-Date: 2015-10-10 19:15:21+00:00\n"
-"PO-Revision-Date: 2015-09-26 18:35:52 UTC\n"
+"POT-Creation-Date: 2016-03-05 22:06:33+00:00\n"
+"PO-Revision-Date: 2016-03-05 21:58:38 UTC\n"
 "Last-Translator: Web Translate It <support@webtranslateit.com>\n"
 "Language-Team: German, Germany\n"
-"Language: \n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -42,24 +42,32 @@ msgid "Sidebar"
 msgstr "Seitenleiste"
 
 #: inc/customizer-options-gold.php:50
+msgid "Author info box on single posts"
+msgstr "Autor-Infobox auf Einzelbeiträgen"
+
+#: inc/customizer-options-gold.php:58
 msgid "Custom footer text"
 msgstr "Eigener Footer-Text"
 
-#: inc/customizer-options-gold.php:60
+#: inc/customizer-options-gold.php:68
 msgid "Advanced"
 msgstr "Erweitert"
 
-#: inc/customizer-options-gold.php:66
+#: inc/customizer-options-gold.php:74
 msgid "Add search box to primary menu"
 msgstr "Das Suchfeld in das Hauptmenü hinzufügen"
 
-#: inc/customizer-options-gold.php:74
+#: inc/customizer-options-gold.php:82
 msgid "Minified CSS and JS"
 msgstr "Minimiertes CSS und JS"
 
-#: inc/customizer-options-gold.php:82
+#: inc/customizer-options-gold.php:90
 msgid "Load Fluidvids.js for responsive videos"
 msgstr "Lade Fluidvids.js für responsive Videos"
+
+#: inc/extras-penguin-gold.php:123
+msgid "About %s"
+msgstr "Über %s"
 
 # INSTRUCTION: Theme Name of the plugin/theme
 #. Theme Name of the plugin/theme
@@ -68,8 +76,8 @@ msgstr ""
 
 # INSTRUCTION: Theme URI of the plugin/theme
 #. Theme URI of the plugin/theme
-msgid "http://wpzoo.ch/themes/penguin/"
-msgstr ""
+msgid "https://wpzoo.ch/en/themes/penguin/"
+msgstr "https://wpzoo.ch/de/themes/penguin/"
 
 # INSTRUCTION: Description of the plugin/theme
 #. Description of the plugin/theme
@@ -93,181 +101,10 @@ msgstr ""
 
 # INSTRUCTION: Author URI of the plugin/theme
 #. Author URI of the plugin/theme
-msgid "http://wpzoo.ch"
-msgstr ""
+msgid "https://wpzoo.ch/en/"
+msgstr "https://wpzoo.ch/de/"
 
 # INSTRUCTION: Template Name of the plugin/theme
 #. Template Name of the plugin/theme
 msgid "Full Width"
 msgstr "Volle Breite"
-
-#~ msgid "Comment navigation"
-#~ msgstr "Kommentar-Navigation"
-
-#~ msgid "Older Comments"
-#~ msgstr "Ältere Kommentare"
-
-#~ msgid "Newer Comments"
-#~ msgstr "Neuere Kommentare"
-
-#~ msgid "Comments are closed."
-#~ msgstr "Kommentare sind geschlossen."
-
-#~ msgid "Primary Menu"
-#~ msgstr "Hauptmenü"
-
-#~ msgid "Footer Menu"
-#~ msgstr "Footer-Menü"
-
-#~ msgid "PENGU!N image size"
-#~ msgstr "PENGU!N Bildgröße"
-
-#~ msgid "Skip to content"
-#~ msgstr "Zum Inhalt wechseln"
-
-#~ msgid "Content"
-#~ msgstr "Inhalt"
-
-#~ msgid "Excerpt (trimmed-down output)"
-#~ msgstr "Auszug (gekürzte Ausgabe)"
-
-#~ msgid "Content (full post / custom more tag)"
-#~ msgstr "Inhalt (ganzer Beitrag / benutzerdefinierter Weiterlesen-Link"
-
-#~ msgid "Content output of standard posts on home and archive pages."
-#~ msgstr "Inhaltsausgabe der Standard-Beiträge für Blog- und Archivseiten"
-
-#~ msgid "Page %s"
-#~ msgstr "Seite %s"
-
-# INSTRUCTION: translators: %s: Name of current post
-#~ msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
-#~ msgstr "%s weiterlesen <span class=\"meta-nav\">&rarr;</span>"
-
-#~ msgid "Scroll To Top"
-#~ msgstr "Nach oben scrollen"
-
-#~ msgid "Posts navigation"
-#~ msgstr "Beiträge-Navigation"
-
-#~ msgid "Older posts"
-#~ msgstr "Ältere Beiträge"
-
-#~ msgid "Newer posts"
-#~ msgstr "Neuere Beiträge"
-
-#~ msgid "Post navigation"
-#~ msgstr "Beitrag-Navigation"
-
-#~ msgid "Category: %s"
-#~ msgstr "Kategorie: %s"
-
-#~ msgid "Tag: %s"
-#~ msgstr "Schlagwort: %s"
-
-#~ msgid "Author: %s"
-#~ msgstr "Autor: %s"
-
-#~ msgid "Year: %s"
-#~ msgstr "Jahr: %s"
-
-#~ msgid "Month: %s"
-#~ msgstr "Monat: %s"
-
-#~ msgid "Day: %s"
-#~ msgstr "Tag: %s"
-
-#~ msgid "Archives: %s"
-#~ msgstr "Archiv: %s"
-
-#~ msgid "Archives"
-#~ msgstr "Archiv"
-
-#~ msgid "Search Results for: %s"
-#~ msgstr "Suchergebnisse für: %s"
-
-#~ msgid "Nothing Found"
-#~ msgstr "Nichts gefunden"
-
-#, fuzzy
-#~ msgid "Ready to publish your first post?"
-#~ msgstr ""
-#~ "Bereit für deinen ersten Beitrag? <a href=\"%1$s\">Leg hier los</a>."
-
-#~ msgid ""
-#~ "Sorry, but nothing matched your search terms. Please try again with some "
-#~ "different keywords."
-#~ msgstr ""
-#~ "Leider entspricht nichts deinem Suchbegriff / deinen Suchbegriffen. "
-#~ "Versuche es bitte mit anderen Suchwörtern."
-
-#~ msgid ""
-#~ "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-#~ "searching can help."
-#~ msgstr ""
-#~ "Was du suchst, kann leider nicht gefunden werden. Vielleicht kann dir das "
-#~ "Suchformular weiterhelfen."
-
-#~ msgid "Leave a comment"
-#~ msgstr "Hinterlasse einen Kommentar"
-
-#~ msgid "1 Comment"
-#~ msgstr "1 Kommentar"
-
-#~ msgid "% Comments"
-#~ msgstr "% Kommentare"
-
-#~ msgid "Edit"
-#~ msgstr "Bearbeiten"
-
-#~ msgid "Pages:"
-#~ msgstr "Seiten:"
-
-#~ msgctxt "comments title"
-#~ msgid "One thought on &ldquo;%2$s&rdquo;"
-#~ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-#~ msgstr[0] "Eine Reaktion zu &bdquo;%2$s&ldquo;"
-#~ msgstr[1] "%1$s Reaktionen zu &bdquo;%2$s&ldquo;"
-
-#~ msgctxt "daily archives date format"
-#~ msgid "F j, Y"
-#~ msgstr "j. F Y"
-
-#~ msgctxt "post format archive title"
-#~ msgid "Asides"
-#~ msgstr "Kurznachrichten"
-
-#~ msgctxt "post format archive title"
-#~ msgid "Galleries"
-#~ msgstr "Galerien"
-
-#~ msgctxt "post format archive title"
-#~ msgid "Images"
-#~ msgstr "Bilder"
-
-#~ msgctxt "post format archive title"
-#~ msgid "Videos"
-#~ msgstr "Videos"
-
-#~ msgctxt "post format archive title"
-#~ msgid "Quotes"
-#~ msgstr "Zitate"
-
-#~ msgctxt "post format archive title"
-#~ msgid "Links"
-#~ msgstr "Links"
-
-#~ msgctxt "post format archive title"
-#~ msgid "Statuses"
-#~ msgstr "Statusmeldungen"
-
-#~ msgctxt "post format archive title"
-#~ msgid "Audio"
-#~ msgstr "Audio"
-
-#~ msgctxt "post format archive title"
-#~ msgid "Chats"
-#~ msgstr "Chats"
-
-#~ msgid "Colors"
-#~ msgstr "Farben"
