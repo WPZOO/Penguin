@@ -2,7 +2,7 @@
 /**
  * Easy Digital Downloads Theme Updater
  *
- * @package PENGU!N Gold
+ * @package Penguin Gold
  */
 
 // Includes the files needed for the theme updater
@@ -16,7 +16,7 @@ $updater = new EDD_Theme_Updater_Admin(
 	// Config settings
 	$config = array(
 		'remote_api_url' => 'https://wpzoo.ch',       // Site where EDD is hosted
-		'item_name'      => 'PENGU!N Gold',           // Name of theme
+		'item_name'      => 'Penguin Gold',           // Name of theme
 		'theme_slug'     => 'penguin-gold',           // Theme slug
 		'version'        => '0.1.0',                  // The current version of this theme
 		'author'         => 'WPZOO',                  // The author of this theme

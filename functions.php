@@ -1,8 +1,8 @@
 <?php
 /**
- * pengu!n functions and definitions
+ * Functions and definitions
  *
- * @package PENGU!N Gold
+ * @package Penguin Gold
  */
 
 if ( ! function_exists( 'penguin_setup' ) ) :
@@ -134,7 +134,7 @@ add_action( 'wp_enqueue_scripts', 'penguin_scripts' );
  * @link http://codex.wordpress.org/Function_Reference/add_image_size
  */
 function penguin_show_custom_image_sizes( $sizes ) {
-	$sizes['Penguin800X400'] = __( 'PENGU!N image size', 'penguin' );
+	$sizes['Penguin800X400'] = __( 'Penguin image size', 'penguin' );
 
 	return $sizes;
 }
@@ -171,7 +171,7 @@ add_action( 'wp_footer', 'penguin_wp_footer', 21 );
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
- * PENGU!N extras
+ * Penguin extras
  */
 require get_template_directory() . '/inc/extras-penguin.php';
 require get_template_directory() . '/inc/extras-penguin-gold.php';

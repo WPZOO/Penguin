@@ -2,7 +2,7 @@
 /**
  * Theme updater admin page and functions.
  *
- * @package PENGU!N Gold
+ * @package Penguin Gold
  */
 
 class EDD_Theme_Updater_Admin {

@@ -2,7 +2,7 @@
 /**
  * The needed <head> part of every HTML document.
  *
- * @package PENGU!N Gold
+ * @package Penguin Gold
  */
 ?>
 

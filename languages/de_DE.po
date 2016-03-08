@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: PENGU!N\n"
+"Project-Id-Version: Penguin\n"
 "Report-Msgid-Bugs-To: WPZOO Translations <translations@wpzoo.ch>\n"
-"POT-Creation-Date: 2016-03-07 20:31:17+00:00\n"
-"PO-Revision-Date: 2016-03-05 21:58:38 UTC\n"
+"POT-Creation-Date: 2016-03-08 16:32:58+00:00\n"
+"PO-Revision-Date: 2016-03-08 16:29:47 UTC\n"
 "Last-Translator: Web Translate It <support@webtranslateit.com>\n"
 "Language-Team: German, Germany\n"
 "Language: de_DE\n"
@@ -15,29 +15,27 @@ msgstr ""
 
 #: inc/customizer-options-gold.php:12
 msgid "Dark"
-msgstr ""
+msgstr "Dunkel"
 
 #: inc/customizer-options-gold.php:13
 msgid "Bright"
-msgstr ""
+msgstr "Hell"
 
 #: inc/customizer-options-gold.php:18
 msgid "Brightness of navbar"
-msgstr ""
+msgstr "Helligkeit der Navigationsleiste"
 
 #: inc/customizer-options-gold.php:27
 msgid "Link color"
-msgstr ""
+msgstr "Linkfarbe"
 
 #: inc/customizer-options-gold.php:35
-#, fuzzy
 msgid "Sidebar right"
-msgstr "Seitenleiste"
+msgstr "Seitenleiste rechts"
 
 #: inc/customizer-options-gold.php:36
-#, fuzzy
 msgid "Sidebar left"
-msgstr "Seitenleiste"
+msgstr "Seitenleiste links"
 
 #: inc/customizer-options-gold.php:41
 msgid "Sidebar"
@@ -45,35 +43,35 @@ msgstr "Seitenleiste"
 
 #: inc/customizer-options-gold.php:50
 msgid "Author info box on single posts"
-msgstr ""
+msgstr "Autor-Infobox auf Einzelbeiträgen"
 
 #: inc/customizer-options-gold.php:58
 msgid "Custom footer text"
-msgstr ""
+msgstr "Eigener Footer-Text"
 
 #: inc/customizer-options-gold.php:68
 msgid "Advanced"
-msgstr ""
+msgstr "Erweitert"
 
 #: inc/customizer-options-gold.php:74
 msgid "Add search box to primary menu"
-msgstr ""
+msgstr "Das Suchfeld in das Hauptmenü hinzufügen"
 
 #: inc/customizer-options-gold.php:82
 msgid "Minified CSS and JS"
-msgstr ""
+msgstr "Minimiertes CSS und JS"
 
 #: inc/customizer-options-gold.php:90
 msgid "Load Fluidvids.js for responsive videos"
-msgstr ""
+msgstr "Lade Fluidvids.js für responsive Videos"
 
 #: inc/extras-penguin-gold.php:123
 msgid "About %s"
-msgstr ""
+msgstr "Über %s"
 
 # INSTRUCTION: Theme Name of the plugin/theme
 #. Theme Name of the plugin/theme
-msgid "PENGU!N Gold"
+msgid "Penguin Gold"
 msgstr ""
 
 # INSTRUCTION: Theme URI of the plugin/theme
@@ -84,16 +82,16 @@ msgstr "https://wpzoo.ch/de/themes/penguin/"
 # INSTRUCTION: Description of the plugin/theme
 #. Description of the plugin/theme
 msgid ""
-"PENGU!N is a clean and modern WordPress theme made by WPZOO. Besides the "
+"Penguin is a clean and modern WordPress theme made by WPZOO. Besides the "
 "link color the used colors are monochromatic. The post thumbnail will be "
 "used as a big header image on single post pages as well as Pages. These "
-"theme characteristics make it possible to use PENGU!N for bloggin' as well "
+"theme characteristics make it possible to use Penguin for bloggin' as well "
 "as a magazin theme."
 msgstr ""
-"PENGU!N ist ein simples und modernes WordPress Theme, entwickelt von WPZOO. "
+"Penguin ist ein simples und modernes WordPress Theme, entwickelt von WPZOO. "
 "Nebst der Linkfarbe ist das Theme in verschiedenen Grautönen gestaltet. Das "
-"Beitragsbild wird auf Single-Post-Seiten als grosses Header-Bild verwendet. "
-"Die Theme-Eigenschaften machen es möglich PENGU!N als Blog oder Magazin-"
+"Beitragsbild wird auf Einzelbeitragseiten als grosses Header-Bild verwendet. "
+"Die Theme-Eigenschaften machen es möglich Penguin als Blog oder Magazin-"
 "Theme zu verwenden."
 
 # INSTRUCTION: Author of the plugin/theme
@@ -106,11 +104,7 @@ msgstr ""
 msgid "https://wpzoo.ch/en/"
 msgstr "https://wpzoo.ch/de/"
 
+# INSTRUCTION: Template Name of the plugin/theme
 #. Template Name of the plugin/theme
 msgid "Full Width"
-msgstr ""
-
-# INSTRUCTION: Theme URI of the plugin/theme
-#, fuzzy
-#~ msgid "http://wpzoo.ch/en/themes/penguin/"
-#~ msgstr "https://wpzoo.ch/de/themes/penguin/"
+msgstr "Volle Breite"

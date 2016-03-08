@@ -1,6 +1,6 @@
 <?php
 /**
- * @package PENGU!N Gold
+ * @package Penguin Gold
  */
 ?>
 

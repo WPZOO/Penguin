@@ -2,7 +2,7 @@
 /**
  * The template for displaying 404 pages (Not Found).
  *
- * @package PENGU!N Gold
+ * @package Penguin Gold
  */
 
 get_header(); ?>

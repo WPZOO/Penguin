@@ -2,7 +2,7 @@
 /**
  * The template used for displaying page content in page.php
  *
- * @package PENGU!N Gold
+ * @package Penguin Gold
  */
 ?>
 

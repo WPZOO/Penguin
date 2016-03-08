@@ -2,7 +2,7 @@
 /**
  * The Template for displaying all single posts.
  *
- * @package PENGU!N Gold
+ * @package Penguin Gold
  */
 
 get_header(); ?>

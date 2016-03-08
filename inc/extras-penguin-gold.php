@@ -2,7 +2,7 @@
 /**
  * Defines theme specific functions
  *
- * @package PENGU!N Gold
+ * @package Penguin Gold
  */
 
 /**

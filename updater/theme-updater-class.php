@@ -2,7 +2,7 @@
 /**
  * Theme updater class.
  *
- * @package PENGU!N Gold
+ * @package Penguin Gold
  */
 
 class EDD_Theme_Updater {

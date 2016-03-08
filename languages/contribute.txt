@@ -1,12 +1,12 @@
 Hello Polyglot
 
-We are so happy you want to help us making the WordPress theme PENGU!N even more international.
+We are so happy you want to help us making the WordPress theme Penguin even more international.
 
 For translating the strings which exist in the lite version, please visit:
 https://translate.wordpress.org/projects/wp-themes/albinomouse
 
 If you wanna support our gold version, you might translate the missing strings on: 
-https://webtranslateit.com/en/projects/9863-PENGU-N/invitation_request
+https://webtranslateit.com/en/projects/9863-Penguin/invitation_request
 
 Thanks a lot for your help!
 Your WPZOO team
