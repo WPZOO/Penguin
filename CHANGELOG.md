@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file. This project follows [Semantic Versioning](http://semver.org/).
 
+## [0.1.3] - 2016-03-08
+### Fixed
+- Changed theme name
+
 ## [0.1.2] - 2016-03-05
 ### Added
 - Use flexbox for comment form
