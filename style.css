@@ -882,17 +882,18 @@ input:focus {
 		margin-bottom: 15px;
 	}
 
-	.search .page .fullwidth-container {
-		left: -30px;
-		width: -webkit-calc(100% + 60px);
-		width: calc(100% + 60px);
-	}
-
 	.page .fullwidth-container,
 	.single .fullwidth-container {
 		left: -50px;
 		width: -webkit-calc(100% + 100px);
 		width: calc(100% + 100px);
+	}
+
+	.fullwidth-container,
+	.search .page .fullwidth-container {
+		left: -30px;
+		width: -webkit-calc(100% + 60px);
+		width: calc(100% + 60px);
 	}
 }
 
