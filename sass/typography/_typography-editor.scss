@@ -1,0 +1,28 @@
+body,
+button,
+input,
+select,
+textarea {
+	color: $color__text-main;
+	font-family: $font__main;
+	@include font-size(1.8);
+	font-weight: $font__weight-standard;
+	line-height: $font__line-height-body;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+
+/*--------------------------------------------------------------
+2.1 - Headings
+--------------------------------------------------------------*/
+@import "headings";
+
+/*--------------------------------------------------------------
+2.2 - General
+--------------------------------------------------------------*/
+@import "general";
+
+/*--------------------------------------------------------------
+2.3 - Icon Font
+--------------------------------------------------------------*/
+@import "icon-font";

@@ -64,6 +64,14 @@ function penguin_setup() {
 endif; // penguin_setup
 add_action( 'after_setup_theme', 'penguin_setup' );
 
+/*
+ * Enable some theme styles for the visual editor
+ */
+function penguin_add_editor_styles() {
+	add_editor_style( 'editor-style.css' );
+}
+add_action( 'admin_init', 'penguin_add_editor_styles' );
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
