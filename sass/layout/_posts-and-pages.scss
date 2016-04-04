@@ -23,7 +23,8 @@
 
 	&.sticky,
 	.single &,
-	.page & {
+	.page &,
+	&:only-of-type {
 		width: 100%;
 	}
 }

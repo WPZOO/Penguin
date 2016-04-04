@@ -1,37 +1,34 @@
-# Penguin
+# Penguin WordPress Theme
 ![Screenshot of the WordPress Theme Penguin](screenshot.png)
 
-## WordPress Theme by WPZOO
 Penguin is a clean and modern WordPress theme made by [WPZOO](http://wpzoo.ch/). Besides the link color, it consists of clean shades of grays. The post thumbnail will be used as a big header image on single posts as well as pages. Penguin theme can be used as blogging as well as a magazin theme.
 
 Moreover Penguin is a responsive, mobile first theme. That means reading your website on mobile device will be as on a desktop computer.
 
-### Documentation & Support
+## Documentation & Support
 If you have any question using this theme, please visit our documentation page. If your issue will still be there after reading our documentation, please ask your question in our forum.
 
 When you're coming across a theme bug – please contact us directly with the help of our bug form.
 
 As a Gold user we will provide you with private email support. However you need to contact us via the contact form on our member site.
 
-### License
+## License
 This theme is licensed under the GNU General Public License version 3. All ressources which have been included are provided with the same or a compatible license. Read more in [license.txt](/license.txt).
 
-## Credits
-Thanks a lot to all people who are involved in the following projects.
+## Thanks a lot to the people who
 
-### Translations
-Penguin has been translated into the following languages so far:
-- German by Stefan Brechbühl
-
-If you are a multilangual and wanna help us make Penguin even more international, join us on [webtranslateit.com](https://webtranslateit.com/en/projects/9863-PENGU-N).
+- **translate the theme** and make it international
+- **report bugs** and make it better
+- are involved in the **following projects**
 
 ### Starting point
 Penguin is based on the well known and maintained [starter theme _s](https://github.com/Automattic/_s) (underscores).
 
-### Font / icon font
+### Font
 Penguin's typeface is the elegant sans-serif font [Raleway](http://www.google.com/fonts/specimen/Raleway), hosted on Google and shared with the SIL Open Font License.
 
-The icon font used in Penguin only contains the icons which are really needed. These icons coming from the [ionicons](http://ionicons.com/) font which have designed by [@benjsperry](https://twitter.com/benjsperry) and licensed under MIT.
+### Icons
+The used icons are part of [ionicons](http://ionicons.com/), designed by [@benjsperry](https://twitter.com/benjsperry) and licensed under MIT.
 
 ### Masonry
 The multi column layout which appears on a bigger screen has implemented with the help of [Masonry](http://masonry.desandro.com/), a JavaScript grid layout library. Masonry is available under the MIT license.
@@ -41,3 +38,13 @@ This is a helpful library for working with the influded WordPress Theme customiz
 
 ### Fluidvids
 [Fluidvids](https://github.com/toddmotto/fluidvids) is a JavaScript library and helps Penguin to show your embed videos in a responsive way. Fluidvids is available under the MIT license.
+
+### Theme Hook Alliance
+For better customization of the theme, there are suggested hooks by [Theme Hook Alliance](https://github.com/zamoose/themehookalliance) included.
+
+### Images in screenshot
+The images, which are visible in the theme screenshot, are licensed under [Creative Commons Zero](http://creativecommons.org/publicdomain/zero/1.0/):
+- [https://unsplash.com/photos/gapYVvUg1M8](https://unsplash.com/photos/gapYVvUg1M8)
+- [https://unsplash.com/photos/DgtRKZOOE0w](https://unsplash.com/photos/DgtRKZOOE0w)
+- [https://unsplash.com/photos/6-C0VRsagUw](https://unsplash.com/photos/6-C0VRsagUw)
+- [https://unsplash.com/photos/ocwmWiNAWGs](https://unsplash.com/photos/ocwmWiNAWGs)
