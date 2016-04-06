@@ -65,6 +65,9 @@ h1 {
 	.page &.entry-title {
 		font-weight: $font__weight-standard;
 	}
+	.author &.page-title {
+		margin-bottom: 0;
+	}
 
 }
 

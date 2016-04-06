@@ -321,6 +321,10 @@ h1.entry-title {
 	font-weight: 300;
 }
 
+.author h1.page-title {
+	margin-bottom: 0;
+}
+
 h2 {
 	font-size: 1.5em;
 }
