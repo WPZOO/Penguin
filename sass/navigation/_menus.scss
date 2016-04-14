@@ -40,21 +40,6 @@
 		}
 	}
 
-	.menu-item-has-children a:after {
-		content: '\e004';
-		font-family: 'penguin-icon-font';
-		font-size: .75em;
-		line-height: 1;
-		padding-left: 7px;
-		speak: none;
-		text-align: right;
-		vertical-align: text-bottom;
-	}
-
-	.menu-item-has-children ul a:after {
-		content: none;
-	}
-
 	.site-title {
 		float: left;
 		margin: 0;
@@ -141,7 +126,6 @@
 	}
 }
 
-.menu-search .penguin-search-icon,
 .menu-search .search-submit {
 	display: none;
 }
@@ -149,12 +133,6 @@
 .menu-toggle {
 	cursor: pointer;
 	display: none;
-	font-size: 26px;
-	padding-top: 10px;
-
-	.has-logo & {
-		padding-top: 15px;
-	}
 }
 
 .footer-menu {
@@ -222,6 +200,7 @@
 
 			.search-field {
 				@include box-sizing(border-box);
+				text-indent: 25px;
 				width: 100%;
 			}
 		}
@@ -278,19 +257,21 @@
 			min-width: 25px;
 			z-index: 2000;
 
-			.has-logo & {
-				margin: 5px 0;
-			}
-
 			.search-field {
 				background-color: transparent;
 				border-width: 0px;
+				@include box-sizing(border-box);
 				cursor: pointer;
+				height: 50px;
 				position: absolute;
 				right: 0;
 				text-indent: 25px;
 				@include transition(all, 0.2s, ease-in-out);
 				width: 0;
+
+				.has-logo & {
+					margin-top: 5px;
+				}
 
 				&:focus {
 					background-color: white;
@@ -298,13 +279,6 @@
 					text-indent: 0;
 					width: 220px;
 				}
-			}
-
-			.penguin-search-icon {
-				display: block;
-				font-size: 25px;
-				position: absolute;
-				top: 11px;
 			}
 		}
 	}

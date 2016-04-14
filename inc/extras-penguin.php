@@ -163,7 +163,15 @@ add_filter( 'excerpt_more', 'penguin_excerpt_more' );
  * Link to scroll back to the top of the page.
  */
 function penguin_back_to_top() {
-	echo '<a data-scroll href="#masthead" id="scroll-to-top"><span class="screen-reader-text">' . __( 'Scroll To Top', 'penguin' ) . '</span></a>';
+	$hamburger = '';
+	$hamburger .= '<a data-scroll href="#masthead" id="scroll-to-top">';
+	$hamburger .= '<svg version="1.1" aria-labelledby="icon-scroll-title icon-scroll-desc" class="penguin-icon-backtotop" role="img">';
+	$hamburger .= '<title id="icon-scroll-title">' . __( 'Scroll', 'penguin' ) . '</title>';
+	$hamburger .= '<desc id="icon-scroll-desc">' . __( 'Scroll To Top', 'penguin' ) . '</desc>';
+	$hamburger .= '<use xlink:href="' . get_template_directory_uri() . '/icons.svg#penguin-icon-backtotop"></use>';
+	$hamburger .= '</svg></a>';
+
+	echo $hamburger;
 }
 add_action( 'tha_footer_top', 'penguin_back_to_top' );
 
@@ -194,3 +202,22 @@ function penguin_poweredby() {
 
 }
 add_action( 'tha_footer_bottom', 'penguin_poweredby' );
+
+/**
+ * Add arrow icon to menu items which has submenu
+ *
+ * @since 0.2.0
+ */
+function penguin_menu_item_arrow( $title, $item, $args, $depth ) {
+
+	if( in_array( 'menu-item-has-children', $item->classes ) && 0 === $depth) {
+		$arrow = '<svg version="1.1" aria-labelledby="icon-arrow-title icon-arrow-desc" class="penguin-icon-dropdown" role="img">';
+		$arrow .= '<title id="icon-arrow-title">' . __( 'Arrow down', 'penguin' ) . '</title>';
+		$arrow .= '<desc id="icon-arrow-desc">' . __( 'Icon points to existing submenu', 'penguin' ) . '</desc>';
+		$arrow .= '<use xlink:href="' . get_template_directory_uri() . '/icons.svg#penguin-icon-dropdown"></use>';
+		$arrow .= '</svg>';
+		return $title . $arrow;
+	}
+	return $title;
+}
+add_filter( 'nav_menu_item_title', 'penguin_menu_item_arrow', 10, 4 );

@@ -9,7 +9,7 @@
 	if ( ! container )
 		return;
 
-	button = container.getElementsByTagName( 'span' )[0];
+	button = container.getElementsByTagName( 'svg' )[0];
 	if ( 'undefined' === typeof button )
 		return;
 

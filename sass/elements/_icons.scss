@@ -1,0 +1,50 @@
+[class^="penguin-icon-"], [class*=" penguin-icon-"] {
+	display: inline-block;
+	fill: currentColor;
+}
+
+.penguin-icon-category {
+	height: 18px;
+	margin-left: -2px;
+	vertical-align: text-bottom;
+	width: 18px;
+}
+
+.penguin-icon-tag {
+	height: 16px;
+	vertical-align: text-bottom;
+	width: 16px;
+}
+
+.penguin-icon-search,
+.penguin-icon-menu,
+.penguin-icon-backtotop {
+	height: 50px;
+	width: 25px;
+
+	.has-logo & {
+		height: 60px;
+	}
+}
+
+.penguin-icon-search,
+.has-logo .penguin-icon-search {
+	position: absolute;
+
+	@media screen and (max-width: 600px) {
+		height: 45px;
+		left: 15px;
+	}
+}
+
+.penguin-icon-backtotop {
+	fill: #404040;
+	width: 30px;
+}
+
+.penguin-icon-dropdown {
+	height: 12px;
+	margin-left: 4px;
+	vertical-align: middle;
+	width: 12px;
+}
