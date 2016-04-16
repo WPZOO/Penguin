@@ -574,6 +574,10 @@ figure {
 .penguin-icon-backtotop {
 	width: 30px;
 
+	fill: #fff;
+}
+
+.bright-navbar .penguin-icon-backtotop {
 	fill: #404040;
 }
 

@@ -38,8 +38,13 @@
 }
 
 .penguin-icon-backtotop {
-	fill: #404040;
+	fill: #fff;
 	width: 30px;
+
+	.bright-navbar & {
+		fill: #404040;
+	}
+
 }
 
 .penguin-icon-dropdown {
