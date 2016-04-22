@@ -14,7 +14,8 @@ When you're coming across a theme bug – please contact us directly with the he
 As a Gold user we will provide you with private email support. However you need to contact us via the contact form on our member site.
 
 ### License
-This theme is licensed under the GNU General Public License version 3. All ressources which have been included are provided with the same or a compatible license. Read more in [license.txt](/license.txt).
+This theme is licensed under the GNU General Public License version 2+. All ressources which have been included are provided with the same or a compatible license. Read more in [license.txt](/license.txt).
+Penguin WordPress Theme, Copyright (C) 2016, WPZOO
 
 ## Credits
 Thanks a lot to all people who are involved in the following projects.
