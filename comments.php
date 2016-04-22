@@ -18,7 +18,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<?php tha_comments_before(); ?>
+<?php penguin_comments_before(); ?>
 <div id="comments" class="comments-area">
 
 	<?php if ( have_comments() ) : ?>
@@ -64,4 +64,4 @@ if ( post_password_required() ) {
 	<?php comment_form(); ?>
 
 </div><!-- #comments -->
-<?php tha_comments_after(); ?>
+<?php penguin_comments_after(); ?>

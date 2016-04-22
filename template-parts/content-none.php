@@ -6,9 +6,9 @@
  */
 ?>
 
-<?php tha_entry_before(); ?>
+<?php penguin_entry_before(); ?>
 <section class="no-results not-found">
-	<?php tha_entry_top(); ?>
+	<?php penguin_entry_top(); ?>
 	<header class="page-header">
 		<h1 class="page-title"><?php _e( 'Nothing Found', 'penguin' ); ?></h1>
 	</header><!-- .page-header -->
@@ -28,6 +28,6 @@
 
 		<?php endif; ?>
 	</div><!-- .page-content -->
-	<?php tha_entry_bottom(); ?>
+	<?php penguin_entry_bottom(); ?>
 </section><!-- .no-results -->
-<?php tha_entry_after(); ?>
+<?php penguin_entry_after(); ?>

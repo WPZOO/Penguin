@@ -6,9 +6,9 @@
  */
 ?>
 
-<?php tha_entry_before(); ?>
+<?php penguin_entry_before(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php tha_entry_top(); ?>
+	<?php penguin_entry_top(); ?>
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 		<?php get_template_part( 'template-parts/meta', 'top' ); ?>
@@ -16,6 +16,6 @@
 
 	<?php get_template_part( 'template-parts/the_content' ); ?>
 
-	<?php tha_entry_bottom(); ?>
+	<?php penguin_entry_bottom(); ?>
 </article><!-- #post-## -->
-<?php tha_entry_after(); ?>
+<?php penguin_entry_after(); ?>

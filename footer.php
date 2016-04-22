@@ -7,23 +7,23 @@
  */
 ?>
 
-<?php tha_content_bottom(); ?>
+<?php penguin_content_bottom(); ?>
 </div><!-- #content -->
-<?php tha_content_after(); ?>
+<?php penguin_content_after(); ?>
 
-<?php tha_footer_before(); ?>
+<?php penguin_footer_before(); ?>
 <footer id="colophon" class="site-footer container" role="contentinfo">
-	<?php tha_footer_top(); ?>
+	<?php penguin_footer_top(); ?>
 
 	<nav id="secondary-navigation" role="navigation">
 		<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class' => 'footer-menu clear', 'depth' => 1, 'fallback_cb'=> '' ) ); ?>
 	</nav>
-	<?php tha_footer_bottom(); ?>
+	<?php penguin_footer_bottom(); ?>
 </footer><!-- #colophon -->
-<?php tha_footer_after(); ?>
+<?php penguin_footer_after(); ?>
 
 </div><!-- #page -->
-<?php tha_body_bottom(); ?>
+<?php penguin_body_bottom(); ?>
 <?php wp_footer(); ?>
 </body>
 </html>

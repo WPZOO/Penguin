@@ -91,7 +91,7 @@ add_theme_support( 'tha_hooks', array(
  *
  * @return bool
  */
-function tha_current_theme_supports( $bool, $args, $registered ) {
+function penguin_current_theme_supports( $bool, $args, $registered ) {
 	return in_array( $args[0], $registered[0] ) || in_array( 'all', $registered[0] );
 }
 add_filter( 'current_theme_supports-tha_hooks', 'tha_current_theme_supports', 10, 3 );
@@ -101,18 +101,18 @@ add_filter( 'current_theme_supports-tha_hooks', 'tha_current_theme_supports', 10
  * Special case, useful for <DOCTYPE>, etc.
  * $tha_supports[] = 'html;
  */
- function tha_html_before() {
+ function penguin_html_before() {
 	 do_action( 'tha_html_before' );
  }
 /**
  * HTML <body> hooks
  * $tha_supports[] = 'body';
  */
- function tha_body_top() {
+ function penguin_body_top() {
 	 do_action( 'tha_body_top' );
  }
 
- function tha_body_bottom() {
+ function penguin_body_bottom() {
 	 do_action( 'tha_body_bottom' );
  }
 
@@ -121,11 +121,11 @@ add_filter( 'current_theme_supports-tha_hooks', 'tha_current_theme_supports', 10
 *
 * $tha_supports[] = 'head';
 */
-function tha_head_top() {
+function penguin_head_top() {
 	do_action( 'tha_head_top' );
 }
 
-function tha_head_bottom() {
+function penguin_head_bottom() {
 	do_action( 'tha_head_bottom' );
 }
 
@@ -134,19 +134,19 @@ function tha_head_bottom() {
 *
 * $tha_supports[] = 'header';
 */
-function tha_header_before() {
+function penguin_header_before() {
 	do_action( 'tha_header_before' );
 }
 
-function tha_header_after() {
+function penguin_header_after() {
 	do_action( 'tha_header_after' );
 }
 
-function tha_header_top() {
+function penguin_header_top() {
 	do_action( 'tha_header_top' );
 }
 
-function tha_header_bottom() {
+function penguin_header_bottom() {
 	do_action( 'tha_header_bottom' );
 }
 
@@ -155,19 +155,19 @@ function tha_header_bottom() {
 *
 * $tha_supports[] = 'content';
 */
-function tha_content_before() {
+function penguin_content_before() {
 	do_action( 'tha_content_before' );
 }
 
-function tha_content_after() {
+function penguin_content_after() {
 	do_action( 'tha_content_after' );
 }
 
-function tha_content_top() {
+function penguin_content_top() {
 	do_action( 'tha_content_top' );
 }
 
-function tha_content_bottom() {
+function penguin_content_bottom() {
 	do_action( 'tha_content_bottom' );
 }
 
@@ -176,19 +176,19 @@ function tha_content_bottom() {
 *
 * $tha_supports[] = 'entry';
 */
-function tha_entry_before() {
+function penguin_entry_before() {
 	do_action( 'tha_entry_before' );
 }
 
-function tha_entry_after() {
+function penguin_entry_after() {
 	do_action( 'tha_entry_after' );
 }
 
-function tha_entry_top() {
+function penguin_entry_top() {
 	do_action( 'tha_entry_top' );
 }
 
-function tha_entry_bottom() {
+function penguin_entry_bottom() {
 	do_action( 'tha_entry_bottom' );
 }
 
@@ -197,11 +197,11 @@ function tha_entry_bottom() {
 *
 * $tha_supports[] = 'comments';
 */
-function tha_comments_before() {
+function penguin_comments_before() {
 	do_action( 'tha_comments_before' );
 }
 
-function tha_comments_after() {
+function penguin_comments_after() {
 	do_action( 'tha_comments_after' );
 }
 
@@ -210,19 +210,19 @@ function tha_comments_after() {
 *
 * $tha_supports[] = 'sidebar';
 */
-function tha_sidebars_before() {
+function penguin_sidebars_before() {
 	do_action( 'tha_sidebars_before' );
 }
 
-function tha_sidebars_after() {
+function penguin_sidebars_after() {
 	do_action( 'tha_sidebars_after' );
 }
 
-function tha_sidebar_top() {
+function penguin_sidebar_top() {
 	do_action( 'tha_sidebar_top' );
 }
 
-function tha_sidebar_bottom() {
+function penguin_sidebar_bottom() {
 	do_action( 'tha_sidebar_bottom' );
 }
 
@@ -231,18 +231,18 @@ function tha_sidebar_bottom() {
 *
 * $tha_supports[] = 'footer';
 */
-function tha_footer_before() {
+function penguin_footer_before() {
 	do_action( 'tha_footer_before' );
 }
 
-function tha_footer_after() {
+function penguin_footer_after() {
 	do_action( 'tha_footer_after' );
 }
 
-function tha_footer_top() {
+function penguin_footer_top() {
 	do_action( 'tha_footer_top' );
 }
 
-function tha_footer_bottom() {
+function penguin_footer_bottom() {
 	do_action( 'tha_footer_bottom' );
 }

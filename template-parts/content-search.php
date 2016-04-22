@@ -4,9 +4,9 @@
  */
 ?>
 
-<?php tha_entry_before(); ?>
+<?php penguin_entry_before(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php tha_entry_top(); ?>
+	<?php penguin_entry_top(); ?>
 	<header class="entry-header">
 		<?php if ( has_post_thumbnail() ) : ?>
 		<?php get_template_part( 'template-parts/the_post_thumbnail' ); ?>
@@ -30,6 +30,6 @@
 	}
 ?>
 
-	<?php tha_entry_bottom(); ?>
+	<?php penguin_entry_bottom(); ?>
 </article><!-- #post-## -->
-<?php tha_entry_after(); ?>
+<?php penguin_entry_after(); ?>
