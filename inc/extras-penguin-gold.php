@@ -59,7 +59,12 @@ function penguin_gold_add_search_box($items, $args) {
 		$searchform = ob_get_contents();
 		ob_end_clean();
 
-		$items .= '<li class="menu-search"><span class="penguin-search-icon"></span>' . $searchform . '</li>';
+		$items .= '<li class="menu-search">';
+		$items .= '<svg version="1.1" aria-labelledby="icon-search-title icon-search-desc" class="penguin-icon-search" role="img">';
+		$items .= '<title id="icon-search-title">' . __( 'Search', 'penguin-gold' ) . '</title>';
+		$items .= '<desc id="icon-search-desc">' . __( 'Click to open the search form', 'penguin-gold' ) . '</desc>';
+		$items .= '<use xlink:href="' . get_template_directory_uri() . '/icons.svg#penguin-icon-search"></use>';
+		$items .= '</svg>' . $searchform . '</li>';
 	}
 	return $items;
 }

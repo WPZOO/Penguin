@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Penguin\n"
 "Report-Msgid-Bugs-To: WPZOO Translations <translations@wpzoo.ch>\n"
-"POT-Creation-Date: 2016-03-08 17:08:53+00:00\n"
-"PO-Revision-Date: 2016-03-08 16:29:47 UTC\n"
+"POT-Creation-Date: 2016-04-15 04:46:37+00:00\n"
+"PO-Revision-Date: 2016-04-15 04:43:59 UTC\n"
 "Last-Translator: Web Translate It <support@webtranslateit.com>\n"
 "Language-Team: German, Germany\n"
 "Language: de_DE\n"
@@ -65,7 +65,15 @@ msgstr "Minimiertes CSS und JS"
 msgid "Load Fluidvids.js for responsive videos"
 msgstr "Lade Fluidvids.js für responsive Videos"
 
-#: inc/extras-penguin-gold.php:123
+#: inc/extras-penguin-gold.php:64
+msgid "Search"
+msgstr "Suche"
+
+#: inc/extras-penguin-gold.php:65
+msgid "Click to open the search form"
+msgstr "Klicke um das Suchformular anzuzeigen"
+
+#: inc/extras-penguin-gold.php:128
 msgid "About %s"
 msgstr "Über %s"
 

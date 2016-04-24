@@ -40,22 +40,8 @@
 		}
 	}
 
-	.menu-item-has-children a:after {
-		content: '\e004';
-		font-family: 'penguin-icon-font';
-		font-size: .75em;
-		line-height: 1;
-		padding-left: 7px;
-		speak: none;
-		text-align: right;
-		vertical-align: text-bottom;
-	}
-
-	.menu-item-has-children ul a:after {
-		content: none;
-	}
-
 	.site-title {
+		clear: none;
 		float: left;
 		margin: 0;
 
@@ -74,11 +60,13 @@
 		}
 	}
 
-	.has-logo & a {
+	.has-logo & a,
+	.wp-custom-logo & a {
 		height: 60px;
 		line-height: 60px;
 	}
 
+	.custom-logo-link,
 	.site-logo {
 		float: left;
 		margin-right: 20px;
@@ -141,7 +129,6 @@
 	}
 }
 
-.menu-search .penguin-search-icon,
 .menu-search .search-submit {
 	display: none;
 }
@@ -149,12 +136,6 @@
 .menu-toggle {
 	cursor: pointer;
 	display: none;
-	font-size: 26px;
-	padding-top: 10px;
-
-	.has-logo & {
-		padding-top: 15px;
-	}
 }
 
 .footer-menu {
@@ -179,11 +160,13 @@
 
 	#site-navigation {
 
-		.has-logo & .nav-menu {
+		.has-logo & .nav-menu,
+		.wp-custom-logo & .nav-menu {
 			margin-top: .5em;
 		}
 
-		.has-logo & li a {
+		.has-logo & li a,
+		.wp-custom-logo & li a {
 			height: 50px;
 			line-height: 50px;
 		}
@@ -222,6 +205,7 @@
 
 			.search-field {
 				@include box-sizing(border-box);
+				text-indent: 25px;
 				width: 100%;
 			}
 		}
@@ -245,7 +229,8 @@
 			left: -999em;
 			z-index: 99999;
 
-			.has-logo & {
+			.has-logo &,
+			.wp-custom-logo & {
 				top: 60px;
 			}
 
@@ -278,19 +263,22 @@
 			min-width: 25px;
 			z-index: 2000;
 
-			.has-logo & {
-				margin: 5px 0;
-			}
-
 			.search-field {
 				background-color: transparent;
 				border-width: 0px;
+				@include box-sizing(border-box);
 				cursor: pointer;
+				height: 50px;
 				position: absolute;
 				right: 0;
 				text-indent: 25px;
 				@include transition(all, 0.2s, ease-in-out);
 				width: 0;
+
+				.has-logo &,
+				.wp-custom-logo & {
+					margin-top: 5px;
+				}
 
 				&:focus {
 					background-color: white;
@@ -298,13 +286,6 @@
 					text-indent: 0;
 					width: 220px;
 				}
-			}
-
-			.penguin-search-icon {
-				display: block;
-				font-size: 25px;
-				position: absolute;
-				top: 11px;
 			}
 		}
 	}

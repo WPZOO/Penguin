@@ -10,304 +10,492 @@
 4.0 - Media
   4.1 - Captions
 --------------------------------------------------------------*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-  border: 0;
-  font-family: inherit;
-  font-size: 100%;
-  font-style: inherit;
-  font-weight: inherit;
-  margin: 0;
-  outline: 0;
-  padding: 0;
-  vertical-align: baseline; }
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
 
 html {
-  font-size: 62.5%;
-  /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
-  overflow-y: scroll;
-  /* Keeps page centered in all browsers regardless of content height */
-  -webkit-text-size-adjust: 100%;
-  /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
-  -ms-text-size-adjust: 100%;
-  /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */ }
+	font-size: 62.5%;
+	/* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+	overflow-y: scroll;
+	/* Keeps page centered in all browsers regardless of content height */
+
+	-webkit-text-size-adjust: 100%;
+	/* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+	-ms-text-size-adjust: 100%;
+	/* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
 
 *,
 *:before,
 *:after {
-  /* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+	-moz-box-sizing: border-box;
+	/* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
 
 .mce-content-body {
-  max-width: 746.5px;
-  margin: 2rem; }
+	margin: 2rem;
+	max-width: 746.5px;
+}
+
 
 /*--------------------------------------------------------------
 1.0 - Typography
 --------------------------------------------------------------*/
+
 body,
 button,
 input,
 select,
 textarea {
-  color: #404040;
-  font-family: Raleway, "Open Sans", sans-serif;
-  font-size: 18px;
-  font-size: 1.8rem;
-  font-weight: 300;
-  line-height: 1.5;
-  -ms-word-wrap: break-word;
-  word-wrap: break-word; }
+	color: #404040;
+	font-family: Raleway, "Open Sans", sans-serif;
+	font-size: 18px;
+	font-size: 1.8rem;
+	font-weight: 300;
+	line-height: 1.5;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+
 
 /*--------------------------------------------------------------
 2.1 - Headings
 --------------------------------------------------------------*/
-h1, h2, h3, h4, h5, h6 {
-  clear: both;
-  font-weight: 600;
-  line-height: 1.3;
-  margin-top: 1em;
-  margin-bottom: 0.5em; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+	font-weight: 600;
+	line-height: 1.3;
+	margin-bottom: 0.5em;
+	margin-top: 1em;
+}
 
 h1 {
-  font-size: 1.6em; }
-  @media screen and (min-width: 500px) and (max-width: 767px) {
-    h1 {
-      font-size: 2em; } }
-  @media screen and (min-width: 992px) {
-    h1 {
-      font-size: 2em; } }
-  @media screen and (min-width: 1200px) {
-    h1.entry-title {
-      font-size: 1.6em; } }
-  @media screen and (min-width: 1200px) {
-    .sticky h1.entry-title {
-      font-size: 2.5em; } }
-  body.single h1.entry-title, body.page h1.entry-title {
-    font-size: 2em; }
-    @media screen and (min-width: 500px) and (max-width: 767px) {
-      body.single h1.entry-title, body.page h1.entry-title {
-        font-size: 2.3em; } }
-    @media screen and (min-width: 992px) {
-      body.single h1.entry-title, body.page h1.entry-title {
-        font-size: 2.5em; } }
-    @media screen and (min-width: 1200px) {
-      body.single h1.entry-title, body.page h1.entry-title {
-        font-size: 3em; } }
-  h1.entry-title, h1.widget-title, h1.page-title {
-    margin-top: 0; }
-  h1.entry-title {
-    margin-bottom: .1em; }
-  .search .page h1.entry-title {
-    font-weight: 600; }
-  .single h1.entry-title, .page h1.entry-title {
-    font-weight: 300; }
+	font-size: 1.6em;
+}
+
+@media screen and (min-width: 500px) and (max-width: 767px) {
+	h1 {
+		font-size: 2em;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	h1 {
+		font-size: 2em;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	h1.entry-title {
+		font-size: 1.6em;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.sticky h1.entry-title,
+	.penguin-post:only-of-type h1.entry-title {
+		font-size: 2.5em;
+	}
+}
+
+body.single h1.entry-title,
+body.page h1.entry-title {
+	font-size: 2em;
+}
+
+@media screen and (min-width: 500px) and (max-width: 767px) {
+	body.single h1.entry-title,
+	body.page h1.entry-title {
+		font-size: 2.3em;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	body.single h1.entry-title,
+	body.page h1.entry-title {
+		font-size: 2.5em;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	body.single h1.entry-title,
+	body.page h1.entry-title {
+		font-size: 3em;
+	}
+}
+
+h1.entry-title,
+h1.widget-title,
+h1.page-title {
+	margin-top: 0;
+}
+
+h1.entry-title {
+	margin-bottom: 0.1em;
+}
+
+.search .page h1.entry-title {
+	font-weight: 600;
+}
+
+.single h1.entry-title,
+.page h1.entry-title {
+	font-weight: 300;
+}
+
+.author h1.page-title {
+	margin-bottom: 0;
+}
 
 h2 {
-  font-size: 1.5em; }
-  @media screen and (min-width: 500px) and (max-width: 767px) {
-    h2 {
-      font-size: 1.8em; } }
-  @media screen and (min-width: 992px) {
-    h2 {
-      font-size: 1.8em; } }
+	font-size: 1.5em;
+}
+
+@media screen and (min-width: 500px) and (max-width: 767px) {
+	h2 {
+		font-size: 1.8em;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	h2 {
+		font-size: 1.8em;
+	}
+}
 
 h3 {
-  font-size: 1.4em; }
-  @media screen and (min-width: 992px) {
-    h3 {
-      font-size: 1.6em; } }
+	font-size: 1.4em;
+}
+
+@media screen and (min-width: 992px) {
+	h3 {
+		font-size: 1.6em;
+	}
+}
 
 h4 {
-  font-size: 1.2em; }
+	font-size: 1.2em;
+}
 
 h5 {
-  font-size: 1em; }
+	font-size: 1em;
+}
 
 h6 {
-  font-size: .85em;
-  letter-spacing: 1px; }
+	font-size: 0.85em;
+	letter-spacing: 1px;
+}
+
 
 /*--------------------------------------------------------------
 2.2 - General
 --------------------------------------------------------------*/
+
 p {
-  margin-bottom: .5em; }
+	margin-bottom: 0.5em;
+}
 
 p:last-of-type {
-  margin-bottom: 0; }
+	margin-bottom: 0;
+}
 
-b, strong {
-  font-weight: 600; }
+b,
+strong {
+	font-weight: 600;
+}
 
-dfn, cite, em, i {
-  font-style: italic; }
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
 
 blockquote {
-  border-left: 2px solid #bcbcbc;
-  font-style: italic;
-  margin-bottom: .5em;
-  padding: .5em 1em; }
+	border-left: 2px solid #bcbcbc;
+	font-style: italic;
+	margin-bottom: 0.5em;
+	padding: 0.5em 1em;
+}
 
 address {
-  margin: 0 0 1.5em; }
+	margin: 0 0 1.5em;
+}
 
 pre {
-  background: #eee;
-  font-family: "Courier 10 Pitch", Courier, monospace;
-  font-size: inherit;
-  line-height: 1.5;
-  margin-bottom: 1.5em;
-  max-width: 100%;
-  overflow: auto;
-  padding: 1.5em; }
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: inherit;
+	line-height: 1.5;
+	margin-bottom: 1.5em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.5em;
+}
 
-code, kbd, tt, var {
-  font-family: Consolas, Monaco, "Andale Mono", "DejaVu Sans Mono", monospace;
-  font-size: inherit; }
+code,
+kbd,
+tt,
+var {
+	font-family: Consolas, Monaco, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: inherit;
+}
 
-abbr, acronym {
-  border-bottom: 1px dotted #666;
-  cursor: help; }
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
 
-mark, ins {
-  background: #fff9c0;
-  text-decoration: none; }
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
 
 sup,
 sub {
-  font-size: .75em;
-  height: 0;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline; }
+	font-size: 0.75em;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
 
 sup {
-  bottom: 1ex; }
+	bottom: 1ex;
+}
 
 sub {
-  top: .5ex; }
+	top: 0.5ex;
+}
 
 small,
 .small {
-  font-size: .85em; }
-  @media screen and (min-width: 992px) {
-    small,
-    .small {
-      font-size: .75em; } }
+	font-size: 0.85em;
+}
+
+@media screen and (min-width: 992px) {
+	small,
+	.small {
+		font-size: 0.75em;
+	}
+}
 
 big,
 .big {
-  font-size: 1.2em; }
+	font-size: 1.2em;
+}
 
-/*--------------------------------------------------------------
-2.3 - Icon Font
---------------------------------------------------------------*/
-@font-face {
-  font-family: "penguin-icon-font";
-  src: url("fonts/penguin-icon-font.eot");
-  src: url("fonts/penguin-icon-font.eot?#iefix") format("embedded-opentype"), url("fonts/penguin-icon-font.woff2") format("woff2"), url("fonts/penguin-icon-font.woff") format("woff"), url("fonts/penguin-icon-font.ttf") format("truetype"), url("fonts/penguin-icon-font.svg#penguin-icon-font") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-[data-icon]:before {
-  font-family: "penguin-icon-font" !important;
-  content: attr(data-icon);
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  speak: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-[class^="penguin-"]:before,
-[class*=" penguin-"]:before {
-  font-family: "penguin-icon-font" !important;
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  speak: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-.penguin-category-icon:before {
-  content: "\e000";
-  font-size: 1.3em;
-  margin-left: -2px;
-  vertical-align: middle; }
-
-.penguin-tag-icon:before {
-  content: "\e001";
-  font-size: 1.1em;
-  vertical-align: middle; }
-
-.penguin-menu-icon:before {
-  content: "\e002"; }
-
-.penguin-dropdown-icon:before {
-  content: "\e004"; }
-
-.penguin-search-icon:before {
-  content: "\e005"; }
 
 /*--------------------------------------------------------------
 2.0 - Elements
 --------------------------------------------------------------*/
-hr {
-  background-color: #ccc;
-  border: 0;
-  height: 1px;
-  margin-bottom: 1.5em; }
 
-ul, ol {
-  margin: 0 0 .5em 2em; }
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ul,
+ol {
+	margin: 0 0 0.5em 2em;
+}
 
 ul {
-  list-style: disc; }
+	list-style: disc;
+}
 
 ol {
-  list-style: decimal; }
+	list-style: decimal;
+}
 
 #primary li {
-  margin: .5em 0; }
+	margin: 0.5em 0;
+}
 
 li > ul,
 li > ol {
-  margin-bottom: 0;
-  margin-left: 1.5em; }
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
 
 dt {
-  font-weight: bold; }
+	font-weight: bold;
+}
 
 dd {
-  margin: 0 1.5em 1.5em; }
+	margin: 0 1.5em 1.5em;
+}
 
 img {
-  height: auto;
-  /* Make sure images are scaled correctly. */
-  max-width: 100%;
-  /* Adhere to container width. */ }
-  .author-img img {
-    float: left;
-    margin: 7px 1em 0 0; }
+	height: auto;
+	/* Make sure images are scaled correctly. */
+	max-width: 100%;
+	/* Adhere to container width. */
+}
+
+.author-img img {
+	float: left;
+	margin: 7px 1em 0 0;
+}
 
 figure {
-  margin: 0; }
+	margin: 0;
+}
+
+[class^="penguin-icon-"],
+[class*=" penguin-icon-"] {
+	display: inline-block;
+
+	fill: currentColor;
+}
+
+.penguin-icon-category {
+	height: 18px;
+	margin-left: -2px;
+	vertical-align: text-bottom;
+	width: 18px;
+}
+
+.penguin-icon-tag {
+	height: 16px;
+	vertical-align: text-bottom;
+	width: 16px;
+}
+
+.penguin-icon-search,
+.penguin-icon-menu,
+.penguin-icon-backtotop {
+	height: 50px;
+	width: 25px;
+}
+
+.has-logo .penguin-icon-search,
+.wp-custom-logo .penguin-icon-search,
+.has-logo
+  .penguin-icon-menu,
+.wp-custom-logo
+  .penguin-icon-menu,
+.has-logo
+  .penguin-icon-backtotop,
+.wp-custom-logo
+  .penguin-icon-backtotop {
+	height: 60px;
+}
+
+.penguin-icon-search,
+.has-logo .penguin-icon-search,
+.wp-custom-logo .penguin-icon-search {
+	position: absolute;
+}
+
+@media screen and (max-width: 600px) {
+	.penguin-icon-search,
+	.has-logo .penguin-icon-search,
+	.wp-custom-logo .penguin-icon-search {
+		height: 45px;
+		left: 15px;
+	}
+}
+
+.penguin-icon-backtotop {
+	width: 30px;
+
+	fill: #fff;
+}
+
+.bright-navbar .penguin-icon-backtotop {
+	fill: #404040;
+}
+
+.penguin-icon-dropdown {
+	height: 12px;
+	margin-left: 4px;
+	vertical-align: middle;
+	width: 12px;
+}
 
 table {
-  margin: 0 0 1.5em;
-  max-width: 100%; }
+	margin: 0 0 1.5em;
+	max-width: 100%;
+}
 
 table > thead > tr > th,
 table > tbody > tr > th,
@@ -315,14 +503,16 @@ table > tfoot > tr > th,
 table > thead > tr > td,
 table > tbody > tr > td,
 table > tfoot > tr > td {
-  padding: 6px;
-  line-height: 1.42857143;
-  vertical-align: top;
-  border-top: 1px solid #dddddd; }
+	border-top: 1px solid #ddd;
+	line-height: 1.42857143;
+	padding: 6px;
+	vertical-align: top;
+}
 
 table > thead > tr > th {
-  vertical-align: bottom;
-  border-bottom: 2px solid #dddddd; }
+	border-bottom: 2px solid #ddd;
+	vertical-align: bottom;
+}
 
 table > caption + thead > tr:first-child > th,
 table > colgroup + thead > tr:first-child > th,
@@ -330,72 +520,85 @@ table > thead:first-child > tr:first-child > th,
 table > caption + thead > tr:first-child > td,
 table > colgroup + thead > tr:first-child > td,
 table > thead:first-child > tr:first-child > td {
-  border-top: 0; }
+	border-top: 0;
+}
 
 table > tbody + tbody {
-  border-top: 2px solid #dddddd; }
+	border-top: 2px solid #ddd;
+}
 
 table > tbody > tr:nth-child(odd) > td,
 table > tbody > tr:nth-child(odd) > th {
-  background-color: #f9f9f9; }
+	background-color: #f9f9f9;
+}
 
 th {
-  font-weight: bold; }
+	font-weight: bold;
+}
+
 
 /*--------------------------------------------------------------
 3.0 - Forms
 --------------------------------------------------------------*/
+
 button,
 input,
 select,
 textarea {
-  font-size: 100%;
-  /* Corrects font size not being inherited in all browsers */
-  margin: 0;
-  /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
-  vertical-align: baseline;
-  /* Improves appearance and consistency in all browsers */ }
+	font-size: 100%;
+	/* Corrects font size not being inherited in all browsers */
+	margin: 0;
+	/* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+	vertical-align: baseline;
+	/* Improves appearance and consistency in all browsers */
+}
 
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  -webkit-appearance: button;
-  /* Corrects inability to style clickable 'input' types in iOS */
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  -webkit-background-clip: padding-box;
-          background-clip: padding-box;
-  /* stops bg color from leaking outside the border: */
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  background: #e6e6e6;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.8);
-  cursor: pointer;
-  /* Improves usability and consistency of cursor style between image-type 'input' and others */
-  font-size: .85em;
-  line-height: 1;
-  padding: 16px 25px;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out; }
-  @media screen and (min-width: 992px) {
-    button,
-    input[type="button"],
-    input[type="reset"],
-    input[type="submit"] {
-      font-size: .75em; } }
+	background: #e6e6e6;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	/* Corrects inability to style clickable 'input' types in iOS */
+	border: 1px solid;
+	border-color: #ccc #ccc #bbb;
+	/* stops bg color from leaking outside the border: */
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+	color: rgba(0, 0, 0, 0.8);
+	cursor: pointer;
+	/* Improves usability and consistency of cursor style between image-type 'input' and others */
+	font-size: 0.85em;
+	line-height: 1;
+	padding: 16px 25px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+
+	-webkit-appearance: button;
+}
+
+@media screen and (min-width: 992px) {
+	button,
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"] {
+		font-size: 0.75em;
+	}
+}
 
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-  border-color: #0066cc;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  color: #0066cc; }
+	border-color: #06c;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	color: #06c;
+}
 
 button:focus,
 input[type="button"]:focus,
@@ -405,32 +608,38 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-  border-color: #aaa #bbb #bbb;
-  -webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
-          box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
+	border-color: #aaa #bbb #bbb;
+	-webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+	box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+}
 
 input[type="checkbox"],
 input[type="radio"] {
-  padding: 0;
-  /* Addresses excess padding in IE8/9 */ }
+	padding: 0;
+	/* Addresses excess padding in IE8/9 */
+}
 
 input[type="search"] {
-  -webkit-appearance: textfield;
-  /* Addresses appearance set to searchfield in S5, Chrome */
-  -webkit-box-sizing: content-box;
-  /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
-  -moz-box-sizing: content-box;
-  box-sizing: content-box; }
+	/* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+	-moz-box-sizing: content-box;
+	/* Addresses appearance set to searchfield in S5, Chrome */
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+
+	-webkit-appearance: textfield;
+}
 
 input[type="search"]::-webkit-search-decoration {
-  /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
-  -webkit-appearance: none; }
+	/* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+	-webkit-appearance: none;
+}
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-  /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
-  border: 0;
-  padding: 0; }
+	/* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+	border: 0;
+	padding: 0;
+}
 
 input[type="text"],
 input[type="email"],
@@ -438,16 +647,17 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-  border: 1px solid #ccc;
-  -webkit-background-clip: padding-box;
-          background-clip: padding-box;
-  /* stops bg color from leaking outside the border: */
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  color: #666;
-  padding: 10.5px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; }
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	border: 1px solid #ccc;
+	/* stops bg color from leaking outside the border: */
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	color: #666;
+	padding: 10.5px;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
 
 input[type="text"]:focus,
 input[type="email"]:focus,
@@ -455,63 +665,84 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
-  border-color: #0066cc;
-  color: #111; }
+	border-color: #06c;
+	color: #111;
+}
 
 textarea {
-  overflow: auto;
-  /* Removes default vertical scrollbar in IE6/7/8/9 */
-  vertical-align: top;
-  /* Improves readability and alignment in all browsers */
-  width: 100%; }
+	overflow: auto;
+	/* Removes default vertical scrollbar in IE6/7/8/9 */
+	vertical-align: top;
+	/* Improves readability and alignment in all browsers */
+	width: 100%;
+}
 
 textarea:focus,
 input:focus {
-  outline: 0; }
+	outline: 0;
+}
+
 
 /*--------------------------------------------------------------
 4.0 - Media
 --------------------------------------------------------------*/
+
 /* Image shapes */
 .img-rounded {
-  -webkit-background-clip: padding-box;
-          background-clip: padding-box;
-  /* stops bg color from leaking outside the border: */
-  -webkit-border-radius: 6px;
-  border-radius: 6px; }
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	/* stops bg color from leaking outside the border: */
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
 
 .img-circle {
-  -webkit-background-clip: padding-box;
-          background-clip: padding-box;
-  /* stops bg color from leaking outside the border: */
-  -webkit-border-radius: 50%;
-  border-radius: 50%; }
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	/* stops bg color from leaking outside the border: */
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
 
 .img-thumbnail {
-  border: 3px solid #fff;
-  -webkit-box-shadow: 0px 1px 3px #ccc;
-          box-shadow: 0px 1px 3px #ccc;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; }
-  .img-thumbnail:hover {
-    -webkit-box-shadow: 0px 1px 3px #404040;
-            box-shadow: 0px 1px 3px #404040; }
+	border: 3px solid #fff;
+	-webkit-box-shadow: 0 1px 3px #ccc;
+	box-shadow: 0 1px 3px #ccc;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.img-thumbnail:hover {
+	-webkit-box-shadow: 0 1px 3px #404040;
+	box-shadow: 0 1px 3px #404040;
+}
+
 
 /*--------------------------------------------------------------
 5.1 Captions
 --------------------------------------------------------------*/
+
 .wp-caption {
-  margin-bottom: 1em;
-  max-width: 100%; }
-  .wp-caption img[class*="wp-image-"] {
-    display: block;
-    margin: 0 auto; }
-  .wp-caption .wp-caption-text {
-    margin: 0.5em 0 1em; }
+	margin-bottom: 1em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 0 auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.5em 0 1em;
+}
 
 .wp-caption-text {
-  font-size: .85em;
-  text-align: center; }
-  @media screen and (min-width: 992px) {
-    .wp-caption-text {
-      font-size: .75em; } }
+	font-size: 0.85em;
+	text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+	.wp-caption-text {
+		font-size: 0.75em;
+	}
+}

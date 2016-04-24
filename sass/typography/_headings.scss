@@ -23,7 +23,8 @@ h1 {
 		}
 	}
 
-	.sticky &.entry-title {
+	.sticky &.entry-title,
+	.penguin-post:only-of-type &.entry-title {
 		@media screen and (min-width: 1200px) {
 			font-size: 2.5em;
 		}
@@ -63,6 +64,9 @@ h1 {
 	.single &.entry-title,
 	.page &.entry-title {
 		font-weight: $font__weight-standard;
+	}
+	.author &.page-title {
+		margin-bottom: 0;
 	}
 
 }

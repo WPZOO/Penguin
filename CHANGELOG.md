@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file. This project follows [Semantic Versioning](http://semver.org/).
 
+## [0.1.4] - 2016-03-29
+### Fixed
+- Fix one post layout issue
+- Update Readme
+
 ## [0.1.3] - 2016-03-08
 ### Fixed
 - Changed theme name

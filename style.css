@@ -4,7 +4,7 @@ Theme URI:   https://wpzoo.ch/en/themes/penguin/
 Description: Penguin is a clean and modern WordPress theme made by WPZOO. Besides the link color the used colors are monochromatic. The post thumbnail will be used as a big header image on single post pages as well as Pages. These theme characteristics make it possible to use Penguin for bloggin' as well as a magazin theme.
 Author:      WPZOO
 Author URI:  https://wpzoo.ch/en/
-Version:     0.1.3
+Version:     0.1.4
 Tags:        black, blue, gray, white, light, two-columns, right-sidebar, responsive-layout, custom-menu, featured-image-header, featured-images, post-formats, sticky-post, threaded-comments, translation-ready
 Text Domain: penguin-gold
 Domain Path: /languages
@@ -19,7 +19,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 2.0 - Typography
   2.1 - Headings
   2.2 - General
-  2.3 - Icon Font
 3.0 - Elements
 4.0 - Forms
 5.0 - Media
@@ -270,7 +269,8 @@ h1 {
 }
 
 @media screen and (min-width: 1200px) {
-	.sticky h1.entry-title {
+	.sticky h1.entry-title,
+	.penguin-post:only-of-type h1.entry-title {
 		font-size: 2.5em;
 	}
 }
@@ -318,6 +318,10 @@ h1.entry-title {
 .single h1.entry-title,
 .page h1.entry-title {
 	font-weight: 300;
+}
+
+.author h1.page-title {
+	margin-bottom: 0;
 }
 
 h2 {
@@ -462,72 +466,6 @@ big,
 
 
 /*--------------------------------------------------------------
-2.3 - Icon Font
---------------------------------------------------------------*/
-
-@font-face {
-	font-family: "penguin-icon-font";
-	font-style: normal;
-	font-weight: normal;
-	src: url("fonts/penguin-icon-font.eot");
-	src: url("fonts/penguin-icon-font.eot?#iefix") format("embedded-opentype"), url("fonts/penguin-icon-font.woff2") format("woff2"), url("fonts/penguin-icon-font.woff") format("woff"), url("fonts/penguin-icon-font.ttf") format("truetype"), url("fonts/penguin-icon-font.svg#penguin-icon-font") format("svg");
-}
-
-[data-icon]:before {
-	content: attr(data-icon);
-	font-family: "penguin-icon-font" !important;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	font-style: normal !important;
-	font-variant: normal !important;
-	font-weight: normal !important;
-	line-height: 1;
-	text-transform: none !important;
-
-	speak: none;
-}
-
-[class^="penguin-"]:before,
-[class*=" penguin-"]:before {
-	font-family: "penguin-icon-font" !important;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	font-style: normal !important;
-	font-variant: normal !important;
-	font-weight: normal !important;
-	line-height: 1;
-	text-transform: none !important;
-
-	speak: none;
-}
-
-.penguin-category-icon:before {
-	content: "\e000";
-	font-size: 1.3em;
-	margin-left: -2px;
-	vertical-align: middle;
-}
-
-.penguin-tag-icon:before {
-	content: "\e001";
-	font-size: 1.1em;
-	vertical-align: middle;
-}
-
-.penguin-menu-icon:before {
-	content: "\e002";
-}
-
-.penguin-dropdown-icon:before {
-	content: "\e004";
-}
-
-.penguin-search-icon:before {
-	content: "\e005";
-}
-
-
-/*--------------------------------------------------------------
 3.0 - Elements
 --------------------------------------------------------------*/
 
@@ -583,6 +521,78 @@ img {
 
 figure {
 	margin: 0;
+}
+
+[class^="penguin-icon-"],
+[class*=" penguin-icon-"] {
+	display: inline-block;
+
+	fill: currentColor;
+}
+
+.penguin-icon-category {
+	height: 18px;
+	margin-left: -2px;
+	vertical-align: text-bottom;
+	width: 18px;
+}
+
+.penguin-icon-tag {
+	height: 16px;
+	vertical-align: text-bottom;
+	width: 16px;
+}
+
+.penguin-icon-search,
+.penguin-icon-menu,
+.penguin-icon-backtotop {
+	height: 50px;
+	width: 25px;
+}
+
+.has-logo .penguin-icon-search,
+.wp-custom-logo .penguin-icon-search,
+.has-logo
+  .penguin-icon-menu,
+.wp-custom-logo
+  .penguin-icon-menu,
+.has-logo
+  .penguin-icon-backtotop,
+.wp-custom-logo
+  .penguin-icon-backtotop {
+	height: 60px;
+}
+
+.penguin-icon-search,
+.has-logo .penguin-icon-search,
+.wp-custom-logo .penguin-icon-search {
+	position: absolute;
+}
+
+@media screen and (max-width: 600px) {
+	.penguin-icon-search,
+	.has-logo .penguin-icon-search,
+	.wp-custom-logo .penguin-icon-search {
+		height: 45px;
+		left: 15px;
+	}
+}
+
+.penguin-icon-backtotop {
+	width: 30px;
+
+	fill: #fff;
+}
+
+.bright-navbar .penguin-icon-backtotop {
+	fill: #404040;
+}
+
+.penguin-icon-dropdown {
+	height: 12px;
+	margin-left: 4px;
+	vertical-align: middle;
+	width: 12px;
 }
 
 table {
@@ -1141,23 +1151,8 @@ p a {
 	color: #06c;
 }
 
-#site-navigation .menu-item-has-children a:after {
-	content: "\e004";
-	font-family: "penguin-icon-font";
-	font-size: 0.75em;
-	line-height: 1;
-	padding-left: 7px;
-	text-align: right;
-	vertical-align: text-bottom;
-
-	speak: none;
-}
-
-#site-navigation .menu-item-has-children ul a:after {
-	content: none;
-}
-
 #site-navigation .site-title {
+	clear: none;
 	float: left;
 	margin: 0;
 }
@@ -1176,22 +1171,28 @@ p a {
 	color: #06c;
 }
 
-.has-logo #site-navigation a {
+.has-logo #site-navigation a,
+.wp-custom-logo #site-navigation a {
 	height: 60px;
 	line-height: 60px;
 }
 
+#site-navigation .custom-logo-link,
 #site-navigation .site-logo {
 	float: left;
 	margin-right: 20px;
 	padding: 5px 0;
 }
 
+#site-navigation .custom-logo-link:hover,
+.bright-navbar #site-navigation .custom-logo-link:hover,
 #site-navigation .site-logo:hover,
-.bright-navbar #site-navigation .site-logo:hover {
+.bright-navbar
+    #site-navigation .site-logo:hover {
 	background-color: transparent;
 }
 
+#site-navigation .custom-logo-link img,
 #site-navigation .site-logo img {
 	max-height: 50px;
 	width: auto;
@@ -1242,7 +1243,6 @@ p a {
 	color: #06c;
 }
 
-.menu-search .penguin-search-icon,
 .menu-search .search-submit {
 	display: none;
 }
@@ -1250,12 +1250,6 @@ p a {
 .menu-toggle {
 	cursor: pointer;
 	display: none;
-	font-size: 26px;
-	padding-top: 10px;
-}
-
-.has-logo .menu-toggle {
-	padding-top: 15px;
 }
 
 .footer-menu {
@@ -1283,11 +1277,13 @@ p a {
 		float: right;
 	}
 
-	.has-logo #site-navigation .nav-menu {
+	.has-logo #site-navigation .nav-menu,
+	.wp-custom-logo #site-navigation .nav-menu {
 		margin-top: 0.5em;
 	}
 
-	.has-logo #site-navigation li a {
+	.has-logo #site-navigation li a,
+	.wp-custom-logo #site-navigation li a {
 		height: 50px;
 		line-height: 50px;
 	}
@@ -1326,6 +1322,7 @@ p a {
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
+		text-indent: 25px;
 		width: 100%;
 	}
 }
@@ -1346,7 +1343,8 @@ p a {
 		z-index: 99999;
 	}
 
-	.has-logo #site-navigation ul ul {
+	.has-logo #site-navigation ul ul,
+	.wp-custom-logo #site-navigation ul ul {
 		top: 60px;
 	}
 
@@ -1376,14 +1374,14 @@ p a {
 		z-index: 2000;
 	}
 
-	.has-logo #masthead .menu-search {
-		margin: 5px 0;
-	}
-
 	#masthead .menu-search .search-field {
 		background-color: transparent;
 		border-width: 0;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
 		cursor: pointer;
+		height: 50px;
 		position: absolute;
 		right: 0;
 		text-indent: 25px;
@@ -1392,18 +1390,16 @@ p a {
 		width: 0;
 	}
 
+	.has-logo #masthead .menu-search .search-field,
+	.wp-custom-logo #masthead .menu-search .search-field {
+		margin-top: 5px;
+	}
+
 	#masthead .menu-search .search-field:focus {
 		background-color: white;
 		border-width: 1px;
 		text-indent: 0;
 		width: 220px;
-	}
-
-	#masthead .menu-search .penguin-search-icon {
-		display: block;
-		font-size: 25px;
-		position: absolute;
-		top: 11px;
 	}
 }
 
@@ -1490,40 +1486,17 @@ p a {
 }
 
 .no-js #scroll-to-top {
-	display: block;
+	display: none;
 }
 
-.has-logo #scroll-to-top {
+.has-logo #scroll-to-top,
+.wp-custom-logo #scroll-to-top {
 	height: 60px;
 	width: 60px;
 }
 
 .bright-navbar #scroll-to-top {
 	background: rgba(255, 255, 255, 0.95);
-}
-
-#scroll-to-top:before {
-	color: #fff;
-	content: "\e003";
-	font-family: "penguin-icon-font" !important;
-	font-size: 26px;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	font-style: normal !important;
-	font-variant: normal !important;
-	font-weight: normal !important;
-	line-height: 50px;
-	text-transform: none !important;
-
-	speak: none;
-}
-
-.bright-navbar #scroll-to-top:before {
-	color: #404040;
-}
-
-.has-logo #scroll-to-top:before {
-	line-height: 60px;
 }
 
 
@@ -1696,7 +1669,8 @@ p a {
 
 .penguin-post.sticky,
 .single .penguin-post,
-.page .penguin-post {
+.page .penguin-post,
+.penguin-post:only-of-type {
 	width: 100%;
 }
 

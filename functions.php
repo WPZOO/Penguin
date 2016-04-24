@@ -50,8 +50,9 @@ function penguin_setup() {
 	// Enable support for post thumbnails.
 	add_theme_support( 'post-thumbnails' );
 
-	// Add new thumbnail sizes.
+	// Add custom image sizes.
 	add_image_size( 'Penguin800X400', '800', '400', array( 'center', 'center' ) );
+	add_image_size( 'Penguin1200X600', '1200', '600', array( 'center', 'center' ) );
 
 	// Enable support for HTML5 markup.
 	add_theme_support( 'html5', array(
@@ -60,6 +61,20 @@ function penguin_setup() {
 		'comment-form',
 		'gallery',
 	) );
+
+	/*
+	 * Enable support for custom logo.
+	 * @since Penguin 0.2.0
+	 */
+	add_theme_support( 'custom-logo', array(
+		'height'     => 100,
+		'flex-width' => true,
+		'header-text' => array( 'site-title' ),
+	) );
+
+	// Indicate widget sidebars can use selective refresh in the Customizer.
+	add_theme_support( 'customize-selective-refresh-widgets' );
+
 }
 endif; // penguin_setup
 add_action( 'after_setup_theme', 'penguin_setup' );
@@ -149,6 +164,50 @@ function penguin_show_custom_image_sizes( $sizes ) {
 add_filter( 'image_size_names_choose', 'penguin_show_custom_image_sizes' );
 
 /**
+ * Add custom image sizes attribute to enhance responsive image functionality 
+ * for content images
+ *
+ * @since Penguin 0.2
+ * @return string A source size value for use in a content image 'sizes' attribute.
+ */
+function penguin_content_image_sizes_attr($size) {
+	// Singular posts with sidebar
+	if ( is_singular() ) {
+		return '(max-width: 599px) calc(100vw - 50px), (max-width: 767px) calc(100vw - 70px), (max-width: 991px) 429px, (max-width: 1199px) 597px, 747px';
+	}
+	// Page full width without sidebar
+	if ( get_page_template_slug() === 'page-fullwidth.php' ) {
+		return '(max-width: 599px) calc(100vw - 50px), (max-width: 767px) calc(100vw - 70px), (max-width: 991px) 679px, (max-width: 1199px) 839px, 1039px';
+	}
+	// 2 col blog with sidebar
+	else {
+		return '(max-width: 599px) calc(100vw - 50px), (max-width: 767px) calc(100vw - 70px), (max-width: 991px) 429px, (max-width: 1199px) 637px, 354px';
+	}
+}
+add_filter('wp_calculate_image_sizes', 'penguin_content_image_sizes_attr', 10 , 2);
+
+/**
+ * Add custom image sizes attribute to enhance responsive image functionality
+ * for post thumbnails
+ *
+ * @since Penguin 0.2
+ * @return string A source size value for use in a post thumbnail 'sizes' attribute.
+ */
+function penguin_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
+	if ( 'Penguin800X400' === $size ) {
+		$attr['sizes'] = '(max-width: 767px) calc(100vw - 30px), (max-width: 991px) 469px, (max-width: 1199px) 696.5px, 414px';
+	}
+	if ( 'Penguin800X400' === $size && ( is_sticky() ) ) {
+		$attr['sizes'] = '(max-width: 767px) calc(100vw - 30px), (max-width: 991px) 469px, (max-width: 1199px) 696.5px, 846.5px';
+	}
+	if ( 'full' === $size && ( is_singular() ) ) {
+		$attr['sizes'] = '100vw';
+	}
+	return $attr;
+}
+add_filter( 'wp_get_attachment_image_attributes', 'penguin_post_thumbnail_sizes_attr', 10 , 3 );
+
+/**
  * Change class when js is enabled
  */
 function penguin_enqueue_js_fix() {
@@ -192,7 +251,7 @@ require get_template_directory() . '/inc/extras-plugins.php';
 /**
  * Customizer additions
  */
-require get_template_directory() . '/inc/customizer-library/customizer-library.php';
+require get_template_directory() . '/inc/style-builder.php';
 require get_template_directory() . '/inc/customizer-options.php';
 require get_template_directory() . '/inc/customizer-options-gold.php';
 require get_template_directory() . '/inc/customizer-styles-gold.php';

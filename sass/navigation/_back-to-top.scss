@@ -17,10 +17,11 @@
 	}
 
 	.no-js & {
-		display: block;
+		display: none;
 	}
 
-	.has-logo & {
+	.has-logo &,
+	.wp-custom-logo & {
 		height: 60px;
 		width: 60px;
 	}
@@ -29,26 +30,4 @@
 		background: $color__background-main-nav-bright;
 	}
 
-	&:before {
-		color: $color__text-main-nav;
-		content: "\e003";
-		font-family: "penguin-icon-font" !important;
-		font-size: 26px;
-		font-style: normal !important;
-		font-weight: normal !important;
-		font-variant: normal !important;
-		text-transform: none !important;
-		speak: none;
-		line-height: 50px;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-
-		.bright-navbar & {
-			color: $color__text-main-nav-bright;
-		}
-
-		.has-logo & {
-			line-height: 60px;
-		}
-	}
 }
