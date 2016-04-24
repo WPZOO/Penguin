@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Penguin\n"
 "Report-Msgid-Bugs-To: WPZOO Translations <translations@wpzoo.ch>\n"
-"POT-Creation-Date: 2016-04-15 04:46:37+00:00\n"
-"PO-Revision-Date: 2016-04-15 04:43:59 UTC\n"
+"POT-Creation-Date: 2016-04-24 12:12:04+00:00\n"
+"PO-Revision-Date: 2016-04-24 11:51:14 UTC\n"
 "Last-Translator: Web Translate It <support@webtranslateit.com>\n"
 "Language-Team: German, Germany\n"
 "Language: de_DE\n"
@@ -13,55 +13,45 @@ msgstr ""
 "X-Generator: WebTranslateIt.com\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: inc/customizer-options-gold.php:12
-msgid "Dark"
-msgstr "Dunkel"
-
-#: inc/customizer-options-gold.php:13
-msgid "Bright"
-msgstr "Hell"
-
-#: inc/customizer-options-gold.php:18
+#: inc/customizer-options-gold.php:24
 msgid "Brightness of navbar"
 msgstr "Helligkeit der Navigationsleiste"
 
-#: inc/customizer-options-gold.php:27
-msgid "Link color"
+#: inc/customizer-options-gold.php:42
+msgid "Link Color"
 msgstr "Linkfarbe"
 
-#: inc/customizer-options-gold.php:35
-msgid "Sidebar right"
-msgstr "Seitenleiste rechts"
+#: inc/customizer-options-gold.php:60
+msgid "Sidebar layout"
+msgstr "Seitenleiste Layout"
 
-#: inc/customizer-options-gold.php:36
-msgid "Sidebar left"
-msgstr "Seitenleiste links"
-
-#: inc/customizer-options-gold.php:41
-msgid "Sidebar"
-msgstr "Seitenleiste"
-
-#: inc/customizer-options-gold.php:50
+#: inc/customizer-options-gold.php:79
 msgid "Author info box on single posts"
 msgstr "Autor-Infobox auf Einzelbeiträgen"
 
-#: inc/customizer-options-gold.php:58
-msgid "Custom footer text"
-msgstr "Eigener Footer-Text"
+#: inc/customizer-options-gold.php:80
+msgid "The user description needs to be added before the box is displayed."
+msgstr ""
+"Damit die Box angezeigt wird, müssen die biographischen Angaben im "
+"Benutzerprofil vorhanden sein."
 
-#: inc/customizer-options-gold.php:68
-msgid "Advanced"
-msgstr "Erweitert"
-
-#: inc/customizer-options-gold.php:74
+#: inc/customizer-options-gold.php:98
 msgid "Add search box to primary menu"
 msgstr "Das Suchfeld in das Hauptmenü hinzufügen"
 
-#: inc/customizer-options-gold.php:82
+#: inc/customizer-options-gold.php:115
+msgid "Custom footer text"
+msgstr "Eigener Footer-Text"
+
+#: inc/customizer-options-gold.php:135
+msgid "Advanced"
+msgstr "Erweitert"
+
+#: inc/customizer-options-gold.php:152
 msgid "Minified CSS and JS"
 msgstr "Minimiertes CSS und JS"
 
-#: inc/customizer-options-gold.php:90
+#: inc/customizer-options-gold.php:170
 msgid "Load Fluidvids.js for responsive videos"
 msgstr "Lade Fluidvids.js für responsive Videos"
 
@@ -98,7 +88,7 @@ msgid ""
 msgstr ""
 "Penguin ist ein simples und modernes WordPress Theme, entwickelt von WPZOO. "
 "Nebst der Linkfarbe ist das Theme in verschiedenen Grautönen gestaltet. Das "
-"Beitragsbild wird auf Einzelbeitragseiten als grosses Header-Bild verwendet. "
+"Beitragsbild wird auf Einzelbeitragseiten als großes Header-Bild verwendet. "
 "Die Theme-Eigenschaften machen es möglich Penguin als Blog oder Magazin-"
 "Theme zu verwenden."
 
