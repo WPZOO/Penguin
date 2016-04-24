@@ -448,21 +448,28 @@ figure {
 }
 
 .has-logo .penguin-icon-search,
+.wp-custom-logo .penguin-icon-search,
 .has-logo
   .penguin-icon-menu,
+.wp-custom-logo
+  .penguin-icon-menu,
 .has-logo
+  .penguin-icon-backtotop,
+.wp-custom-logo
   .penguin-icon-backtotop {
 	height: 60px;
 }
 
 .penguin-icon-search,
-.has-logo .penguin-icon-search {
+.has-logo .penguin-icon-search,
+.wp-custom-logo .penguin-icon-search {
 	position: absolute;
 }
 
 @media screen and (max-width: 600px) {
 	.penguin-icon-search,
-	.has-logo .penguin-icon-search {
+	.has-logo .penguin-icon-search,
+	.wp-custom-logo .penguin-icon-search {
 		height: 45px;
 		left: 15px;
 	}

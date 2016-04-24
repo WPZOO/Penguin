@@ -34,7 +34,7 @@ The used icons are part of [ionicons](http://ionicons.com/), designed by [@benjs
 The multi column layout which appears on a bigger screen has implemented with the help of [Masonry](http://masonry.desandro.com/), a JavaScript grid layout library. Masonry is available under the MIT license.
 
 ### Customizer Library
-This is a helpful library for working with the influded WordPress Theme customizer. [Customizer Library](https://github.com/devinsays/customizer-library) is shared by Devin Price on github.
+The `Customizer_Library_Styles` class from the [Customizer Library](https://github.com/devinsays/customizer-library) by Devin Price released under GPL-2.0+.
 
 ### Fluidvids
 [Fluidvids](https://github.com/toddmotto/fluidvids) is a JavaScript library and helps Penguin to show your embed videos in a responsive way. Fluidvids is available under the MIT license.

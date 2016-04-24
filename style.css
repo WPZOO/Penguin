@@ -551,21 +551,28 @@ figure {
 }
 
 .has-logo .penguin-icon-search,
+.wp-custom-logo .penguin-icon-search,
 .has-logo
   .penguin-icon-menu,
+.wp-custom-logo
+  .penguin-icon-menu,
 .has-logo
+  .penguin-icon-backtotop,
+.wp-custom-logo
   .penguin-icon-backtotop {
 	height: 60px;
 }
 
 .penguin-icon-search,
-.has-logo .penguin-icon-search {
+.has-logo .penguin-icon-search,
+.wp-custom-logo .penguin-icon-search {
 	position: absolute;
 }
 
 @media screen and (max-width: 600px) {
 	.penguin-icon-search,
-	.has-logo .penguin-icon-search {
+	.has-logo .penguin-icon-search,
+	.wp-custom-logo .penguin-icon-search {
 		height: 45px;
 		left: 15px;
 	}
@@ -1145,6 +1152,7 @@ p a {
 }
 
 #site-navigation .site-title {
+	clear: none;
 	float: left;
 	margin: 0;
 }
@@ -1163,22 +1171,28 @@ p a {
 	color: #06c;
 }
 
-.has-logo #site-navigation a {
+.has-logo #site-navigation a,
+.wp-custom-logo #site-navigation a {
 	height: 60px;
 	line-height: 60px;
 }
 
+#site-navigation .custom-logo-link,
 #site-navigation .site-logo {
 	float: left;
 	margin-right: 20px;
 	padding: 5px 0;
 }
 
+#site-navigation .custom-logo-link:hover,
+.bright-navbar #site-navigation .custom-logo-link:hover,
 #site-navigation .site-logo:hover,
-.bright-navbar #site-navigation .site-logo:hover {
+.bright-navbar
+    #site-navigation .site-logo:hover {
 	background-color: transparent;
 }
 
+#site-navigation .custom-logo-link img,
 #site-navigation .site-logo img {
 	max-height: 50px;
 	width: auto;
@@ -1263,11 +1277,13 @@ p a {
 		float: right;
 	}
 
-	.has-logo #site-navigation .nav-menu {
+	.has-logo #site-navigation .nav-menu,
+	.wp-custom-logo #site-navigation .nav-menu {
 		margin-top: 0.5em;
 	}
 
-	.has-logo #site-navigation li a {
+	.has-logo #site-navigation li a,
+	.wp-custom-logo #site-navigation li a {
 		height: 50px;
 		line-height: 50px;
 	}
@@ -1327,7 +1343,8 @@ p a {
 		z-index: 99999;
 	}
 
-	.has-logo #site-navigation ul ul {
+	.has-logo #site-navigation ul ul,
+	.wp-custom-logo #site-navigation ul ul {
 		top: 60px;
 	}
 
@@ -1373,7 +1390,8 @@ p a {
 		width: 0;
 	}
 
-	.has-logo #masthead .menu-search .search-field {
+	.has-logo #masthead .menu-search .search-field,
+	.wp-custom-logo #masthead .menu-search .search-field {
 		margin-top: 5px;
 	}
 
@@ -1471,7 +1489,8 @@ p a {
 	display: none;
 }
 
-.has-logo #scroll-to-top {
+.has-logo #scroll-to-top,
+.wp-custom-logo #scroll-to-top {
 	height: 60px;
 	width: 60px;
 }

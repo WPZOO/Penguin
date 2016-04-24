@@ -41,6 +41,7 @@
 	}
 
 	.site-title {
+		clear: none;
 		float: left;
 		margin: 0;
 
@@ -59,11 +60,13 @@
 		}
 	}
 
-	.has-logo & a {
+	.has-logo & a,
+	.wp-custom-logo & a {
 		height: 60px;
 		line-height: 60px;
 	}
 
+	.custom-logo-link,
 	.site-logo {
 		float: left;
 		margin-right: 20px;
@@ -157,11 +160,13 @@
 
 	#site-navigation {
 
-		.has-logo & .nav-menu {
+		.has-logo & .nav-menu,
+		.wp-custom-logo & .nav-menu {
 			margin-top: .5em;
 		}
 
-		.has-logo & li a {
+		.has-logo & li a,
+		.wp-custom-logo & li a {
 			height: 50px;
 			line-height: 50px;
 		}
@@ -224,7 +229,8 @@
 			left: -999em;
 			z-index: 99999;
 
-			.has-logo & {
+			.has-logo &,
+			.wp-custom-logo & {
 				top: 60px;
 			}
 
@@ -269,7 +275,8 @@
 				@include transition(all, 0.2s, ease-in-out);
 				width: 0;
 
-				.has-logo & {
+				.has-logo &,
+				.wp-custom-logo & {
 					margin-top: 5px;
 				}
 

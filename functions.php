@@ -61,6 +61,20 @@ function penguin_setup() {
 		'comment-form',
 		'gallery',
 	) );
+
+	/*
+	 * Enable support for custom logo.
+	 * @since Penguin 0.2.0
+	 */
+	add_theme_support( 'custom-logo', array(
+		'height'     => 100,
+		'flex-width' => true,
+		'header-text' => array( 'site-title' ),
+	) );
+
+	// Indicate widget sidebars can use selective refresh in the Customizer.
+	add_theme_support( 'customize-selective-refresh-widgets' );
+
 }
 endif; // penguin_setup
 add_action( 'after_setup_theme', 'penguin_setup' );
@@ -237,7 +251,7 @@ require get_template_directory() . '/inc/extras-plugins.php';
 /**
  * Customizer additions
  */
-require get_template_directory() . '/inc/customizer-library/customizer-library.php';
+require get_template_directory() . '/inc/style-builder.php';
 require get_template_directory() . '/inc/customizer-options.php';
 require get_template_directory() . '/inc/customizer-options-gold.php';
 require get_template_directory() . '/inc/customizer-styles-gold.php';

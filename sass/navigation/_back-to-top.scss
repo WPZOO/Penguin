@@ -20,7 +20,8 @@
 		display: none;
 	}
 
-	.has-logo & {
+	.has-logo &,
+	.wp-custom-logo & {
 		height: 60px;
 		width: 60px;
 	}

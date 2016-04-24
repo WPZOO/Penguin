@@ -24,8 +24,7 @@ function penguin_body_classes( $classes ) {
 	}
 
 	// Adds body class if logo has uploaded
-	$logo = get_theme_mod( 'logo-upload' );
-	if ( ! empty( $logo ) ) {
+	if ( get_theme_mod( 'logo-upload', false ) ) {
 		$classes[] = 'has-logo';
 	}
 
@@ -145,7 +144,7 @@ function penguin_excerpt_read_more_link( $output ) {
 		return;
 	}
 	if ( ! is_attachment() ) {
-		$output .= '<a href="'. get_permalink() . '" class="read-more-link">' . penguin_read_more_text() . '</a>';
+		$output .= '<a href="'. esc_url( get_permalink() ) . '" class="read-more-link">' . penguin_read_more_text() . '</a>';
 	}
 	return $output;
 }
