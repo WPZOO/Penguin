@@ -1,6 +1,33 @@
 # Change Log
 All notable changes to this project will be documented in this file. This project follows [Semantic Versioning](http://semver.org/).
 
+## [0.2.1] - 2016-04-28
+### Removed
+- German translations (lite version only). Further using [translate.wordpress.org](translate.wordpress.org)
+
+### Fixed
+- Missing change log information
+
+## [0.2.0] - 2016-04-24
+### Added
+- Support Responsive Images
+- SVG icons
+- Core customizer
+- New custom logo
+- Editor styles
+
+### Removed
+- Options Framework
+- Icon Font
+
+### Fixed
+- Fullwidth class
+- Author page header
+- Correct GPL version and add copyright
+- Escaped `get_permalink()`
+- Change prefix from `tha_` to `penguin_`
+- Remove `the_posts_navigation` and `the_post_navigation`
+
 ## [0.1.4] - 2016-03-29
 ### Fixed
 - Fix one post layout issue
