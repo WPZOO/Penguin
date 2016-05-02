@@ -183,7 +183,7 @@ function penguin_upsell_notice() {
 		'penguin-customizer-goldad',
 		'penguinL10n',
 		array(
-			'penguinURL'   => __( 'http://wpzoo.ch/en/themes/penguin/', 'penguin' ),
+			'penguinURL'   => __( 'https://wpzoo.ch/en/themes/penguin/', 'penguin' ),
 			'penguinLabel' => __( 'Buy Gold Version', 'penguin' ),
 		)
 	);
