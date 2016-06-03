@@ -5,8 +5,8 @@ if ( typeof jQuery == 'undefined' ) {
 	var posts_container = document.querySelector('#posts-container');
 	var penguin_post = document.querySelector('.penguin-post');
 	var msnry = new Masonry( posts_container, {
-		columnWidth: 400,
-		gutter: 32,
+		columnWidth: '.penguin-post-not-sticky',
+		gutter: 16,
 		itemSelector: '.penguin-post',
 		transitionDuration: '1s'
 	});
@@ -40,8 +40,8 @@ if ( typeof jQuery == 'undefined' ) {
 
 		$container.imagesLoaded( function() {
 			$container.masonry({
-				columnWidth: 400,
-				gutter: 32,
+				columnWidth: '.penguin-post-not-sticky',
+				gutter: 16,
 				itemSelector: '.penguin-post',
 				transitionDuration: '1s'
 			});
