@@ -39,7 +39,7 @@
     "licenseuri": "http://www.gnu.org/licenses/gpl-2.0.html",
     "textdomain": "penguin-gold",
     "domainpath": "/languages",
-    "tags": "black, blue, gray, white, light, two-columns, right-sidebar, responsive-layout, custom-menu, custom-background, featured-image-header, featured-images, post-formats, sticky-post, threaded-comments, translation-ready, editor-style, theme-options"
+    "tags": "grid-layout, two-columns, right-sidebar, responsive-layout, custom-menu, custom-logo, featured-image-header, featured-images, post-formats, sticky-post, threaded-comments, translation-ready, blog"
   },
   "bugs": {
     "url": "https://github.com/WPZOO/penguin-gold/issues",
