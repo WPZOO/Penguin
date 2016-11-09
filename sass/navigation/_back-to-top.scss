@@ -1,13 +1,13 @@
 #scroll-to-top {
-	background: $color__background-main-nav;
+	background: $color__dark-transparent;
 	display: none;
-	height: 50px;
+	height: 60px;
 	position: fixed;
 	right: 0;
 	text-align: center;
 	text-decoration: none;
 	top: 0;
-	width: 50px;
+	width: 60px;
 	z-index: 2000;
 
 	.admin-bar & {
@@ -20,14 +20,8 @@
 		display: none;
 	}
 
-	.has-logo &,
-	.wp-custom-logo & {
-		height: 60px;
-		width: 60px;
-	}
-
 	.bright-navbar & {
-		background: $color__background-main-nav-bright;
+		background: $color__bright-transparent;
 	}
 
 }

@@ -16,24 +16,22 @@
 	width: 16px;
 }
 
-.penguin-icon-search,
-.penguin-icon-menu,
-.penguin-icon-backtotop {
-	height: 50px;
-	width: 25px;
-
-	.has-logo &,
-	.wp-custom-logo & {
-		height: 60px;
-	}
+.penguin-icon-menu {
+	height: 30px;
+	width: 30px;
 }
 
 .penguin-icon-search,
-.has-logo .penguin-icon-search,
-.wp-custom-logo .penguin-icon-search {
+.penguin-icon-backtotop {
+	height: 60px;
+	width: 25px;
+}
+
+.penguin-icon-search {
 	position: absolute;
 
 	@media screen and (max-width: 600px) {
+		color: $color__dark;
 		height: 45px;
 		left: 15px;
 	}
@@ -44,7 +42,7 @@
 	width: 30px;
 
 	.bright-navbar & {
-		fill: #404040;
+		fill: $color__dark;
 	}
 
 }

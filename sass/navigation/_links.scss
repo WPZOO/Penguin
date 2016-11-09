@@ -1,14 +1,16 @@
 a {
-	&:link,
-	&:visited {
-		color: $color__link;
-		text-decoration: none;
-		@include transition(all, 0.2s, ease-in-out);
-	}
+	color: $color__primary;
+	text-decoration: none;
+	@include transition(all, 0.2s, ease-in-out);
+
 	&:hover,
-	&:focus,
 	&:active {
-		color: $color__link-hover;
+		color: $color__dark;
+		outline: 0;
+	}
+	&:focus {
+		background: $color__bright;
+		outline: thin solid $color__primary;
 	}
 
 	p & {
@@ -16,8 +18,8 @@ a {
 	}
 
 	.btn & {
-		background-color: $color__background-btn;
-		color: $color__text-main !important;
+		background-color: $color__bg-btn;
+		color: $color__dark;
 		display: inline-block;
 	}
 	.btn-sm & {
@@ -29,8 +31,8 @@ a {
 	.btn &:hover,
 	.btn &:focus,
 	.btn &:active {
-		background-color: $color__background-btn-hover;
-		color: white !important;
+		background-color: $color__primary;
+		color: #fff;
 	}
 }
 

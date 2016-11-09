@@ -28,36 +28,6 @@ function penguin_customizer_styles() {
 		return;
 	}
 
-	// Color
-	Customizer_Library_Styles()->add( array(
-		'selectors' => array(
-			'button:hover',
-			'input[type="button"]:hover',
-			'input[type="reset"]:hover',
-			'input[type="submit"]:hover',
-			'a:link',
-			'a:visited',
-			'#site-navigation a:hover',
-			'#site-navigation .site-title a:hover',
-			'.bright-navbar #site-navigation a:hover',
-			'.bright-navbar #site-navigation .site-title a:hover'
-		),
-		'declarations' => array(
-			'color' => esc_html( $color )
-		)
-	) );
-
-	Customizer_Library_Styles()->add( array(
-		'selectors' => array(
-			'a:hover',
-			'a:focus',
-			'a:active'
-		),
-		'declarations' => array(
-			'color' => '#404040'
-		)
-	) );
-
 	// background-color
 	Customizer_Library_Styles()->add( array(
 		'selectors' => array(
@@ -94,6 +64,10 @@ function penguin_customizer_styles() {
 			'input[type="button"]:hover',
 			'input[type="reset"]:hover',
 			'input[type="submit"]:hover',
+			'button:focus',
+			'input[type="button"]:focus',
+			'input[type="reset"]:focus',
+			'input[type="submit"]:focus',
 			'input[type="text"]:focus',
 			'input[type="email"]:focus',
 			'input[type="url"]:focus',
@@ -105,6 +79,62 @@ function penguin_customizer_styles() {
 			'border-color' => esc_html( $color )
 		)
 	) );
+
+	// box-shadow
+	Customizer_Library_Styles()->add( array(
+		'selectors' => array(
+			'button:focus',
+			'input[type="button"]:focus',
+			'input[type="reset"]:focus',
+			'input[type="submit"]:focus',
+			'input[type="text"]:focus',
+			'input[type="email"]:focus',
+			'input[type="url"]:focus',
+			'input[type="password"]:focus',
+			'input[type="search"]:focus',
+			'textarea:focus'
+		),
+		'declarations' => array(
+			'-webkit-box-shadow' => '0 0 6px ' . esc_html( $color ),
+			'box-shadow'         => '0 0 6px ' . esc_html( $color )
+		)
+	) );
+
+	// color
+	Customizer_Library_Styles()->add( array(
+		'selectors' => array(
+			'button:hover',
+			'input[type="button"]:hover',
+			'input[type="reset"]:hover',
+			'input[type="submit"]:hover',
+			'a',
+			'#site-navigation li:hover > a',
+			'#site-navigation li.focus > a',
+			'#site-navigation .site-title a:hover',
+			'#site-navigation .site-title a:focus',
+			'.bright-navbar #site-navigation a:hover',
+			'.bright-navbar #site-navigation a.focus',
+			'.bright-navbar #site-navigation .site-title a:hover',
+			'.bright-navbar #site-navigation .site-title a.focus',
+			'.screen-reader-text:hover',
+			'.screen-reader-text:active',
+			'.screen-reader-text:focus'
+		),
+		'declarations' => array(
+			'color' => esc_html( $color )
+		)
+	) );
+
+	// outline color
+	Customizer_Library_Styles()->add( array(
+		'selectors' => array(
+			'a:focus'
+		),
+		'declarations' => array(
+			'outline-color' => esc_html( $color )
+		)
+	) );
+
 
 	$css = Customizer_Library_Styles()->build();
 

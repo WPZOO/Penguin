@@ -23,11 +23,6 @@ function penguin_body_classes( $classes ) {
 		$classes[] = 'has-headerimg';
 	}
 
-	// Adds body class if logo has uploaded
-	if ( get_theme_mod( 'logo-upload', false ) ) {
-		$classes[] = 'has-logo';
-	}
-
 	return $classes;
 }
 add_filter( 'body_class', 'penguin_body_classes' );

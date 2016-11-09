@@ -7,7 +7,7 @@
 
 $classes = get_body_class();
 if ( in_array( 'has-headerimg', $classes ) ) : ?>
-    <div class="headerimg">
-        <?php the_post_thumbnail( 'full' ); ?>
-    </div>
+	<div class="headerimg">
+		<?php the_post_thumbnail( 'full' ); ?>
+	</div>
 <?php endif; ?>

@@ -28,7 +28,7 @@ html {
 	@include box-sizing(border-box);
 }
 body {
-	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+	background: $color__bright; /* Fallback for when there is no custom background color defined. */
 }
 article,
 aside,
@@ -61,7 +61,7 @@ blockquote, q {
 	quotes: "" "";
 }
 a:focus {
-	outline: thin dotted;
+	outline: thin solid;
 }
 a:hover,
 a:active {

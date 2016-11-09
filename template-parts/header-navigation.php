@@ -6,8 +6,12 @@
  */
 ?>
 
-<nav id="site-navigation" class="main-navigation clear" role="navigation">
+<div id="navbar">
+
 	<div class="container">
+
+		<nav id="site-navigation" class="main-navigation clear" role="navigation">
+
 		<?php
 			if ( function_exists( 'the_custom_logo' ) ) {
 				the_custom_logo();
@@ -22,12 +26,19 @@
 				echo '<p class="site-title"><a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . get_bloginfo( 'name' ) . '</a></p>';
 			}
 		?>
-		<svg version="1.1" aria-labelledby="icon-menu-title icon-menu-desc" class="menu-toggle penguin-icon-menu" role="img">
-			<title id="icon-menu-title"><?php __( 'Menu', 'penguin' ) ?></title>
-			<desc id="icon-menu-desc"><?php __( 'Click to see the menu', 'penguin' ) ?></desc>
-			<use xlink:href="<?php echo get_template_directory_uri() ?>/icons.svg#penguin-icon-menu"></use>
-		</svg>
-		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'penguin' ); ?></a>
-		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'main-menu', 'depth' => 2 ) ); ?>
+
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+				<svg version="1.1" aria-labelledby="icon-menu-title icon-menu-desc" class="penguin-icon-menu" role="img">
+					<title id="icon-menu-title"><?php __( 'Menu', 'penguin' ) ?></title>
+					<desc id="icon-menu-desc"><?php __( 'Click to see the menu', 'penguin' ) ?></desc>
+					<use xlink:href="<?php echo get_template_directory_uri() ?>/icons.svg#penguin-icon-menu"></use>
+				</svg>
+			</button>
+
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'main-menu nav-menu', 'depth' => 2 ) ); ?>
+
+		</nav><!-- #site-navigation -->
+
 	</div><!-- .container -->
-</nav><!-- #site-navigation -->
+
+</div><!-- #navbar -->
