@@ -1050,6 +1050,7 @@ object {
 --------------------------------------------------------------*/
 
 a {
+	border-bottom: 1px solid;
 	color: #06c;
 	text-decoration: none;
 	-webkit-transition: all 0.2s ease-in-out;
@@ -1058,21 +1059,33 @@ a {
 
 a:hover,
 a:active {
+	border-bottom: none;
 	color: #404040;
 	outline: 0;
 }
 
 a:focus {
 	background: #f1f1f1;
+	border-bottom: none;
 	outline: thin solid #06c;
 }
 
-p a {
-	font-weight: 600;
+.site-title a,
+.entry-title a,
+.format-link a,
+.nav-menu a,
+.nav-links a,
+.post-thumbnail a {
+	border-bottom: none;
+}
+
+a img {
+	vertical-align: bottom;
 }
 
 .btn a {
 	background-color: #ddd;
+	border-bottom: none;
 	color: #404040;
 	display: inline-block;
 }
@@ -1164,6 +1177,7 @@ p a {
 #site-navigation .site-title a {
 	color: #fff;
 	font-size: 20px;
+	font-weight: 600;
 	letter-spacing: 1px;
 	margin-left: 20px;
 	padding-right: 0;

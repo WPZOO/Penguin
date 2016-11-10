@@ -1,24 +1,37 @@
 a {
+	border-bottom: 1px solid;
 	color: $color__primary;
 	text-decoration: none;
 	@include transition(all, 0.2s, ease-in-out);
 
 	&:hover,
 	&:active {
+		border-bottom: none;
 		color: $color__dark;
 		outline: 0;
 	}
 	&:focus {
 		background: $color__bright;
+		border-bottom: none;
 		outline: thin solid $color__primary;
 	}
 
-	p & {
-		font-weight: $font__weight-bold;
+	.site-title &,
+	.entry-title &,
+	.format-link &,
+	.nav-menu &,
+	.nav-links &,
+	.post-thumbnail & {
+		border-bottom: none;
+	}
+	
+	img {
+		vertical-align: bottom;
 	}
 
 	.btn & {
 		background-color: $color__bg-btn;
+		border-bottom: none;
 		color: $color__dark;
 		display: inline-block;
 	}
