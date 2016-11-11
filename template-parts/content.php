@@ -11,9 +11,13 @@
 		<?php if ( has_post_thumbnail() ) : ?>
 		<?php get_template_part( 'template-parts/the_post_thumbnail' ); ?>
 		<?php endif; ?>
-		<?php if ( ! has_post_format( 'status' ) ) : ?>
-			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-		<?php endif; ?>
+		<?php
+			if ( is_single() ) :
+				the_title( '<h1 class="entry-title">', '</h1>' );
+			else :
+				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			endif;
+		?>
 
 		<?php get_template_part( 'template-parts/meta', 'top' ); ?>
 	</header><!-- .entry-header -->

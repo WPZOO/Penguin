@@ -18,21 +18,8 @@ h1 {
 	}
 
 	&.entry-title {
-		@media screen and (min-width: 1200px) {
-			font-size: 1.6em;
-		}
-	}
-
-	.sticky &.entry-title,
-	.penguin-post:only-of-type &.entry-title {
-		@media screen and (min-width: 1200px) {
-			font-size: 2.5em;
-		}
-	}
-
-	body.single &.entry-title,
-	body.page &.entry-title {
 		font-size: 2em;
+		font-weight: $font__weight-standard;
 
 		@media screen and (min-width: 500px) and (max-width: 767px) {
 			font-size: 2.3em;
@@ -47,24 +34,6 @@ h1 {
 		}
 	}
 
-	&.entry-title,
-	&.widget-title,
-	&.page-title {
-		margin-top: 0;
-	}
-
-	&.entry-title {
-		margin-bottom: .1em;
-	}
-
-	.search .page &.entry-title {
-		font-weight: $font__weight-bold;
-	}
-
-	.single &.entry-title,
-	.page &.entry-title {
-		font-weight: $font__weight-standard;
-	}
 	.author &.page-title {
 		margin-bottom: 0;
 	}
@@ -74,6 +43,23 @@ h1 {
 h2 {
 	font-size: 1.5em;
 
+	&.entry-title {
+		@media screen and (min-width: 1200px) {
+			font-size: 1.6em;
+		}
+	}
+
+	.sticky &.entry-title,
+	.penguin-post:only-of-type &.entry-title {
+		@media screen and (min-width: 1200px) {
+			font-size: 2.5em;
+		}
+	}
+
+	.search .page &.entry-title {
+		font-weight: $font__weight-bold;
+	}
+
 	@media screen and (min-width: 500px) and (max-width: 767px) {
 		font-size: 1.8em;
 	}
@@ -81,6 +67,16 @@ h2 {
 	@media screen and (min-width: 992px) {
 		font-size: 1.8em;
 	}
+}
+
+.entry-title,
+.widget-title,
+.page-title {
+	margin-top: 0;
+}
+
+.entry-title {
+	margin-bottom: 0;
 }
 
 h3 {

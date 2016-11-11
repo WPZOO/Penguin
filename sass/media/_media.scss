@@ -59,8 +59,12 @@
 	}
 }
 
-.post-thumbnail img {
-	width: 100%;
+.post-thumbnail {
+	margin-bottom: 5px;
+
+	img {
+		width: 100%;
+	}
 }
 
 .fullwidth-container {
@@ -75,7 +79,7 @@
 
 @media screen and (min-width: 600px) and (max-width: 991px) {
 	.post-thumbnail {
-		margin-bottom: 10px;
+		margin-bottom: 15px;
 	}
 
 	.fullwidth-container {
@@ -86,7 +90,7 @@
 
 @media screen and (min-width: 992px) {
 	.post-thumbnail {
-		margin-bottom: 15px;
+		margin-bottom: 20px;
 	}
 	.page .fullwidth-container,
 	.single .fullwidth-container {
