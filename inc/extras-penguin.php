@@ -161,10 +161,8 @@ add_filter( 'excerpt_more', 'penguin_excerpt_more' );
  */
 function penguin_back_to_top() {
 	$hamburger = '';
-	$hamburger .= '<a data-scroll href="#masthead" id="scroll-to-top">';
-	$hamburger .= '<svg version="1.1" aria-labelledby="icon-scroll-title icon-scroll-desc" class="penguin-icon-backtotop" role="img">';
-	$hamburger .= '<title id="icon-scroll-title">' . __( 'Scroll', 'penguin' ) . '</title>';
-	$hamburger .= '<desc id="icon-scroll-desc">' . __( 'Scroll To Top', 'penguin' ) . '</desc>';
+	$hamburger .= '<a data-scroll href="#masthead" id="scroll-to-top" aria-label="'. __( 'Scroll To Top', 'penguin' ) . '">';
+	$hamburger .= '<svg version="1.1" class="penguin-icon-backtotop">';
 	$hamburger .= '<use xlink:href="' . get_template_directory_uri() . '/icons.svg#penguin-icon-backtotop"></use>';
 	$hamburger .= '</svg></a>';
 
@@ -208,9 +206,7 @@ add_action( 'tha_footer_bottom', 'penguin_poweredby' );
 function penguin_menu_item_arrow( $title, $item, $args, $depth ) {
 
 	if( in_array( 'menu-item-has-children', $item->classes ) && 0 === $depth) {
-		$arrow = '<svg version="1.1" aria-labelledby="icon-arrow-title icon-arrow-desc" class="penguin-icon-dropdown" role="img">';
-		$arrow .= '<title id="icon-arrow-title">' . __( 'Arrow down', 'penguin' ) . '</title>';
-		$arrow .= '<desc id="icon-arrow-desc">' . __( 'Icon points to existing submenu', 'penguin' ) . '</desc>';
+		$arrow = '<svg version="1.1" aria-hidden="true" class="penguin-icon-dropdown">';
 		$arrow .= '<use xlink:href="' . get_template_directory_uri() . '/icons.svg#penguin-icon-dropdown"></use>';
 		$arrow .= '</svg>';
 		return $title . $arrow;
