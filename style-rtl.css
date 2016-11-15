@@ -1635,6 +1635,7 @@ a img {
 }
 
 #poweredby a {
+	border-bottom: none;
 	color: #cdcdcd;
 	font-weight: 600;
 }
