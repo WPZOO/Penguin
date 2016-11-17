@@ -27,10 +27,8 @@
 			}
 		?>
 
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-				<svg version="1.1" aria-labelledby="icon-menu-title icon-menu-desc" class="penguin-icon-menu" role="img">
-					<title id="icon-menu-title"><?php __( 'Menu', 'penguin' ) ?></title>
-					<desc id="icon-menu-desc"><?php __( 'Click to see the menu', 'penguin' ) ?></desc>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="<?php _e( 'Menu', 'penguin' ) ?>">
+				<svg version="1.1" class="penguin-icon-menu" role="img">
 					<use xlink:href="<?php echo get_template_directory_uri() ?>/icons.svg#penguin-icon-menu"></use>
 				</svg>
 			</button>
