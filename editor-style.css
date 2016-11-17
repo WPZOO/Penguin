@@ -231,8 +231,8 @@ h2.entry-title {
 @media screen and (min-width: 1200px) {
 	.sticky h2.entry-title,
 	.penguin-post:only-of-type h2.entry-title {
-		font-size: 40px;
-		font-size: 4rem;
+		font-size: 50px;
+		font-size: 5rem;
 	}
 }
 
@@ -352,7 +352,9 @@ h6 {
 
 @media screen and (min-width: 1200px) {
 	.single .entry-content,
-	.page .entry-content {
+	.page .entry-content,
+	.sticky .entry-content,
+	.penguin-post:only-of-type .entry-content {
 		font-size: 20px;
 		font-size: 2rem;
 	}

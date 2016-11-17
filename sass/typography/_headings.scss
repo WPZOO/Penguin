@@ -59,7 +59,7 @@ h2 {
 	.sticky &.entry-title,
 	.penguin-post:only-of-type &.entry-title {
 		@media screen and (min-width: 1200px) {
-			@include font-size(4);
+			@include font-size(5);
 		}
 	}
 }
