@@ -10,14 +10,23 @@ textarea {
 	line-height: $font__line-height-body;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
+
+	@media screen and (min-width: 500px) and (max-width: 699px) {
+		@include font-size(1.6);
+	}
+
+	@media screen and (min-width: 700px) and (max-width: 767px) {
+		@include font-size(1.7);
+	}
+
+	@media screen and (min-width: 992px) {
+		@include font-size(1.7);
+	}
 }
-@media only screen and (min-width: 992px) {
-	body,
-	button,
-	input,
-	select,
-	textarea {
-		@include font-size(1.8);
+
+.single .entry-content {
+	@media screen and (min-width: 1200px) {
+		@include font-size(2);
 	}
 }
 

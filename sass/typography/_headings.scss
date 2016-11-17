@@ -7,31 +7,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 1.6em;
+	@include font-size(3);
 
-	@media screen and (min-width: 500px) and (max-width: 767px) {
-		font-size: 2em;
+	@media screen and (min-width: 500px) and (max-width: 699px) {
+		@include font-size(3.5);
 	}
-
+	@media screen and (min-width: 700px) and (max-width: 767px) {
+		@include font-size(3.8);
+	}
 	@media screen and (min-width: 992px) {
-		font-size: 2em;
+		@include font-size(4.2);
+	}
+	@media screen and (min-width: 1200px) {
+		@include font-size(5);
 	}
 
 	&.entry-title {
-		font-size: 2em;
 		font-weight: $font__weight-standard;
-
-		@media screen and (min-width: 500px) and (max-width: 767px) {
-			font-size: 2.3em;
-		}
-
-		@media screen and (min-width: 992px) {
-			font-size: 2.5em;
-		}
-
-		@media screen and (min-width: 1200px) {
-			font-size: 3em;
-		}
 	}
 
 	.author &.page-title {
@@ -41,31 +33,34 @@ h1 {
 }
 
 h2 {
-	font-size: 1.5em;
+	@include font-size(2.6);
+
+	@media screen and (min-width: 500px) and (max-width: 699px) {
+		@include font-size(3);
+	}
+	@media screen and (min-width: 700px) and (max-width: 767px) {
+		@include font-size(3.8);
+	}
+	@media screen and (min-width: 992px) {
+		@include font-size(3.4);
+	}
+	@media screen and (min-width: 1200px) {
+		@include font-size(4);
+	}
 
 	&.entry-title {
+		font-weight: $font__weight-bold;
+
 		@media screen and (min-width: 1200px) {
-			font-size: 1.6em;
+			@include font-size(3);
 		}
 	}
 
 	.sticky &.entry-title,
 	.penguin-post:only-of-type &.entry-title {
 		@media screen and (min-width: 1200px) {
-			font-size: 2.5em;
+			@include font-size(4);
 		}
-	}
-
-	.search .page &.entry-title {
-		font-weight: $font__weight-bold;
-	}
-
-	@media screen and (min-width: 500px) and (max-width: 767px) {
-		font-size: 1.8em;
-	}
-
-	@media screen and (min-width: 992px) {
-		font-size: 1.8em;
 	}
 }
 
@@ -80,22 +75,52 @@ h2 {
 }
 
 h3 {
-	font-size: 1.4em;
+	@include font-size(2);
 
+	@media screen and (min-width: 500px) and (max-width: 699px) {
+		@include font-size(2.4);
+	}
+	@media screen and (min-width: 700px) and (max-width: 767px) {
+		@include font-size(2.6);
+	}
 	@media screen and (min-width: 992px) {
-		font-size: 1.6em;
+		@include font-size(2.6);
+	}
+	@media screen and (min-width: 1200px) {
+		@include font-size(3);
 	}
 }
 
 h4 {
-	font-size: 1.2em;
-}
+	@include font-size(1.8);
 
-h5 {
-	font-size: 1em;
+	@media screen and (min-width: 500px) and (max-width: 699px) {
+		@include font-size(2);
+	}
+	@media screen and (min-width: 700px) and (max-width: 767px) {
+		@include font-size(2.2);
+	}
+	@media screen and (min-width: 992px) {
+		@include font-size(2.2);
+	}
+	@media screen and (min-width: 1200px) {
+		@include font-size(2.5);
+	}
 }
 
 h6 {
-	font-size: .85em;
-	letter-spacing: 1px;
+	@include font-size(1.3);
+
+	@media screen and (min-width: 500px) and (max-width: 699px) {
+		@include font-size(1.4);
+	}
+	@media screen and (min-width: 700px) and (max-width: 767px) {
+		@include font-size(1.5);
+	}
+	@media screen and (min-width: 992px) {
+		@include font-size(1.5);
+	}
+	@media screen and (min-width: 1200px) {
+		@include font-size(1.8);
+	}
 }
