@@ -103,6 +103,12 @@
 		width: calc(100% + 60px);
 	}
 }
+@media screen and (min-width: 1200px) {
+	.sticky .post-thumbnail,
+	.penguin-post:only-of-type .post-thumbnail {
+		margin-bottom: 40px;
+	}
+}
 
 /* Image shapes */
 .img-rounded {

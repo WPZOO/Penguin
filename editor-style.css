@@ -354,7 +354,8 @@ h6 {
 	.single .entry-content,
 	.page .entry-content,
 	.sticky .entry-content,
-	.penguin-post:only-of-type .entry-content {
+	.penguin-post:only-of-type .entry-content,
+	.penguin-post:only-of-type .entry-summary {
 		font-size: 20px;
 		font-size: 2rem;
 	}
