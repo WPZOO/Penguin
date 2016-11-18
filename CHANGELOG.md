@@ -1,12 +1,25 @@
 # Change Log
 All notable changes to this project will be documented in this file. This project follows [Semantic Versioning](http://semver.org/).
 
-## [0.2.1] - 2016-04-28
-### Removed
-- German translations (lite version only). Further using [translate.wordpress.org](translate.wordpress.org)
+## [0.3.0] - 2016-04-28
+### Added
+- Improve font-size, especially headings
+- Links with underline [accessibility]
+- Missing change log information
 
 ### Fixed
-- Missing change log information
+- Rebuild all navigation [accessibility]
+- Use only one h1 [accessibility]
+- SVG metadata without conflict html syntax
+- Padding of posts
+- Change URLs to HTTPS
+- Flexible `columnWidth` in masonry script
+- Remove i18n functions from variables
+- Update theme tags
+
+### Removed
+- German translations (lite version only). Further using [translate.wordpress.org](translate.wordpress.org)
+- Not needed JS code
 
 ## [0.2.0] - 2016-04-24
 ### Added
