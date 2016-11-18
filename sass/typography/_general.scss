@@ -1,7 +1,8 @@
 .single .entry-content,
 .page .entry-content,
 .sticky .entry-content,
-.penguin-post:only-of-type .entry-content {
+.penguin-post:only-of-type .entry-content,
+.penguin-post:only-of-type .entry-summary {
 	@media screen and (min-width: 1200px) {
 		@include font-size(2);
 	}
