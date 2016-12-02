@@ -1212,14 +1212,16 @@ a img {
 	vertical-align: bottom;
 }
 
-.btn a {
+.btn a,
+.footer-menu a {
 	background-color: #ddd;
 	border-bottom: none;
 	color: #404040;
 	display: inline-block;
 }
 
-.btn-sm a {
+.btn-sm a,
+.footer-menu a {
 	padding: 2px 8px;
 }
 
@@ -1229,7 +1231,10 @@ a img {
 
 .btn a:hover,
 .btn a:focus,
-.btn a:active {
+.btn a:active,
+.footer-menu a:hover,
+.footer-menu a:focus,
+.footer-menu a:active {
 	background-color: #06c;
 	color: #fff;
 }
@@ -1400,7 +1405,7 @@ a img {
 	float: right;
 	font-size: 0.85em;
 	line-height: 2;
-	margin: 0 0 0 10px;
+	margin: 0 0 5px 5px;
 }
 
 @media screen and (min-width: 992px) {

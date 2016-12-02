@@ -29,13 +29,15 @@ a {
 		vertical-align: bottom;
 	}
 
-	.btn & {
+	.btn &,
+	.footer-menu & {
 		background-color: $color__bg-btn;
 		border-bottom: none;
 		color: $color__dark;
 		display: inline-block;
 	}
-	.btn-sm & {
+	.btn-sm &,
+	.footer-menu & {
 		padding: 2px 8px;
 	}
 	.btn-lg & {
@@ -43,7 +45,10 @@ a {
 	}
 	.btn &:hover,
 	.btn &:focus,
-	.btn &:active {
+	.btn &:active,
+	.footer-menu &:hover,
+	.footer-menu &:focus,
+	.footer-menu &:active {
 		background-color: $color__primary;
 		color: #fff;
 	}
