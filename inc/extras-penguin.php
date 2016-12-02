@@ -36,7 +36,7 @@ add_filter( 'body_class', 'penguin_body_classes' );
 function penguin_add_post_class( $class ) {
 	$class[] = 'penguin-post';
 	if( ! is_sticky() ) {
-		$class[] .= 'penguin-post-not-sticky';
+		$class[] = 'penguin-post-not-sticky';
 	}
 	return $class;
 }
