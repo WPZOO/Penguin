@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file. This projec
 ## [0.3.0] - 2016-04-28
 ### Added
 - Improve font-size, especially headings
+- More ways of styling links as flat buttons
 - Links with underline [accessibility]
 - Missing change log information
 

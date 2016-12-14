@@ -34,6 +34,7 @@ function penguin_customizer_styles() {
 			'.btn a:hover',
 			'.btn a:focus',
 			'.btn a:active',
+			'.btn-colored a',
 			'#site-navigation .current_page_item > a',
 			'#site-navigation .current-menu-item > a',
 			'.bright-navbar #site-navigation .current_page_item > a',
@@ -73,7 +74,8 @@ function penguin_customizer_styles() {
 			'input[type="url"]:focus',
 			'input[type="password"]:focus',
 			'input[type="search"]:focus',
-			'textarea:focus'
+			'textarea:focus',
+			'.btn-outline a'
 		),
 		'declarations' => array(
 			'border-color' => esc_html( $color )
@@ -118,7 +120,8 @@ function penguin_customizer_styles() {
 			'.bright-navbar #site-navigation .site-title a.focus',
 			'.screen-reader-text:hover',
 			'.screen-reader-text:active',
-			'.screen-reader-text:focus'
+			'.screen-reader-text:focus',
+			'.btn-outline a'
 		),
 		'declarations' => array(
 			'color' => esc_html( $color )
