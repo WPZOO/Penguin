@@ -17,13 +17,13 @@
 				the_custom_logo();
 			} elseif ( $logo = get_theme_mod( 'logo-upload', false ) ) {
 				echo '<a class="site-logo" href="' . esc_url( home_url( '/' ) ) . '" rel="home">';
-				echo '<img title="' . get_bloginfo( 'name' ) . '" alt="' . get_bloginfo( 'name' ) . '" src="' . esc_url( $logo ) . '">';
+				echo '<img title="' . get_bloginfo( 'name', 'display' ) . '" alt="' . get_bloginfo( 'name', 'display' ) . '" src="' . esc_url( $logo ) . '">';
 				echo '</a>';
 			}
 			if ( is_front_page() && is_home() ) {
-				echo '<h1 class="site-title"><a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . get_bloginfo( 'name' ) . '</a></h1>';
+				echo '<h1 class="site-title"><a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . get_bloginfo( 'name', 'display' ) . '</a></h1>';
 			} else {
-				echo '<p class="site-title"><a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . get_bloginfo( 'name' ) . '</a></p>';
+				echo '<p class="site-title"><a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . get_bloginfo( 'name', 'display' ) . '</a></p>';
 			}
 		?>
 
