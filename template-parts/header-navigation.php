@@ -29,7 +29,7 @@
 
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="<?php _e( 'Menu', 'penguin' ) ?>">
 				<svg version="1.1" class="penguin-icon-menu" role="img">
-					<use xlink:href="<?php echo get_template_directory_uri() ?>/icons.svg#penguin-icon-menu"></use>
+					<use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/icons.svg#penguin-icon-menu"></use>
 				</svg>
 			</button>
 
