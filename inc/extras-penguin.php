@@ -18,8 +18,7 @@ function penguin_body_classes( $classes ) {
 	}
 
 	// Adds a class to handle the header img
-	global $post;
-	if ( has_post_thumbnail() && false == get_post_meta( $post->ID, 'header-img', true ) && ( is_page() || is_single() ) ) {
+	if ( has_post_thumbnail() && ! get_post_meta( get_the_ID(), 'header-img', true ) && ( is_page() || is_single() ) ) {
 		$classes[] = 'has-headerimg';
 	}
 
