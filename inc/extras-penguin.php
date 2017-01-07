@@ -35,7 +35,7 @@ add_filter( 'body_class', 'penguin_body_classes' );
  */
 function penguin_add_post_class( $class ) {
 	$class[] = 'penguin-post';
-	if( ! is_sticky() ) {
+	if ( ! is_sticky() ) {
 		$class[] = 'penguin-post-not-sticky';
 	}
 	return $class;
@@ -44,11 +44,13 @@ add_filter( 'post_class', 'penguin_add_post_class' );
 
 /**
  * Change image size on attachment pages.
+ *
+ * @param string $p The attachment HTML output.
  */
-function penguin_prepend_attachment($p) {
+function penguin_prepend_attachment( $p ) {
 	return '<p class="attachment">' . wp_get_attachment_link( 0, 'full', false ) . '</p>';
 }
-add_filter('prepend_attachment', 'penguin_prepend_attachment');
+add_filter( 'prepend_attachment', 'penguin_prepend_attachment' );
 
 /**
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
@@ -104,8 +106,8 @@ function penguin_read_more_text() {
 			__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'penguin' ),
 			array(
 				'span' => array(
-					'class' => array()
-				)
+					'class' => array(),
+				),
 			)
 		),
 		the_title( '<span class="screen-reader-text">"', '"</span>', false )
@@ -121,7 +123,7 @@ function penguin_excerpt_read_more_link( $output ) {
 		return;
 	}
 	if ( ! is_attachment() ) {
-		$output .= '<a href="'. esc_url( get_permalink() ) . '" class="read-more-link">' . penguin_read_more_text() . '</a>';
+		$output .= '<a href="' . esc_url( get_permalink() ) . '" class="read-more-link">' . penguin_read_more_text() . '</a>';
 	}
 	return $output;
 }
