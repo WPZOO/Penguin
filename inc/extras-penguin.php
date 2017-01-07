@@ -170,7 +170,7 @@ add_action( 'customize_controls_enqueue_scripts', 'penguin_upsell_notice' );
  * Footer text
  */
 function penguin_poweredby() {
-	$footer = '<div id="poweredby"><a href="http://wpzoo.ch" rel="designer">' . __( 'Penguin WordPress Theme made by WPZOO', 'penguin' ) . '</a></div>';
+	$footer = '<div id="poweredby"><a href="http://wpzoo.ch">' . __( 'Penguin WordPress Theme made by WPZOO', 'penguin' ) . '</a></div>';
 
 	echo apply_filters( 'penguin_footer_text', $footer );
 
