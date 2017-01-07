@@ -29,7 +29,7 @@ article.format-quote {
 
 /* Post Format Link */
 article.format-link {
-	background-color: $color__background-post-primary;
+	background-color: $color__primary;
 	border: none;
 	color: white;
 }
@@ -47,7 +47,7 @@ article.format-link .entry-meta-top a:active,
 article.format-link .entry-content a:hover,
 article.format-link .entry-content a:focus,
 article.format-link .entry-content a:active {
-	background-color: $color__background-post-primary;
+	background-color: $color__primary;
 	color: white;
 }
 article.format-link .entry-meta-bottom a {

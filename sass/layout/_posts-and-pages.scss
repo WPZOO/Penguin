@@ -1,5 +1,5 @@
 .penguin-post {
-	background-color: $color__background-post;
+	background-color: #fff;
 	border-top: 3px solid rgba(145, 145, 145, 0.4);
 	border-bottom: 1px solid #ccc;
 	border-right: 1px solid #ddd;
@@ -93,8 +93,7 @@
 	margin: 2px 0;
 }
 
-.entry-meta-top div,
-.entry-meta-bottom {
+.entry-meta-top div {
 	display: inline-block;
 }
 
@@ -119,11 +118,6 @@
 }
 
 @media screen and (min-width: 992px) {
-	.single .penguin-post,
-	.page .penguin-post {
-		padding: 40px 0;
-	}
-
 	.entry-title,
 	.entry-summary,
 	.entry-content,
@@ -137,7 +131,14 @@
 		margin-left: 30px;
 		margin-right: 30px;
 	}
-	
+}
+
+@media screen and (min-width: 1200px) {
+	.single .penguin-post,
+	.page .penguin-post {
+		padding: 40px 0;
+	}
+
 	.single .entry-title,
 	.single .entry-summary,
 	.single .entry-content,
@@ -147,8 +148,26 @@
 	.page .entry-summary,
 	.page .entry-content,
 	.page .entry-meta-top,
-	.page .entry-meta-bottom {
+	.page .entry-meta-bottom,
+	.sticky .entry-title,
+	.sticky .entry-summary,
+	.sticky .entry-content,
+	.sticky .entry-meta-top,
+	.sticky .entry-meta-bottom,
+	.penguin-post:only-of-type .entry-title,
+	.penguin-post:only-of-type .entry-summary,
+	.penguin-post:only-of-type .entry-content,
+	.penguin-post:only-of-type .entry-meta-top,
+	.penguin-post:only-of-type .entry-meta-bottom {
 		margin-left: 50px;
 		margin-right: 50px;
+	}
+	
+	.sticky.penguin-post {
+		padding-bottom: 40px;
+	}
+
+	.penguin-post:only-of-type {
+		padding: 40px 0;
 	}
 }

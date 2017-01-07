@@ -8,8 +8,8 @@
 		width: 100%;
 
 		a {
-			background-color: $color__background-btn;
-			color: $color__text-main !important;
+			background-color: $color__bg-btn;
+			color: $color__dark;
 			display: block;
 			padding: 12px 16px;
 		}
@@ -17,8 +17,8 @@
 		a:hover,
 		a:focus,
 		a:active {
-			background-color: $color__background-btn-hover;
-			color: white !important;
+			background-color: $color__primary;
+			color: #fff;
 		}
 	}
 

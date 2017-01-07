@@ -12,6 +12,7 @@
 	overflow: hidden;
 	position: relative;
 	width: 100%;
+	z-index: 1;
 
 	@media screen and (min-width: 400px) {
 		height: 200px;
@@ -19,6 +20,10 @@
 
 	@media screen and (min-width: 500px) {
 		height: 250px;
+	}
+
+	@media screen and (min-width: 601px) {
+		margin-top: -60px;
 	}
 
 	@media screen and (min-width: 600px) {
@@ -54,8 +59,12 @@
 	}
 }
 
-.post-thumbnail img {
-	width: 100%;
+.post-thumbnail {
+	margin-bottom: 5px;
+
+	img {
+		width: 100%;
+	}
 }
 
 .fullwidth-container {
@@ -70,7 +79,7 @@
 
 @media screen and (min-width: 600px) and (max-width: 991px) {
 	.post-thumbnail {
-		margin-bottom: 10px;
+		margin-bottom: 15px;
 	}
 
 	.fullwidth-container {
@@ -81,7 +90,7 @@
 
 @media screen and (min-width: 992px) {
 	.post-thumbnail {
-		margin-bottom: 15px;
+		margin-bottom: 20px;
 	}
 	.page .fullwidth-container,
 	.single .fullwidth-container {
@@ -92,6 +101,12 @@
 	.search .page .fullwidth-container {
 		left: -30px;
 		width: calc(100% + 60px);
+	}
+}
+@media screen and (min-width: 1200px) {
+	.sticky .post-thumbnail,
+	.penguin-post:only-of-type .post-thumbnail {
+		margin-bottom: 40px;
 	}
 }
 
@@ -110,7 +125,7 @@
 	@include transition(all, 0.3s, ease-in-out);
 
 	&:hover {
-		box-shadow: 0px 1px 3px #404040;
+		box-shadow: 0px 1px 3px $color__dark;
 	}
 }
 

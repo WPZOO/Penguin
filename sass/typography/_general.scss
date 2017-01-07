@@ -1,3 +1,13 @@
+.single .entry-content,
+.page .entry-content,
+.sticky .entry-content,
+.penguin-post:only-of-type .entry-content,
+.penguin-post:only-of-type .entry-summary {
+	@media screen and (min-width: 1200px) {
+		@include font-size(2);
+	}
+}
+
 p {
 	margin-bottom: .5em;
 }
@@ -25,7 +35,7 @@ address {
 }
 
 pre {
-	background: $color__background-pre;
+	background: #eee;
 	font-family: $font__pre;
 	font-size: inherit;
 	line-height: $font__line-height-pre;
@@ -41,12 +51,12 @@ code, kbd, tt, var {
 }
 
 abbr, acronym {
-	border-bottom: 1px dotted $color__border-abbr;
+	border-bottom: 1px dotted #666;
 	cursor: help;
 }
 
 mark, ins {
-	background: $color__background-ins;
+	background: #fff9c0;
 	text-decoration: none;
 }
 

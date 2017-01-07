@@ -18,14 +18,8 @@ function penguin_body_classes( $classes ) {
 	}
 
 	// Adds a class to handle the header img
-	global $post;
-	if ( has_post_thumbnail() && false == get_post_meta( $post->ID, 'header-img', true ) && ( is_page() || is_single() ) ) {
+	if ( has_post_thumbnail() && ! get_post_meta( get_the_ID(), 'header-img', true ) && ( is_page() || is_single() ) ) {
 		$classes[] = 'has-headerimg';
-	}
-
-	// Adds body class if logo has uploaded
-	if ( get_theme_mod( 'logo-upload', false ) ) {
-		$classes[] = 'has-logo';
 	}
 
 	return $classes;
@@ -40,17 +34,22 @@ add_filter( 'body_class', 'penguin_body_classes' );
  */
 function penguin_add_post_class( $class ) {
 	$class[] = 'penguin-post';
+	if ( ! is_sticky() ) {
+		$class[] = 'penguin-post-not-sticky';
+	}
 	return $class;
 }
 add_filter( 'post_class', 'penguin_add_post_class' );
 
 /**
  * Change image size on attachment pages.
+ *
+ * @param string $p The attachment HTML output.
  */
-function penguin_prepend_attachment($p) {
+function penguin_prepend_attachment( $p ) {
 	return '<p class="attachment">' . wp_get_attachment_link( 0, 'full', false ) . '</p>';
 }
-add_filter('prepend_attachment', 'penguin_prepend_attachment');
+add_filter( 'prepend_attachment', 'penguin_prepend_attachment' );
 
 /**
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
@@ -97,27 +96,6 @@ function penguin_wp_title( $title, $sep ) {
 add_filter( 'wp_title', 'penguin_wp_title', 10, 2 );
 
 /**
- * Sets the authordata global when viewing an author archive.
- *
- * This provides backwards compatibility with
- * http://core.trac.wordpress.org/changeset/25574
- *
- * It removes the need to call the_post() and rewind_posts() in an author
- * template to print information about the author.
- *
- * @global WP_Query $wp_query WordPress Query object.
- * @return void
- */
-function penguin_setup_author() {
-	global $wp_query;
-
-	if ( $wp_query->is_author() && isset( $wp_query->post ) ) {
-		$GLOBALS['authordata'] = get_userdata( $wp_query->post->post_author );
-	}
-}
-add_action( 'wp', 'penguin_setup_author' );
-
-/**
  * Read more text
  */
 function penguin_read_more_text() {
@@ -127,8 +105,8 @@ function penguin_read_more_text() {
 			__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'penguin' ),
 			array(
 				'span' => array(
-					'class' => array()
-				)
+					'class' => array(),
+				),
 			)
 		),
 		the_title( '<span class="screen-reader-text">"', '"</span>', false )
@@ -144,7 +122,7 @@ function penguin_excerpt_read_more_link( $output ) {
 		return;
 	}
 	if ( ! is_attachment() ) {
-		$output .= '<a href="'. esc_url( get_permalink() ) . '" class="read-more-link">' . penguin_read_more_text() . '</a>';
+		$output .= '<a href="' . esc_url( get_permalink() ) . '" class="read-more-link">' . penguin_read_more_text() . '</a>';
 	}
 	return $output;
 }
@@ -162,15 +140,11 @@ add_filter( 'excerpt_more', 'penguin_excerpt_more' );
  * Link to scroll back to the top of the page.
  */
 function penguin_back_to_top() {
-	$hamburger = '';
-	$hamburger .= '<a data-scroll href="#masthead" id="scroll-to-top">';
-	$hamburger .= '<svg version="1.1" aria-labelledby="icon-scroll-title icon-scroll-desc" class="penguin-icon-backtotop" role="img">';
-	$hamburger .= '<title id="icon-scroll-title">' . __( 'Scroll', 'penguin' ) . '</title>';
-	$hamburger .= '<desc id="icon-scroll-desc">' . __( 'Scroll To Top', 'penguin' ) . '</desc>';
-	$hamburger .= '<use xlink:href="' . get_template_directory_uri() . '/icons.svg#penguin-icon-backtotop"></use>';
-	$hamburger .= '</svg></a>';
-
-	echo $hamburger;
+	echo '<a data-scroll href="#masthead" id="scroll-to-top" aria-label="' . __( 'Scroll To Top', 'penguin' ) . '">',
+		'<svg version="1.1" class="penguin-icon-backtotop">',
+			'<use xlink:href="' . esc_url( get_template_directory_uri() ) . '/icons.svg#penguin-icon-backtotop"></use>',
+		'</svg>',
+	'</a>';
 }
 add_action( 'tha_footer_top', 'penguin_back_to_top' );
 
@@ -183,7 +157,7 @@ function penguin_upsell_notice() {
 		'penguin-customizer-goldad',
 		'penguinL10n',
 		array(
-			'penguinURL'   => __( 'http://wpzoo.ch/en/themes/penguin/', 'penguin' ),
+			'penguinURL'   => __( 'https://wpzoo.ch/en/themes/penguin/', 'penguin' ),
 			'penguinLabel' => __( 'Buy Gold Version', 'penguin' ),
 		)
 	);
@@ -195,10 +169,21 @@ add_action( 'customize_controls_enqueue_scripts', 'penguin_upsell_notice' );
  * Footer text
  */
 function penguin_poweredby() {
-	$footer = '<div id="poweredby"><a href="http://wpzoo.ch" rel="designer">' . __( 'Penguin WordPress Theme made by WPZOO', 'penguin' ) . '</a></div>';
- 
-	echo apply_filters( 'penguin_footer_text', $footer );
-
+	$footer = '<div id="poweredby"><a href="http://wpzoo.ch">' . __( 'Penguin WordPress Theme made by WPZOO', 'penguin' ) . '</a></div>';
+	echo wp_kses(
+		apply_filters( 'penguin_footer_text', $footer ),
+		array(
+			'div' => array(
+				'id' => array(),
+			),
+			'a' => array(
+				'href' => array(),
+			),
+			'span' => array(
+				'class' => array(),
+			),
+		)
+	);
 }
 add_action( 'tha_footer_bottom', 'penguin_poweredby' );
 
@@ -209,13 +194,10 @@ add_action( 'tha_footer_bottom', 'penguin_poweredby' );
  */
 function penguin_menu_item_arrow( $title, $item, $args, $depth ) {
 
-	if( in_array( 'menu-item-has-children', $item->classes ) && 0 === $depth) {
-		$arrow = '<svg version="1.1" aria-labelledby="icon-arrow-title icon-arrow-desc" class="penguin-icon-dropdown" role="img">';
-		$arrow .= '<title id="icon-arrow-title">' . __( 'Arrow down', 'penguin' ) . '</title>';
-		$arrow .= '<desc id="icon-arrow-desc">' . __( 'Icon points to existing submenu', 'penguin' ) . '</desc>';
-		$arrow .= '<use xlink:href="' . get_template_directory_uri() . '/icons.svg#penguin-icon-dropdown"></use>';
-		$arrow .= '</svg>';
-		return $title . $arrow;
+	if ( in_array( 'menu-item-has-children', $item->classes, true ) && 0 === $depth ) {
+		$title .= '<svg version="1.1" aria-hidden="true" class="penguin-icon-dropdown">' .
+			'<use xlink:href="' . esc_url( get_template_directory_uri() ) . '/icons.svg#penguin-icon-dropdown"></use>' .
+		'</svg>';
 	}
 	return $title;
 }

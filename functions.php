@@ -111,8 +111,8 @@ function penguin_widgets_init() {
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
 	) );
 }
 add_action( 'widgets_init', 'penguin_widgets_init' );
@@ -124,11 +124,12 @@ function penguin_scripts() {
 	$theme     = wp_get_theme();
 	$penguin   = wp_get_theme( 'penguin-gold' );
 	$minified  = get_theme_mod( 'min-files' );
-	$suffix    = ( 1 == $minified ) ? '.min' : '';
+	$suffix    = ( 1 === $minified ) ? '.min' : '';
 	$fluidvids = get_theme_mod( 'fluidvids', true );
 
 	if ( is_child_theme() ) {
-		wp_enqueue_style( 'penguin-parent-style', get_template_directory_uri() . '/style' . $suffix . '.css', false, $penguin['Version'] );
+		wp_enqueue_style( 'penguin-parent-style', get_template_directory_uri() . '/style.css', false, $penguin['Version'] );
+		wp_style_add_data( 'penguin-parent-style', 'suffix', $suffix );
 	}
 
 	wp_enqueue_style( 'penguin-style', get_stylesheet_uri(), false, $theme['Version'] );
@@ -139,7 +140,7 @@ function penguin_scripts() {
 	}
 
 	wp_enqueue_script( 'smooth-scroll', get_template_directory_uri() . '/js/smooth-scroll' . $suffix . '.js', array(), '5.3.3', true );
-	wp_enqueue_script( 'penguin-navigation', get_template_directory_uri() . '/js/navigation' . $suffix . '.js', array(), '20120206', true );
+	wp_enqueue_script( 'penguin-navigation', get_template_directory_uri() . '/js/navigation' . $suffix . '.js', array(), '20161106', true );
 
 	if ( 1 == $fluidvids ) {
 		wp_enqueue_script( 'fluidvids', get_template_directory_uri() . '/js/fluidvids' . $suffix . '.js', array(), '2.4.1', true );
@@ -172,12 +173,12 @@ add_filter( 'image_size_names_choose', 'penguin_show_custom_image_sizes' );
  */
 function penguin_content_image_sizes_attr($size) {
 	// Singular posts with sidebar
-	if ( is_singular() ) {
-		return '(max-width: 599px) calc(100vw - 50px), (max-width: 767px) calc(100vw - 70px), (max-width: 991px) 429px, (max-width: 1199px) 597px, 747px';
+	if ( is_singular() || is_sticky() ) {
+		return '(max-width: 599px) calc(100vw - 50px), (max-width: 767px) calc(100vw - 70px), (max-width: 991px) 429px, (max-width: 1199px) 637px, 747px';
 	}
 	// Page full width without sidebar
 	if ( get_page_template_slug() === 'page-fullwidth.php' ) {
-		return '(max-width: 599px) calc(100vw - 50px), (max-width: 767px) calc(100vw - 70px), (max-width: 991px) 679px, (max-width: 1199px) 839px, 1039px';
+		return '(max-width: 599px) calc(100vw - 50px), (max-width: 767px) calc(100vw - 70px), (max-width: 991px) 679px, (max-width: 1199px) 879px, 1039px';
 	}
 	// 2 col blog with sidebar
 	else {

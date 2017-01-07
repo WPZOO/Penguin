@@ -1,7 +1,7 @@
 # Penguin WordPress Theme
 ![Screenshot of the WordPress Theme Penguin](screenshot.png)
 
-Penguin is a clean and modern WordPress theme made by [WPZOO](http://wpzoo.ch/). Besides the link color, it consists of clean shades of grays. The post thumbnail will be used as a big header image on single posts as well as pages. Penguin theme can be used as blogging as well as a magazin theme.
+Penguin is a clean and modern WordPress theme made by [WPZOO](https://wpzoo.ch/). Besides the link color, it consists of clean shades of grays. The post thumbnail will be used as a big header image on single posts as well as pages. Penguin theme can be used as blogging as well as a magazin theme.
 
 Moreover Penguin is a responsive, mobile first theme. That means reading your website on mobile device will be as on a desktop computer.
 

@@ -5,32 +5,14 @@ if ( typeof jQuery == 'undefined' ) {
 	var posts_container = document.querySelector('#posts-container');
 	var penguin_post = document.querySelector('.penguin-post');
 	var msnry = new Masonry( posts_container, {
-		columnWidth: 400,
-		gutter: 32,
+		columnWidth: '.penguin-post-not-sticky',
+		gutter: 16,
 		itemSelector: '.penguin-post',
 		transitionDuration: '1s'
 	});
 	// initialize Masonry after all images have loaded
 	imagesLoaded( posts_container, function() {
 		msnry.layout();
-	});
-//	window.twttr = function (d, s, id) {
-//		var t, js, fjs = d.getElementsByTagName(s)[0];
-//		if (d.getElementById(id)) return; js = d.createElement(s); js.id = id;
-//		js.src = "https://platform.twitter.com/widgets.js";
-//		fjs.parentNode.insertBefore(js, fjs);
-//		return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });
-//	}(document, 'script', 'twitter-wjs');
-//
-//	twttr.ready(function (twttr) {
-//		twttr.events.bind('loaded', function (event) {
-//			//DO A MASONRY RELAYOUT HERE
-//			msnry.layout();
-//		});
-//	});
-	$('.elem').each(function(elem,index){
-		var height = $(elem).find('iframe').height();
-		$(elem).height(height);
 	});
 } else {
 	jQuery(document).ready(function ($) {
@@ -40,8 +22,8 @@ if ( typeof jQuery == 'undefined' ) {
 
 		$container.imagesLoaded( function() {
 			$container.masonry({
-				columnWidth: 400,
-				gutter: 32,
+				columnWidth: '.penguin-post-not-sticky',
+				gutter: 16,
 				itemSelector: '.penguin-post',
 				transitionDuration: '1s'
 			});

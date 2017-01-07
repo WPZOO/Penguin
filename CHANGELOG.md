@@ -1,6 +1,56 @@
 # Change Log
 All notable changes to this project will be documented in this file. This project follows [Semantic Versioning](http://semver.org/).
 
+## [0.3.0] - 2017-01-07
+### Added
+- Improve font-size, especially headings
+- More ways of styling links as flat buttons
+- Links with underline [accessibility]
+- Missing change log information
+
+### Fixed
+- Rebuild all navigation [accessibility]
+- Use only one h1 [accessibility]
+- SVG metadata without conflict html syntax
+- Padding of posts
+- Change URLs to HTTPS
+- Flexible `columnWidth` in masonry script
+- Remove i18n functions from variables
+- Update theme tags
+- Make get_bloginfo more secure
+- Escape get_template_directory_uri
+- Remove author data shim
+- Improve code style
+- Echo text directly instead of defining a variable
+- Use wp_style_add_data to define minified file
+- Fix translatability of comments title
+- Remove rel="designer" in credits link
+- Escape footer text
+
+### Removed
+- German translations (lite version only). Further using [translate.wordpress.org](translate.wordpress.org)
+- Not needed JS code
+
+## [0.2.0] - 2016-04-24
+### Added
+- Support Responsive Images
+- SVG icons
+- Core customizer
+- New custom logo
+- Editor styles
+
+### Removed
+- Options Framework
+- Icon Font
+
+### Fixed
+- Fullwidth class
+- Author page header
+- Correct GPL version and add copyright
+- Escaped `get_permalink()`
+- Change prefix from `tha_` to `penguin_`
+- Remove `the_posts_navigation` and `the_post_navigation`
+
 ## [0.1.4] - 2016-03-29
 ### Fixed
 - Fix one post layout issue

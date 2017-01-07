@@ -1,43 +1,48 @@
-#site-navigation {
-	background: $color__background-main-nav;
+#navbar {
+	background: $color__dark-transparent;
 	@include box-sizing(border-box);
+	color: #fff;
+	position: relative;
+	z-index: 20;
+
+	.bright-navbar & {
+		background: $color__bright-transparent;
+		color: $color__dark;
+	}
+}
+
+#site-navigation {
 	clear: both;
-	color: $color__text-main-nav;
 	display: block;
 	height: auto;
-	position: relative;
 	width: 100%;
 
-	.has-headerimg & {
-
-		@media screen and (min-width: 600px) {
-			position: absolute;
-			z-index: 1000;
-		}
-	}
-
-	ul {
-		list-style: none;
+	.nav-menu,
+	.sub-menu {
+		list-style-type: none;
 		margin: 0;
 	}
 
 	li {
 		float: left;
 		position: relative;
+		
+		&:hover > a,
+		&.focus > a {
+			background-color: #fff;
+			color: $color__primary;
+		}
 	}
 
 	a {
 		color: #fff;
 		display: block;
 		font-size: .8em;
-		height: 50px;
-		line-height: 50px;
+		height: 60px;
+		line-height: 60px;
+		outline-offset: -1px;
 		text-decoration: none;
-
-		&:hover {
-			background-color: white;
-			color: $color__link;
-		}
+		transition: none;
 	}
 
 	.site-title {
@@ -48,22 +53,17 @@
 		a {
 			color: #fff;
 			font-size: 20px;
+			font-weight: 600;
 			text-transform: uppercase;
 			letter-spacing: 1px;
-			margin-right: 5px;
+			margin-right: 20px;
 			padding-left: 0;
-
-			&:hover {
-				color: $color__link;
-				background-color: transparent;
+			
+			&:hover,
+			&:focus {
+				color: $color__primary;
 			}
 		}
-	}
-
-	.has-logo & a,
-	.wp-custom-logo & a {
-		height: 60px;
-		line-height: 60px;
 	}
 
 	.custom-logo-link,
@@ -73,7 +73,9 @@
 		padding: 5px 0;
 
 		&:hover,
-		.bright-navbar &:hover {
+		&.focus,
+		.bright-navbar &:hover,
+		.bright-navbar &.focus {
 			background-color: transparent;
 		}
 
@@ -83,15 +85,10 @@
 		}
 	}
 
-	.skip-link {
-		color: black;
-		line-height: 1.5;
-	}
-
 	.current_page_item > a,
 	.current-menu-item > a {
-		background-color: $color__background-main-nav-current;
-		color: white !important;
+		background-color: $color__primary;
+		color: #fff;
 		font-weight: bold;
 	}
 
@@ -99,33 +96,35 @@
 	.current-menu-ancestor > a {
 		font-weight: bold;
 	}
+}
 
-	.bright-navbar & {
-		background: $color__background-main-nav-bright;
-		color: $color__text-main-nav-bright;
 
-		a {
-			color: $color__text-main-nav-bright;
-		}
+.bright-navbar #site-navigation {
 
-		a:hover {
-			background-color: $color__background-main-nav-hover-bright;
-			color: $color__link;
-		}
+	a {
+		color: $color__dark;
+	}
 
-		.current_page_item > a,
-		.current-menu-item > a {
-			background-color: $color__background-main-nav-current;
-		}
+	.current_page_item > a,
+	.current-menu-item > a {
+		background-color: $color__primary;
+		color: #fff;
+	}
 
-		.site-title a {
-			color: $color__text-main-nav-bright;
-		}
+	a:hover,
+	a.focus {
+		background-color: rgba(0,0,0,0.03);
+		color: $color__primary;
+	}
 
-		.site-title a:hover {
-			background-color: transparent;
-			color: $color__link;
-		}
+	.site-title a {
+		color: $color__dark;
+	}
+
+	.site-title a:hover,
+	.site-title a.focus {
+		background-color: transparent;
+		color: $color__primary;
 	}
 }
 
@@ -146,34 +145,18 @@
 		float: left;
 		@include font-size-small;
 		line-height: 2;
-		margin: 0 10px 0 0;
+		margin: 0 5px 5px 0;
 	}
 }
 
 @media screen and (max-width: 600px) {
 
-	.menu-toggle,
-	#site-navigation.toggled .nav-menu {
-		display: block;
-		float: right;
-	}
-
 	#site-navigation {
 
-		.has-logo & .nav-menu,
-		.wp-custom-logo & .nav-menu {
-			margin-top: .5em;
-		}
-
-		.has-logo & li a,
-		.wp-custom-logo & li a {
-			height: 50px;
-			line-height: 50px;
-		}
-
-		ul {
+		.nav-menu {
 			display: none;
 			max-height: 100%;
+			margin-top: .5em;
 			overflow-y: scroll;
 			text-indent: .5em;
 
@@ -184,7 +167,7 @@
 		}
 
 		li {
-			border-top: 1px solid rgba(255,255,255,0.5);
+			border-top: 1px solid #fff;
 			display: block;
 			width: 100%;
 
@@ -194,51 +177,69 @@
 		}
 
 		.bright-navbar & li {
-			border-top: 1px solid rgba(0,0,0,0.5);
+			border-top: 1px solid $color__dark;
+		}
+
+		.menu-search {
+			border-color: #fff;
+			padding: 16px 16px 16px 0;
+		}
+		.search-field {
+			@include box-sizing(border-box);
+			border-color: transparent;
+			text-indent: 25px;
+			width: 100%;
+
+			.bright-navbar & {
+				border-color: $color__dark;
+			}
 		}
 	}
 
-	#masthead {
-
-		.menu-search {
-			padding: 5px 16px 5px 0;
-
-			.search-field {
-				@include box-sizing(border-box);
-				text-indent: 25px;
-				width: 100%;
-			}
+	.menu-toggle {
+		background: transparent;
+		border-color: #fff;
+		box-shadow: none;
+		color: #fff;
+		height: 50px;
+		margin: 5px 0;
+		padding: 0;
+		width: 50px;
+		
+		.bright-navbar & {
+			border-color: $color__dark;
+			color: $color__dark;
 		}
+	}
+	.menu-toggle,
+	#site-navigation.toggled .nav-menu {
+		display: block;
+		float: right;
 	}
 }
 
 @media screen and (min-width: 601px) {
 
-	#site-navigation {
+	#site-navigation .nav-menu {
 
 		a {
 			padding-left: 12px;
 			padding-right: 12px;
 		}
 
-		ul ul {
+		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
 			position: absolute;
-			top: 50px;
+			top: 60px;
 			left: -999em;
-			z-index: 99999;
-
-			.has-logo &,
-			.wp-custom-logo & {
-				top: 60px;
-			}
+			z-index: 9999;
 
 			li {
-				background-color: $color__background-main-nav;
+				background-color: $color__dark-transparent;
 
 				.bright-navbar & {
-					background-color: $color__background-main-nav-bright;
+					background-color: $color__bright-transparent;
 				}
 			}
 
@@ -248,12 +249,11 @@
 			}
 		}
 
-		li:hover > ul {
-			left: auto;
+		li:hover > ul,
+		li.focus > ul {
+			left: 0;
+			margin-left: 0;
 		}
-	}
-
-	#masthead {
 
 		.menu-search {
 			display: block;
@@ -269,19 +269,15 @@
 				@include box-sizing(border-box);
 				cursor: pointer;
 				height: 50px;
+				margin-top: 5px;
 				position: absolute;
 				right: 0;
 				text-indent: 25px;
 				@include transition(all, 0.2s, ease-in-out);
 				width: 0;
 
-				.has-logo &,
-				.wp-custom-logo & {
-					margin-top: 5px;
-				}
-
 				&:focus {
-					background-color: white;
+					background-color: #fff;
 					border-width: 1px;
 					text-indent: 0;
 					width: 220px;
