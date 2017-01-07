@@ -170,9 +170,20 @@ add_action( 'customize_controls_enqueue_scripts', 'penguin_upsell_notice' );
  */
 function penguin_poweredby() {
 	$footer = '<div id="poweredby"><a href="http://wpzoo.ch">' . __( 'Penguin WordPress Theme made by WPZOO', 'penguin' ) . '</a></div>';
-
-	echo apply_filters( 'penguin_footer_text', $footer );
-
+	echo wp_kses(
+		apply_filters( 'penguin_footer_text', $footer ),
+		array(
+			'div' => array(
+				'id' => array(),
+			),
+			'a' => array(
+				'href' => array(),
+			),
+			'span' => array(
+				'class' => array(),
+			),
+		)
+	);
 }
 add_action( 'tha_footer_bottom', 'penguin_poweredby' );
 
