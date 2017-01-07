@@ -141,13 +141,11 @@ add_filter( 'excerpt_more', 'penguin_excerpt_more' );
  * Link to scroll back to the top of the page.
  */
 function penguin_back_to_top() {
-	$hamburger = '';
-	$hamburger .= '<a data-scroll href="#masthead" id="scroll-to-top" aria-label="'. __( 'Scroll To Top', 'penguin' ) . '">';
-	$hamburger .= '<svg version="1.1" class="penguin-icon-backtotop">';
-	$hamburger .= '<use xlink:href="' . esc_url( get_template_directory_uri() ) . '/icons.svg#penguin-icon-backtotop"></use>';
-	$hamburger .= '</svg></a>';
-
-	echo $hamburger;
+	echo '<a data-scroll href="#masthead" id="scroll-to-top" aria-label="' . __( 'Scroll To Top', 'penguin' ) . '">',
+		'<svg version="1.1" class="penguin-icon-backtotop">',
+			'<use xlink:href="' . esc_url( get_template_directory_uri() ) . '/icons.svg#penguin-icon-backtotop"></use>',
+		'</svg>',
+	'</a>';
 }
 add_action( 'tha_footer_top', 'penguin_back_to_top' );
 
