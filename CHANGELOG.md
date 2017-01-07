@@ -1,7 +1,7 @@
 # Change Log
 All notable changes to this project will be documented in this file. This project follows [Semantic Versioning](http://semver.org/).
 
-## [0.3.0] - 2016-04-28
+## [0.3.0] - 2017-01-07
 ### Added
 - Improve font-size, especially headings
 - More ways of styling links as flat buttons
@@ -25,6 +25,7 @@ All notable changes to this project will be documented in this file. This projec
 - Use wp_style_add_data to define minified file
 - Fix translatability of comments title
 - Remove rel="designer" in credits link
+- Escape footer text
 
 ### Removed
 - German translations (lite version only). Further using [translate.wordpress.org](translate.wordpress.org)
