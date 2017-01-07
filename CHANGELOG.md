@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file. This project follows [Semantic Versioning](http://semver.org/).
 
+## [0.3.1] - 2017-01-07
+### Fixed
+- Typo in theme tag
+
 ## [0.3.0] - 2017-01-07
 ### Added
 - Improve font-size, especially headings
