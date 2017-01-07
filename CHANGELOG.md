@@ -17,6 +17,14 @@ All notable changes to this project will be documented in this file. This projec
 - Flexible `columnWidth` in masonry script
 - Remove i18n functions from variables
 - Update theme tags
+- Make get_bloginfo more secure
+- Escape get_template_directory_uri
+- Remove author data shim
+- Improve code style
+- Echo text directly instead of defining a variable
+- Use wp_style_add_data to define minified file
+- Fix translatability of comments title
+- Remove rel="designer" in credits link
 
 ### Removed
 - German translations (lite version only). Further using [translate.wordpress.org](translate.wordpress.org)
