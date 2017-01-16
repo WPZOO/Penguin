@@ -14,7 +14,7 @@ input[type="submit"] {
 	line-height: 1;
 	padding: 16px 25px;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-	@include transition( all, 0.2s, ease-in-out )
+	transition: all 0.2s ease-in-out;
 }
 
 button:hover,

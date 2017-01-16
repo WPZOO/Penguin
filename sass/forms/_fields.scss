@@ -30,7 +30,7 @@ textarea {
 	@include border-radius(0);
 	color: #666;
 	padding: 10.5px;
-	@include transition(all, 0.3s, ease-in-out)
+	transition: all 0.3s ease-in-out;
 }
 
 input[type="text"]:focus,
