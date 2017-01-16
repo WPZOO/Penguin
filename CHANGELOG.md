@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file. This project follows [Semantic Versioning](http://semver.org/).
 
+## [0.3.2] - 2017-01-16
+### Fixed
+- Excerpt sticky font size on big screen
+
 ## [0.3.1] - 2017-01-07
 ### Fixed
 - Typo in theme tag
