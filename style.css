@@ -1661,6 +1661,15 @@ a img {
 	background: rgba(255, 255, 255, 0.95);
 }
 
+#scroll-to-top:focus {
+	border: 1px solid #06c;
+	outline: 0;
+}
+
+#scroll-to-top:focus svg {
+	fill: #06c;
+}
+
 
 /*--------------------------------------------------------------
 7.0 - Layout

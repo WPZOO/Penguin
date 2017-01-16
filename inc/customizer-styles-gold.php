@@ -75,7 +75,8 @@ function penguin_customizer_styles() {
 			'input[type="password"]:focus',
 			'input[type="search"]:focus',
 			'textarea:focus',
-			'.btn-outline a'
+			'.btn-outline a',
+			'#scroll-to-top:focus'
 		),
 		'declarations' => array(
 			'border-color' => esc_html( $color )
@@ -135,6 +136,16 @@ function penguin_customizer_styles() {
 		),
 		'declarations' => array(
 			'outline-color' => esc_html( $color )
+		)
+	) );
+
+	// fill
+	Customizer_Library_Styles()->add( array(
+		'selectors' => array(
+			'#scroll-to-top:focus svg'
+		),
+		'declarations' => array(
+			'fill' => esc_html( $color )
 		)
 	) );
 
