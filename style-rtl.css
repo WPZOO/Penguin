@@ -1343,6 +1343,7 @@ a img {
 
 #site-navigation .custom-logo-link,
 #site-navigation .site-logo {
+	border-bottom: 0;
 	float: right;
 	margin-left: 20px;
 	padding: 5px 0;
@@ -1364,6 +1365,7 @@ a img {
 #site-navigation .custom-logo-link img,
 #site-navigation .site-logo img {
 	max-height: 50px;
+	vertical-align: baseline;
 	width: auto;
 }
 
