@@ -3,7 +3,14 @@ All notable changes to this project will be documented in this file. This projec
 
 ## [0.3.2] - 2017-01-16
 ### Fixed
+- Fix focus styling of scroll to top
 - Excerpt sticky font size on big screen
+- Fix appearance of custom logo
+- Accessibility of search form
+- Contrast of copyright text
+- ARIA label to menus
+- aria-hidden for decorative svg icons
+- word-wrap normal for screen-reader-text
 
 ## [0.3.1] - 2017-01-07
 ### Fixed
