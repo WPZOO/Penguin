@@ -141,7 +141,7 @@ add_filter( 'excerpt_more', 'penguin_excerpt_more' );
  */
 function penguin_back_to_top() {
 	echo '<a data-scroll href="#masthead" id="scroll-to-top" aria-label="' . __( 'Scroll To Top', 'penguin' ) . '">',
-		'<svg version="1.1" class="penguin-icon-backtotop">',
+		'<svg version="1.1" class="penguin-icon-backtotop" aria-hidden="true">',
 			'<use xlink:href="' . esc_url( get_template_directory_uri() ) . '/icons.svg#penguin-icon-backtotop"></use>',
 		'</svg>',
 	'</a>';
