@@ -10,7 +10,7 @@
 
 	<div class="container">
 
-		<nav id="site-navigation" class="main-navigation clear" role="navigation">
+		<nav id="site-navigation" class="main-navigation clear" role="navigation" aria-label="<?php esc_attr_e( 'Primary Navigation', 'penguin' ); ?>">
 
 		<?php
 			if ( function_exists( 'the_custom_logo' ) ) {
