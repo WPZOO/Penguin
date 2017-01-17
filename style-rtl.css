@@ -1407,10 +1407,6 @@ a img {
 	color: #06c;
 }
 
-.menu-search .search-submit {
-	display: none;
-}
-
 .menu-toggle {
 	cursor: pointer;
 	display: none;
@@ -2313,11 +2309,6 @@ span.required {
 	margin-bottom: 10px;
 	padding-bottom: 5px;
 	text-transform: uppercase;
-}
-
-/* Search widget */
-.widget_search .search-submit {
-	display: none;
 }
 
 /* Calendar widget */
