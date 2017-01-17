@@ -1787,7 +1787,7 @@ a img {
 }
 
 #poweredby {
-	color: #cdcdcd;
+	color: #404040;
 	font-size: 0.85em;
 }
 
@@ -1799,7 +1799,7 @@ a img {
 
 #poweredby a {
 	border-bottom: none;
-	color: #cdcdcd;
+	color: #404040;
 	font-weight: 600;
 }
 
