@@ -57,7 +57,7 @@ function penguin_gold_add_search_box($items, $args) {
 		$items .= '<li class="menu-search">
 			<svg version="1.1" aria-hidden="true" class="penguin-icon-search">
 			<use xlink:href="' . esc_url( get_template_directory_uri() ) . '/icons.svg#penguin-icon-search"></use>
-			</svg>' . get_search_form( $echo = false ) . '</li>';
+			</svg>' . get_search_form( false ) . '</li>';
 	}
 	return $items;
 }
