@@ -194,7 +194,7 @@ add_action( 'tha_footer_bottom', 'penguin_poweredby' );
  */
 function penguin_menu_item_arrow( $title, $item, $args, $depth ) {
 
-	if ( in_array( 'menu-item-has-children', $item->classes, true ) && 0 === $depth ) {
+	if ( 'primary' === $args->theme_location && in_array( 'menu-item-has-children', $item->classes, true ) && 0 === $depth ) {
 		$title .= '<svg version="1.1" aria-hidden="true" class="penguin-icon-dropdown">' .
 			'<use xlink:href="' . esc_url( get_template_directory_uri() ) . '/icons.svg#penguin-icon-dropdown"></use>' .
 		'</svg>';
