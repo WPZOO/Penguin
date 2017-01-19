@@ -94,12 +94,12 @@
 }
 
 #poweredby {
-	color: #cdcdcd;
+	color: #404040;
 	@include font-size-small;
 
 	a {
 		border-bottom: none;
-		color: #cdcdcd;
+		color: #404040;
 		font-weight: $font__weight-bold;
 	}
 }

@@ -15,7 +15,7 @@
 <footer id="colophon" class="site-footer container" role="contentinfo">
 	<?php penguin_footer_top(); ?>
 
-	<nav id="secondary-navigation" role="navigation">
+	<nav id="secondary-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Secondary Navigation', 'penguin' ); ?>">
 		<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class' => 'footer-menu nav-menu clear', 'depth' => 1, 'fallback_cb'=> '' ) ); ?>
 	</nav>
 	<?php penguin_footer_bottom(); ?>

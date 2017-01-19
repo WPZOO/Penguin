@@ -25,4 +25,12 @@
 		background: $color__bright-transparent;
 	}
 
+	&:focus {
+		border: 1px solid $color__primary;
+		outline: 0;
+
+		svg {
+			fill: $color__primary;
+		}
+	}
 }

@@ -68,6 +68,7 @@
 
 	.custom-logo-link,
 	.site-logo {
+		border-bottom: 0;
 		float: left;
 		margin-right: 20px;
 		padding: 5px 0;
@@ -81,6 +82,7 @@
 
 		img {
 			max-height: 50px;
+			vertical-align: baseline;
 			width: auto;
 		}
 	}
@@ -126,10 +128,6 @@
 		background-color: transparent;
 		color: $color__primary;
 	}
-}
-
-.menu-search .search-submit {
-	display: none;
 }
 
 .menu-toggle {
@@ -273,7 +271,7 @@
 				position: absolute;
 				right: 0;
 				text-indent: 25px;
-				@include transition(all, 0.2s, ease-in-out);
+				transition: all 0.2s ease-in-out;
 				width: 0;
 
 				&:focus {

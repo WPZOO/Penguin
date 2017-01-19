@@ -10,7 +10,7 @@
 
 	<div class="container">
 
-		<nav id="site-navigation" class="main-navigation clear" role="navigation">
+		<nav id="site-navigation" class="main-navigation clear" role="navigation" aria-label="<?php esc_attr_e( 'Primary Navigation', 'penguin' ); ?>">
 
 		<?php
 			if ( function_exists( 'the_custom_logo' ) ) {
@@ -28,7 +28,7 @@
 		?>
 
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="<?php _e( 'Menu', 'penguin' ) ?>">
-				<svg version="1.1" class="penguin-icon-menu" role="img">
+				<svg version="1.1" class="penguin-icon-menu" role="img" aria-hidden="true">
 					<use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/icons.svg#penguin-icon-menu"></use>
 				</svg>
 			</button>

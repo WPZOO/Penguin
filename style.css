@@ -4,8 +4,8 @@ Theme URI:   https://wpzoo.ch/en/themes/penguin/
 Description: Penguin is a clean and modern WordPress theme made by WPZOO. Besides the link color the used colors are monochromatic. The post thumbnail will be used as a big header image on single post pages as well as Pages. These theme characteristics make it possible to use Penguin for bloggin' as well as a magazin theme.
 Author:      WPZOO
 Author URI:  https://wpzoo.ch/en/
-Version:     0.3.1
-Tags:        grid-layout, two-columns, three-columns, right-sidebar, custom-menu, custom-logo, editor-style, featured-image-header, featured-images, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog
+Version:     0.3.2
+Tags:        grid-layout, two-columns, three-columns, right-sidebar, custom-menu, custom-logo, editor-style, featured-image-header, featured-images, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, accessibility-ready
 Text Domain: penguin-gold
 Domain Path: /languages
 License:     GPL-2.0+
@@ -479,6 +479,7 @@ h6 {
 	.single .entry-content,
 	.page .entry-content,
 	.sticky .entry-content,
+	.sticky .entry-summary,
 	.penguin-post:only-of-type .entry-content,
 	.penguin-post:only-of-type .entry-summary {
 		font-size: 20px;
@@ -1342,6 +1343,7 @@ a img {
 
 #site-navigation .custom-logo-link,
 #site-navigation .site-logo {
+	border-bottom: 0;
 	float: left;
 	margin-right: 20px;
 	padding: 5px 0;
@@ -1363,6 +1365,7 @@ a img {
 #site-navigation .custom-logo-link img,
 #site-navigation .site-logo img {
 	max-height: 50px;
+	vertical-align: baseline;
 	width: auto;
 }
 
@@ -1402,10 +1405,6 @@ a img {
 .bright-navbar #site-navigation .site-title a.focus {
 	background-color: transparent;
 	color: #06c;
-}
-
-.menu-search .search-submit {
-	display: none;
 }
 
 .menu-toggle {
@@ -1661,6 +1660,15 @@ a img {
 	background: rgba(255, 255, 255, 0.95);
 }
 
+#scroll-to-top:focus {
+	border: 1px solid #06c;
+	outline: 0;
+}
+
+#scroll-to-top:focus svg {
+	fill: #06c;
+}
+
 
 /*--------------------------------------------------------------
 7.0 - Layout
@@ -1779,7 +1787,7 @@ a img {
 }
 
 #poweredby {
-	color: #cdcdcd;
+	color: #404040;
 	font-size: 0.85em;
 }
 
@@ -1791,7 +1799,7 @@ a img {
 
 #poweredby a {
 	border-bottom: none;
-	color: #cdcdcd;
+	color: #404040;
 	font-weight: 600;
 }
 
@@ -2303,11 +2311,6 @@ span.required {
 	text-transform: uppercase;
 }
 
-/* Search widget */
-.widget_search .search-submit {
-	display: none;
-}
-
 /* Calendar widget */
 #calendar_wrap table {
 	margin-bottom: 0;
@@ -2410,6 +2413,8 @@ article:after,
 	overflow: hidden;
 	position: absolute !important;
 	width: 1px;
+	word-wrap: normal !important;
+	/* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
 
 .screen-reader-text:hover,

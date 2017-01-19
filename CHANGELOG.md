@@ -1,6 +1,18 @@
 # Change Log
 All notable changes to this project will be documented in this file. This project follows [Semantic Versioning](http://semver.org/).
 
+## [0.3.2] - 2017-01-19
+### Fixed
+- Fix focus styling of scroll to top
+- Excerpt sticky font size on big screen
+- Fix appearance of custom logo
+- Add search form template and improve accessibility
+- Contrast of copyright text
+- ARIA label to menus
+- aria-hidden for decorative svg icons
+- word-wrap normal for screen-reader-text
+- Restrict menu item arrow to the primary menu
+
 ## [0.3.1] - 2017-01-07
 ### Fixed
 - Typo in theme tag

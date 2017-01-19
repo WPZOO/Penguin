@@ -122,7 +122,7 @@
 .img-thumbnail {
 	border: 3px solid #fff;
 	box-shadow: 0px 1px 3px #ccc;
-	@include transition(all, 0.3s, ease-in-out);
+	transition: all 0.3s ease-in-out;
 
 	&:hover {
 		box-shadow: 0px 1px 3px $color__dark;

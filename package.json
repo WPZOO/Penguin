@@ -4,7 +4,7 @@
   "description": "WP Theme Penguin Gold",
   "author": "Stefan Brechbühl",
   "homepage": "https://wpzoo.ch/",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "copyright": "2016",
   "license": "GPL-2.0+",
   "private": true,
@@ -39,7 +39,7 @@
     "licenseuri": "http://www.gnu.org/licenses/gpl-2.0.html",
     "textdomain": "penguin-gold",
     "domainpath": "/languages",
-    "tags": "grid-layout, two-columns, three-columns, right-sidebar, custom-menu, custom-logo, editor-style, featured-image-header, featured-images, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog"
+    "tags": "grid-layout, two-columns, three-columns, right-sidebar, custom-menu, custom-logo, editor-style, featured-image-header, featured-images, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, accessibility-ready"
   },
   "bugs": {
     "url": "https://github.com/WPZOO/penguin-gold/issues",
