@@ -43,6 +43,9 @@ The `Customizer_Library_Styles` class from the [Customizer Library](https://gith
 ### Theme Hook Alliance
 For better customization of the theme, there are suggested hooks by [Theme Hook Alliance](https://github.com/zamoose/themehookalliance) included.
 
+### svgxuse
+The [svgxuse](https://github.com/Keyamoon/svgxuse) polyfill by Keyamoon fetches external SVGs referenced in `<use>` elements. This will be loaded for Internet Explorer only.
+
 ### Images in screenshot
 The images, which are visible in the theme screenshot, are licensed under [Creative Commons Zero](http://creativecommons.org/publicdomain/zero/1.0/):
 - [https://unsplash.com/photos/gapYVvUg1M8](https://unsplash.com/photos/gapYVvUg1M8)

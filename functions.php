@@ -149,6 +149,9 @@ function penguin_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	wp_enqueue_script( 'ant_theme-svgxuse', get_template_directory_uri() . '/js/svgxuse' .$suffix . '.js', array(), '1.1.23', false );
+	wp_script_add_data( 'ant_theme-svgxuse', 'conditional', 'lte IE 11' );
 }
 add_action( 'wp_enqueue_scripts', 'penguin_scripts' );
 
