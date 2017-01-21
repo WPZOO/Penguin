@@ -11,16 +11,17 @@
 			.attr('target', '_blank')
 			.text(penguinL10n.penguinLabel)
 			.css({
-				'display' : 'inline-block',
-				'background-color' : 'goldenrod',
-				'color' : '#fff',
-				'text-transform' : 'uppercase',
-				'margin-top' : '6px',
-				'padding' : '4px 6px',
+				'background-color': 'goldenrod',
+				'clear': 'both',
+				'color': '#fff',
+				'display': 'inline-block',
 				'font-size': '10px',
 				'letter-spacing': '1px',
 				'line-height': '1.5',
-				'clear' : 'both'
+				'margin-top': '6px',
+				'padding': '4px 6px',
+				'text-transform': 'uppercase',
+				'text-decoration': 'none'
 			})
 		;
 
