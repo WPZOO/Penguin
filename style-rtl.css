@@ -1863,13 +1863,6 @@ a img {
 	}
 }
 
-.blog .has-post-thumbnail,
-.search .has-post-thumbnail,
-.archive .has-post-thumbnail {
-	border-top: none;
-	padding-top: 0;
-}
-
 .single .penguin-post {
 	margin-bottom: 0;
 }
@@ -1970,7 +1963,9 @@ a img {
 
 @media screen and (min-width: 1200px) {
 	.single .penguin-post,
-	.page .penguin-post {
+	.page .penguin-post,
+	.sticky.penguin-post,
+	.penguin-post:only-of-type {
 		padding: 40px 0;
 	}
 
@@ -1997,14 +1992,13 @@ a img {
 		margin-right: 50px;
 		margin-left: 50px;
 	}
+}
 
-	.sticky.penguin-post {
-		padding-bottom: 40px;
-	}
-
-	.penguin-post:only-of-type {
-		padding: 40px 0;
-	}
+.blog .has-post-thumbnail,
+.search .has-post-thumbnail,
+.archive .has-post-thumbnail {
+	border-top: none;
+	padding-top: 0;
 }
 
 
