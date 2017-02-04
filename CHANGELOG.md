@@ -1,6 +1,16 @@
 # Change Log
 All notable changes to this project will be documented in this file. This project follows [Semantic Versioning](http://semver.org/).
 
+## [0.3.3] - 2017-02-04
+### Added
+- svgxuse polyfill
+
+### Fixed
+- Padding of stand alone post
+- Styling of last p and cite inside blockquote
+- Line height of link in link post format
+- Screenshot size 1200x900
+
 ## [0.3.2] - 2017-01-19
 ### Fixed
 - Fix focus styling of scroll to top
