@@ -1325,6 +1325,12 @@ a img {
 	color: #06c;
 }
 
+.bright-navbar #site-navigation li:hover > a,
+.bright-navbar #site-navigation li.focus > a {
+	background-color: rgba(0, 0, 0, 0.03);
+	color: #06c;
+}
+
 #site-navigation a {
 	color: #fff;
 	display: block;
@@ -1335,6 +1341,10 @@ a img {
 	text-decoration: none;
 	-webkit-transition: none;
 	transition: none;
+}
+
+.bright-navbar #site-navigation a {
+	color: #404040;
 }
 
 #site-navigation .site-title {
@@ -1355,6 +1365,16 @@ a img {
 
 #site-navigation .site-title a:hover,
 #site-navigation .site-title a:focus {
+	color: #06c;
+}
+
+.bright-navbar #site-navigation .site-title a {
+	color: #404040;
+}
+
+.bright-navbar #site-navigation .site-title a:hover,
+.bright-navbar #site-navigation .site-title a.focus {
+	background-color: transparent;
 	color: #06c;
 }
 
@@ -1396,32 +1416,6 @@ a img {
 #site-navigation .current_page_ancestor > a,
 #site-navigation .current-menu-ancestor > a {
 	font-weight: bold;
-}
-
-.bright-navbar #site-navigation a {
-	color: #404040;
-}
-
-.bright-navbar #site-navigation .current_page_item > a,
-.bright-navbar #site-navigation .current-menu-item > a {
-	background-color: #06c;
-	color: #fff;
-}
-
-.bright-navbar #site-navigation a:hover,
-.bright-navbar #site-navigation a.focus {
-	background-color: rgba(0, 0, 0, 0.03);
-	color: #06c;
-}
-
-.bright-navbar #site-navigation .site-title a {
-	color: #404040;
-}
-
-.bright-navbar #site-navigation .site-title a:hover,
-.bright-navbar #site-navigation .site-title a.focus {
-	background-color: transparent;
-	color: #06c;
 }
 
 .menu-toggle {

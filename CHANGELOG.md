@@ -1,7 +1,7 @@
 # Change Log
 All notable changes to this project will be documented in this file. This project follows [Semantic Versioning](http://semver.org/).
 
-## [0.3.3] - 2017-02-04
+## [0.3.3] - 2017-02-07
 ### Added
 - svgxuse polyfill
 
@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file. This projec
 - Styling of last p and cite inside blockquote
 - Line height of link in link post format
 - Screenshot size 1200x900
+- Fix primary color bug
 
 ## [0.3.2] - 2017-01-19
 ### Fixed
