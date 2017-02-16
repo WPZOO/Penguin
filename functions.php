@@ -150,8 +150,8 @@ function penguin_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	wp_enqueue_script( 'ant_theme-svgxuse', get_template_directory_uri() . '/js/svgxuse' .$suffix . '.js', array(), '1.1.23', false );
-	wp_script_add_data( 'ant_theme-svgxuse', 'conditional', 'lte IE 11' );
+	wp_enqueue_script( 'svgxuse', get_template_directory_uri() . '/js/svgxuse' .$suffix . '.js', array(), '1.1.23', false );
+	wp_script_add_data( 'svgxuse', 'conditional', 'lte IE 11' );
 }
 add_action( 'wp_enqueue_scripts', 'penguin_scripts' );
 
@@ -168,7 +168,7 @@ function penguin_show_custom_image_sizes( $sizes ) {
 add_filter( 'image_size_names_choose', 'penguin_show_custom_image_sizes' );
 
 /**
- * Add custom image sizes attribute to enhance responsive image functionality 
+ * Add custom image sizes attribute to enhance responsive image functionality
  * for content images
  *
  * @since Penguin 0.2
