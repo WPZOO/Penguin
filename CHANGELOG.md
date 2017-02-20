@@ -10,7 +10,8 @@ All notable changes to this project will be documented in this file. This projec
 - Styling of last p and cite inside blockquote
 - Line height of link in link post format
 - Screenshot size 1200x900
-- Fix primary color bug
+- Primary color bug
+- Alignment without clear
 
 ## [0.3.2] - 2017-01-19
 ### Fixed

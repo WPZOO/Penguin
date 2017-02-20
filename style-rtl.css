@@ -2394,12 +2394,14 @@ article:after,
 
 @media screen and (min-width: 600px) {
 	.alignleft {
+		clear: none;
 		display: inline;
 		float: right;
 		margin-left: 1.5em;
 	}
 
 	.alignright {
+		clear: none;
 		display: inline;
 		float: left;
 		margin-right: 1.5em;
