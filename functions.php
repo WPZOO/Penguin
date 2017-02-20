@@ -141,6 +141,7 @@ function penguin_scripts() {
 
 	wp_enqueue_script( 'smooth-scroll', get_template_directory_uri() . '/js/smooth-scroll' . $suffix . '.js', array(), '5.3.3', true );
 	wp_enqueue_script( 'penguin-navigation', get_template_directory_uri() . '/js/navigation' . $suffix . '.js', array(), '20161106', true );
+	wp_enqueue_script( 'svg4everybody', get_template_directory_uri() . '/js/svg4everybody' .$suffix . '.js', array(), '2.1.4', true );
 
 	if ( 1 == $fluidvids ) {
 		wp_enqueue_script( 'fluidvids', get_template_directory_uri() . '/js/fluidvids' . $suffix . '.js', array(), '2.4.1', true );
@@ -149,9 +150,6 @@ function penguin_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-
-	wp_enqueue_script( 'svgxuse', get_template_directory_uri() . '/js/svgxuse' .$suffix . '.js', array(), '1.1.23', false );
-	wp_script_add_data( 'svgxuse', 'conditional', 'lte IE 11' );
 }
 add_action( 'wp_enqueue_scripts', 'penguin_scripts' );
 
@@ -232,7 +230,9 @@ function penguin_wp_footer() {
 			players: ['www.youtube.com', 'www.youtube-nocookie.com', 'player.vimeo.com']
 		});
 	</script>
-	<?php }
+	<?php } ?>
+	<script>svg4everybody();</script>
+	<?php
 }
 add_action( 'wp_footer', 'penguin_wp_footer', 21 );
 
