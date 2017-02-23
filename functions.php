@@ -173,13 +173,13 @@ add_filter( 'image_size_names_choose', 'penguin_show_custom_image_sizes' );
  * @return string A source size value for use in a content image 'sizes' attribute.
  */
 function penguin_content_image_sizes_attr($size) {
-	// Singular posts with sidebar
-	if ( is_singular() || is_sticky() ) {
-		return '(max-width: 599px) calc(100vw - 50px), (max-width: 767px) calc(100vw - 70px), (max-width: 991px) 429px, (max-width: 1199px) 637px, 747px';
-	}
 	// Page full width without sidebar
-	if ( get_page_template_slug() === 'page-fullwidth.php' ) {
+	if ( is_page_template('page-templates/page-fullwidth.php' ) ) {
 		return '(max-width: 599px) calc(100vw - 50px), (max-width: 767px) calc(100vw - 70px), (max-width: 991px) 679px, (max-width: 1199px) 879px, 1039px';
+	}
+	// Singular posts with sidebar
+	elseif ( is_singular() || is_sticky() ) {
+		return '(max-width: 599px) calc(100vw - 50px), (max-width: 767px) calc(100vw - 70px), (max-width: 991px) 429px, (max-width: 1199px) 637px, 747px';
 	}
 	// 2 col blog with sidebar
 	else {
