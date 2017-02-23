@@ -174,7 +174,7 @@ add_filter( 'image_size_names_choose', 'penguin_show_custom_image_sizes' );
  */
 function penguin_content_image_sizes_attr($size) {
 	// Page full width without sidebar
-	if ( is_page_template('page-templates/page-fullwidth.php' ) ) {
+	if ( is_page_template('page-templates/page-fullwidth.php' ) || is_page_template('page-templates/page-transparent-fullwidth.php' ) ) {
 		return '(max-width: 599px) calc(100vw - 50px), (max-width: 767px) calc(100vw - 70px), (max-width: 991px) 679px, (max-width: 1199px) 879px, 1039px';
 	}
 	// Singular posts with sidebar

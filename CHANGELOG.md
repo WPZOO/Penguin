@@ -3,7 +3,8 @@ All notable changes to this project will be documented in this file. This projec
 
 ## [0.3.3] - 2017-02-07
 ### Added
-- svgxuse polyfill
+- Page template transparent full width
+- svg4everybody polyfill
 
 ### Fixed
 - Padding of stand alone post
