@@ -1,10 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file. This project follows [Semantic Versioning](http://semver.org/).
 
-## [0.3.3] - 2017-02-07
+## [0.3.3] - 2017-03-10
 ### Added
 - Page template transparent full width
 - svg4everybody polyfill
+- Update smooth scroll script
 
 ### Fixed
 - Padding of stand alone post
