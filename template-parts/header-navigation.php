@@ -2,7 +2,7 @@
 /**
  * The template part for displaying the main navigation in the header.
  *
- * @package Penguin Gold
+ * @package Penguin
  */
 ?>
 

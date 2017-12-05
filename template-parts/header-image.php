@@ -2,7 +2,7 @@
 /**
  * The template part for displaying the big image on the top of the page.
  *
- * @package Penguin Gold
+ * @package Penguin
  */
 
 $classes = get_body_class();

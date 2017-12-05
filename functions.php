@@ -2,7 +2,7 @@
 /**
  * Functions and definitions
  *
- * @package Penguin Gold
+ * @package Penguin
  */
 
 if ( ! function_exists( 'penguin_setup' ) ) :
@@ -19,7 +19,6 @@ function penguin_setup() {
 	 * Make theme available for translation.
 	 */
 	load_theme_textdomain( 'penguin' );
-	load_theme_textdomain( 'penguin-gold', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -122,13 +121,12 @@ add_action( 'widgets_init', 'penguin_widgets_init' );
  */
 function penguin_scripts() {
 	$theme     = wp_get_theme();
-	$penguin   = wp_get_theme( 'penguin-gold' );
 	$minified  = get_theme_mod( 'min-files' );
 	$suffix    = ( 1 === $minified ) ? '.min' : '';
 	$fluidvids = get_theme_mod( 'fluidvids', true );
 
 	if ( is_child_theme() ) {
-		wp_enqueue_style( 'penguin-parent-style', get_template_directory_uri() . '/style.css', false, $penguin['Version'] );
+		wp_enqueue_style( 'penguin-parent-style', get_template_directory_uri() . '/style.css', false, $theme['Version'] );
 		wp_style_add_data( 'penguin-parent-style', 'suffix', $suffix );
 	}
 
@@ -245,7 +243,6 @@ require get_template_directory() . '/inc/template-tags.php';
  * Penguin extras
  */
 require get_template_directory() . '/inc/extras-penguin.php';
-require get_template_directory() . '/inc/extras-penguin-gold.php';
 
 /**
  * Plugins compatibility file
@@ -257,8 +254,7 @@ require get_template_directory() . '/inc/extras-plugins.php';
  */
 require get_template_directory() . '/inc/style-builder.php';
 require get_template_directory() . '/inc/customizer-options.php';
-require get_template_directory() . '/inc/customizer-options-gold.php';
-require get_template_directory() . '/inc/customizer-styles-gold.php';
+require get_template_directory() . '/inc/customizer-styles.php';
 
 /*
  * Theme Hook Alliance files

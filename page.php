@@ -7,7 +7,7 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package Penguin Gold
+ * @package Penguin
  */
 
 get_header(); ?>

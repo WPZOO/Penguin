@@ -2,7 +2,7 @@
 /**
  * Plugins Compatibility File
  *
- * @package Penguin Gold
+ * @package Penguin
  */
 
 /**

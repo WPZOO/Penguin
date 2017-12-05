@@ -1,9 +1,9 @@
 {
-	"name"        : "wpzoo/penguin-gold",
+	"name"        : "wpzoo/penguin",
 	"description" : "Penguin is a clean and modern WordPress theme made by WPZOO. Besides the link color the used colors are monochromatic. The post thumbnail will be used as a big header image on single post pages as well as Pages. These theme characteristics make it possible to use Penguin for bloggin' as well as a magazin theme.",
-	"keywords"    : ["wordpress", "theme", "penguin-gold"],
+	"keywords"    : ["wordpress", "theme", "penguin"],
 	"type"        : "wordpress-theme",
-	"homepage"    : "https://github.com/WPZOO/penguin-gold",
+	"homepage"    : "https://github.com/WPZOO/Penguin",
 	"license"     : "GPL2",
 	"authors"     : [
 		{
@@ -21,7 +21,7 @@
 		}
 	],
 	"support"     : {
-		"issues": "https://github.com/WPZOO/penguin-gold/issues"
+		"issues": "https://github.com/WPZOO/Penguin/issues"
 	},
 	"require" : {
 		"php": ">=5.2"

@@ -1,11 +1,11 @@
 {
-  "name": "penguin-gold",
-  "capitalname": "Penguin Gold",
-  "description": "WP Theme Penguin Gold",
+  "name": "penguin",
+  "capitalname": "Penguin",
+  "description": "WP Theme Penguin",
   "author": "Stefan Brechbühl",
   "homepage": "https://wpzoo.ch/",
-  "version": "0.3.3",
-  "copyright": "2016",
+  "version": "1.0.0",
+  "copyright": "2017",
   "license": "GPL-2.0+",
   "private": true,
   "contributors": [
@@ -26,23 +26,22 @@
     "js": "./js",
     "sass": "./sass",
     "css": "",
-    "build": "./build",
-    "lite": "../penguin/"
+    "build": "./build"
   },
   "theme": {
-    "name": "Penguin Gold",
+    "name": "Penguin",
     "uri": "https://wpzoo.ch/en/themes/penguin/",
     "description": "Penguin is a clean and modern WordPress theme made by WPZOO. Besides the link color the used colors are monochromatic. The post thumbnail will be used as a big header image on single post pages as well as Pages. These theme characteristics make it possible to use Penguin for bloggin' as well as a magazin theme.",
     "author": "WPZOO",
     "authoruri": "https://wpzoo.ch/en/",
     "license": "GPL-2.0+",
     "licenseuri": "http://www.gnu.org/licenses/gpl-2.0.html",
-    "textdomain": "penguin-gold",
+    "textdomain": "penguin",
     "domainpath": "/languages",
     "tags": "grid-layout, two-columns, three-columns, right-sidebar, custom-menu, custom-logo, editor-style, featured-image-header, featured-images, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, accessibility-ready"
   },
   "bugs": {
-    "url": "https://github.com/WPZOO/penguin-gold/issues",
+    "url": "https://github.com/WPZOO/Penguin/issues",
     "email": "support@wpzoo.ch"
   },
   "pot": {
@@ -53,7 +52,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/WPZOO/penguin-gold.git"
+    "url": "https://github.com/WPZOO/Penguin.git"
   },
   "devDependencies": {
     "autoprefixer": "*",

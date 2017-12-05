@@ -2,7 +2,7 @@
 /**
  * Custom search form template
  *
- * @package Penguin Gold
+ * @package Penguin
  */
 
 $unique_id = esc_attr( uniqid( 'search-form-' ) );

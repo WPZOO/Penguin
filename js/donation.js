@@ -1,36 +1,32 @@
 /**
- * Upsell notice for theme
+ * Donation notice for theme
  */
 
 ( function( $ ) {
 
 	// Add Upgrade Message
 	if ('undefined' !== typeof penguinL10n) {
-		upsell = $('<a class="penguin-goldad-link"></a>')
+		donation = $('<a class="penguin-customizer-donation"></a>')
 			.attr('href', penguinL10n.penguinURL)
 			.attr('target', '_blank')
 			.text(penguinL10n.penguinLabel)
 			.css({
-				'background-color': 'goldenrod',
+				'background-color': '#00ade5',
 				'clear': 'both',
 				'color': '#fff',
 				'display': 'inline-block',
-				'font-size': '10px',
-				'letter-spacing': '1px',
-				'line-height': '1.5',
 				'margin-top': '6px',
-				'padding': '4px 6px',
-				'text-transform': 'uppercase',
+				'padding': '4px 7px',
 				'text-decoration': 'none'
 			})
 		;
 
 		setTimeout(function () {
-			$('#accordion-section-themes h3').append(upsell);
+			$('#accordion-section-themes h3').append(donation);
 		}, 200);
 
 		// Remove accordion click event
-		$('.penguin-goldad-link').on('click', function(e) {
+		$('.penguin-donation-link').on('click', function(e) {
 			e.stopPropagation();
 		});
 	}

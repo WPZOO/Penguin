@@ -2,7 +2,7 @@
 /**
  * Template Name: Transparent Full Width
  *
- * @package Penguin Gold
+ * @package Penguin
  * @since 0.3.3
  */
 

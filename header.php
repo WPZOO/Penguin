@@ -3,7 +3,7 @@
  * The Header for our theme.
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package Penguin Gold
+ * @package Penguin
  */
 ?>
 <?php get_template_part( 'template-parts/header-head' ); ?>

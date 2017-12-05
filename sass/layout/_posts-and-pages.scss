@@ -111,17 +111,18 @@
 }
 
 .author_info_box {
-	@include font-size-small;
 	margin-top: 2em;
 
-	.author_name {
-		font-weight: bold;
+	h2.author_name,
+	.author_details {
+		clear: none;
+		@include font-size-small;
+		margin-top: 0;
 	}
 
 	img {
 		float: left;
 		margin: 0 15px 3px 0;
-		padding: 5px 0 0 0px;
 
 		@media screen and (max-width: 991px) {
 			margin-right: 10px;
