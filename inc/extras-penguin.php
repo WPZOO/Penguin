@@ -83,39 +83,6 @@ add_filter( 'wp_page_menu_args', 'penguin_page_menu_args' );
 
 
 /**
- * Filters wp_title to print a neat <title> tag based on what is being viewed.
- *
- * @param string $title Default title text for current view.
- * @param string $sep Optional separator.
- * @return string The filtered title.
- */
-function penguin_wp_title( $title, $sep ) {
-	if ( is_feed() ) {
-		return $title;
-	}
-
-	global $page, $paged;
-
-	// Add the blog name
-	$title .= get_bloginfo( 'name', 'display' );
-
-	// Add the blog description for the home/front page.
-	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) ) {
-		$title .= " $sep $site_description";
-	}
-
-	// Add a page number if necessary:
-	if ( $paged >= 2 || $page >= 2 ) {
-		$title .= " $sep " . sprintf( __( 'Page %s', 'penguin' ), max( $paged, $page ) );
-	}
-
-	return $title;
-}
-add_filter( 'wp_title', 'penguin_wp_title', 10, 2 );
-
-
-/**
  * Read more text
  */
 function penguin_read_more_text() {
@@ -163,7 +130,7 @@ add_filter( 'excerpt_more', 'penguin_excerpt_more' );
  * Link to scroll back to the top of the page.
  */
 function penguin_back_to_top() {
-	echo '<a data-scroll href="#masthead" id="scroll-to-top" aria-label="' . __( 'Scroll To Top', 'penguin' ) . '">',
+	echo '<a data-scroll href="#masthead" id="scroll-to-top" aria-label="' . esc_html__( 'Scroll To Top', 'penguin' ) . '">',
 		'<svg version="1.1" class="penguin-icon-backtotop" aria-hidden="true">',
 			'<use xlink:href="' . esc_url( get_template_directory_uri() ) . '/icons.svg#penguin-icon-backtotop"></use>',
 		'</svg>',
