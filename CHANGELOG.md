@@ -18,6 +18,7 @@ All notable changes to this project will be documented in this file. This projec
 - css alignment
 - responsive images function
 - h2 for author_name in author box
+- escaping
 
 ## [0.3.3] - 2017-03-10
 ### Added
