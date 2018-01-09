@@ -2,7 +2,7 @@
 /**
  * Template Name: Full Width
  *
- * @package Penguin Gold
+ * @package Penguin
  */
 
 get_header(); ?>

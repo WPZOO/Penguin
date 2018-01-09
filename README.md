@@ -6,11 +6,7 @@ Penguin is a clean and modern WordPress theme made by [WPZOO](https://wpzoo.ch/)
 Moreover Penguin is a responsive, mobile first theme. That means reading your website on mobile device will be as on a desktop computer.
 
 ## Documentation & Support
-If you have any question using this theme, please visit our documentation page. If your issue will still be there after reading our documentation, please ask your question in our forum.
-
-When you're coming across a theme bug – please contact us directly with the help of our bug form.
-
-As a Gold user we will provide you with private email support. However you need to contact us via the contact form on our member site.
+If you have any question using this theme, please visit our documentation page. If your issue will still be there after reading our documentation, please ask your question in [the forum on wordpress.org](https://wordpress.org/support/theme/penguin).
 
 ## License
 This theme is licensed under the GNU General Public License version 2+. All ressources which have been included are provided with the same or a compatible license. Read more in [license.txt](/license.txt).
@@ -42,6 +38,9 @@ The `Customizer_Library_Styles` class from the [Customizer Library](https://gith
 
 ### Theme Hook Alliance
 For better customization of the theme, there are suggested hooks by [Theme Hook Alliance](https://github.com/zamoose/themehookalliance) included.
+
+### svgxuse
+The [svgxuse](https://github.com/Keyamoon/svgxuse) polyfill by Keyamoon fetches external SVGs referenced in `<use>` elements. This will be loaded for Internet Explorer only.
 
 ### Images in screenshot
 The images, which are visible in the theme screenshot, are licensed under [Creative Commons Zero](http://creativecommons.org/publicdomain/zero/1.0/):

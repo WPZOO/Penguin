@@ -3,7 +3,7 @@
  * The Header for our theme.
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package Penguin Gold
+ * @package Penguin
  */
 ?>
 <?php get_template_part( 'template-parts/header-head' ); ?>
@@ -12,7 +12,7 @@
 <?php penguin_body_top(); ?>
 <div id="page" class="hfeed site">
 
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'penguin' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'penguin' ); ?></a>
 
 	<?php penguin_header_before(); ?>
 	<header id="masthead" class="site-header" role="banner">

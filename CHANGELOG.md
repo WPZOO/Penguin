@@ -1,6 +1,39 @@
 # Change Log
 All notable changes to this project will be documented in this file. This project follows [Semantic Versioning](http://semver.org/).
 
+## [1.0.0] - 2017-12-01
+### Added
+- former gold features
+- svg4everybody polyfill
+- page template transparent full width
+- update smooth scroll script
+
+### Fixed
+- url in footer
+- padding of stand alone post
+- last p and cite inside blockquote
+- line-height link post format
+- screenshot size 1200x900
+- primary color bug
+- css alignment
+- responsive images function
+- h2 for author_name in author box
+- escaping
+
+## [0.3.3] - 2017-03-10
+### Added
+- Page template transparent full width
+- svg4everybody polyfill
+- Update smooth scroll script
+
+### Fixed
+- Padding of stand alone post
+- Styling of last p and cite inside blockquote
+- Line height of link in link post format
+- Screenshot size 1200x900
+- Primary color bug
+- Alignment without clear
+
 ## [0.3.2] - 2017-01-19
 ### Fixed
 - Fix focus styling of scroll to top
