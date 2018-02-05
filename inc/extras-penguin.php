@@ -140,26 +140,6 @@ add_action( 'tha_footer_top', 'penguin_back_to_top' );
 
 
 /**
- * Display donation link inside the customizer
- *
- * @since 1.0.0
- */
-function penguin_donation_link() {
-	wp_enqueue_script( 'penguin-customizer-donation', get_template_directory_uri() . '/js/donation.js', array(), '1.0.0', true );
-	wp_localize_script(
-		'penguin-customizer-donation',
-		'penguinL10n',
-		array(
-			'penguinURL'   => __( 'https://wpzoo.ch/en/donation/', 'penguin' ),
-			'penguinLabel' => __( 'Please support us?', 'penguin' ),
-		)
-	);
-
-}
-add_action( 'customize_controls_enqueue_scripts', 'penguin_donation_link' );
-
-
-/**
  * Footer text
  */
 function penguin_poweredby() {
