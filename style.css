@@ -1,12 +1,12 @@
 /*!
-Theme Name:  Penguin Gold
+Theme Name:  Penguin
 Theme URI:   https://wpzoo.ch/en/themes/penguin/
 Description: Penguin is a clean and modern WordPress theme made by WPZOO. Besides the link color the used colors are monochromatic. The post thumbnail will be used as a big header image on single post pages as well as Pages. These theme characteristics make it possible to use Penguin for bloggin' as well as a magazin theme.
 Author:      WPZOO
 Author URI:  https://wpzoo.ch/en/
-Version:     0.3.2
+Version:     1.0.0
 Tags:        grid-layout, two-columns, three-columns, right-sidebar, custom-menu, custom-logo, editor-style, featured-image-header, featured-images, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, accessibility-ready
-Text Domain: penguin-gold
+Text Domain: penguin
 Domain Path: /languages
 License:     GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -491,7 +491,8 @@ p {
 	margin-bottom: 0.5em;
 }
 
-p:last-of-type {
+.entry-content p:nth-last-child(1),
+.entry-summary p {
 	margin-bottom: 0;
 }
 
@@ -512,6 +513,22 @@ blockquote {
 	font-style: italic;
 	margin-bottom: 0.5em;
 	padding: 0.5em 1em;
+}
+
+blockquote cite,
+blockquote footer {
+	display: block;
+	font-size: 0.85em;
+	font-style: normal;
+	font-weight: 600;
+	margin-top: 0.5em;
+}
+
+@media screen and (min-width: 992px) {
+	blockquote cite,
+	blockquote footer {
+		font-size: 0.75em;
+	}
 }
 
 address {
@@ -1308,6 +1325,12 @@ a img {
 	color: #06c;
 }
 
+.bright-navbar #site-navigation li:hover > a,
+.bright-navbar #site-navigation li.focus > a {
+	background-color: rgba(0, 0, 0, 0.03);
+	color: #06c;
+}
+
 #site-navigation a {
 	color: #fff;
 	display: block;
@@ -1318,6 +1341,10 @@ a img {
 	text-decoration: none;
 	-webkit-transition: none;
 	transition: none;
+}
+
+.bright-navbar #site-navigation a {
+	color: #404040;
 }
 
 #site-navigation .site-title {
@@ -1341,6 +1368,16 @@ a img {
 	color: #06c;
 }
 
+.bright-navbar #site-navigation .site-title a {
+	color: #404040;
+}
+
+.bright-navbar #site-navigation .site-title a:hover,
+.bright-navbar #site-navigation .site-title a.focus {
+	background-color: transparent;
+	color: #06c;
+}
+
 #site-navigation .custom-logo-link,
 #site-navigation .site-logo {
 	border-bottom: 0;
@@ -1355,10 +1392,8 @@ a img {
 .bright-navbar #site-navigation .custom-logo-link.focus,
 #site-navigation .site-logo:hover,
 #site-navigation .site-logo.focus,
-.bright-navbar
-    #site-navigation .site-logo:hover,
-.bright-navbar
-    #site-navigation .site-logo.focus {
+.bright-navbar #site-navigation .site-logo:hover,
+.bright-navbar #site-navigation .site-logo.focus {
 	background-color: transparent;
 }
 
@@ -1379,32 +1414,6 @@ a img {
 #site-navigation .current_page_ancestor > a,
 #site-navigation .current-menu-ancestor > a {
 	font-weight: bold;
-}
-
-.bright-navbar #site-navigation a {
-	color: #404040;
-}
-
-.bright-navbar #site-navigation .current_page_item > a,
-.bright-navbar #site-navigation .current-menu-item > a {
-	background-color: #06c;
-	color: #fff;
-}
-
-.bright-navbar #site-navigation a:hover,
-.bright-navbar #site-navigation a.focus {
-	background-color: rgba(0, 0, 0, 0.03);
-	color: #06c;
-}
-
-.bright-navbar #site-navigation .site-title a {
-	color: #404040;
-}
-
-.bright-navbar #site-navigation .site-title a:hover,
-.bright-navbar #site-navigation .site-title a.focus {
-	background-color: transparent;
-	color: #06c;
 }
 
 .menu-toggle {
@@ -1735,7 +1744,8 @@ a img {
 	}
 }
 
-.page-template-page-fullwidth #primary {
+#primary.page-transparent-fullwidth,
+#primary.page-fullwidth {
 	float: none;
 	width: 100%;
 }
@@ -1846,6 +1856,14 @@ a img {
 	width: 100%;
 }
 
+.page-transparent-fullwidth .penguin-post {
+	background: transparent;
+	border: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	padding: 0;
+}
+
 .has-headerimg .has-post-thumbnail {
 	border-top: none;
 	margin-top: -40px;
@@ -1863,11 +1881,14 @@ a img {
 	}
 }
 
-.blog .has-post-thumbnail,
-.search .has-post-thumbnail,
-.archive .has-post-thumbnail {
-	border-top: none;
-	padding-top: 0;
+.has-headerimg .page-transparent-fullwidth .has-post-thumbnail {
+	margin-top: 0;
+}
+
+@media screen and (min-width: 992px) {
+	.has-headerimg .page-transparent-fullwidth .has-post-thumbnail {
+		margin-top: 2.5em;
+	}
 }
 
 .single .penguin-post {
@@ -1910,6 +1931,15 @@ a img {
 	}
 }
 
+.page-transparent-fullwidth .entry-title,
+.page-transparent-fullwidth .entry-summary,
+.page-transparent-fullwidth .entry-content,
+.page-transparent-fullwidth .entry-meta-top,
+.page-transparent-fullwidth .entry-meta-bottom {
+	margin-left: 0;
+	margin-right: 0;
+}
+
 .entry-summary,
 .entry-content {
 	margin-bottom: 0.5em;
@@ -1925,24 +1955,26 @@ a img {
 }
 
 .author_info_box {
-	font-size: 0.85em;
 	margin-top: 2em;
 }
 
-@media screen and (min-width: 992px) {
-	.author_info_box {
-		font-size: 0.75em;
-	}
+.author_info_box h2.author_name,
+.author_info_box .author_details {
+	clear: none;
+	font-size: 0.85em;
+	margin-top: 0;
 }
 
-.author_info_box .author_name {
-	font-weight: bold;
+@media screen and (min-width: 992px) {
+	.author_info_box h2.author_name,
+	.author_info_box .author_details {
+		font-size: 0.75em;
+	}
 }
 
 .author_info_box img {
 	float: left;
 	margin: 0 15px 3px 0;
-	padding: 5px 0 0 0;
 }
 
 @media screen and (max-width: 991px) {
@@ -1966,12 +1998,35 @@ a img {
 		margin-left: 30px;
 		margin-right: 30px;
 	}
+
+	.page-transparent-fullwidth .entry-title,
+	.page-transparent-fullwidth .entry-summary,
+	.page-transparent-fullwidth .entry-content,
+	.page-transparent-fullwidth .entry-meta-top,
+	.page-transparent-fullwidth .entry-meta-bottom,
+	.page-transparent-fullwidth .search .page .entry-title,
+	.page-transparent-fullwidth .search .page .entry-summary,
+	.page-transparent-fullwidth .search .page .entry-content,
+	.page-transparent-fullwidth .search .page .entry-meta-top,
+	.page-transparent-fullwidth .search .page .entry-meta-bottom {
+		margin-left: 0;
+		margin-right: 0;
+	}
 }
 
 @media screen and (min-width: 1200px) {
 	.single .penguin-post,
-	.page .penguin-post {
+	.page .penguin-post,
+	.sticky.penguin-post,
+	.penguin-post:only-of-type {
 		padding: 40px 0;
+	}
+
+	.page-transparent-fullwidth .single .penguin-post,
+	.page-transparent-fullwidth .page .penguin-post,
+	.page-transparent-fullwidth .sticky.penguin-post,
+	.page-transparent-fullwidth .penguin-post:only-of-type {
+		padding: 0;
 	}
 
 	.single .entry-title,
@@ -1998,13 +2053,36 @@ a img {
 		margin-right: 50px;
 	}
 
-	.sticky.penguin-post {
-		padding-bottom: 40px;
+	.page-transparent-fullwidth .single .entry-title,
+	.page-transparent-fullwidth .single .entry-summary,
+	.page-transparent-fullwidth .single .entry-content,
+	.page-transparent-fullwidth .single .entry-meta-top,
+	.page-transparent-fullwidth .single .entry-meta-bottom,
+	.page-transparent-fullwidth .page .entry-title,
+	.page-transparent-fullwidth .page .entry-summary,
+	.page-transparent-fullwidth .page .entry-content,
+	.page-transparent-fullwidth .page .entry-meta-top,
+	.page-transparent-fullwidth .page .entry-meta-bottom,
+	.page-transparent-fullwidth .sticky .entry-title,
+	.page-transparent-fullwidth .sticky .entry-summary,
+	.page-transparent-fullwidth .sticky .entry-content,
+	.page-transparent-fullwidth .sticky .entry-meta-top,
+	.page-transparent-fullwidth .sticky .entry-meta-bottom,
+	.page-transparent-fullwidth .penguin-post:only-of-type .entry-title,
+	.page-transparent-fullwidth .penguin-post:only-of-type .entry-summary,
+	.page-transparent-fullwidth .penguin-post:only-of-type .entry-content,
+	.page-transparent-fullwidth .penguin-post:only-of-type .entry-meta-top,
+	.page-transparent-fullwidth .penguin-post:only-of-type .entry-meta-bottom {
+		margin-left: 0;
+		margin-right: 0;
 	}
+}
 
-	.penguin-post:only-of-type {
-		padding: 40px 0;
-	}
+.blog .has-post-thumbnail,
+.search .has-post-thumbnail,
+.archive .has-post-thumbnail {
+	border-top: none;
+	padding-top: 0;
 }
 
 
@@ -2057,7 +2135,7 @@ article.format-link .entry-meta-top a {
 article.format-link .entry-content a {
 	background-color: #fff;
 	font-size: 1.5em;
-	line-height: 1;
+	line-height: 1.2;
 }
 
 article.format-link .entry-meta-top a:hover,
@@ -2389,12 +2467,14 @@ article:after,
 
 @media screen and (min-width: 600px) {
 	.alignleft {
+		clear: none;
 		display: inline;
 		float: left;
 		margin-right: 1.5em;
 	}
 
 	.alignright {
+		clear: none;
 		display: inline;
 		float: right;
 		margin-left: 1.5em;

@@ -12,7 +12,8 @@
 p {
 	margin-bottom: .5em;
 }
-p:last-of-type {
+.entry-content p:nth-last-child(1),
+.entry-summary p {
 	margin-bottom: 0;
 }
 
@@ -29,6 +30,15 @@ blockquote {
 	font-style: italic;
 	margin-bottom: .5em;
 	padding: .5em 1em;
+
+	cite,
+	footer {
+		display: block;
+		@include font-size-small;
+		font-style: normal;
+		font-weight: $font__weight-bold;
+		margin-top: .5em;
+	}
 }
 
 address {

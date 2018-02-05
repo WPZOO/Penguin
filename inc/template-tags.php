@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Penguin Gold
+ * @package Penguin
  */
 
 if ( ! function_exists( 'penguin_posted_on' ) ) :

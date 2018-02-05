@@ -1,19 +1,15 @@
 <?php
 /**
- * The template for displaying all pages.
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
+ * Template Name: Transparent Full Width
  *
  * @package Penguin
+ * @since 0.3.3
  */
 
 get_header(); ?>
 
 <div id="content-area">
-	<div id="primary">
+	<div id="primary" class="page-transparent-fullwidth">
 		<main id="main" class="site-main" role="main">
 
 			<div id="posts-container">
@@ -36,6 +32,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 </div><!-- #content-area -->
 <?php get_footer(); ?>

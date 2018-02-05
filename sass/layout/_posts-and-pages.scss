@@ -27,6 +27,13 @@
 	&:only-of-type {
 		width: 100%;
 	}
+
+	.page-transparent-fullwidth & {
+		background: transparent;
+		border: 0;
+		box-shadow: none;
+		padding: 0;
+	}
 }
 
 .has-headerimg .has-post-thumbnail {
@@ -42,11 +49,12 @@
 	}
 }
 
-.blog .has-post-thumbnail,
-.search .has-post-thumbnail,
-.archive .has-post-thumbnail {
-	border-top: none;
-	padding-top: 0;
+.has-headerimg .page-transparent-fullwidth .has-post-thumbnail {
+	margin-top: 0;
+
+	@media screen and (min-width: 992px) {
+		margin-top: 2.5em;
+	}
 }
 
 .single .penguin-post {
@@ -81,6 +89,11 @@
 		margin-left: 20px;
 		margin-right: 20px;
 	}
+
+	.page-transparent-fullwidth & {
+		margin-left: 0;
+		margin-right: 0;
+	}
 }
 
 .entry-summary,
@@ -98,17 +111,18 @@
 }
 
 .author_info_box {
-	@include font-size-small;
 	margin-top: 2em;
 
-	.author_name {
-		font-weight: bold;
+	h2.author_name,
+	.author_details {
+		clear: none;
+		@include font-size-small;
+		margin-top: 0;
 	}
 
 	img {
 		float: left;
 		margin: 0 15px 3px 0;
-		padding: 5px 0 0 0px;
 
 		@media screen and (max-width: 991px) {
 			margin-right: 10px;
@@ -130,13 +144,24 @@
 	.search .page .entry-meta-bottom {
 		margin-left: 30px;
 		margin-right: 30px;
+
+		.page-transparent-fullwidth & {
+			margin-left: 0;
+			margin-right: 0;
+		}
 	}
 }
 
 @media screen and (min-width: 1200px) {
 	.single .penguin-post,
-	.page .penguin-post {
+	.page .penguin-post,
+	.sticky.penguin-post,
+	.penguin-post:only-of-type {
 		padding: 40px 0;
+		
+		.page-transparent-fullwidth & {
+			padding: 0;
+		}
 	}
 
 	.single .entry-title,
@@ -161,13 +186,17 @@
 	.penguin-post:only-of-type .entry-meta-bottom {
 		margin-left: 50px;
 		margin-right: 50px;
-	}
-	
-	.sticky.penguin-post {
-		padding-bottom: 40px;
-	}
 
-	.penguin-post:only-of-type {
-		padding: 40px 0;
+		.page-transparent-fullwidth & {
+			margin-left: 0;
+			margin-right: 0;
+		}
 	}
+}
+
+.blog .has-post-thumbnail,
+.search .has-post-thumbnail,
+.archive .has-post-thumbnail {
+	border-top: none;
+	padding-top: 0;
 }

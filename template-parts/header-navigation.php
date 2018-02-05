@@ -2,7 +2,7 @@
 /**
  * The template part for displaying the main navigation in the header.
  *
- * @package Penguin Gold
+ * @package Penguin
  */
 ?>
 
@@ -12,22 +12,29 @@
 
 		<nav id="site-navigation" class="main-navigation clear" role="navigation" aria-label="<?php esc_attr_e( 'Primary Navigation', 'penguin' ); ?>">
 
-		<?php
-			if ( function_exists( 'the_custom_logo' ) ) {
+			<?php
+			if ( function_exists( 'the_custom_logo' ) ) :
 				the_custom_logo();
-			} elseif ( $logo = get_theme_mod( 'logo-upload', false ) ) {
-				echo '<a class="site-logo" href="' . esc_url( home_url( '/' ) ) . '" rel="home">';
-				echo '<img title="' . get_bloginfo( 'name', 'display' ) . '" alt="' . get_bloginfo( 'name', 'display' ) . '" src="' . esc_url( $logo ) . '">';
-				echo '</a>';
-			}
-			if ( is_front_page() && is_home() ) {
-				echo '<h1 class="site-title"><a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . get_bloginfo( 'name', 'display' ) . '</a></h1>';
-			} else {
-				echo '<p class="site-title"><a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . get_bloginfo( 'name', 'display' ) . '</a></p>';
-			}
-		?>
+			elseif ( $logo = get_theme_mod( 'logo-upload', false ) ) :
+			?>
+				<a class="site-logo" href="'<?php esc_url( home_url( '/' ) ) ?>" rel="home">;
+					<img title="<?php bloginfo( 'name' ); ?>" alt="<?php bloginfo( 'name' ); ?>" src="<?php esc_url( $logo ) ?>">;
+				</a>;
+			<?php
+			endif;
 
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="<?php _e( 'Menu', 'penguin' ) ?>">
+			if ( is_front_page() && is_home() ) :
+			?>
+				<h1 class="site-title">
+					<a href="<?php esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+				</h1>
+			<?php else : ?>
+				<p class="site-title">
+					<a href="<?php esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+				</p>
+			<?php endif; ?>
+
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="<?php esc_attr_e( 'Menu', 'penguin' ); ?>">
 				<svg version="1.1" class="penguin-icon-menu" role="img" aria-hidden="true">
 					<use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/icons.svg#penguin-icon-menu"></use>
 				</svg>

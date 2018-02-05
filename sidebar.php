@@ -2,7 +2,7 @@
 /**
  * The Sidebar containing the main widget areas.
  *
- * @package Penguin Gold
+ * @package Penguin
  */
 ?>
 

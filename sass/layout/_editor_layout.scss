@@ -46,7 +46,8 @@
 		width: 75%;
 	}
 
-	.page-template-page-fullwidth & {
+	.page-template-page-fullwidth &,
+	.page-template-page-transparent-fullwidth & {
 		float: none;
 		width: 100%;
 	}

@@ -53,6 +53,42 @@ function penguin_customize_register( $wp_customize ) {
 		);
 	}
 
+	$wp_customize->add_setting(
+		'brightness-navbar',
+		array(
+			'default'           => 'dark',
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'penguin_sanitize_choices',
+		)
+	);
+
+	$wp_customize->add_control(
+		'brightness-navbar',
+		array(
+			'label'   => __( 'Brightness of navbar', 'penguin' ),
+			'section' => 'colors',
+			'type'    => 'select',
+			'choices' => $choices['brightness-navbar'],
+		)
+	);
+
+	$wp_customize->add_setting( 'link-color', array(
+		'default'           => '#0066cc',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'sanitize_hex_color',
+	) );
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'link-color',
+			array(
+				'label'   => __( 'Link Color', 'penguin' ),
+				'section' => 'colors',
+			)
+		)
+	);
+
 	$wp_customize->add_section(
 		'content',
 		array(
@@ -77,6 +113,134 @@ function penguin_customize_register( $wp_customize ) {
 			'section' => 'content',
 			'type'    => 'radio',
 			'choices' => $choices['excerpt-content'],
+		)
+	);
+
+		$wp_customize->add_setting(
+		'sidebar-layout',
+		array(
+			'default'           => 'sidebar-right',
+			'transport'         => 'refresh',
+			'sanitize_callback' => 'penguin_sanitize_choices',
+		)
+	);
+
+	$wp_customize->add_control(
+		'sidebar-layout',
+		array(
+			'label'   => __( 'Sidebar layout', 'penguin' ),
+			'section' => 'content',
+			'type'    => 'radio',
+			'choices' => $choices['sidebar-layout'],
+		)
+	);
+
+	$wp_customize->add_setting(
+		'author-box',
+		array(
+			'default'           => 0,
+			'transport'         => 'refresh',
+			'sanitize_callback' => 'penguin_sanitize_checkbox',
+		)
+	);
+
+	$wp_customize->add_control(
+		'author-box',
+		array(
+			'label'       => __( 'Author info box on single posts', 'penguin' ),
+			'description' => __( 'The user description needs to be added before the box is displayed.', 'penguin' ),
+			'section'     => 'content',
+			'type'        => 'checkbox',
+		)
+	);
+
+	$wp_customize->add_setting(
+		'menu-search',
+		array(
+			'default'           => 0,
+			'transport'         => 'refresh',
+			'sanitize_callback' => 'penguin_sanitize_checkbox',
+		)
+	);
+
+	$wp_customize->add_control(
+		'menu-search',
+		array(
+			'label'   => __( 'Add search box to primary menu', 'penguin' ),
+			'section' => 'content',
+			'type'    => 'checkbox',
+		)
+	);
+
+	$wp_customize->add_setting(
+		'footer-text',
+		array(
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'wp_kses_post',
+		)
+	);
+
+	$wp_customize->add_control(
+		'footer-text',
+		array(
+			'label'   => __( 'Custom footer text', 'penguin' ),
+			'section' => 'content',
+			'type'    => 'textarea',
+		)
+	);
+
+	if ( isset( $wp_customize->selective_refresh ) ) {
+		$wp_customize->selective_refresh->add_partial(
+			'footer-text',
+			array(
+				'selector'            => '#poweredby',
+				'container_inclusive' => true,
+				'render_callback'     => 'penguin_poweredby',
+			)
+		);
+	}
+
+	$wp_customize->add_section(
+		'advanced',
+		array(
+			'title'    => __( 'Advanced', 'penguin' ),
+			'priority' => 150,
+		)
+	);
+
+	$wp_customize->add_setting(
+		'min-files',
+		array(
+			'default'           => 1,
+			'transport'         => 'refresh',
+			'sanitize_callback' => 'penguin_sanitize_checkbox',
+		)
+	);
+
+	$wp_customize->add_control(
+		'min-files',
+		array(
+			'label'   => __( 'Minified CSS and JS', 'penguin' ),
+			'section' => 'advanced',
+			'type'    => 'checkbox',
+		)
+	);
+
+	$wp_customize->add_setting(
+		'fluidvids',
+		array(
+			'default'           => 1,
+			'transport'         => 'refresh',
+			'sanitize_callback' => 'penguin_sanitize_checkbox',
+		)
+	);
+
+	$wp_customize->add_control(
+		'fluidvids',
+		array(
+			'label'   => __( 'Load Fluidvids.js for responsive videos', 'penguin' ),
+			'section' => 'advanced',
+			'type'    => 'checkbox',
 		)
 	);
 
@@ -111,13 +275,13 @@ function penguin_option_choices() {
 	);
 
 	$choices['brightness-navbar'] = array(
-		'dark'          => __( 'Dark', 'penguin-gold' ),
-		'bright'        => __( 'Bright', 'penguin-gold' )
+		'dark'          => __( 'Dark', 'penguin' ),
+		'bright'        => __( 'Bright', 'penguin' )
 	);
 
 	$choices['sidebar-layout'] = array(
-		'sidebar-right' => __( 'Sidebar right', 'penguin-gold' ),
-		'sidebar-left'  => __( 'Sidebar left', 'penguin-gold' ),
+		'sidebar-right' => __( 'Sidebar right', 'penguin' ),
+		'sidebar-left'  => __( 'Sidebar left', 'penguin' ),
 	);
 
 	return $choices;
