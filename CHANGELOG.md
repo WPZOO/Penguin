@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file. This project follows [Semantic Versioning](http://semver.org/).
 
+## [1.X.X]
+### Fixed
+- site title link to home page
+
 ## [1.0.0] - 2017-12-01
 ### Added
 - former gold features
