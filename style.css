@@ -1200,8 +1200,6 @@ a {
 	border-bottom: 1px solid;
 	color: #06c;
 	text-decoration: none;
-	-webkit-transition: all 0.2s ease-in-out;
-	transition: all 0.2s ease-in-out;
 }
 
 a:hover,

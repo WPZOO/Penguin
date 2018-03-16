@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file. This projec
 ## [1.X.X]
 ### Fixed
 - site title link to home page
+- link underline without transition
 
 ## [1.0.0] - 2017-12-01
 ### Added
